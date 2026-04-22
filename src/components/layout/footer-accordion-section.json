@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_layout_footer_accordion_sections",
+  "info": { "displayName": "Footer Accordion Section" },
+  "options": {},
+  "attributes": {
+    "title": { "type": "string" },
+    "type": {
+      "type": "enumeration",
+      "enum": ["solutions", "industries", "technologies"]
+    },
+    "solutionGroups": {
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.footer-solution-group"
+    },
+    "industries": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.link"
+    },
+    "technologies": {
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.footer-technology-item"
+    }
+  }
+}

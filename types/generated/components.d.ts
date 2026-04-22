@@ -94,8 +94,92 @@ export interface LayoutFooter extends Struct.ComponentSchema {
     displayName: 'Footer';
   };
   attributes: {
+    accordionSections: Schema.Attribute.Component<
+      'layout.footer-accordion-section',
+      true
+    >;
+    addressHeading: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Address'>;
+    addressText: Schema.Attribute.Text;
+    awards: Schema.Attribute.Component<'layout.footer-award-item', true>;
+    companyProfileLink: Schema.Attribute.String;
+    companyProfileMeta: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'PDF, 3 mb'>;
+    companyProfileTitle: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Company Profile'>;
+    contactHeading: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Contact'>;
+    copyrightText: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    email: Schema.Attribute.Email;
+    footerLinks: Schema.Attribute.Component<'elements.link', true>;
+    legalLinks: Schema.Attribute.Component<'elements.link', true>;
+    logoImage: Schema.Attribute.Media<'images'>;
+    logoText: Schema.Attribute.String;
+    newsletterButtonText: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Subscribe'>;
+    newsletterPlaceholder: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Enter Your Email'>;
+    newsletterTitle: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Subscribe To Our Newsletter'>;
+    phone: Schema.Attribute.String;
     socialLinks: Schema.Attribute.Component<'elements.link', true>;
-    text: Schema.Attribute.Text;
+  };
+}
+
+export interface LayoutFooterAccordionSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_footer_accordion_sections';
+  info: {
+    displayName: 'Footer Accordion Section';
+  };
+  attributes: {
+    industries: Schema.Attribute.Component<'elements.link', true>;
+    solutionGroups: Schema.Attribute.Component<
+      'layout.footer-solution-group',
+      true
+    >;
+    technologies: Schema.Attribute.Component<
+      'layout.footer-technology-item',
+      true
+    >;
+    title: Schema.Attribute.String;
+    type: Schema.Attribute.Enumeration<
+      ['solutions', 'industries', 'technologies']
+    >;
+  };
+}
+
+export interface LayoutFooterAwardItem extends Struct.ComponentSchema {
+  collectionName: 'components_layout_footer_award_items';
+  info: {
+    displayName: 'Footer Award Item';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images'>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface LayoutFooterSolutionGroup extends Struct.ComponentSchema {
+  collectionName: 'components_layout_footer_solution_groups';
+  info: {
+    displayName: 'Footer Solution Group';
+  };
+  attributes: {
+    items: Schema.Attribute.Component<'elements.link', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface LayoutFooterTechnologyItem extends Struct.ComponentSchema {
+  collectionName: 'components_layout_footer_technology_items';
+  info: {
+    displayName: 'Footer Technology Item';
+  };
+  attributes: {
+    iconText: Schema.Attribute.String;
+    link: Schema.Attribute.String;
+    name: Schema.Attribute.String;
   };
 }
 
@@ -223,6 +307,10 @@ declare module '@strapi/strapi' {
       'layout.card-grid': LayoutCardGrid;
       'layout.content-with-image': LayoutContentWithImage;
       'layout.footer': LayoutFooter;
+      'layout.footer-accordion-section': LayoutFooterAccordionSection;
+      'layout.footer-award-item': LayoutFooterAwardItem;
+      'layout.footer-solution-group': LayoutFooterSolutionGroup;
+      'layout.footer-technology-item': LayoutFooterTechnologyItem;
       'layout.hero': LayoutHero;
       'layout.price-grid': LayoutPriceGrid;
       'layout.section-heading': LayoutSectionHeading;
