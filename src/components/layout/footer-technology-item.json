@@ -1,0 +1,10 @@
+{
+  "collectionName": "components_layout_footer_technology_items",
+  "info": { "displayName": "Footer Technology Item" },
+  "options": {},
+  "attributes": {
+    "name": { "type": "string" },
+    "iconText": { "type": "string" },
+    "link": { "type": "string" }
+  }
+}

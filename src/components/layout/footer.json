@@ -5,10 +5,91 @@
   },
   "options": {},
   "attributes": {
-    "text": {
+    "logoText": {
+      "type": "string"
+    },
+    "logoImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "description": {
       "type": "text"
     },
+
+    "newsletterTitle": {
+      "type": "string",
+      "default": "Subscribe To Our Newsletter"
+    },
+    "newsletterPlaceholder": {
+      "type": "string",
+      "default": "Enter Your Email"
+    },
+    "newsletterButtonText": {
+      "type": "string",
+      "default": "Subscribe"
+    },
+
     "socialLinks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.link"
+    },
+
+    "footerLinks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.link"
+    },
+
+    "contactHeading": {
+      "type": "string",
+      "default": "Contact"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+
+    "addressHeading": {
+      "type": "string",
+      "default": "Address"
+    },
+    "addressText": {
+      "type": "text"
+    },
+
+    "awards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.footer-award-item"
+    },
+
+    "accordionSections": {
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.footer-accordion-section"
+    },
+
+    "companyProfileTitle": {
+      "type": "string",
+      "default": "Company Profile"
+    },
+    "companyProfileMeta": {
+      "type": "string",
+      "default": "PDF, 3 mb"
+    },
+    "companyProfileLink": {
+      "type": "string"
+    },
+
+    "copyrightText": {
+      "type": "string"
+    },
+
+    "legalLinks": {
       "type": "component",
       "repeatable": true,
       "component": "elements.link"

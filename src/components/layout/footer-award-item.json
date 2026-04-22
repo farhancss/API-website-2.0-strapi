@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_layout_footer_award_items",
+  "info": { "displayName": "Footer Award Item" },
+  "options": {},
+  "attributes": {
+    "title": { "type": "string" },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    }
+  }
+}
