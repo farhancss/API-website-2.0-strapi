@@ -33,13 +33,13 @@
     "socialLinks": {
       "type": "component",
       "repeatable": true,
-      "component": "elements.link"
+      "component": "layout.footer-social-link"
     },
 
     "footerLinks": {
       "type": "component",
       "repeatable": true,
-      "component": "elements.link"
+      "component": "layout.footer-link-item"
     },
 
     "contactHeading": {

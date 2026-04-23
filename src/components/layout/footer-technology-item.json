@@ -5,6 +5,11 @@
   "attributes": {
     "name": { "type": "string" },
     "iconText": { "type": "string" },
+    "iconImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
     "link": { "type": "string" }
   }
 }
