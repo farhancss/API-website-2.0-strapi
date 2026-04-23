@@ -16,7 +16,9 @@
       "type": "text"
     },
     "badgeItems": {
-      "type": "json"
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.badge"
     },
     "topLink": {
       "displayName": "Link",

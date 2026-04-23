@@ -10,6 +10,18 @@ export interface BlocksText extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementsBadge extends Struct.ComponentSchema {
+  collectionName: 'components_elements_badges';
+  info: {
+    description: 'Hero badge with text and trailing icon';
+    displayName: 'Badge';
+  };
+  attributes: {
+    icon: Schema.Attribute.Media<'images'>;
+    text: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface ElementsCard extends Struct.ComponentSchema {
   collectionName: 'components_elements_cards';
   info: {
@@ -221,7 +233,7 @@ export interface LayoutHero extends Struct.ComponentSchema {
   attributes: {
     arrowImage: Schema.Attribute.Media<'images'>;
     assistText: Schema.Attribute.String;
-    badgeItems: Schema.Attribute.JSON;
+    badgeItems: Schema.Attribute.Component<'elements.badge', true>;
     buttonLink: Schema.Attribute.Component<'elements.link', true>;
     clientLogos: Schema.Attribute.Media<'images', true>;
     clutchIcon: Schema.Attribute.Media<'images'>;
@@ -341,6 +353,7 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'blocks.text': BlocksText;
+      'elements.badge': ElementsBadge;
       'elements.card': ElementsCard;
       'elements.feature': ElementsFeature;
       'elements.link': ElementsLink;
