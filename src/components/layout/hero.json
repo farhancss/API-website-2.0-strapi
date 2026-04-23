@@ -9,8 +9,14 @@
     "heading": {
       "type": "string"
     },
+    "headingHighlight": {
+      "type": "string"
+    },
     "text": {
       "type": "text"
+    },
+    "badgeItems": {
+      "type": "json"
     },
     "topLink": {
       "displayName": "Link",
@@ -29,6 +35,49 @@
       ],
       "type": "media",
       "multiple": false
+    },
+    "inputPlaceholder": {
+      "type": "string"
+    },
+    "primaryButtonText": {
+      "type": "string"
+    },
+    "clutchIcon": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "reviewScore": {
+      "type": "string"
+    },
+    "reviewStarsText": {
+      "type": "string"
+    },
+    "reviewText": {
+      "type": "string"
+    },
+    "experienceText": {
+      "type": "text"
+    },
+    "assistText": {
+      "type": "string"
+    },
+    "arrowImage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "clientLogos": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true
     }
   }
 }
+ 
