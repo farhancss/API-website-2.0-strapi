@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_layout_footer_link_items",
+  "info": { "displayName": "Footer Link Item" },
+  "options": {},
+  "attributes": {
+    "text": { "type": "string" },
+    "href": { "type": "string" },
+    "isExternal": {
+      "type": "boolean",
+      "default": false
+    },
+    "children": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.link"
+    }
+  }
+}

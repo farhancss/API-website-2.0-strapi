@@ -112,7 +112,7 @@ export interface LayoutFooter extends Struct.ComponentSchema {
     copyrightText: Schema.Attribute.String;
     description: Schema.Attribute.Text;
     email: Schema.Attribute.Email;
-    footerLinks: Schema.Attribute.Component<'elements.link', true>;
+    footerLinks: Schema.Attribute.Component<'layout.footer-link-item', true>;
     legalLinks: Schema.Attribute.Component<'elements.link', true>;
     logoImage: Schema.Attribute.Media<'images'>;
     logoText: Schema.Attribute.String;
@@ -123,7 +123,7 @@ export interface LayoutFooter extends Struct.ComponentSchema {
     newsletterTitle: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'Subscribe To Our Newsletter'>;
     phone: Schema.Attribute.String;
-    socialLinks: Schema.Attribute.Component<'elements.link', true>;
+    socialLinks: Schema.Attribute.Component<'layout.footer-social-link', true>;
   };
 }
 
@@ -155,8 +155,36 @@ export interface LayoutFooterAwardItem extends Struct.ComponentSchema {
     displayName: 'Footer Award Item';
   };
   attributes: {
+    href: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images'>;
+    isExternal: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
     title: Schema.Attribute.String;
+  };
+}
+
+export interface LayoutFooterLinkItem extends Struct.ComponentSchema {
+  collectionName: 'components_layout_footer_link_items';
+  info: {
+    displayName: 'Footer Link Item';
+  };
+  attributes: {
+    children: Schema.Attribute.Component<'elements.link', true>;
+    href: Schema.Attribute.String;
+    isExternal: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    text: Schema.Attribute.String;
+  };
+}
+
+export interface LayoutFooterSocialLink extends Struct.ComponentSchema {
+  collectionName: 'components_layout_footer_social_links';
+  info: {
+    displayName: 'Footer Social Link';
+  };
+  attributes: {
+    href: Schema.Attribute.String;
+    isExternal: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    label: Schema.Attribute.String;
+    logo: Schema.Attribute.Media<'images'>;
   };
 }
 
@@ -177,6 +205,7 @@ export interface LayoutFooterTechnologyItem extends Struct.ComponentSchema {
     displayName: 'Footer Technology Item';
   };
   attributes: {
+    iconImage: Schema.Attribute.Media<'images'>;
     iconText: Schema.Attribute.String;
     link: Schema.Attribute.String;
     name: Schema.Attribute.String;
@@ -309,6 +338,8 @@ declare module '@strapi/strapi' {
       'layout.footer': LayoutFooter;
       'layout.footer-accordion-section': LayoutFooterAccordionSection;
       'layout.footer-award-item': LayoutFooterAwardItem;
+      'layout.footer-link-item': LayoutFooterLinkItem;
+      'layout.footer-social-link': LayoutFooterSocialLink;
       'layout.footer-solution-group': LayoutFooterSolutionGroup;
       'layout.footer-technology-item': LayoutFooterTechnologyItem;
       'layout.hero': LayoutHero;
