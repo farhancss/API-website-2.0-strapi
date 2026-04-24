@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_layout_legal_documents",
+  "info": {
+    "displayName": "Legal Document"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "blocks"
+    },
+    "description": {
+      "type": "blocks"
+    }
+  },
+  "config": {}
+}
