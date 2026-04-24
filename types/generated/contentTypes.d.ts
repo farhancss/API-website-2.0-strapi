@@ -653,7 +653,6 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'layout.content-with-image',
         'layout.card-grid',
         'layout.price-grid',
-        'layout.legal-document',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;

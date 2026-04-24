@@ -251,17 +251,6 @@ export interface LayoutHero extends Struct.ComponentSchema {
   };
 }
 
-export interface LayoutLegalDocument extends Struct.ComponentSchema {
-  collectionName: 'components_layout_legal_documents';
-  info: {
-    displayName: 'Legal Document';
-  };
-  attributes: {
-    description: Schema.Attribute.Blocks;
-    heading: Schema.Attribute.Blocks;
-  };
-}
-
 export interface LayoutPriceGrid extends Struct.ComponentSchema {
   collectionName: 'components_layout_price_grids';
   info: {
@@ -379,7 +368,6 @@ declare module '@strapi/strapi' {
       'layout.footer-solution-group': LayoutFooterSolutionGroup;
       'layout.footer-technology-item': LayoutFooterTechnologyItem;
       'layout.hero': LayoutHero;
-      'layout.legal-document': LayoutLegalDocument;
       'layout.price-grid': LayoutPriceGrid;
       'layout.section-heading': LayoutSectionHeading;
       'layout.top-nav': LayoutTopNav;
