@@ -257,8 +257,8 @@ export interface LayoutLegalDocument extends Struct.ComponentSchema {
     displayName: 'Legal Document';
   };
   attributes: {
-    description: Schema.Attribute.RichText;
-    heading: Schema.Attribute.RichText;
+    description: Schema.Attribute.Blocks;
+    heading: Schema.Attribute.Blocks;
   };
 }
 

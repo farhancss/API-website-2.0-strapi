@@ -6,10 +6,10 @@
   "options": {},
   "attributes": {
     "heading": {
-      "type": "richtext"
+      "type": "blocks"
     },
     "description": {
-      "type": "richtext"
+      "type": "blocks"
     }
   },
   "config": {}
