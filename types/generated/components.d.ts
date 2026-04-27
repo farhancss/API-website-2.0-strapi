@@ -234,20 +234,11 @@ export interface LayoutHero extends Struct.ComponentSchema {
     arrowImage: Schema.Attribute.Media<'images'>;
     assistText: Schema.Attribute.String;
     badgeItems: Schema.Attribute.Component<'elements.badge', true>;
-    buttonLink: Schema.Attribute.Component<'elements.link', true>;
     clientLogos: Schema.Attribute.Media<'images', true>;
-    clutchIcon: Schema.Attribute.Media<'images'>;
     experienceText: Schema.Attribute.Text;
     heading: Schema.Attribute.String;
     headingHighlight: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images'>;
-    inputPlaceholder: Schema.Attribute.String;
-    primaryButtonText: Schema.Attribute.String;
-    reviewScore: Schema.Attribute.String;
-    reviewStarsText: Schema.Attribute.String;
-    reviewText: Schema.Attribute.String;
-    text: Schema.Attribute.Text;
-    topLink: Schema.Attribute.Component<'elements.link', false>;
   };
 }
 
