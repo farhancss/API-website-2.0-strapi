@@ -10,6 +10,43 @@ export interface BlocksText extends Struct.ComponentSchema {
   };
 }
 
+export interface CaseStudyCategory extends Struct.ComponentSchema {
+  collectionName: 'components_case_study_categories';
+  info: {
+    displayName: 'Category';
+  };
+  attributes: {
+    items: Schema.Attribute.Component<'case-study.item', true>;
+    name: Schema.Attribute.String;
+  };
+}
+
+export interface CaseStudyItem extends Struct.ComponentSchema {
+  collectionName: 'components_case_study_items';
+  info: {
+    displayName: 'Case Study Item';
+  };
+  attributes: {
+    author_designation: Schema.Attribute.String;
+    author_image: Schema.Attribute.Media<'images'>;
+    author_name: Schema.Attribute.String;
+    company_name: Schema.Attribute.String;
+    funding_info: Schema.Attribute.String;
+    main_image: Schema.Attribute.Media<'images'>;
+    rating: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 5;
+          min: 1;
+        },
+        number
+      >;
+    review_text: Schema.Attribute.Text;
+    service_label: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface ElementsBadge extends Struct.ComponentSchema {
   collectionName: 'components_elements_badges';
   info: {
@@ -122,6 +159,17 @@ export interface LayoutContentWithVideo extends Struct.ComponentSchema {
     >;
     button: Schema.Attribute.Component<'layout.button', false>;
     youtubeUrl: Schema.Attribute.String;
+  };
+}
+
+export interface LayoutFeatureCaseStudies extends Struct.ComponentSchema {
+  collectionName: 'components_layout_feature_case_studies';
+  info: {
+    displayName: 'Feature Case Studies';
+  };
+  attributes: {
+    categories: Schema.Attribute.Component<'case-study.category', true>;
+    heading: Schema.Attribute.Blocks;
   };
 }
 
@@ -383,6 +431,8 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'blocks.text': BlocksText;
+      'case-study.category': CaseStudyCategory;
+      'case-study.item': CaseStudyItem;
       'elements.badge': ElementsBadge;
       'elements.card': ElementsCard;
       'elements.feature': ElementsFeature;
@@ -392,6 +442,7 @@ declare module '@strapi/strapi' {
       'layout.card-grid': LayoutCardGrid;
       'layout.content-with-image': LayoutContentWithImage;
       'layout.content-with-video': LayoutContentWithVideo;
+      'layout.feature-case-studies': LayoutFeatureCaseStudies;
       'layout.footer': LayoutFooter;
       'layout.footer-accordion-section': LayoutFooterAccordionSection;
       'layout.footer-award-item': LayoutFooterAwardItem;

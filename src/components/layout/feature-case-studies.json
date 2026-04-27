@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_layout_feature_case_studies",
+  "info": {
+    "displayName": "Feature Case Studies"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "blocks"
+    },
+    "categories": {
+      "type": "component",
+      "component": "case-study.category",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

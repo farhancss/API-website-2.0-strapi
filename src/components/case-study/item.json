@@ -1,0 +1,50 @@
+{
+  "collectionName": "components_case_study_items",
+  "info": {
+    "displayName": "Case Study Item"
+  },
+  "attributes": {
+    "company_name": {
+      "type": "string"
+    },
+
+    "service_label": {
+      "type": "string"
+    },
+    "funding_info": {
+      "type": "string"
+    },
+
+    "title": {
+      "type": "string"
+    },
+
+    "rating": {
+      "type": "integer",
+      "min": 1,
+      "max": 5
+    },
+
+    "review_text": {
+      "type": "text"
+    },
+
+    "author_name": {
+      "type": "string"
+    },
+    "author_designation": {
+      "type": "string"
+    },
+    "author_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+
+    "main_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    }
+  }
+}

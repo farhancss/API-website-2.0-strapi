@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_case_study_categories",
+  "info": {
+    "displayName": "Category"
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "case-study.item"
+    }
+  }
+}
