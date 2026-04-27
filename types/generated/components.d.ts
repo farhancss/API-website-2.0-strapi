@@ -345,9 +345,10 @@ export interface LayoutSectionHeading extends Struct.ComponentSchema {
     displayName: 'Section Heading';
   };
   attributes: {
+    DGEImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     heading: Schema.Attribute.Blocks;
+    items: Schema.Attribute.Component<'blocks.text', true>;
     subHeading: Schema.Attribute.Blocks;
-    text: Schema.Attribute.Text;
   };
 }
 
