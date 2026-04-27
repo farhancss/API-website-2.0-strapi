@@ -342,7 +342,7 @@ export interface LayoutPriceGrid extends Struct.ComponentSchema {
 export interface LayoutSectionHeading extends Struct.ComponentSchema {
   collectionName: 'components_layout_section_headings';
   info: {
-    displayName: 'Section Heading';
+    displayName: 'DGE Section';
   };
   attributes: {
     DGEImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
