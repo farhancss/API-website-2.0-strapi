@@ -6,7 +6,7 @@
   "options": {},
   "attributes": {
     "content": {
-      "type": "richtext"
+      "type": "blocks"
     }
   }
 }
