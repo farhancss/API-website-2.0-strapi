@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_layout_content_with_videos",
+  "info": {
+    "displayName": "Content With Video"
+  },
+  "options": {},
+  "attributes": {
+    "backgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "button": {
+      "type": "component",
+      "component": "layout.button",
+      "repeatable": false
+    },
+    "youtubeUrl": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
