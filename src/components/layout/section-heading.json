@@ -5,12 +5,6 @@
   },
   "options": {},
   "attributes": {
-    "subHeading": {
-      "type": "string"
-    },
-    "heading": {
-      "type": "text"
-    },
     "text": {
       "type": "text"
     }
