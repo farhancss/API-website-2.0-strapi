@@ -5,14 +5,26 @@
   },
   "options": {},
   "attributes": {
-    "subHeading": {
-      "type": "blocks"
-    },
     "heading": {
       "type": "blocks"
     },
-    "text": {
-      "type": "text"
+    "subHeading": {
+      "type": "blocks"
+    },
+    "DGEImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "items": {
+      "type": "component",
+      "component": "blocks.text",
+      "repeatable": true
     }
   }
 }
