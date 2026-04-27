@@ -345,6 +345,8 @@ export interface LayoutSectionHeading extends Struct.ComponentSchema {
     displayName: 'Section Heading';
   };
   attributes: {
+    heading: Schema.Attribute.Blocks;
+    subHeading: Schema.Attribute.Blocks;
     text: Schema.Attribute.Text;
   };
 }
