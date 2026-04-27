@@ -30,7 +30,8 @@
         "layout.content-with-image",
         "layout.card-grid",
         "layout.price-grid",
-        "layout.legal-document"
+        "layout.legal-document",
+        "layout.content-with-video"
       ]
     },
     "seo": {

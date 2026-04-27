@@ -75,6 +75,17 @@ export interface ElementsPriceCard extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutButton extends Struct.ComponentSchema {
+  collectionName: 'components_layout_buttons';
+  info: {
+    displayName: 'button';
+  };
+  attributes: {
+    buttonLink: Schema.Attribute.String;
+    buttonText: Schema.Attribute.String;
+  };
+}
+
 export interface LayoutCardGrid extends Struct.ComponentSchema {
   collectionName: 'components_layout_card_grids';
   info: {
@@ -97,6 +108,20 @@ export interface LayoutContentWithImage extends Struct.ComponentSchema {
     reverse: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     subHeading: Schema.Attribute.String;
     text: Schema.Attribute.Text;
+  };
+}
+
+export interface LayoutContentWithVideo extends Struct.ComponentSchema {
+  collectionName: 'components_layout_content_with_videos';
+  info: {
+    displayName: 'Content With Video';
+  };
+  attributes: {
+    backgroundImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    button: Schema.Attribute.Component<'layout.button', false>;
+    youtubeUrl: Schema.Attribute.String;
   };
 }
 
@@ -233,6 +258,9 @@ export interface LayoutHero extends Struct.ComponentSchema {
   attributes: {
     arrowImage: Schema.Attribute.Media<'images'>;
     assistText: Schema.Attribute.String;
+    badgeImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
     badgeItems: Schema.Attribute.Component<'elements.badge', true>;
     clientLogos: Schema.Attribute.Media<'images', true>;
     experienceText: Schema.Attribute.Text;
@@ -360,8 +388,10 @@ declare module '@strapi/strapi' {
       'elements.feature': ElementsFeature;
       'elements.link': ElementsLink;
       'elements.price-card': ElementsPriceCard;
+      'layout.button': LayoutButton;
       'layout.card-grid': LayoutCardGrid;
       'layout.content-with-image': LayoutContentWithImage;
+      'layout.content-with-video': LayoutContentWithVideo;
       'layout.footer': LayoutFooter;
       'layout.footer-accordion-section': LayoutFooterAccordionSection;
       'layout.footer-award-item': LayoutFooterAwardItem;
