@@ -11,6 +11,9 @@
     "text": {
       "type": "string"
     },
+    "label": {
+      "type": "string"
+    },
     "isExternal": {
       "type": "boolean",
       "default": false
@@ -18,6 +21,16 @@
     "isPrimary": {
       "type": "boolean",
       "default": false
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     }
   }
 }

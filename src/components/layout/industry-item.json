@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_layout_industry_items",
+  "info": {
+    "displayName": "Industry Item"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": true
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "clientLogos": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "cta":{
+      "type":"component",
+      "component":"elements.link",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

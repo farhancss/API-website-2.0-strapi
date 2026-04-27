@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_elements_form_fields",
+  "info": {
+    "displayName": "Form Fields"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "placeholder": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "text",
+        "email",
+        "tel"
+      ]
+    },
+    "required": {
+      "type": "boolean"
+    }
+  },
+  "config": {}
+}
