@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_layout_faq_sections",
+  "info": {
+    "displayName": "FAQ Section"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "blocks",
+      "default": "Got questions? We’re here to assist!"
+    },
+    "faqs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.faq-item"
+    },
+      "cta":{
+      "type":"component",
+      "component":"elements.link",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

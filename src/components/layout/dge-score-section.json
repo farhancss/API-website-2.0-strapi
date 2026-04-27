@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_layout_dge_score_sections",
+  "info": {
+    "displayName": "DGE Score Section"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "blocks"
+    },
+    "description": {
+      "type": "text"
+    },
+    "backgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "formTitle": {
+      "type": "string"
+    },
+    "formFields": {
+      "type": "component",
+      "component": "elements.form-fields",
+      "repeatable": true
+    },
+    "submitButtonLabel": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

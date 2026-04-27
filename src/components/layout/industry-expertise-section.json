@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_layout_industry_expertise_sections",
+  "info": {
+    "displayName": "Industry Expertise Section"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "blocks"
+    },
+    "industries": {
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.industry-item"
+    }
+  },
+  "config": {}
+}

@@ -83,6 +83,19 @@ export interface ElementsFeature extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementsFormFields extends Struct.ComponentSchema {
+  collectionName: 'components_elements_form_fields';
+  info: {
+    displayName: 'Form Fields';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    placeholder: Schema.Attribute.String;
+    required: Schema.Attribute.Boolean;
+    type: Schema.Attribute.Enumeration<['text', 'email', 'tel']>;
+  };
+}
+
 export interface ElementsLink extends Struct.ComponentSchema {
   collectionName: 'components_elements_links';
   info: {
@@ -90,8 +103,10 @@ export interface ElementsLink extends Struct.ComponentSchema {
   };
   attributes: {
     href: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     isExternal: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     isPrimary: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    label: Schema.Attribute.String;
     text: Schema.Attribute.String;
   };
 }
@@ -175,6 +190,47 @@ export interface LayoutContentWithVideo extends Struct.ComponentSchema {
     >;
     button: Schema.Attribute.Component<'layout.button', false>;
     youtubeUrl: Schema.Attribute.String;
+  };
+}
+
+export interface LayoutDgeScoreSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_dge_score_sections';
+  info: {
+    displayName: 'DGE Score Section';
+  };
+  attributes: {
+    backgroundImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    description: Schema.Attribute.Text;
+    formFields: Schema.Attribute.Component<'elements.form-fields', true>;
+    formTitle: Schema.Attribute.String;
+    heading: Schema.Attribute.Blocks;
+    submitButtonLabel: Schema.Attribute.String;
+  };
+}
+
+export interface LayoutFaqItem extends Struct.ComponentSchema {
+  collectionName: 'components_layout_faq_items';
+  info: {
+    displayName: 'FAQ Item';
+  };
+  attributes: {
+    answer: Schema.Attribute.Text;
+    question: Schema.Attribute.String;
+  };
+}
+
+export interface LayoutFaqSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_faq_sections';
+  info: {
+    displayName: 'FAQ Section';
+  };
+  attributes: {
+    cta: Schema.Attribute.Component<'elements.link', false>;
+    faqs: Schema.Attribute.Component<'layout.faq-item', true>;
+    heading: Schema.Attribute.Blocks &
+      Schema.Attribute.DefaultTo<'Got questions? We\u2019re here to assist!'>;
   };
 }
 
@@ -334,6 +390,34 @@ export interface LayoutHero extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutIndustryExpertiseSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_industry_expertise_sections';
+  info: {
+    displayName: 'Industry Expertise Section';
+  };
+  attributes: {
+    heading: Schema.Attribute.Blocks;
+    industries: Schema.Attribute.Component<'layout.industry-item', true>;
+  };
+}
+
+export interface LayoutIndustryItem extends Struct.ComponentSchema {
+  collectionName: 'components_layout_industry_items';
+  info: {
+    displayName: 'Industry Item';
+  };
+  attributes: {
+    clientLogos: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    cta: Schema.Attribute.Component<'elements.link', false>;
+    description: Schema.Attribute.Blocks;
+    tags: Schema.Attribute.Component<'elements.link', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface LayoutLegalDocument extends Struct.ComponentSchema {
   collectionName: 'components_layout_legal_documents';
   info: {
@@ -453,6 +537,7 @@ declare module '@strapi/strapi' {
       'elements.badge': ElementsBadge;
       'elements.card': ElementsCard;
       'elements.feature': ElementsFeature;
+      'elements.form-fields': ElementsFormFields;
       'elements.link': ElementsLink;
       'elements.price-card': ElementsPriceCard;
       'layout.award-section': LayoutAwardSection;
@@ -460,6 +545,9 @@ declare module '@strapi/strapi' {
       'layout.card-grid': LayoutCardGrid;
       'layout.content-with-image': LayoutContentWithImage;
       'layout.content-with-video': LayoutContentWithVideo;
+      'layout.dge-score-section': LayoutDgeScoreSection;
+      'layout.faq-item': LayoutFaqItem;
+      'layout.faq-section': LayoutFaqSection;
       'layout.feature-case-studies': LayoutFeatureCaseStudies;
       'layout.footer': LayoutFooter;
       'layout.footer-accordion-section': LayoutFooterAccordionSection;
@@ -469,6 +557,8 @@ declare module '@strapi/strapi' {
       'layout.footer-solution-group': LayoutFooterSolutionGroup;
       'layout.footer-technology-item': LayoutFooterTechnologyItem;
       'layout.hero': LayoutHero;
+      'layout.industry-expertise-section': LayoutIndustryExpertiseSection;
+      'layout.industry-item': LayoutIndustryItem;
       'layout.legal-document': LayoutLegalDocument;
       'layout.price-grid': LayoutPriceGrid;
       'layout.section-heading': LayoutSectionHeading;
