@@ -5,6 +5,12 @@
   },
   "options": {},
   "attributes": {
+    "subHeading": {
+      "type": "blocks"
+    },
+    "heading": {
+      "type": "blocks"
+    },
     "text": {
       "type": "text"
     }
