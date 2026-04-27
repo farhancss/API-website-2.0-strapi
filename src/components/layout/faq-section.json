@@ -6,8 +6,7 @@
   "options": {},
   "attributes": {
     "heading": {
-      "type": "blocks",
-      "default": "Got questions? We’re here to assist!"
+      "type": "blocks"
     },
     "faqs": {
       "type": "component",

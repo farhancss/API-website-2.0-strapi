@@ -213,8 +213,7 @@ export interface LayoutFaqSection extends Struct.ComponentSchema {
   attributes: {
     cta: Schema.Attribute.Component<'elements.link', false>;
     faqs: Schema.Attribute.Component<'layout.faq-item', true>;
-    heading: Schema.Attribute.Blocks &
-      Schema.Attribute.DefaultTo<'Got questions? We\u2019re here to assist!'>;
+    heading: Schema.Attribute.Blocks;
   };
 }
 
