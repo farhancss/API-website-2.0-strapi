@@ -6,7 +6,7 @@ export interface BlocksText extends Struct.ComponentSchema {
     displayName: 'Text';
   };
   attributes: {
-    content: Schema.Attribute.RichText;
+    content: Schema.Attribute.Blocks;
   };
 }
 
@@ -109,6 +109,22 @@ export interface ElementsPriceCard extends Struct.ComponentSchema {
     link: Schema.Attribute.Component<'elements.link', false>;
     price: Schema.Attribute.String;
     selected: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+  };
+}
+
+export interface LayoutAwardSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_award_sections';
+  info: {
+    displayName: 'Award Section';
+  };
+  attributes: {
+    awards: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    description: Schema.Attribute.Blocks;
+    heading: Schema.Attribute.Blocks;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
@@ -439,6 +455,7 @@ declare module '@strapi/strapi' {
       'elements.feature': ElementsFeature;
       'elements.link': ElementsLink;
       'elements.price-card': ElementsPriceCard;
+      'layout.award-section': LayoutAwardSection;
       'layout.button': LayoutButton;
       'layout.card-grid': LayoutCardGrid;
       'layout.content-with-image': LayoutContentWithImage;
