@@ -615,6 +615,7 @@ export interface ApiLandingPageLandingPage extends Struct.SingleTypeSchema {
         'layout.content-with-image',
         'layout.price-grid',
         'layout.content-with-video',
+        'layout.feature-case-studies',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
