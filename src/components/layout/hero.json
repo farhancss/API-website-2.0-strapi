@@ -6,80 +6,43 @@
   },
   "options": {},
   "attributes": {
+    "badgeItems": {
+      "type": "component",
+      "component": "elements.badge",
+      "repeatable": true
+    },
     "heading": {
       "type": "string"
     },
     "headingHighlight": {
       "type": "string"
     },
-    "text": {
-      "type": "text"
-    },
-    "badgeItems": {
-      "type": "component",
-      "repeatable": true,
-      "component": "elements.badge"
-    },
-    "topLink": {
-      "displayName": "Link",
-      "type": "component",
-      "repeatable": false,
-      "component": "elements.link"
-    },
-    "buttonLink": {
-      "type": "component",
-      "repeatable": true,
-      "component": "elements.link"
-    },
     "image": {
+      "type": "media",
+      "multiple": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
-    },
-    "inputPlaceholder": {
-      "type": "string"
-    },
-    "primaryButtonText": {
-      "type": "string"
-    },
-    "clutchIcon": {
-      "allowedTypes": [
-        "images"
-      ],
-      "type": "media",
-      "multiple": false
-    },
-    "reviewScore": {
-      "type": "string"
-    },
-    "reviewStarsText": {
-      "type": "string"
-    },
-    "reviewText": {
-      "type": "string"
+      ]
     },
     "experienceText": {
       "type": "text"
     },
+    "arrowImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
     "assistText": {
       "type": "string"
     },
-    "arrowImage": {
-      "allowedTypes": [
-        "images"
-      ],
-      "type": "media",
-      "multiple": false
-    },
     "clientLogos": {
+      "type": "media",
+      "multiple": true,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     }
   }
 }
- 
