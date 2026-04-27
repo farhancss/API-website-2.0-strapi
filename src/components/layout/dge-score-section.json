@@ -20,17 +20,6 @@
         "videos",
         "audios"
       ]
-    },
-    "formTitle": {
-      "type": "string"
-    },
-    "formFields": {
-      "type": "component",
-      "component": "elements.form-fields",
-      "repeatable": true
-    },
-    "submitButtonLabel": {
-      "type": "string"
     }
   },
   "config": {}

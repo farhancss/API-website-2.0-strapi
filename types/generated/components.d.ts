@@ -83,19 +83,6 @@ export interface ElementsFeature extends Struct.ComponentSchema {
   };
 }
 
-export interface ElementsFormFields extends Struct.ComponentSchema {
-  collectionName: 'components_elements_form_fields';
-  info: {
-    displayName: 'Form Fields';
-  };
-  attributes: {
-    label: Schema.Attribute.String;
-    placeholder: Schema.Attribute.String;
-    required: Schema.Attribute.Boolean;
-    type: Schema.Attribute.Enumeration<['text', 'email', 'tel']>;
-  };
-}
-
 export interface ElementsLink extends Struct.ComponentSchema {
   collectionName: 'components_elements_links';
   info: {
@@ -203,10 +190,7 @@ export interface LayoutDgeScoreSection extends Struct.ComponentSchema {
       'images' | 'files' | 'videos' | 'audios'
     >;
     description: Schema.Attribute.Text;
-    formFields: Schema.Attribute.Component<'elements.form-fields', true>;
-    formTitle: Schema.Attribute.String;
     heading: Schema.Attribute.Blocks;
-    submitButtonLabel: Schema.Attribute.String;
   };
 }
 
@@ -537,7 +521,6 @@ declare module '@strapi/strapi' {
       'elements.badge': ElementsBadge;
       'elements.card': ElementsCard;
       'elements.feature': ElementsFeature;
-      'elements.form-fields': ElementsFormFields;
       'elements.link': ElementsLink;
       'elements.price-card': ElementsPriceCard;
       'layout.award-section': LayoutAwardSection;
