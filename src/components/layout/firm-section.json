@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_layout_firm_sections",
+  "info": {
+    "displayName": "Firm Section"
+  },
+  "options": {},
+  "attributes": {
+    "topHeading": {
+      "type": "string"
+    },
+    "sectionTitle": {
+      "type": "component",
+      "component": "elements.tabs",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

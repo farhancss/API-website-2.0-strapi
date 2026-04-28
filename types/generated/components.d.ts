@@ -114,6 +114,34 @@ export interface ElementsPriceCard extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementsTabs extends Struct.ComponentSchema {
+  collectionName: 'components_elements_tabs';
+  info: {
+    displayName: 'Tabs';
+  };
+  attributes: {
+    description: Schema.Attribute.Blocks;
+    heading: Schema.Attribute.String;
+  };
+}
+
+export interface LayoutAboutSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_about_sections';
+  info: {
+    displayName: 'About Section';
+  };
+  attributes: {
+    aboutBadges: Schema.Attribute.Component<'elements.badge', true>;
+    companyImages: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    description: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    trustedHeading: Schema.Attribute.String;
+  };
+}
+
 export interface LayoutAwardSection extends Struct.ComponentSchema {
   collectionName: 'components_layout_award_sections';
   info: {
@@ -158,6 +186,7 @@ export interface LayoutContentWithImage extends Struct.ComponentSchema {
     displayName: 'Content With Image';
   };
   attributes: {
+    cat: Schema.Attribute.Component<'elements.link', true>;
     heading: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     reverse: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
@@ -225,6 +254,17 @@ export interface LayoutFeatureCaseStudies extends Struct.ComponentSchema {
   attributes: {
     categories: Schema.Attribute.Component<'case-study.category', true>;
     heading: Schema.Attribute.Blocks;
+  };
+}
+
+export interface LayoutFirmSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_firm_sections';
+  info: {
+    displayName: 'Firm Section';
+  };
+  attributes: {
+    sectionTitle: Schema.Attribute.Component<'elements.tabs', true>;
+    topHeading: Schema.Attribute.String;
   };
 }
 
@@ -352,6 +392,23 @@ export interface LayoutFooterTechnologyItem extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutFounderSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_founder_sections';
+  info: {
+    displayName: 'Founder Section';
+  };
+  attributes: {
+    cat: Schema.Attribute.Component<'elements.link', true>;
+    designation: Schema.Attribute.String;
+    dna: Schema.Attribute.String;
+    founderImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    founderName: Schema.Attribute.String;
+    funderDescription: Schema.Attribute.Blocks;
+  };
+}
+
 export interface LayoutHero extends Struct.ComponentSchema {
   collectionName: 'components_layout_heroes';
   info: {
@@ -370,6 +427,21 @@ export interface LayoutHero extends Struct.ComponentSchema {
     heading: Schema.Attribute.String;
     headingHighlight: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images'>;
+  };
+}
+
+export interface LayoutImageSliderSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_image_slider_sections';
+  info: {
+    displayName: 'Image Slider Section';
+  };
+  attributes: {
+    cat: Schema.Attribute.Component<'elements.link', true>;
+    heading: Schema.Attribute.String;
+    images: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
   };
 }
 
@@ -401,6 +473,19 @@ export interface LayoutIndustryItem extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutLeadersBoard extends Struct.ComponentSchema {
+  collectionName: 'components_layout_leaders_boards';
+  info: {
+    displayName: 'Leaders Board Section';
+  };
+  attributes: {
+    cat: Schema.Attribute.Component<'elements.link', true>;
+    description: Schema.Attribute.Blocks;
+    heading: Schema.Attribute.Blocks;
+    profile: Schema.Attribute.Component<'layout.profile-section', true>;
+  };
+}
+
 export interface LayoutLegalDocument extends Struct.ComponentSchema {
   collectionName: 'components_layout_legal_documents';
   info: {
@@ -409,6 +494,17 @@ export interface LayoutLegalDocument extends Struct.ComponentSchema {
   attributes: {
     description: Schema.Attribute.Blocks;
     heading: Schema.Attribute.Blocks;
+  };
+}
+
+export interface LayoutMissionVision extends Struct.ComponentSchema {
+  collectionName: 'components_layout_mission_visions';
+  info: {
+    displayName: 'Mission Vision Section';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    missionVisionTabs: Schema.Attribute.Component<'elements.tabs', true>;
   };
 }
 
@@ -422,6 +518,32 @@ export interface LayoutPriceGrid extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutProfileSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_profile_sections';
+  info: {
+    displayName: 'Profile Section';
+  };
+  attributes: {
+    designation: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    linkedinUrl: Schema.Attribute.String;
+    name: Schema.Attribute.String;
+  };
+}
+
+export interface LayoutResourcesAndCareers extends Struct.ComponentSchema {
+  collectionName: 'components_layout_resources_and_careers';
+  info: {
+    displayName: 'Resources & Careers';
+  };
+  attributes: {
+    sectionWithImage: Schema.Attribute.Component<
+      'layout.content-with-image',
+      true
+    >;
+  };
+}
+
 export interface LayoutSectionHeading extends Struct.ComponentSchema {
   collectionName: 'components_layout_section_headings';
   info: {
@@ -432,6 +554,24 @@ export interface LayoutSectionHeading extends Struct.ComponentSchema {
     heading: Schema.Attribute.Blocks;
     items: Schema.Attribute.Component<'blocks.text', true>;
     subHeading: Schema.Attribute.Blocks;
+  };
+}
+
+export interface LayoutStatsSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_stats_sections';
+  info: {
+    displayName: 'Stats Section';
+  };
+  attributes: {
+    awardsImages: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    clutchImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    stats: Schema.Attribute.Component<'layout.content-with-image', true>;
   };
 }
 
@@ -522,6 +662,8 @@ declare module '@strapi/strapi' {
       'elements.feature': ElementsFeature;
       'elements.link': ElementsLink;
       'elements.price-card': ElementsPriceCard;
+      'elements.tabs': ElementsTabs;
+      'layout.about-section': LayoutAboutSection;
       'layout.award-section': LayoutAwardSection;
       'layout.button': LayoutButton;
       'layout.card-grid': LayoutCardGrid;
@@ -531,6 +673,7 @@ declare module '@strapi/strapi' {
       'layout.faq-item': LayoutFaqItem;
       'layout.faq-section': LayoutFaqSection;
       'layout.feature-case-studies': LayoutFeatureCaseStudies;
+      'layout.firm-section': LayoutFirmSection;
       'layout.footer': LayoutFooter;
       'layout.footer-accordion-section': LayoutFooterAccordionSection;
       'layout.footer-award-item': LayoutFooterAwardItem;
@@ -538,12 +681,19 @@ declare module '@strapi/strapi' {
       'layout.footer-social-link': LayoutFooterSocialLink;
       'layout.footer-solution-group': LayoutFooterSolutionGroup;
       'layout.footer-technology-item': LayoutFooterTechnologyItem;
+      'layout.founder-section': LayoutFounderSection;
       'layout.hero': LayoutHero;
+      'layout.image-slider-section': LayoutImageSliderSection;
       'layout.industry-expertise-section': LayoutIndustryExpertiseSection;
       'layout.industry-item': LayoutIndustryItem;
+      'layout.leaders-board': LayoutLeadersBoard;
       'layout.legal-document': LayoutLegalDocument;
+      'layout.mission-vision': LayoutMissionVision;
       'layout.price-grid': LayoutPriceGrid;
+      'layout.profile-section': LayoutProfileSection;
+      'layout.resources-and-careers': LayoutResourcesAndCareers;
       'layout.section-heading': LayoutSectionHeading;
+      'layout.stats-section': LayoutStatsSection;
       'layout.top-nav': LayoutTopNav;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;

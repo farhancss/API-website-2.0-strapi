@@ -31,13 +31,22 @@
         "layout.card-grid",
         "layout.price-grid",
         "layout.legal-document",
-        "layout.content-with-video"
+        "layout.content-with-video",
+        "layout.resources-and-careers",
+        "layout.profile-section",
+        "layout.mission-vision",
+        "layout.leaders-board",
+        "layout.founder-section",
+        "layout.firm-section",
+        "layout.about-section",
+        "layout.stats-section",
+        "layout.image-slider-section"
       ]
     },
     "seo": {
       "type": "component",
-      "repeatable": false,
-      "component": "shared.seo"
+      "component": "shared.seo",
+      "repeatable": false
     }
   }
 }

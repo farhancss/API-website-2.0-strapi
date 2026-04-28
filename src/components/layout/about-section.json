@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_layout_about_sections",
+  "info": {
+    "displayName": "About Section"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "aboutBadges": {
+      "type": "component",
+      "component": "elements.badge",
+      "repeatable": true
+    },
+    "description": {
+      "type": "string"
+    },
+    "trustedHeading": {
+      "type": "string"
+    },
+    "companyImages": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

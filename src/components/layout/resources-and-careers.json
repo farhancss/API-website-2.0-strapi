@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_layout_resources_and_careers",
+  "info": {
+    "displayName": "Resources & Careers"
+  },
+  "options": {},
+  "attributes": {
+    "sectionWithImage": {
+      "type": "component",
+      "component": "layout.content-with-image",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
