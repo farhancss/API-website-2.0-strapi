@@ -186,7 +186,7 @@ export interface LayoutContentWithImage extends Struct.ComponentSchema {
     displayName: 'Content With Image';
   };
   attributes: {
-    cat: Schema.Attribute.Component<'elements.link', true>;
+    cta: Schema.Attribute.Component<'elements.link', true>;
     heading: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     reverse: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
@@ -398,7 +398,7 @@ export interface LayoutFounderSection extends Struct.ComponentSchema {
     displayName: 'Founder Section';
   };
   attributes: {
-    cat: Schema.Attribute.Component<'elements.link', true>;
+    cta: Schema.Attribute.Component<'elements.link', true>;
     designation: Schema.Attribute.String;
     dna: Schema.Attribute.String;
     founderImage: Schema.Attribute.Media<

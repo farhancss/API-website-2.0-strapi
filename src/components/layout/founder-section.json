@@ -27,7 +27,7 @@
     "funderDescription": {
       "type": "blocks"
     },
-    "cat": {
+    "cta": {
       "type": "component",
       "component": "elements.link",
       "repeatable": true
