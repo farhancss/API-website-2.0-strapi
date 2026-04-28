@@ -1,0 +1,45 @@
+{
+  "collectionName": "components_layout_stats_sections",
+  "info": {
+    "displayName": "Stats Section"
+  },
+  "options": {},
+  "attributes": {
+    "clutchImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "stats": {
+      "type": "component",
+      "component": "layout.content-with-image",
+      "repeatable": true
+    },
+    "awardsImages": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

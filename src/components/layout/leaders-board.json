@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_layout_leaders_boards",
+  "info": {
+    "displayName": "Leaders Board Section"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "blocks"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "cat": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": true
+    },
+    "profile": {
+      "type": "component",
+      "component": "layout.profile-section",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

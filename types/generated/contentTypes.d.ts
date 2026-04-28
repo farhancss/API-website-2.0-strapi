@@ -659,6 +659,15 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'layout.price-grid',
         'layout.legal-document',
         'layout.content-with-video',
+        'layout.resources-and-careers',
+        'layout.profile-section',
+        'layout.mission-vision',
+        'layout.leaders-board',
+        'layout.founder-section',
+        'layout.firm-section',
+        'layout.about-section',
+        'layout.stats-section',
+        'layout.image-slider-section',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;

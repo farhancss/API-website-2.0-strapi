@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_layout_founder_sections",
+  "info": {
+    "displayName": "Founder Section"
+  },
+  "options": {},
+  "attributes": {
+    "founderName": {
+      "type": "string"
+    },
+    "founderImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "designation": {
+      "type": "string"
+    },
+    "dna": {
+      "type": "string"
+    },
+    "funderDescription": {
+      "type": "blocks"
+    },
+    "cat": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

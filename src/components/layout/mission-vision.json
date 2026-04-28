@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_layout_mission_visions",
+  "info": {
+    "displayName": "Mission Vision Section"
+  },
+  "options": {},
+  "attributes": {
+    "missionVisionTabs": {
+      "type": "component",
+      "component": "elements.tabs",
+      "repeatable": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}
