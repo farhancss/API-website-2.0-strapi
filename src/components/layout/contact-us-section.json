@@ -11,6 +11,9 @@
     "keyPoints": {
       "type": "blocks"
     },
+    "subHeading": {
+      "type": "string"
+    },
     "contactPerson": {
       "type": "component",
       "component": "layout.profile-section",
