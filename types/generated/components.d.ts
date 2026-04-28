@@ -98,6 +98,18 @@ export interface ElementsLink extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementsLinkBasic extends Struct.ComponentSchema {
+  collectionName: 'components_elements_link_basics';
+  info: {
+    displayName: 'Link Basic';
+  };
+  attributes: {
+    href: Schema.Attribute.String;
+    isExternal: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    text: Schema.Attribute.String;
+  };
+}
+
 export interface ElementsPriceCard extends Struct.ComponentSchema {
   collectionName: 'components_elements_price_cards';
   info: {
@@ -468,7 +480,7 @@ export interface LayoutImageSliderSection extends Struct.ComponentSchema {
     displayName: 'Image Slider Section';
   };
   attributes: {
-    cat: Schema.Attribute.Component<'elements.link', true>;
+    cta: Schema.Attribute.Component<'elements.link', true>;
     heading: Schema.Attribute.String;
     images: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
@@ -511,7 +523,7 @@ export interface LayoutLeadersBoard extends Struct.ComponentSchema {
     displayName: 'Leaders Board Section';
   };
   attributes: {
-    cat: Schema.Attribute.Component<'elements.link', true>;
+    cta: Schema.Attribute.Component<'elements.link', true>;
     description: Schema.Attribute.Blocks;
     heading: Schema.Attribute.Blocks;
     profile: Schema.Attribute.Component<'layout.profile-section', true>;
@@ -707,6 +719,7 @@ declare module '@strapi/strapi' {
       'elements.card': ElementsCard;
       'elements.feature': ElementsFeature;
       'elements.link': ElementsLink;
+      'elements.link-basic': ElementsLinkBasic;
       'elements.price-card': ElementsPriceCard;
       'elements.tabs': ElementsTabs;
       'layout.about-section': LayoutAboutSection;
