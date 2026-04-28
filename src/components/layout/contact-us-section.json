@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_layout_contact_us_sections",
+  "info": {
+    "displayName": "Contact Us Section"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "keyPoints": {
+      "type": "blocks"
+    },
+    "contactPerson": {
+      "type": "component",
+      "component": "layout.profile-section",
+      "repeatable": true
+    },
+    "badges": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

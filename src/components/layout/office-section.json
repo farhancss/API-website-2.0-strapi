@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_layout_office_sections",
+  "info": {
+    "displayName": "Office Section"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "Locations": {
+      "type": "component",
+      "component": "layout.heading-with-image",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

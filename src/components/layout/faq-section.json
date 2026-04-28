@@ -10,12 +10,27 @@
     },
     "faqs": {
       "type": "component",
-      "repeatable": true,
-      "component": "layout.faq-item"
+      "component": "layout.faq-item",
+      "repeatable": true
     },
-      "cta":{
-      "type":"component",
-      "component":"elements.link",
+    "cta": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": false
+    },
+    "backgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "contactCard": {
+      "type": "component",
+      "component": "layout.profile-section",
       "repeatable": false
     }
   },
