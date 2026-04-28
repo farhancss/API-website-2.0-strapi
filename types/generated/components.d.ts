@@ -205,6 +205,7 @@ export interface LayoutContactUsSection extends Struct.ComponentSchema {
     contactPerson: Schema.Attribute.Component<'layout.profile-section', true>;
     heading: Schema.Attribute.String;
     keyPoints: Schema.Attribute.Blocks;
+    subHeading: Schema.Attribute.String;
   };
 }
 
@@ -325,7 +326,7 @@ export interface LayoutFooter extends Struct.ComponentSchema {
     description: Schema.Attribute.Text;
     email: Schema.Attribute.Email;
     footerLinks: Schema.Attribute.Component<'layout.footer-link-item', true>;
-    legalLinks: Schema.Attribute.Component<'elements.link', true>;
+    legalLinks: Schema.Attribute.Component<'elements.link-basic', true>;
     logoImage: Schema.Attribute.Media<'images'>;
     logoText: Schema.Attribute.String;
     newsletterButtonText: Schema.Attribute.String &
