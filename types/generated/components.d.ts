@@ -180,6 +180,22 @@ export interface LayoutCardGrid extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutContactUsSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_contact_us_sections';
+  info: {
+    displayName: 'Contact Us Section';
+  };
+  attributes: {
+    badges: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    contactPerson: Schema.Attribute.Component<'layout.profile-section', true>;
+    heading: Schema.Attribute.String;
+    keyPoints: Schema.Attribute.Blocks;
+  };
+}
+
 export interface LayoutContentWithImage extends Struct.ComponentSchema {
   collectionName: 'components_layout_content_with_images';
   info: {
@@ -240,6 +256,10 @@ export interface LayoutFaqSection extends Struct.ComponentSchema {
     displayName: 'FAQ Section';
   };
   attributes: {
+    backgroundImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    contactCard: Schema.Attribute.Component<'layout.profile-section', false>;
     cta: Schema.Attribute.Component<'elements.link', false>;
     faqs: Schema.Attribute.Component<'layout.faq-item', true>;
     heading: Schema.Attribute.Blocks;
@@ -409,6 +429,18 @@ export interface LayoutFounderSection extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutHeadingWithImage extends Struct.ComponentSchema {
+  collectionName: 'components_layout_heading_with_images';
+  info: {
+    displayName: 'Heading With Image';
+  };
+  attributes: {
+    heading: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    subHeading: Schema.Attribute.String;
+  };
+}
+
 export interface LayoutHero extends Struct.ComponentSchema {
   collectionName: 'components_layout_heroes';
   info: {
@@ -508,6 +540,18 @@ export interface LayoutMissionVision extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutOfficeSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_office_sections';
+  info: {
+    displayName: 'Office Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Blocks;
+    heading: Schema.Attribute.String;
+    Locations: Schema.Attribute.Component<'layout.heading-with-image', true>;
+  };
+}
+
 export interface LayoutPriceGrid extends Struct.ComponentSchema {
   collectionName: 'components_layout_price_grids';
   info: {
@@ -525,9 +569,11 @@ export interface LayoutProfileSection extends Struct.ComponentSchema {
   };
   attributes: {
     designation: Schema.Attribute.String;
+    email: Schema.Attribute.Email;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     linkedinUrl: Schema.Attribute.String;
     name: Schema.Attribute.String;
+    phone: Schema.Attribute.String;
   };
 }
 
@@ -667,6 +713,7 @@ declare module '@strapi/strapi' {
       'layout.award-section': LayoutAwardSection;
       'layout.button': LayoutButton;
       'layout.card-grid': LayoutCardGrid;
+      'layout.contact-us-section': LayoutContactUsSection;
       'layout.content-with-image': LayoutContentWithImage;
       'layout.content-with-video': LayoutContentWithVideo;
       'layout.dge-score-section': LayoutDgeScoreSection;
@@ -682,6 +729,7 @@ declare module '@strapi/strapi' {
       'layout.footer-solution-group': LayoutFooterSolutionGroup;
       'layout.footer-technology-item': LayoutFooterTechnologyItem;
       'layout.founder-section': LayoutFounderSection;
+      'layout.heading-with-image': LayoutHeadingWithImage;
       'layout.hero': LayoutHero;
       'layout.image-slider-section': LayoutImageSliderSection;
       'layout.industry-expertise-section': LayoutIndustryExpertiseSection;
@@ -689,6 +737,7 @@ declare module '@strapi/strapi' {
       'layout.leaders-board': LayoutLeadersBoard;
       'layout.legal-document': LayoutLegalDocument;
       'layout.mission-vision': LayoutMissionVision;
+      'layout.office-section': LayoutOfficeSection;
       'layout.price-grid': LayoutPriceGrid;
       'layout.profile-section': LayoutProfileSection;
       'layout.resources-and-careers': LayoutResourcesAndCareers;

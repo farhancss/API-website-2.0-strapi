@@ -1,23 +1,14 @@
 {
-  "collectionName": "components_layout_profile_sections",
+  "collectionName": "components_layout_heading_with_images",
   "info": {
-    "displayName": "Profile Section"
+    "displayName": "Heading With Image"
   },
   "options": {},
   "attributes": {
-    "name": {
+    "heading": {
       "type": "string"
     },
-    "designation": {
-      "type": "string"
-    },
-    "email": {
-      "type": "email"
-    },
-    "phone": {
-      "type": "string"
-    },
-    "linkedinUrl": {
+    "subHeading": {
       "type": "string"
     },
     "image": {
