@@ -18,7 +18,7 @@
     "heading": {
       "type": "string"
     },
-    "cat": {
+    "cta": {
       "type": "component",
       "component": "elements.link",
       "repeatable": true
