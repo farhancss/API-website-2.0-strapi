@@ -28,6 +28,25 @@
         "videos",
         "audios"
       ]
+    },
+    "successMessage": {
+      "type": "string"
+    },
+    "successSubText": {
+      "type": "text"
+    },
+    "nextStepsHeading": {
+      "type": "string"
+    },
+    "nextSteps": {
+      "type": "component",
+      "component": "elements.steps",
+      "repeatable": true
+    },
+    "exploreSection": {
+      "type": "component",
+      "component": "layout.explore",
+      "repeatable": true
     }
   },
   "config": {}

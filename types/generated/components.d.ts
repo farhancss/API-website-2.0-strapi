@@ -126,6 +126,18 @@ export interface ElementsPriceCard extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementsSteps extends Struct.ComponentSchema {
+  collectionName: 'components_elements_steps';
+  info: {
+    displayName: 'Steps';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface ElementsTabs extends Struct.ComponentSchema {
   collectionName: 'components_elements_tabs';
   info: {
@@ -203,9 +215,14 @@ export interface LayoutContactUsSection extends Struct.ComponentSchema {
       true
     >;
     contactPerson: Schema.Attribute.Component<'layout.profile-section', true>;
+    exploreSection: Schema.Attribute.Component<'layout.explore', true>;
     heading: Schema.Attribute.String;
     keyPoints: Schema.Attribute.Blocks;
+    nextSteps: Schema.Attribute.Component<'elements.steps', true>;
+    nextStepsHeading: Schema.Attribute.String;
     subHeading: Schema.Attribute.String;
+    successMessage: Schema.Attribute.String;
+    successSubText: Schema.Attribute.Text;
   };
 }
 
@@ -249,6 +266,25 @@ export interface LayoutDgeScoreSection extends Struct.ComponentSchema {
     >;
     description: Schema.Attribute.Text;
     heading: Schema.Attribute.Blocks;
+  };
+}
+
+export interface LayoutExplore extends Struct.ComponentSchema {
+  collectionName: 'components_layout_explores';
+  info: {
+    displayName: 'Explore';
+  };
+  attributes: {
+    backgroundImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    cta: Schema.Attribute.Component<'elements.link-basic', true>;
+    description: Schema.Attribute.Text;
+    images: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -722,6 +758,7 @@ declare module '@strapi/strapi' {
       'elements.link': ElementsLink;
       'elements.link-basic': ElementsLinkBasic;
       'elements.price-card': ElementsPriceCard;
+      'elements.steps': ElementsSteps;
       'elements.tabs': ElementsTabs;
       'layout.about-section': LayoutAboutSection;
       'layout.award-section': LayoutAwardSection;
@@ -731,6 +768,7 @@ declare module '@strapi/strapi' {
       'layout.content-with-image': LayoutContentWithImage;
       'layout.content-with-video': LayoutContentWithVideo;
       'layout.dge-score-section': LayoutDgeScoreSection;
+      'layout.explore': LayoutExplore;
       'layout.faq-item': LayoutFaqItem;
       'layout.faq-section': LayoutFaqSection;
       'layout.feature-case-studies': LayoutFeatureCaseStudies;
