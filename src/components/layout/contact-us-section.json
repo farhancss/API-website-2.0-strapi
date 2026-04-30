@@ -43,6 +43,9 @@
       "component": "elements.steps",
       "repeatable": true
     },
+    "exploreSectionHeading": {
+      "type": "string"
+    },
     "exploreSection": {
       "type": "component",
       "component": "layout.explore",

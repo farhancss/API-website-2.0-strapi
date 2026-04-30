@@ -216,6 +216,7 @@ export interface LayoutContactUsSection extends Struct.ComponentSchema {
     >;
     contactPerson: Schema.Attribute.Component<'layout.profile-section', true>;
     exploreSection: Schema.Attribute.Component<'layout.explore', true>;
+    exploreSectionHeading: Schema.Attribute.String;
     heading: Schema.Attribute.String;
     keyPoints: Schema.Attribute.Blocks;
     nextSteps: Schema.Attribute.Component<'elements.steps', true>;
@@ -275,15 +276,9 @@ export interface LayoutExplore extends Struct.ComponentSchema {
     displayName: 'Explore';
   };
   attributes: {
-    backgroundImage: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    >;
+    backgroundColor: Schema.Attribute.String;
     cta: Schema.Attribute.Component<'elements.link-basic', true>;
-    description: Schema.Attribute.Text;
-    images: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    >;
+    images: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Schema.Attribute.String;
   };
 }
