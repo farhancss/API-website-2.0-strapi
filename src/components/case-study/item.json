@@ -15,10 +15,6 @@
       "type": "string"
     },
 
-    "title": {
-      "type": "blocks"
-    },
-
     "rating": {
       "type": "integer",
       "min": 1,
