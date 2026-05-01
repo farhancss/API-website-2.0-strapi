@@ -16,7 +16,7 @@
     },
 
     "title": {
-      "type": "string"
+      "type": "blocks"
     },
 
     "rating": {
