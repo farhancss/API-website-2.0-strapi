@@ -8,15 +8,10 @@
     "title": {
       "type": "string"
     },
-    "description": {
-      "type": "text"
+    "backgroundColor": {
+      "type": "string"
     },
-    "cta": {
-      "type": "component",
-      "component": "elements.link-basic",
-      "repeatable": true
-    },
-    "backgroundImage": {
+    "images": {
       "type": "media",
       "multiple": false,
       "allowedTypes": [
@@ -26,15 +21,10 @@
         "audios"
       ]
     },
-    "images": {
-      "type": "media",
-      "multiple": true,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
+    "cta": {
+      "type": "component",
+      "component": "elements.link-basic",
+      "repeatable": true
     }
   },
   "config": {}

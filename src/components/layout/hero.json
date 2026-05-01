@@ -53,6 +53,11 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "hubSpotForm": {
+      "type": "component",
+      "component": "sections.hub-spot-form",
+      "repeatable": false
     }
   }
 }
