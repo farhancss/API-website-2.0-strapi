@@ -43,6 +43,7 @@ export interface CaseStudyItem extends Struct.ComponentSchema {
       >;
     review_text: Schema.Attribute.Text;
     service_label: Schema.Attribute.String;
+    title: Schema.Attribute.Blocks;
   };
 }
 
