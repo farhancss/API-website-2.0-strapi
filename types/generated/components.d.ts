@@ -267,6 +267,7 @@ export interface LayoutDgeScoreSection extends Struct.ComponentSchema {
     >;
     description: Schema.Attribute.Text;
     heading: Schema.Attribute.Blocks;
+    hubSpotForm: Schema.Attribute.Component<'sections.hub-spot-form', false>;
   };
 }
 
@@ -502,6 +503,7 @@ export interface LayoutHero extends Struct.ComponentSchema {
     experienceText: Schema.Attribute.Text;
     heading: Schema.Attribute.String;
     headingHighlight: Schema.Attribute.String;
+    hubSpotForm: Schema.Attribute.Component<'sections.hub-spot-form', false>;
     image: Schema.Attribute.Media<'images'>;
   };
 }
@@ -679,6 +681,20 @@ export interface LayoutTopNav extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionsHubSpotForm extends Struct.ComponentSchema {
+  collectionName: 'components_sections_hub_spot_forms';
+  info: {
+    displayName: 'HubSpot Form';
+  };
+  attributes: {
+    formId: Schema.Attribute.String;
+    portalId: Schema.Attribute.String;
+    region: Schema.Attribute.String;
+    targetSelector: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_media';
   info: {
@@ -791,6 +807,7 @@ declare module '@strapi/strapi' {
       'layout.section-heading': LayoutSectionHeading;
       'layout.stats-section': LayoutStatsSection;
       'layout.top-nav': LayoutTopNav;
+      'sections.hub-spot-form': SectionsHubSpotForm;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;

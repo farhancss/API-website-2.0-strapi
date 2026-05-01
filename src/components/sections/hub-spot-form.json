@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_sections_hub_spot_forms",
+  "info": {
+    "displayName": "HubSpot Form"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "portalId": {
+      "type": "string"
+    },
+    "formId": {
+      "type": "string"
+    },
+    "region": {
+      "type": "string"
+    },
+    "targetSelector": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
