@@ -618,6 +618,7 @@ export interface LayoutProfileSection extends Struct.ComponentSchema {
     email: Schema.Attribute.Email;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     linkedinUrl: Schema.Attribute.String;
+    message: Schema.Attribute.String;
     name: Schema.Attribute.String;
     phone: Schema.Attribute.String;
   };

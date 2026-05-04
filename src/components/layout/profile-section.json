@@ -8,6 +8,9 @@
     "name": {
       "type": "string"
     },
+    "message": {
+      "type": "string"
+    },
     "designation": {
       "type": "string"
     },
