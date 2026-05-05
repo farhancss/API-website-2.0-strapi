@@ -626,8 +626,7 @@ export interface LayoutPortfolioProject extends Struct.ComponentSchema {
     projectName: Schema.Attribute.String & Schema.Attribute.Required;
     projectType: Schema.Attribute.String;
     services: Schema.Attribute.Component<'elements.badge', true>;
-    slug: Schema.Attribute.UID<'projectName'>;
-    tags: Schema.Attribute.Component<'elements.badge', true>;
+    slug: Schema.Attribute.String;
     thumbnail: Schema.Attribute.Media<'images'>;
   };
 }

@@ -10,7 +10,7 @@
       "required": true
     },
     "slug": {
-      "type": "uid",
+      "type": "string",
       "targetField": "projectName"
     },
     "projectType": {
@@ -20,11 +20,6 @@
       "type": "media",
       "multiple": false,
       "allowedTypes": ["images"]
-    },
-    "tags": {
-      "type": "component",
-      "repeatable": true,
-      "component": "elements.badge"
     },
     "industry": {
       "type": "string"
