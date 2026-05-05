@@ -671,6 +671,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'layout.office-section',
         'layout.contact-us-section',
         'layout.faq-section',
+        'layout.portfolio-section',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;

@@ -43,7 +43,8 @@
         "layout.image-slider-section",
         "layout.office-section",
         "layout.contact-us-section",
-        "layout.faq-section"
+        "layout.faq-section",
+        "layout.portfolio-section"
       ]
     },
     "seo": {

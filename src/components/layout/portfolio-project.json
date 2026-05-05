@@ -1,0 +1,63 @@
+{
+  "collectionName": "components_layout_portfolio_projects",
+  "info": {
+    "displayName": "Portfolio Project"
+  },
+  "options": {},
+  "attributes": {
+    "projectName": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "projectName"
+    },
+    "projectType": {
+      "type": "string"
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "tags": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.badge"
+    },
+    "industry": {
+      "type": "string"
+    },
+    "services": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.badge"
+    },
+    "platforms": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": ["images"]
+    },
+    "integrations": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.link-basic"
+    },
+    "overview": {
+      "type": "blocks"
+    },
+    "copyLink": {
+      "type": "string"
+    },
+    "gallery": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": ["images"]
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}
