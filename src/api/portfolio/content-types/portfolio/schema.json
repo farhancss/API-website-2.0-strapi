@@ -26,25 +26,29 @@
     "thumbnail": {
       "type": "media",
       "multiple": false,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
     },
     "industry": {
       "type": "string"
     },
     "services": {
       "type": "component",
-      "repeatable": true,
-      "component": "elements.badge"
+      "component": "elements.badge",
+      "repeatable": true
     },
     "platforms": {
       "type": "media",
       "multiple": true,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
     },
     "integrations": {
       "type": "component",
-      "repeatable": true,
-      "component": "elements.link-basic"
+      "component": "elements.link-basic",
+      "repeatable": true
     },
     "overview": {
       "type": "blocks"
@@ -55,7 +59,16 @@
     "gallery": {
       "type": "media",
       "multiple": true,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "block": {
+      "type": "dynamiczone",
+      "components": [
+        "layout.dge-score-section",
+        "layout.feature-case-studies"
+      ]
     }
   }
 }

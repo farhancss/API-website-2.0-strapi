@@ -702,6 +702,9 @@ export interface ApiPortfolioPortfolio extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    block: Schema.Attribute.DynamicZone<
+      ['layout.dge-score-section', 'layout.feature-case-studies']
+    >;
     copyLink: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
