@@ -36,11 +36,6 @@
       "repeatable": true,
       "component": "elements.badge"
     },
-    "technology": {
-      "type": "component",
-      "repeatable": true,
-      "component": "elements.badge"
-    },
     "platforms": {
       "type": "media",
       "multiple": true,

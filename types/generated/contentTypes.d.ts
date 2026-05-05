@@ -721,7 +721,6 @@ export interface ApiPortfolioPortfolio extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     services: Schema.Attribute.Component<'elements.badge', true>;
     slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
-    technology: Schema.Attribute.Component<'elements.badge', true>;
     thumbnail: Schema.Attribute.Media<'images'>;
     title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
