@@ -638,7 +638,18 @@ export interface LayoutPortfolioSection extends Struct.ComponentSchema {
   };
   attributes: {
     filters: Schema.Attribute.Component<'layout.portfolio-filter', true>;
-    projects: Schema.Attribute.Component<'layout.portfolio-project', true>;
+    itemsPerPage: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 1;
+        },
+        number
+      > &
+      Schema.Attribute.DefaultTo<6>;
+    projects: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::portfolio.portfolio'
+    >;
     title: Schema.Attribute.String & Schema.Attribute.DefaultTo<'Portfolio'>;
   };
 }
