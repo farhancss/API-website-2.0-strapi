@@ -15,9 +15,14 @@
       "repeatable": true
     },
     "projects": {
-      "type": "component",
-      "component": "layout.portfolio-project",
-      "repeatable": true
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::portfolio.portfolio"
+    },
+    "itemsPerPage": {
+      "type": "integer",
+      "default": 6,
+      "min": 1
     }
   }
 }
