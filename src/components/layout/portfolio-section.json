@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_layout_portfolio_sections",
+  "info": {
+    "displayName": "Portfolio Section"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Portfolio"
+    },
+    "filters": {
+      "type": "component",
+      "component": "layout.portfolio-filter",
+      "repeatable": true
+    },
+    "projects": {
+      "type": "component",
+      "component": "layout.portfolio-project",
+      "repeatable": true
+    }
+  }
+}

@@ -598,6 +598,52 @@ export interface LayoutOfficeSection extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutPortfolioFilter extends Struct.ComponentSchema {
+  collectionName: 'components_layout_portfolio_filters';
+  info: {
+    displayName: 'Portfolio Filter';
+  };
+  attributes: {
+    key: Schema.Attribute.Enumeration<['industry', 'services', 'technology']> &
+      Schema.Attribute.Required;
+    label: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface LayoutPortfolioProject extends Struct.ComponentSchema {
+  collectionName: 'components_layout_portfolio_projects';
+  info: {
+    displayName: 'Portfolio Project';
+  };
+  attributes: {
+    copyLink: Schema.Attribute.String;
+    featured: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    gallery: Schema.Attribute.Media<'images', true>;
+    industry: Schema.Attribute.String;
+    integrations: Schema.Attribute.Component<'elements.link-basic', true>;
+    overview: Schema.Attribute.Blocks;
+    platforms: Schema.Attribute.Media<'images', true>;
+    projectName: Schema.Attribute.String & Schema.Attribute.Required;
+    projectType: Schema.Attribute.String;
+    services: Schema.Attribute.Component<'elements.badge', true>;
+    slug: Schema.Attribute.UID<'projectName'>;
+    tags: Schema.Attribute.Component<'elements.badge', true>;
+    thumbnail: Schema.Attribute.Media<'images'>;
+  };
+}
+
+export interface LayoutPortfolioSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_portfolio_sections';
+  info: {
+    displayName: 'Portfolio Section';
+  };
+  attributes: {
+    filters: Schema.Attribute.Component<'layout.portfolio-filter', true>;
+    projects: Schema.Attribute.Component<'layout.portfolio-project', true>;
+    title: Schema.Attribute.String & Schema.Attribute.DefaultTo<'Portfolio'>;
+  };
+}
+
 export interface LayoutPriceGrid extends Struct.ComponentSchema {
   collectionName: 'components_layout_price_grids';
   info: {
@@ -802,6 +848,9 @@ declare module '@strapi/strapi' {
       'layout.legal-document': LayoutLegalDocument;
       'layout.mission-vision': LayoutMissionVision;
       'layout.office-section': LayoutOfficeSection;
+      'layout.portfolio-filter': LayoutPortfolioFilter;
+      'layout.portfolio-project': LayoutPortfolioProject;
+      'layout.portfolio-section': LayoutPortfolioSection;
       'layout.price-grid': LayoutPriceGrid;
       'layout.profile-section': LayoutProfileSection;
       'layout.resources-and-careers': LayoutResourcesAndCareers;

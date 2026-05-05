@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_layout_portfolio_filters",
+  "info": {
+    "displayName": "Portfolio Filter"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "key": {
+      "type": "enumeration",
+      "enum": ["industry", "services", "technology"],
+      "required": true
+    }
+  }
+}
