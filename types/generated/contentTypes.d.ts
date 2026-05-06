@@ -667,7 +667,11 @@ export interface ApiPortfolioPortfolio extends Struct.CollectionTypeSchema {
   };
   attributes: {
     block: Schema.Attribute.DynamicZone<
-      ['layout.dge-score-section', 'layout.feature-case-studies']
+      [
+        'layout.dge-score-section',
+        'layout.feature-case-studies',
+        'layout.portfolio-page-featured-case-studies',
+      ]
     >;
     copyLink: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
