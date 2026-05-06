@@ -218,6 +218,7 @@ export interface LayoutContactUsSection extends Struct.ComponentSchema {
     exploreSection: Schema.Attribute.Component<'layout.explore', true>;
     exploreSectionHeading: Schema.Attribute.String;
     heading: Schema.Attribute.String;
+    hubSpotForm: Schema.Attribute.Component<'sections.hub-spot-form', false>;
     keyPoints: Schema.Attribute.Blocks;
     nextSteps: Schema.Attribute.Component<'elements.steps', true>;
     nextStepsHeading: Schema.Attribute.String;
