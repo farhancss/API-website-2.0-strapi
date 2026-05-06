@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_layout_portfolio_page_featured_case_studies",
+  "info": {
+    "displayName": "Portfolio Page Featured Case Studies"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "featuredCaseStudies": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::featured-case-study.featured-case-study"
+    }
+  },
+  "config": {}
+}

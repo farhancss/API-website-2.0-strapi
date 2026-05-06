@@ -611,6 +611,21 @@ export interface LayoutPortfolioFilter extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutPortfolioPageFeaturedCaseStudies
+  extends Struct.ComponentSchema {
+  collectionName: 'components_layout_portfolio_page_featured_case_studies';
+  info: {
+    displayName: 'Portfolio Page Featured Case Studies';
+  };
+  attributes: {
+    featuredCaseStudies: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::featured-case-study.featured-case-study'
+    >;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface LayoutPortfolioProject extends Struct.ComponentSchema {
   collectionName: 'components_layout_portfolio_projects';
   info: {
@@ -891,6 +906,7 @@ declare module '@strapi/strapi' {
       'layout.mission-vision': LayoutMissionVision;
       'layout.office-section': LayoutOfficeSection;
       'layout.portfolio-filter': LayoutPortfolioFilter;
+      'layout.portfolio-page-featured-case-studies': LayoutPortfolioPageFeaturedCaseStudies;
       'layout.portfolio-project': LayoutPortfolioProject;
       'layout.portfolio-section': LayoutPortfolioSection;
       'layout.price-grid': LayoutPriceGrid;
