@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "portfolio_shareds",
+  "info": {
+    "singularName": "portfolio-shared",
+    "pluralName": "portfolio-shareds",
+    "displayName": "Portfolio Shared"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "sections": {
+      "type": "dynamiczone",
+      "components": [
+        "layout.dge-score-section",
+        "layout.portfolio-page-featured-case-studies"
+      ]
+    }
+  }
+}

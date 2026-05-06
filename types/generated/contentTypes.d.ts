@@ -655,6 +655,40 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiPortfolioSharedPortfolioShared
+  extends Struct.SingleTypeSchema {
+  collectionName: 'portfolio_shareds';
+  info: {
+    displayName: 'Portfolio Shared';
+    pluralName: 'portfolio-shareds';
+    singularName: 'portfolio-shared';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::portfolio-shared.portfolio-shared'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    sections: Schema.Attribute.DynamicZone<
+      [
+        'layout.dge-score-section',
+        'layout.portfolio-page-featured-case-studies',
+      ]
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiPortfolioPortfolio extends Struct.CollectionTypeSchema {
   collectionName: 'portfolios';
   info: {
@@ -666,13 +700,6 @@ export interface ApiPortfolioPortfolio extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    block: Schema.Attribute.DynamicZone<
-      [
-        'layout.dge-score-section',
-        'layout.feature-case-studies',
-        'layout.portfolio-page-featured-case-studies',
-      ]
-    >;
     copyLink: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -691,6 +718,10 @@ export interface ApiPortfolioPortfolio extends Struct.CollectionTypeSchema {
     projectType: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     services: Schema.Attribute.Component<'elements.badge', true>;
+    sharedSections: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::portfolio-shared.portfolio-shared'
+    >;
     slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
     thumbnail: Schema.Attribute.Media<'images'>;
     title: Schema.Attribute.String & Schema.Attribute.Required;
@@ -1216,6 +1247,7 @@ declare module '@strapi/strapi' {
       'api::industry.industry': ApiIndustryIndustry;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
       'api::page.page': ApiPagePage;
+      'api::portfolio-shared.portfolio-shared': ApiPortfolioSharedPortfolioShared;
       'api::portfolio.portfolio': ApiPortfolioPortfolio;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
