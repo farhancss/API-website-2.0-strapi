@@ -67,7 +67,8 @@
       "type": "dynamiczone",
       "components": [
         "layout.dge-score-section",
-        "layout.feature-case-studies"
+        "layout.feature-case-studies",
+        "layout.portfolio-page-featured-case-studies"
       ]
     }
   }
