@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "hub_spot_forms",
+  "info": {
+    "singularName": "hub-spot-form",
+    "pluralName": "hub-spot-forms",
+    "displayName": "HubSpot Form"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "portalId": {
+      "type": "string"
+    },
+    "formId": {
+      "type": "string"
+    },
+    "region": {
+      "type": "string"
+    },
+    "targetSelector": {
+      "type": "string"
+    }
+  }
+}
