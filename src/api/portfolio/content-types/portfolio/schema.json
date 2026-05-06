@@ -63,13 +63,10 @@
         "images"
       ]
     },
-    "block": {
-      "type": "dynamiczone",
-      "components": [
-        "layout.dge-score-section",
-        "layout.feature-case-studies",
-        "layout.portfolio-page-featured-case-studies"
-      ]
+    "sharedSections": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::portfolio-shared.portfolio-shared"
     }
   }
 }
