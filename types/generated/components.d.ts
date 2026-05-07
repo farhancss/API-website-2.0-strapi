@@ -401,6 +401,7 @@ export interface LayoutFooterAwardItem extends Struct.ComponentSchema {
     displayName: 'Footer Award Item';
   };
   attributes: {
+    backgroundImage: Schema.Attribute.Media<'images'>;
     href: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images'>;
     isExternal: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
