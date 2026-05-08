@@ -471,6 +471,10 @@ export interface ApiCaseStudyCaseStudy extends Struct.CollectionTypeSchema {
       ]
     >;
     services: Schema.Attribute.String;
+    sharedSections: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::portfolio-shared.portfolio-shared'
+    >;
     shareLabel: Schema.Attribute.String & Schema.Attribute.DefaultTo<'Share'>;
     shareLink: Schema.Attribute.Component<'elements.link-basic', false>;
     slug: Schema.Attribute.UID<'companyName'>;

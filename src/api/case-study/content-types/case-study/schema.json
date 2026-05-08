@@ -88,6 +88,11 @@
     "featured": {
       "type": "boolean",
       "default": false
+    },
+    "sharedSections": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::portfolio-shared.portfolio-shared"
     }
   }
 }
