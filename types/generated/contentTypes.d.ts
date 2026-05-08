@@ -636,6 +636,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'layout.faq-section',
         'layout.portfolio-section',
         'layout.portfolio-page-featured-case-studies',
+        'layout.dge-score-section',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
