@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_case_study_process_items",
+  "info": {
+    "displayName": "Process Item"
+  },
+  "attributes": {
+    "text": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

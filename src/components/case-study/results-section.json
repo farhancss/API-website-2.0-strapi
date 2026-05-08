@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_case_study_results_sections",
+  "info": {
+    "displayName": "Results Section"
+  },
+  "attributes": {
+    "label": {
+      "type": "string",
+      "default": "Results"
+    },
+    "cards": {
+      "type": "component",
+      "component": "case-study.result-card",
+      "repeatable": true
+    }
+  }
+}

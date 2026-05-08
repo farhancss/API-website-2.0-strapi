@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_case_study_website_design_sections",
+  "info": {
+    "displayName": "Website Design Section"
+  },
+  "attributes": {
+    "label": {
+      "type": "string",
+      "default": "Website Design"
+    },
+    "heading": {
+      "type": "blocks"
+    },
+    "description": {
+      "type": "text"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

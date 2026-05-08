@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_case_study_growth_session_sections",
+  "info": {
+    "displayName": "Growth Session Section"
+  },
+  "attributes": {
+    "headline": {
+      "type": "blocks"
+    },
+    "backgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "cta": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": false
+    }
+  }
+}

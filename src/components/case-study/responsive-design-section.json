@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_case_study_responsive_design_sections",
+  "info": {
+    "displayName": "Responsive Design Section"
+  },
+  "attributes": {
+    "label": {
+      "type": "string",
+      "default": "Responsive Design"
+    },
+    "heading": {
+      "type": "blocks"
+    },
+    "description": {
+      "type": "text"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

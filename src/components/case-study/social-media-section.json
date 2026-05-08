@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_case_study_social_media_sections",
+  "info": {
+    "displayName": "Social Media Section"
+  },
+  "attributes": {
+    "label": {
+      "type": "string",
+      "default": "Social Media"
+    },
+    "heading": {
+      "type": "blocks"
+    },
+    "description": {
+      "type": "text"
+    },
+    "cards": {
+      "type": "component",
+      "component": "case-study.social-media-card",
+      "repeatable": true
+    }
+  }
+}

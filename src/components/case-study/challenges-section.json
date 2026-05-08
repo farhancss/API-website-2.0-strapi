@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_case_study_challenges_sections",
+  "info": {
+    "displayName": "Challenges Section"
+  },
+  "attributes": {
+    "label": {
+      "type": "string",
+      "default": "Challenges"
+    },
+    "rows": {
+      "type": "component",
+      "component": "case-study.challenge-row",
+      "repeatable": true
+    }
+  }
+}

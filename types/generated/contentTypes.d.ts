@@ -430,13 +430,12 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiFeaturedCaseStudyFeaturedCaseStudy
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'featured_case_studies';
+export interface ApiCaseStudyCaseStudy extends Struct.CollectionTypeSchema {
+  collectionName: 'case_studies';
   info: {
-    displayName: 'Featured Case Studies';
-    pluralName: 'featured-case-studies';
-    singularName: 'featured-case-study';
+    displayName: 'Case Studies';
+    pluralName: 'case-studies';
+    singularName: 'case-study';
   };
   options: {
     draftAndPublish: true;
@@ -446,18 +445,34 @@ export interface ApiFeaturedCaseStudyFeaturedCaseStudy
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    description: Schema.Attribute.Blocks;
+    featured: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
-      'api::featured-case-study.featured-case-study'
+      'api::case-study.case-study'
     > &
       Schema.Attribute.Private;
     mainImage: Schema.Attribute.Media<'images'>;
+    platforms: Schema.Attribute.Media<'images', true>;
     publishedAt: Schema.Attribute.DateTime;
+    sections: Schema.Attribute.DynamicZone<
+      [
+        'case-study.about-section',
+        'case-study.challenges-section',
+        'case-study.dge-process-section',
+        'case-study.results-section',
+        'case-study.branding-section',
+        'case-study.user-experience-section',
+        'case-study.website-design-section',
+        'case-study.responsive-design-section',
+        'case-study.social-media-section',
+        'case-study.growth-session-section',
+      ]
+    >;
     slug: Schema.Attribute.UID<'companyName'>;
     tags: Schema.Attribute.Component<'shared.tag', true>;
     testimonial: Schema.Attribute.Component<'shared.testimonial', false>;
-    title: Schema.Attribute.Blocks;
     type: Schema.Attribute.Relation<'manyToOne', 'api::industry.industry'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1242,7 +1257,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
-      'api::featured-case-study.featured-case-study': ApiFeaturedCaseStudyFeaturedCaseStudy;
+      'api::case-study.case-study': ApiCaseStudyCaseStudy;
       'api::global.global': ApiGlobalGlobal;
       'api::hub-spot-form.hub-spot-form': ApiHubSpotFormHubSpotForm;
       'api::industry.industry': ApiIndustryIndustry;

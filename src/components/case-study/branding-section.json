@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_case_study_branding_sections",
+  "info": {
+    "displayName": "Branding Section"
+  },
+  "attributes": {
+    "label": {
+      "type": "string",
+      "default": "Branding"
+    },
+    "heading": {
+      "type": "blocks"
+    },
+    "description": {
+      "type": "text"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

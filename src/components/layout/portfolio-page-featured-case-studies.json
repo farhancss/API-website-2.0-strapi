@@ -8,10 +8,10 @@
     "title": {
       "type": "string"
     },
-    "featuredCaseStudies": {
+    "caseStudies": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::featured-case-study.featured-case-study"
+      "target": "api::case-study.case-study"
     }
   },
   "config": {}

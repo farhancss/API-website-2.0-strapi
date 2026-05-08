@@ -1,0 +1,72 @@
+{
+  "kind": "collectionType",
+  "collectionName": "case_studies",
+  "info": {
+    "singularName": "case-study",
+    "pluralName": "case-studies",
+    "displayName": "Case Studies"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "companyName": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "companyName"
+    },
+    "type": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::industry.industry"
+    },
+    "mainImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "tags": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.tag"
+    },
+    "platforms": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "testimonial": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.testimonial"
+    },
+    "sections": {
+      "type": "dynamiczone",
+      "components": [
+        "case-study.about-section",
+        "case-study.challenges-section",
+        "case-study.dge-process-section",
+        "case-study.results-section",
+        "case-study.branding-section",
+        "case-study.user-experience-section",
+        "case-study.website-design-section",
+        "case-study.responsive-design-section",
+        "case-study.social-media-section",
+        "case-study.growth-session-section"
+      ]
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}
