@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_case_study_result_cards",
+  "info": {
+    "displayName": "Result Card"
+  },
+  "attributes": {
+    "metric": {
+      "type": "string",
+      "required": true
+    },
+    "showTrendUp": {
+      "type": "boolean",
+      "default": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

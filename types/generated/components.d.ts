@@ -10,6 +10,31 @@ export interface BlocksText extends Struct.ComponentSchema {
   };
 }
 
+export interface CaseStudyAboutSection extends Struct.ComponentSchema {
+  collectionName: 'components_case_study_about_sections';
+  info: {
+    displayName: 'About Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Blocks;
+    images: Schema.Attribute.Media<'images', true>;
+    label: Schema.Attribute.String & Schema.Attribute.DefaultTo<'About'>;
+  };
+}
+
+export interface CaseStudyBrandingSection extends Struct.ComponentSchema {
+  collectionName: 'components_case_study_branding_sections';
+  info: {
+    displayName: 'Branding Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.Blocks;
+    images: Schema.Attribute.Media<'images', true>;
+    label: Schema.Attribute.String & Schema.Attribute.DefaultTo<'Branding'>;
+  };
+}
+
 export interface CaseStudyCategory extends Struct.ComponentSchema {
   collectionName: 'components_case_study_categories';
   info: {
@@ -18,6 +43,42 @@ export interface CaseStudyCategory extends Struct.ComponentSchema {
   attributes: {
     items: Schema.Attribute.Component<'case-study.item', true>;
     name: Schema.Attribute.String;
+  };
+}
+
+export interface CaseStudyChallengeRow extends Struct.ComponentSchema {
+  collectionName: 'components_case_study_challenge_rows';
+  info: {
+    displayName: 'Challenge Row';
+  };
+  attributes: {
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface CaseStudyChallengesSection extends Struct.ComponentSchema {
+  collectionName: 'components_case_study_challenges_sections';
+  info: {
+    displayName: 'Challenges Section';
+  };
+  attributes: {
+    label: Schema.Attribute.String & Schema.Attribute.DefaultTo<'Challenges'>;
+    rows: Schema.Attribute.Component<'case-study.challenge-row', true>;
+  };
+}
+
+export interface CaseStudyDgeProcessSection extends Struct.ComponentSchema {
+  collectionName: 'components_case_study_dge_process_sections';
+  info: {
+    displayName: 'DGE Process Section';
+  };
+  attributes: {
+    cards: Schema.Attribute.Component<'case-study.process-card', true>;
+    cta: Schema.Attribute.Component<'elements.link', false>;
+    heading: Schema.Attribute.String;
+    highlightText: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Digital Growth Engine (DGE)'>;
   };
 }
 
@@ -44,6 +105,130 @@ export interface CaseStudyItem extends Struct.ComponentSchema {
     review_text: Schema.Attribute.Text;
     service_label: Schema.Attribute.String;
     title: Schema.Attribute.Blocks;
+  };
+}
+
+export interface CaseStudyProcessCard extends Struct.ComponentSchema {
+  collectionName: 'components_case_study_process_cards';
+  info: {
+    displayName: 'Process Card';
+  };
+  attributes: {
+    icon: Schema.Attribute.Media<'images'>;
+    items: Schema.Attribute.Component<'case-study.process-item', true>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface CaseStudyProcessItem extends Struct.ComponentSchema {
+  collectionName: 'components_case_study_process_items';
+  info: {
+    displayName: 'Process Item';
+  };
+  attributes: {
+    text: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface CaseStudyResponsiveDesignSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_case_study_responsive_design_sections';
+  info: {
+    displayName: 'Responsive Design Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.Blocks;
+    images: Schema.Attribute.Media<'images', true>;
+    label: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Responsive Design'>;
+  };
+}
+
+export interface CaseStudyResultCard extends Struct.ComponentSchema {
+  collectionName: 'components_case_study_result_cards';
+  info: {
+    displayName: 'Result Card';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    metric: Schema.Attribute.String & Schema.Attribute.Required;
+    showTrendUp: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface CaseStudyResultsSection extends Struct.ComponentSchema {
+  collectionName: 'components_case_study_results_sections';
+  info: {
+    displayName: 'Results Section';
+  };
+  attributes: {
+    cards: Schema.Attribute.Component<'case-study.result-card', true>;
+    label: Schema.Attribute.String & Schema.Attribute.DefaultTo<'Results'>;
+  };
+}
+
+export interface CaseStudySocialMediaCard extends Struct.ComponentSchema {
+  collectionName: 'components_case_study_social_media_cards';
+  info: {
+    displayName: 'Social Media Card';
+  };
+  attributes: {
+    altText: Schema.Attribute.String;
+    cta: Schema.Attribute.Component<'elements.link', false>;
+    image: Schema.Attribute.Media<'images'>;
+  };
+}
+
+export interface CaseStudySocialMediaSection extends Struct.ComponentSchema {
+  collectionName: 'components_case_study_social_media_sections';
+  info: {
+    displayName: 'Social Media Section';
+  };
+  attributes: {
+    cards: Schema.Attribute.Component<'case-study.social-media-card', true>;
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.Blocks;
+    label: Schema.Attribute.String & Schema.Attribute.DefaultTo<'Social Media'>;
+  };
+}
+
+export interface CaseStudyTestimonialSection extends Struct.ComponentSchema {
+  collectionName: 'components_case_study_testimonial_sections';
+  info: {
+    displayName: 'Testimonial Section';
+  };
+  attributes: {
+    testimonial: Schema.Attribute.Component<'shared.testimonial', false>;
+  };
+}
+
+export interface CaseStudyUserExperienceSection extends Struct.ComponentSchema {
+  collectionName: 'components_case_study_user_experience_sections';
+  info: {
+    displayName: 'User Experience Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.Blocks;
+    images: Schema.Attribute.Media<'images', true>;
+    label: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'User Experience'>;
+  };
+}
+
+export interface CaseStudyWebsiteDesignSection extends Struct.ComponentSchema {
+  collectionName: 'components_case_study_website_design_sections';
+  info: {
+    displayName: 'Website Design Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.Blocks;
+    images: Schema.Attribute.Media<'images', true>;
+    label: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Website Design'>;
   };
 }
 
@@ -619,9 +804,9 @@ export interface LayoutPortfolioPageFeaturedCaseStudies
     displayName: 'Portfolio Page Featured Case Studies';
   };
   attributes: {
-    featuredCaseStudies: Schema.Attribute.Relation<
+    caseStudies: Schema.Attribute.Relation<
       'oneToMany',
-      'api::featured-case-study.featured-case-study'
+      'api::case-study.case-study'
     >;
     title: Schema.Attribute.String;
   };
@@ -866,8 +1051,23 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'blocks.text': BlocksText;
+      'case-study.about-section': CaseStudyAboutSection;
+      'case-study.branding-section': CaseStudyBrandingSection;
       'case-study.category': CaseStudyCategory;
+      'case-study.challenge-row': CaseStudyChallengeRow;
+      'case-study.challenges-section': CaseStudyChallengesSection;
+      'case-study.dge-process-section': CaseStudyDgeProcessSection;
       'case-study.item': CaseStudyItem;
+      'case-study.process-card': CaseStudyProcessCard;
+      'case-study.process-item': CaseStudyProcessItem;
+      'case-study.responsive-design-section': CaseStudyResponsiveDesignSection;
+      'case-study.result-card': CaseStudyResultCard;
+      'case-study.results-section': CaseStudyResultsSection;
+      'case-study.social-media-card': CaseStudySocialMediaCard;
+      'case-study.social-media-section': CaseStudySocialMediaSection;
+      'case-study.testimonial-section': CaseStudyTestimonialSection;
+      'case-study.user-experience-section': CaseStudyUserExperienceSection;
+      'case-study.website-design-section': CaseStudyWebsiteDesignSection;
       'elements.badge': ElementsBadge;
       'elements.card': ElementsCard;
       'elements.feature': ElementsFeature;

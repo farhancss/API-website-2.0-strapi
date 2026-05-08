@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_case_study_social_media_cards",
+  "info": {
+    "displayName": "Social Media Card"
+  },
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "altText": {
+      "type": "string"
+    },
+    "cta": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": false
+    }
+  }
+}

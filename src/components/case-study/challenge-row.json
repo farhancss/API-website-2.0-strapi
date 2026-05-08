@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_case_study_challenge_rows",
+  "info": {
+    "displayName": "Challenge Row"
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

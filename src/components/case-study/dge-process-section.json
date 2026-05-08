@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_case_study_dge_process_sections",
+  "info": {
+    "displayName": "DGE Process Section"
+  },
+  "attributes": {
+    "highlightText": {
+      "type": "string",
+      "default": "Digital Growth Engine (DGE)"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "cta": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": false
+    },
+    "cards": {
+      "type": "component",
+      "component": "case-study.process-card",
+      "repeatable": true
+    }
+  }
+}

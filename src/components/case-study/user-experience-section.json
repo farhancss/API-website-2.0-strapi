@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_case_study_user_experience_sections",
+  "info": {
+    "displayName": "User Experience Section"
+  },
+  "attributes": {
+    "label": {
+      "type": "string",
+      "default": "User Experience"
+    },
+    "heading": {
+      "type": "blocks"
+    },
+    "description": {
+      "type": "text"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_case_study_process_cards",
+  "info": {
+    "displayName": "Process Card"
+  },
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "items": {
+      "type": "component",
+      "component": "case-study.process-item",
+      "repeatable": true
+    }
+  }
+}
