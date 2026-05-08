@@ -44,6 +44,11 @@
     "description": {
       "type": "blocks"
     },
+    "testimonial": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.testimonial"
+    },
     "sections": {
       "type": "dynamiczone",
       "components": [
@@ -55,7 +60,8 @@
         "case-study.user-experience-section",
         "case-study.website-design-section",
         "case-study.responsive-design-section",
-        "case-study.social-media-section"
+        "case-study.social-media-section",
+        "case-study.growth-session-section"
       ]
     },
     "featured": {

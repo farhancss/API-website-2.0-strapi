@@ -82,6 +82,18 @@ export interface CaseStudyDgeProcessSection extends Struct.ComponentSchema {
   };
 }
 
+export interface CaseStudyGrowthSessionSection extends Struct.ComponentSchema {
+  collectionName: 'components_case_study_growth_session_sections';
+  info: {
+    displayName: 'Growth Session Section';
+  };
+  attributes: {
+    backgroundImage: Schema.Attribute.Media<'images'>;
+    cta: Schema.Attribute.Component<'elements.link', false>;
+    headline: Schema.Attribute.Blocks;
+  };
+}
+
 export interface CaseStudyItem extends Struct.ComponentSchema {
   collectionName: 'components_case_study_items';
   info: {
@@ -191,16 +203,6 @@ export interface CaseStudySocialMediaSection extends Struct.ComponentSchema {
     description: Schema.Attribute.Text;
     heading: Schema.Attribute.Blocks;
     label: Schema.Attribute.String & Schema.Attribute.DefaultTo<'Social Media'>;
-  };
-}
-
-export interface CaseStudyTestimonialSection extends Struct.ComponentSchema {
-  collectionName: 'components_case_study_testimonial_sections';
-  info: {
-    displayName: 'Testimonial Section';
-  };
-  attributes: {
-    testimonial: Schema.Attribute.Component<'shared.testimonial', false>;
   };
 }
 
@@ -1057,6 +1059,7 @@ declare module '@strapi/strapi' {
       'case-study.challenge-row': CaseStudyChallengeRow;
       'case-study.challenges-section': CaseStudyChallengesSection;
       'case-study.dge-process-section': CaseStudyDgeProcessSection;
+      'case-study.growth-session-section': CaseStudyGrowthSessionSection;
       'case-study.item': CaseStudyItem;
       'case-study.process-card': CaseStudyProcessCard;
       'case-study.process-item': CaseStudyProcessItem;
@@ -1065,7 +1068,6 @@ declare module '@strapi/strapi' {
       'case-study.results-section': CaseStudyResultsSection;
       'case-study.social-media-card': CaseStudySocialMediaCard;
       'case-study.social-media-section': CaseStudySocialMediaSection;
-      'case-study.testimonial-section': CaseStudyTestimonialSection;
       'case-study.user-experience-section': CaseStudyUserExperienceSection;
       'case-study.website-design-section': CaseStudyWebsiteDesignSection;
       'elements.badge': ElementsBadge;

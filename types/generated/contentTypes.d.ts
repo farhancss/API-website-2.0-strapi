@@ -467,10 +467,12 @@ export interface ApiCaseStudyCaseStudy extends Struct.CollectionTypeSchema {
         'case-study.website-design-section',
         'case-study.responsive-design-section',
         'case-study.social-media-section',
+        'case-study.growth-session-section',
       ]
     >;
     slug: Schema.Attribute.UID<'companyName'>;
     tags: Schema.Attribute.Component<'shared.tag', true>;
+    testimonial: Schema.Attribute.Component<'shared.testimonial', false>;
     type: Schema.Attribute.Relation<'manyToOne', 'api::industry.industry'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
