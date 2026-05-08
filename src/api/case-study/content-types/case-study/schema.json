@@ -44,6 +44,27 @@
     "description": {
       "type": "blocks"
     },
+    "services": {
+      "type": "string"
+    },
+    "workLabel": {
+      "type": "string",
+      "default": "Work"
+    },
+    "workLink": {
+      "type": "component",
+      "component": "elements.link-basic",
+      "repeatable": false
+    },
+    "shareLabel": {
+      "type": "string",
+      "default": "Share"
+    },
+    "shareLink": {
+      "type": "component",
+      "component": "elements.link-basic",
+      "repeatable": false
+    },
     "testimonial": {
       "type": "component",
       "repeatable": false,

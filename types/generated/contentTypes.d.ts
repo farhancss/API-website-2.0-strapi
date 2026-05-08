@@ -470,6 +470,9 @@ export interface ApiCaseStudyCaseStudy extends Struct.CollectionTypeSchema {
         'case-study.growth-session-section',
       ]
     >;
+    services: Schema.Attribute.String;
+    shareLabel: Schema.Attribute.String & Schema.Attribute.DefaultTo<'Share'>;
+    shareLink: Schema.Attribute.Component<'elements.link-basic', false>;
     slug: Schema.Attribute.UID<'companyName'>;
     tags: Schema.Attribute.Component<'shared.tag', true>;
     testimonial: Schema.Attribute.Component<'shared.testimonial', false>;
@@ -477,6 +480,8 @@ export interface ApiCaseStudyCaseStudy extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    workLabel: Schema.Attribute.String & Schema.Attribute.DefaultTo<'Work'>;
+    workLink: Schema.Attribute.Component<'elements.link-basic', false>;
   };
 }
 
