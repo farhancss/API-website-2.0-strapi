@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_layout_client_logo_marquee_sections",
+  "info": {
+    "displayName": "Client Logo Marquee Section"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "companyImages": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

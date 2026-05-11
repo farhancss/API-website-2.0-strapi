@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_layout_page_hero_sections",
+  "info": {
+    "displayName": "Page Hero Section"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "backgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "backgroundPattern": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "hubSpotForm": {
+      "type": "component",
+      "component": "sections.hub-spot-form",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

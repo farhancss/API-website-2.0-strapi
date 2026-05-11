@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_layout_client_showcase_sections",
+  "info": {
+    "displayName": "Client Showcase Section"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "clients": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.client-showcase-item"
+    },
+    "cta": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

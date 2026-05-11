@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_layout_our_clients_sections",
+  "info": {
+    "displayName": "Our Clients Section"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "blocks"
+    },
+    "clients": {
+     "type": "component",
+      "repeatable": true,
+      "component": "shared.client-industry-item"
+    }
+  },
+  "config": {}
+}

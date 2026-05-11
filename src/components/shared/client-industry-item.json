@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_shared_client_industry_items",
+  "info": {
+    "displayName": "Client Industry Item"
+  },
+  "options": {},
+  "attributes": {
+    "industry": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::industry.industry"
+    },
+    "clientImage": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}
