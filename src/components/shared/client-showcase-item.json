@@ -1,0 +1,45 @@
+{
+  "collectionName": "components_shared_client_showcase_items",
+  "info": {
+    "displayName": "Client Showcase Item"
+  },
+  "options": {},
+  "config": {},
+    "attributes": {
+    "clientName": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "clientName"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "category": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "previewImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "cta": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": false
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

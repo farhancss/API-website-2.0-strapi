@@ -391,6 +391,33 @@ export interface LayoutCardGrid extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutClientLogoMarqueeSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_client_logo_marquee_sections';
+  info: {
+    displayName: 'Client Logo Marquee Section';
+  };
+  attributes: {
+    companyImages: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    heading: Schema.Attribute.String;
+  };
+}
+
+export interface LayoutClientShowcaseSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_client_showcase_sections';
+  info: {
+    displayName: 'Client Showcase Section';
+  };
+  attributes: {
+    clients: Schema.Attribute.Component<'shared.client-showcase-item', true>;
+    cta: Schema.Attribute.Component<'elements.link', false>;
+    description: Schema.Attribute.Blocks;
+    heading: Schema.Attribute.String;
+  };
+}
+
 export interface LayoutContactUsSection extends Struct.ComponentSchema {
   collectionName: 'components_layout_contact_us_sections';
   info: {
@@ -787,6 +814,35 @@ export interface LayoutOfficeSection extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutOurClientsSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_our_clients_sections';
+  info: {
+    displayName: 'Our Clients Section';
+  };
+  attributes: {
+    clients: Schema.Attribute.Component<'shared.client-industry-item', true>;
+    heading: Schema.Attribute.Blocks;
+  };
+}
+
+export interface LayoutPageHeroSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_page_hero_sections';
+  info: {
+    displayName: 'Page Hero Section';
+  };
+  attributes: {
+    backgroundImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    backgroundPattern: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    description: Schema.Attribute.Blocks;
+    heading: Schema.Attribute.String;
+    hubSpotForm: Schema.Attribute.Component<'sections.hub-spot-form', false>;
+  };
+}
+
 export interface LayoutPortfolioFilter extends Struct.ComponentSchema {
   collectionName: 'components_layout_portfolio_filters';
   info: {
@@ -956,6 +1012,38 @@ export interface SectionsHubSpotForm extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedClientIndustryItem extends Struct.ComponentSchema {
+  collectionName: 'components_shared_client_industry_items';
+  info: {
+    displayName: 'Client Industry Item';
+  };
+  attributes: {
+    clientImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    industry: Schema.Attribute.Relation<'oneToOne', 'api::industry.industry'>;
+  };
+}
+
+export interface SharedClientShowcaseItem extends Struct.ComponentSchema {
+  collectionName: 'components_shared_client_showcase_items';
+  info: {
+    displayName: 'Client Showcase Item';
+  };
+  attributes: {
+    category: Schema.Attribute.String;
+    clientName: Schema.Attribute.String;
+    cta: Schema.Attribute.Component<'elements.link', false>;
+    description: Schema.Attribute.Text;
+    isActive: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    logo: Schema.Attribute.Media<'images'>;
+    previewImage: Schema.Attribute.Media<'images'>;
+    slug: Schema.Attribute.UID<'clientName'>;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_media';
   info: {
@@ -1082,6 +1170,8 @@ declare module '@strapi/strapi' {
       'layout.award-section': LayoutAwardSection;
       'layout.button': LayoutButton;
       'layout.card-grid': LayoutCardGrid;
+      'layout.client-logo-marquee-section': LayoutClientLogoMarqueeSection;
+      'layout.client-showcase-section': LayoutClientShowcaseSection;
       'layout.contact-us-section': LayoutContactUsSection;
       'layout.content-with-image': LayoutContentWithImage;
       'layout.content-with-video': LayoutContentWithVideo;
@@ -1108,6 +1198,8 @@ declare module '@strapi/strapi' {
       'layout.legal-document': LayoutLegalDocument;
       'layout.mission-vision': LayoutMissionVision;
       'layout.office-section': LayoutOfficeSection;
+      'layout.our-clients-section': LayoutOurClientsSection;
+      'layout.page-hero-section': LayoutPageHeroSection;
       'layout.portfolio-filter': LayoutPortfolioFilter;
       'layout.portfolio-page-featured-case-studies': LayoutPortfolioPageFeaturedCaseStudies;
       'layout.portfolio-project': LayoutPortfolioProject;
@@ -1119,6 +1211,8 @@ declare module '@strapi/strapi' {
       'layout.stats-section': LayoutStatsSection;
       'layout.top-nav': LayoutTopNav;
       'sections.hub-spot-form': SectionsHubSpotForm;
+      'shared.client-industry-item': SharedClientIndustryItem;
+      'shared.client-showcase-item': SharedClientShowcaseItem;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
