@@ -31,7 +31,7 @@
     },
     "items": {
       "type": "component",
-      "component": "elements.steps",
+      "component": "elements.tabs",
       "repeatable": true
     }
   },

@@ -1058,7 +1058,7 @@ export interface LayoutValuePropositionSection extends Struct.ComponentSchema {
     description: Schema.Attribute.Text;
     heading: Schema.Attribute.Blocks;
     image: Schema.Attribute.Media<'images'>;
-    items: Schema.Attribute.Component<'elements.steps', true>;
+    items: Schema.Attribute.Component<'elements.tabs', true>;
   };
 }
 
