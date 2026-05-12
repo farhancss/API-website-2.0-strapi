@@ -10,7 +10,7 @@
       "type": "string"
     },
     "heading": {
-      "type": "text"
+      "type": "blocks"
     },
     "beliefs": {
       "type": "component",
