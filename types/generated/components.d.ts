@@ -411,7 +411,7 @@ export interface LayoutBeliefsSection extends Struct.ComponentSchema {
   };
   attributes: {
     beliefs: Schema.Attribute.Component<'elements.steps', true>;
-    heading: Schema.Attribute.Text;
+    heading: Schema.Attribute.Blocks;
     title: Schema.Attribute.String;
   };
 }
