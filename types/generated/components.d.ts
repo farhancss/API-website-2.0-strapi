@@ -389,7 +389,7 @@ export interface LayoutAwardsRecognitionSection extends Struct.ComponentSchema {
     displayName: 'Awards & Recognition Section';
   };
   attributes: {
-    achievementImages: Schema.Attribute.Media<'images'>;
+    achievementImages: Schema.Attribute.Media<'images', true>;
     achievementsHeading: Schema.Attribute.Blocks;
     description: Schema.Attribute.Blocks;
     featuredPartner: Schema.Attribute.Media<'images'>;
@@ -400,6 +400,19 @@ export interface LayoutAwardsRecognitionSection extends Struct.ComponentSchema {
       false
     >;
     subHeading: Schema.Attribute.String;
+  };
+}
+
+export interface LayoutBeliefsSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_beliefs_sections';
+  info: {
+    description: 'Eyebrow label, a two-tone intro statement, and a row of belief/value cards (icon + title + description).';
+    displayName: 'Beliefs Section';
+  };
+  attributes: {
+    beliefs: Schema.Attribute.Component<'elements.steps', true>;
+    heading: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -1032,6 +1045,23 @@ export interface LayoutTopNav extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutValuePropositionSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_value_proposition_sections';
+  info: {
+    description: 'Two-column section with a heading + description + decorative image on the left and a list of value-prop items on the right.';
+    displayName: 'Value Proposition Section';
+  };
+  attributes: {
+    backgroundImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.Blocks;
+    image: Schema.Attribute.Media<'images'>;
+    items: Schema.Attribute.Component<'elements.tabs', true>;
+  };
+}
+
 export interface SectionsHubSpotForm extends Struct.ComponentSchema {
   collectionName: 'components_sections_hub_spot_forms';
   info: {
@@ -1234,6 +1264,7 @@ declare module '@strapi/strapi' {
       'layout.award-insights-section': LayoutAwardInsightsSection;
       'layout.award-section': LayoutAwardSection;
       'layout.awards-recognition-section': LayoutAwardsRecognitionSection;
+      'layout.beliefs-section': LayoutBeliefsSection;
       'layout.button': LayoutButton;
       'layout.card-grid': LayoutCardGrid;
       'layout.client-logo-marquee-section': LayoutClientLogoMarqueeSection;
@@ -1276,6 +1307,7 @@ declare module '@strapi/strapi' {
       'layout.section-heading': LayoutSectionHeading;
       'layout.stats-section': LayoutStatsSection;
       'layout.top-nav': LayoutTopNav;
+      'layout.value-proposition-section': LayoutValuePropositionSection;
       'sections.hub-spot-form': SectionsHubSpotForm;
       'shared.award-insight-item': SharedAwardInsightItem;
       'shared.client-industry-item': SharedClientIndustryItem;

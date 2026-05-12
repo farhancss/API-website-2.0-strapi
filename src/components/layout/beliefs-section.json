@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_layout_beliefs_sections",
+  "info": {
+    "displayName": "Beliefs Section",
+    "description": "Eyebrow label, a two-tone intro statement, and a row of belief/value cards (icon + title + description)."
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "text"
+    },
+    "beliefs": {
+      "type": "component",
+      "component": "elements.steps",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
