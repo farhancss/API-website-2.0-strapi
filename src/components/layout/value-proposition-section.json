@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_layout_value_proposition_sections",
+  "info": {
+    "displayName": "Value Proposition Section",
+    "description": "Two-column section with a heading + description + decorative image on the left and a list of value-prop items on the right."
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "blocks"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "backgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "items": {
+      "type": "component",
+      "component": "elements.steps",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

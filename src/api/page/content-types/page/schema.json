@@ -52,7 +52,9 @@
         "layout.client-logo-marquee-section",
         "layout.our-clients-section",
         "layout.awards-recognition-section",
-        "layout.award-insights-section"
+        "layout.award-insights-section",
+        "layout.beliefs-section",
+        "layout.value-proposition-section"
       ]
     },
     "seo": {
