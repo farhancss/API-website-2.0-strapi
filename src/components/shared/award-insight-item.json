@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_shared_award_insight_items",
+  "info": {
+    "displayName": "Award Insight Item",
+    "description": "A single blog/insight card in the 'Insights from Our Award Wins' section."
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "tag": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    }
+  },
+  "config": {}
+}

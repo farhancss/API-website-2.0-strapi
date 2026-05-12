@@ -665,6 +665,8 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'layout.client-showcase-section',
         'layout.client-logo-marquee-section',
         'layout.our-clients-section',
+        'layout.awards-recognition-section',
+        'layout.award-insights-section',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;

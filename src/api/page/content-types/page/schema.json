@@ -50,7 +50,9 @@
         "layout.page-hero-section",
         "layout.client-showcase-section",
         "layout.client-logo-marquee-section",
-        "layout.our-clients-section"
+        "layout.our-clients-section",
+        "layout.awards-recognition-section",
+        "layout.award-insights-section"
       ]
     },
     "seo": {

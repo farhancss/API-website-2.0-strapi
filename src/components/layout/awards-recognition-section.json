@@ -1,0 +1,43 @@
+{
+  "collectionName": "components_layout_awards_recognition_sections",
+  "info": {
+    "displayName": "Awards & Recognition Section",
+    "description": "Partnerships highlight (left/right split) plus a divider and an achievements/awards grid."
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "blocks"
+    },
+    "subHeading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "recognitionCard": {
+      "type": "component",
+      "component": "shared.recognition-highlight-card",
+      "repeatable": false
+    },
+    "featuredPartner": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "partners": {
+     "type": "media",
+      "multiple": true,
+      "allowedTypes": ["images"]
+    },
+    "achievementsHeading": {
+      "type": "blocks"
+    },
+    "achievementImages": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    }
+  },
+  "config": {}
+}
