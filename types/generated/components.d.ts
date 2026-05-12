@@ -353,6 +353,19 @@ export interface LayoutAboutSection extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutAwardInsightsSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_award_insights_sections';
+  info: {
+    description: "Featured blog/insight cards related to award wins (e.g. 'Insights from Our Award Wins').";
+    displayName: 'Award Insights Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.Blocks;
+    insights: Schema.Attribute.Component<'shared.award-insight-item', true>;
+  };
+}
+
 export interface LayoutAwardSection extends Struct.ComponentSchema {
   collectionName: 'components_layout_award_sections';
   info: {
@@ -366,6 +379,27 @@ export interface LayoutAwardSection extends Struct.ComponentSchema {
     description: Schema.Attribute.Blocks;
     heading: Schema.Attribute.Blocks;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
+export interface LayoutAwardsRecognitionSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_awards_recognition_sections';
+  info: {
+    description: 'Partnerships highlight (left/right split) plus a divider and an achievements/awards grid.';
+    displayName: 'Awards & Recognition Section';
+  };
+  attributes: {
+    achievementImages: Schema.Attribute.Media<'images'>;
+    achievementsHeading: Schema.Attribute.Blocks;
+    description: Schema.Attribute.Blocks;
+    featuredPartner: Schema.Attribute.Media<'images'>;
+    heading: Schema.Attribute.Blocks;
+    partners: Schema.Attribute.Media<'images', true>;
+    recognitionCard: Schema.Attribute.Component<
+      'shared.recognition-highlight-card',
+      false
+    >;
+    subHeading: Schema.Attribute.String;
   };
 }
 
@@ -1012,6 +1046,20 @@ export interface SectionsHubSpotForm extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedAwardInsightItem extends Struct.ComponentSchema {
+  collectionName: 'components_shared_award_insight_items';
+  info: {
+    description: "A single blog/insight card in the 'Insights from Our Award Wins' section.";
+    displayName: 'Award Insight Item';
+  };
+  attributes: {
+    date: Schema.Attribute.Date;
+    image: Schema.Attribute.Media<'images'>;
+    tag: Schema.Attribute.String;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface SharedClientIndustryItem extends Struct.ComponentSchema {
   collectionName: 'components_shared_client_industry_items';
   info: {
@@ -1063,6 +1111,22 @@ export interface SharedQuote extends Struct.ComponentSchema {
   };
   attributes: {
     body: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedRecognitionHighlightCard extends Struct.ComponentSchema {
+  collectionName: 'components_shared_recognition_highlight_cards';
+  info: {
+    description: "Featured recognition card shown on the left of the Awards & Recognition section (e.g. 'Recognition For Excellence').";
+    displayName: 'Recognition Highlight Card';
+  };
+  attributes: {
+    backgroundImage: Schema.Attribute.Media<'images'>;
+    description: Schema.Attribute.Text;
+    href: Schema.Attribute.String;
+    icon: Schema.Attribute.Media<'images'>;
+    isExternal: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     title: Schema.Attribute.String;
   };
 }
@@ -1167,7 +1231,9 @@ declare module '@strapi/strapi' {
       'elements.steps': ElementsSteps;
       'elements.tabs': ElementsTabs;
       'layout.about-section': LayoutAboutSection;
+      'layout.award-insights-section': LayoutAwardInsightsSection;
       'layout.award-section': LayoutAwardSection;
+      'layout.awards-recognition-section': LayoutAwardsRecognitionSection;
       'layout.button': LayoutButton;
       'layout.card-grid': LayoutCardGrid;
       'layout.client-logo-marquee-section': LayoutClientLogoMarqueeSection;
@@ -1211,10 +1277,12 @@ declare module '@strapi/strapi' {
       'layout.stats-section': LayoutStatsSection;
       'layout.top-nav': LayoutTopNav;
       'sections.hub-spot-form': SectionsHubSpotForm;
+      'shared.award-insight-item': SharedAwardInsightItem;
       'shared.client-industry-item': SharedClientIndustryItem;
       'shared.client-showcase-item': SharedClientShowcaseItem;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
+      'shared.recognition-highlight-card': SharedRecognitionHighlightCard;
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;

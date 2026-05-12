@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_shared_recognition_highlight_cards",
+  "info": {
+    "displayName": "Recognition Highlight Card",
+    "description": "Featured recognition card shown on the left of the Awards & Recognition section (e.g. 'Recognition For Excellence')."
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "backgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "href": {
+      "type": "string"
+    },
+    "isExternal": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "config": {}
+}
