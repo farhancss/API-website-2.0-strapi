@@ -325,12 +325,26 @@ export interface ElementsSteps extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementsTabSubItem extends Struct.ComponentSchema {
+  collectionName: 'components_elements_tab_sub_items';
+  info: {
+    description: "A child item shown inside a Tab (e.g. 'Client Service', 'Ownership' under the 'Our Core Values' tab).";
+    displayName: 'Tab Sub Item';
+  };
+  attributes: {
+    description: Schema.Attribute.Blocks;
+    icon: Schema.Attribute.Media<'images'>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface ElementsTabs extends Struct.ComponentSchema {
   collectionName: 'components_elements_tabs';
   info: {
     displayName: 'Tabs';
   };
   attributes: {
+    children: Schema.Attribute.Component<'elements.tab-sub-item', true>;
     description: Schema.Attribute.Blocks;
     heading: Schema.Attribute.String;
   };
@@ -1259,6 +1273,7 @@ declare module '@strapi/strapi' {
       'elements.link-basic': ElementsLinkBasic;
       'elements.price-card': ElementsPriceCard;
       'elements.steps': ElementsSteps;
+      'elements.tab-sub-item': ElementsTabSubItem;
       'elements.tabs': ElementsTabs;
       'layout.about-section': LayoutAboutSection;
       'layout.award-insights-section': LayoutAwardInsightsSection;

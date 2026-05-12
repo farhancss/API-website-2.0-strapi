@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_elements_tab_sub_items",
+  "info": {
+    "displayName": "Tab Sub Item",
+    "description": "A child item shown inside a Tab (e.g. 'Client Service', 'Ownership' under the 'Our Core Values' tab)."
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    }
+  },
+  "config": {}
+}

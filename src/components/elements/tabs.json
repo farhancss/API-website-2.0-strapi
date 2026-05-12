@@ -10,6 +10,11 @@
     },
     "description": {
       "type": "blocks"
+    },
+    "children": {
+      "type": "component",
+      "component": "elements.tab-sub-item",
+      "repeatable": true
     }
   },
   "config": {}
