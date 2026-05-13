@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_layout_portfolio_list_sections",
+  "info": {
+    "displayName": "Portfolio List Section",
+    "description": "Portfolio grid with Industry / Services / Technology filter config, linked Portfolio entries, and optional load-more CTA."
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "default": "Portfolio"
+    },
+    "description": {
+      "type": "text"
+    },
+    "filters": {
+      "type": "component",
+      "component": "layout.portfolio-filter",
+      "repeatable": true
+    },
+    "projects": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::portfolio.portfolio"
+    },
+    "itemsPerPage": {
+      "type": "integer",
+      "default": 6,
+      "min": 1
+    },
+    "loadMore": {
+      "type": "component",
+      "component": "elements.link-basic",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

@@ -33,7 +33,17 @@
     "industry": {
       "type": "string"
     },
+    "industryCategory": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::industry.industry"
+    },
     "services": {
+      "type": "component",
+      "component": "elements.badge",
+      "repeatable": true
+    },
+    "technologies": {
       "type": "component",
       "component": "elements.badge",
       "repeatable": true

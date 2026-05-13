@@ -659,6 +659,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'layout.contact-us-section',
         'layout.faq-section',
         'layout.portfolio-section',
+        'layout.portfolio-list-section',
         'layout.portfolio-page-featured-case-studies',
         'layout.dge-score-section',
         'layout.page-hero-section',
@@ -669,6 +670,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'layout.award-insights-section',
         'layout.beliefs-section',
         'layout.value-proposition-section',
+        'layout.case-studies-list-section',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -739,6 +741,10 @@ export interface ApiPortfolioPortfolio extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     gallery: Schema.Attribute.Media<'images', true>;
     industry: Schema.Attribute.String;
+    industryCategory: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::industry.industry'
+    >;
     integrations: Schema.Attribute.Component<'elements.link-basic', true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -756,6 +762,7 @@ export interface ApiPortfolioPortfolio extends Struct.CollectionTypeSchema {
       'api::portfolio-shared.portfolio-shared'
     >;
     slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
+    technologies: Schema.Attribute.Component<'elements.badge', true>;
     thumbnail: Schema.Attribute.Media<'images'>;
     title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
