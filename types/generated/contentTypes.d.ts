@@ -755,8 +755,6 @@ export interface ApiPortfolioPortfolio extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     overview: Schema.Attribute.Blocks;
-    platforms: Schema.Attribute.Media<'images', true>;
-    projectType: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     services: Schema.Attribute.Relation<'manyToMany', 'api::service.service'>;
     sharedSections: Schema.Attribute.Relation<
@@ -819,7 +817,7 @@ export interface ApiTechnologyTechnology extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    icon: Schema.Attribute.Media<'images'>;
+    icon: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
