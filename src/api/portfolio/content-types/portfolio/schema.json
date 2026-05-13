@@ -39,9 +39,9 @@
       "target": "api::industry.industry"
     },
     "services": {
-      "type": "component",
-      "component": "elements.badge",
-      "repeatable": true
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::service.service"
     },
     "technologies": {
       "type": "relation",
