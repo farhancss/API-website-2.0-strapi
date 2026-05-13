@@ -758,7 +758,7 @@ export interface ApiPortfolioPortfolio extends Struct.CollectionTypeSchema {
     platforms: Schema.Attribute.Media<'images', true>;
     projectType: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
-    services: Schema.Attribute.Component<'elements.badge', true>;
+    services: Schema.Attribute.Relation<'manyToMany', 'api::service.service'>;
     sharedSections: Schema.Attribute.Relation<
       'manyToOne',
       'api::portfolio-shared.portfolio-shared'
@@ -770,6 +770,35 @@ export interface ApiPortfolioPortfolio extends Struct.CollectionTypeSchema {
     >;
     thumbnail: Schema.Attribute.Media<'images'>;
     title: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiServiceService extends Struct.CollectionTypeSchema {
+  collectionName: 'services';
+  info: {
+    displayName: 'Service';
+    pluralName: 'services';
+    singularName: 'service';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::service.service'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.UID<'name'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1324,6 +1353,7 @@ declare module '@strapi/strapi' {
       'api::page.page': ApiPagePage;
       'api::portfolio-shared.portfolio-shared': ApiPortfolioSharedPortfolioShared;
       'api::portfolio.portfolio': ApiPortfolioPortfolio;
+      'api::service.service': ApiServiceService;
       'api::technology.technology': ApiTechnologyTechnology;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
