@@ -22,6 +22,11 @@
       "type": "uid",
       "targetField": "title"
     },
+    "theme": {
+      "type": "enumeration",
+      "enum": ["light", "dark"],
+      "default": "light"
+    },
     "blocks": {
       "type": "dynamiczone",
       "components": [
