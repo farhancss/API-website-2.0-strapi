@@ -35,17 +35,17 @@
       "component": "shared.tag"
     },
     "platforms": {
-      "type": "media",
-      "multiple": true,
-      "allowedTypes": [
-        "images"
-      ]
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::technology.technology"
     },
     "description": {
       "type": "blocks"
     },
     "services": {
-      "type": "string"
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::service.service"
     },
     "workLabel": {
       "type": "string",

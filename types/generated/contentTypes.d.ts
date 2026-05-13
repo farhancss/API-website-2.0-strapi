@@ -454,7 +454,10 @@ export interface ApiCaseStudyCaseStudy extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     mainImage: Schema.Attribute.Media<'images'>;
-    platforms: Schema.Attribute.Media<'images', true>;
+    platforms: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::technology.technology'
+    >;
     publishedAt: Schema.Attribute.DateTime;
     sections: Schema.Attribute.DynamicZone<
       [
@@ -470,7 +473,7 @@ export interface ApiCaseStudyCaseStudy extends Struct.CollectionTypeSchema {
         'case-study.growth-session-section',
       ]
     >;
-    services: Schema.Attribute.String;
+    services: Schema.Attribute.Relation<'manyToMany', 'api::service.service'>;
     sharedSections: Schema.Attribute.Relation<
       'manyToOne',
       'api::portfolio-shared.portfolio-shared'
@@ -755,8 +758,6 @@ export interface ApiPortfolioPortfolio extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     overview: Schema.Attribute.Blocks;
-    platforms: Schema.Attribute.Media<'images', true>;
-    projectType: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     services: Schema.Attribute.Relation<'manyToMany', 'api::service.service'>;
     sharedSections: Schema.Attribute.Relation<
@@ -819,7 +820,7 @@ export interface ApiTechnologyTechnology extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    icon: Schema.Attribute.Media<'images'>;
+    icon: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
