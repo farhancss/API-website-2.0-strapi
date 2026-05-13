@@ -661,7 +661,6 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'layout.office-section',
         'layout.contact-us-section',
         'layout.faq-section',
-        'layout.portfolio-section',
         'layout.portfolio-list-section',
         'layout.portfolio-page-featured-case-studies',
         'layout.dge-score-section',

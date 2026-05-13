@@ -931,12 +931,20 @@ export interface LayoutPageHeroSection extends Struct.ComponentSchema {
 export interface LayoutPortfolioFilter extends Struct.ComponentSchema {
   collectionName: 'components_layout_portfolio_filters';
   info: {
+    description: 'Filter dimension (key) plus UI label. Link Industry, Service, or Technology entries from the API for the options shown for that filter; match key to the relation you populate.';
     displayName: 'Portfolio Filter';
   };
   attributes: {
-    key: Schema.Attribute.Enumeration<['industry', 'services', 'technology']> &
-      Schema.Attribute.Required;
+    industries: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::industry.industry'
+    >;
     label: Schema.Attribute.String & Schema.Attribute.Required;
+    services: Schema.Attribute.Relation<'manyToMany', 'api::service.service'>;
+    technologies: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::technology.technology'
+    >;
   };
 }
 
@@ -999,29 +1007,6 @@ export interface LayoutPortfolioProject extends Struct.ComponentSchema {
     services: Schema.Attribute.Component<'elements.badge', true>;
     slug: Schema.Attribute.String;
     thumbnail: Schema.Attribute.Media<'images'>;
-  };
-}
-
-export interface LayoutPortfolioSection extends Struct.ComponentSchema {
-  collectionName: 'components_layout_portfolio_sections';
-  info: {
-    displayName: 'Portfolio Section';
-  };
-  attributes: {
-    filters: Schema.Attribute.Component<'layout.portfolio-filter', true>;
-    itemsPerPage: Schema.Attribute.Integer &
-      Schema.Attribute.SetMinMax<
-        {
-          min: 1;
-        },
-        number
-      > &
-      Schema.Attribute.DefaultTo<6>;
-    projects: Schema.Attribute.Relation<
-      'manyToMany',
-      'api::portfolio.portfolio'
-    >;
-    title: Schema.Attribute.String & Schema.Attribute.DefaultTo<'Portfolio'>;
   };
 }
 
@@ -1367,7 +1352,6 @@ declare module '@strapi/strapi' {
       'layout.portfolio-list-section': LayoutPortfolioListSection;
       'layout.portfolio-page-featured-case-studies': LayoutPortfolioPageFeaturedCaseStudies;
       'layout.portfolio-project': LayoutPortfolioProject;
-      'layout.portfolio-section': LayoutPortfolioSection;
       'layout.price-grid': LayoutPriceGrid;
       'layout.profile-section': LayoutProfileSection;
       'layout.resources-and-careers': LayoutResourcesAndCareers;

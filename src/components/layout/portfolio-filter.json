@@ -1,7 +1,8 @@
 {
   "collectionName": "components_layout_portfolio_filters",
   "info": {
-    "displayName": "Portfolio Filter"
+    "displayName": "Portfolio Filter",
+    "description": "Filter dimension (key) plus UI label. Link Industry, Service, or Technology entries from the API for the options shown for that filter; match key to the relation you populate."
   },
   "options": {},
   "attributes": {
@@ -9,10 +10,20 @@
       "type": "string",
       "required": true
     },
-    "key": {
-      "type": "enumeration",
-      "enum": ["industry", "services", "technology"],
-      "required": true
+    "industries": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::industry.industry"
+    },
+    "services": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::service.service"
+    },
+    "technologies": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::technology.technology"
     }
   }
 }
