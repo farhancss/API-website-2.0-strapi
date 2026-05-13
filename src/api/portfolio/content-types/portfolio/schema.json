@@ -44,9 +44,9 @@
       "repeatable": true
     },
     "technologies": {
-      "type": "component",
-      "component": "elements.badge",
-      "repeatable": true
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::technology.technology"
     },
     "platforms": {
       "type": "media",
