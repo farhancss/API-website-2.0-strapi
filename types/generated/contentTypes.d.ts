@@ -454,7 +454,10 @@ export interface ApiCaseStudyCaseStudy extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     mainImage: Schema.Attribute.Media<'images'>;
-    platforms: Schema.Attribute.Media<'images', true>;
+    platforms: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::technology.technology'
+    >;
     publishedAt: Schema.Attribute.DateTime;
     sections: Schema.Attribute.DynamicZone<
       [
@@ -470,7 +473,7 @@ export interface ApiCaseStudyCaseStudy extends Struct.CollectionTypeSchema {
         'case-study.growth-session-section',
       ]
     >;
-    services: Schema.Attribute.String;
+    services: Schema.Attribute.Relation<'manyToMany', 'api::service.service'>;
     sharedSections: Schema.Attribute.Relation<
       'manyToOne',
       'api::portfolio-shared.portfolio-shared'
