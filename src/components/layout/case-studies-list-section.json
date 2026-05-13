@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_layout_case_studies_list_sections",
+  "info": {
+    "displayName": "Case Studies List Section",
+    "description": "Case studies grid/list with optional industry filter pills. Entries come from the Case Study collection type."
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "default": "Case Studies"
+    },
+    "overviewLabel": {
+      "type": "string",
+      "default": "OVERVIEW"
+    },
+    "viewCaseStudyLabel": {
+      "type": "string",
+      "default": "View Full Case Study"
+    },
+    "caseStudies": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::case-study.case-study"
+    },
+    "filterIndustries": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::industry.industry"
+    }
+  },
+  "config": {}
+}

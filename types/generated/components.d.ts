@@ -452,6 +452,30 @@ export interface LayoutCardGrid extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutCaseStudiesListSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_case_studies_list_sections';
+  info: {
+    description: 'Case studies grid/list with optional industry filter pills. Entries come from the Case Study collection type.';
+    displayName: 'Case Studies List Section';
+  };
+  attributes: {
+    caseStudies: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::case-study.case-study'
+    >;
+    filterIndustries: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::industry.industry'
+    >;
+    heading: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Case Studies'>;
+    overviewLabel: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'OVERVIEW'>;
+    viewCaseStudyLabel: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'View Full Case Study'>;
+  };
+}
+
 export interface LayoutClientLogoMarqueeSection extends Struct.ComponentSchema {
   collectionName: 'components_layout_client_logo_marquee_sections';
   info: {
@@ -916,6 +940,32 @@ export interface LayoutPortfolioFilter extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutPortfolioListSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_portfolio_list_sections';
+  info: {
+    description: 'Portfolio grid with Industry / Services / Technology filter config, linked Portfolio entries, and optional load-more CTA.';
+    displayName: 'Portfolio List Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    filters: Schema.Attribute.Component<'layout.portfolio-filter', true>;
+    heading: Schema.Attribute.String & Schema.Attribute.DefaultTo<'Portfolio'>;
+    itemsPerPage: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 1;
+        },
+        number
+      > &
+      Schema.Attribute.DefaultTo<6>;
+    loadMore: Schema.Attribute.Component<'elements.link-basic', false>;
+    projects: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::portfolio.portfolio'
+    >;
+  };
+}
+
 export interface LayoutPortfolioPageFeaturedCaseStudies
   extends Struct.ComponentSchema {
   collectionName: 'components_layout_portfolio_page_featured_case_studies';
@@ -1282,6 +1332,7 @@ declare module '@strapi/strapi' {
       'layout.beliefs-section': LayoutBeliefsSection;
       'layout.button': LayoutButton;
       'layout.card-grid': LayoutCardGrid;
+      'layout.case-studies-list-section': LayoutCaseStudiesListSection;
       'layout.client-logo-marquee-section': LayoutClientLogoMarqueeSection;
       'layout.client-showcase-section': LayoutClientShowcaseSection;
       'layout.contact-us-section': LayoutContactUsSection;
@@ -1313,6 +1364,7 @@ declare module '@strapi/strapi' {
       'layout.our-clients-section': LayoutOurClientsSection;
       'layout.page-hero-section': LayoutPageHeroSection;
       'layout.portfolio-filter': LayoutPortfolioFilter;
+      'layout.portfolio-list-section': LayoutPortfolioListSection;
       'layout.portfolio-page-featured-case-studies': LayoutPortfolioPageFeaturedCaseStudies;
       'layout.portfolio-project': LayoutPortfolioProject;
       'layout.portfolio-section': LayoutPortfolioSection;

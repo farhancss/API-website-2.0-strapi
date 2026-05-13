@@ -45,6 +45,7 @@
         "layout.contact-us-section",
         "layout.faq-section",
         "layout.portfolio-section",
+        "layout.portfolio-list-section",
         "layout.portfolio-page-featured-case-studies",
         "layout.dge-score-section",
         "layout.page-hero-section",
@@ -54,7 +55,8 @@
         "layout.awards-recognition-section",
         "layout.award-insights-section",
         "layout.beliefs-section",
-        "layout.value-proposition-section"
+        "layout.value-proposition-section",
+        "layout.case-studies-list-section"
       ]
     },
     "seo": {
