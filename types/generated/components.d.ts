@@ -582,8 +582,7 @@ export interface LayoutDigitalGrowthFrameworkSection
     cta: Schema.Attribute.Component<'elements.link', false>;
     description: Schema.Attribute.Text;
     steps: Schema.Attribute.Component<'elements.steps', true>;
-    title: Schema.Attribute.String &
-      Schema.Attribute.DefaultTo<' Framework to Fuel Your Digital Presence'>;
+    title: Schema.Attribute.Blocks;
   };
 }
 
