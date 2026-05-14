@@ -487,6 +487,8 @@ export interface LayoutClientLogoMarqueeSection extends Struct.ComponentSchema {
       true
     >;
     heading: Schema.Attribute.String;
+    isBlackAndWhite: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
   };
 }
 
