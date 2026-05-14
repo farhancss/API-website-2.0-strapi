@@ -29,6 +29,13 @@
         "images"
       ]
     },
+    "gallery": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
     "tags": {
       "type": "component",
       "repeatable": true,
