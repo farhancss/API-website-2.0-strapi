@@ -571,6 +571,53 @@ export interface LayoutDgeScoreSection extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutDigitalGrowthFrameworkSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_layout_digital_growth_framework_sections';
+  info: {
+    description: 'Header (split title with highlighted phrase, intro, CTA) and a vertical list of framework steps with icons.';
+    displayName: 'Digital Growth Framework Section';
+  };
+  attributes: {
+    cta: Schema.Attribute.Component<'elements.link', false>;
+    description: Schema.Attribute.Text;
+    steps: Schema.Attribute.Component<'elements.steps', true>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<' Framework to Fuel Your Digital Presence'>;
+  };
+}
+
+export interface LayoutDigitalProductHeroGallery
+  extends Struct.ComponentSchema {
+  collectionName: 'components_layout_digital_product_hero_galleries';
+  info: {
+    description: 'Three-column hero: CTA card, mobile mockup, laptop mockup.';
+    displayName: 'Digital Product Hero Gallery';
+  };
+  attributes: {
+    cta: Schema.Attribute.Component<'elements.link-basic', false>;
+    heading: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files'>;
+  };
+}
+
+export interface LayoutDigitalProductShowcaseSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_layout_digital_product_showcase_sections';
+  info: {
+    description: 'Dark marketing band: hero gallery (CTA + two device mockups), value intro (logo + copy + headline), and a row of feature pillars.';
+    displayName: 'Digital Product Showcase Section';
+  };
+  attributes: {
+    featurePillars: Schema.Attribute.Component<'elements.steps', true>;
+    heroGallery: Schema.Attribute.Component<
+      'layout.digital-product-hero-gallery',
+      true
+    >;
+    valueIntro: Schema.Attribute.Component<'elements.steps', false>;
+  };
+}
+
 export interface LayoutExplore extends Struct.ComponentSchema {
   collectionName: 'components_layout_explores';
   info: {
@@ -1324,6 +1371,9 @@ declare module '@strapi/strapi' {
       'layout.content-with-image': LayoutContentWithImage;
       'layout.content-with-video': LayoutContentWithVideo;
       'layout.dge-score-section': LayoutDgeScoreSection;
+      'layout.digital-growth-framework-section': LayoutDigitalGrowthFrameworkSection;
+      'layout.digital-product-hero-gallery': LayoutDigitalProductHeroGallery;
+      'layout.digital-product-showcase-section': LayoutDigitalProductShowcaseSection;
       'layout.explore': LayoutExplore;
       'layout.faq-item': LayoutFaqItem;
       'layout.faq-section': LayoutFaqSection;

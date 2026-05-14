@@ -609,6 +609,8 @@ export interface ApiLandingPageLandingPage extends Struct.SingleTypeSchema {
         'layout.industry-expertise-section',
         'layout.faq-section',
         'layout.dge-score-section',
+        'layout.digital-growth-framework-section',
+        'layout.digital-product-showcase-section',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -674,6 +676,8 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'layout.beliefs-section',
         'layout.value-proposition-section',
         'layout.case-studies-list-section',
+        'layout.digital-growth-framework-section',
+        'layout.digital-product-showcase-section',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;

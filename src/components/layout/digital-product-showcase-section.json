@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_layout_digital_product_showcase_sections",
+  "info": {
+    "displayName": "Digital Product Showcase Section",
+    "description": "Dark marketing band: hero gallery (CTA + two device mockups), value intro (logo + copy + headline), and a row of feature pillars."
+  },
+  "options": {},
+  "attributes": {
+    "heroGallery": {
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.digital-product-hero-gallery"
+    },
+    "valueIntro": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.steps"
+    },
+    "featurePillars": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.steps"
+    }
+  }
+}
