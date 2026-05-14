@@ -7,8 +7,7 @@
   "options": {},
   "attributes": {
     "title": {
-      "type": "string",
-      "default": " Framework to Fuel Your Digital Presence"
+      "type": "blocks"
     },
     "description": {
       "type": "text"
