@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_layout_digital_product_hero_galleries",
+  "info": {
+    "displayName": "Digital Product Hero Gallery",
+    "description": "Three-column hero: CTA card, mobile mockup, laptop mockup."
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link-basic"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images", "files"]
+    }
+  }
+}

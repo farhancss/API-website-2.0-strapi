@@ -60,7 +60,9 @@
         "layout.award-insights-section",
         "layout.beliefs-section",
         "layout.value-proposition-section",
-        "layout.case-studies-list-section"
+        "layout.case-studies-list-section",
+        "layout.digital-growth-framework-section",
+        "layout.digital-product-showcase-section"
       ]
     },
     "seo": {

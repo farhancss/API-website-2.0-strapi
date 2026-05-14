@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_layout_digital_growth_framework_sections",
+  "info": {
+    "displayName": "Digital Growth Framework Section",
+    "description": "Header (split title with highlighted phrase, intro, CTA) and a vertical list of framework steps with icons."
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": " Framework to Fuel Your Digital Presence"
+    },
+    "description": {
+      "type": "text"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link"
+    },
+    "steps": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.steps"
+    }
+  }
+}
