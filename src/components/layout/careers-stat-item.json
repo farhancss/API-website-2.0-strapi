@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_layout_careers_stat_items",
+  "info": {
+    "displayName": "Careers Stat Item",
+    "description": "One stat cell: bold value (e.g. 69+) and label underneath."
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "string",
+      "required": true
+    },
+    "label": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

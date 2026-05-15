@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_layout_careers_team_testimonial_items",
+  "info": {
+    "displayName": "Careers Team Testimonial Item",
+    "description": "One team member: profile photo, name, role, and quote for the culture testimonials panel."
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "designation": {
+      "type": "string",
+      "required": true
+    },
+    "photo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images", "files"]
+    },
+    "quote": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

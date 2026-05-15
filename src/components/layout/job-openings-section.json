@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_layout_job_openings_sections",
+  "info": {
+    "displayName": "Job Openings Section",
+    "description": "Careers job list band with heading. Jobs are loaded from the Job collection (search/filter on the frontend)."
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "blocks"
+    }
+  }
+}

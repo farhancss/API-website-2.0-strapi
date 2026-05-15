@@ -452,6 +452,114 @@ export interface LayoutCardGrid extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutCareersCtaSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_careers_cta_sections';
+  info: {
+    description: 'Centered careers call-to-action with split heading, email line, button, and four decorative images.';
+    displayName: 'Careers CTA Section';
+  };
+  attributes: {
+    cta: Schema.Attribute.Component<'elements.link-basic', false>;
+    description: Schema.Attribute.Blocks;
+    heading: Schema.Attribute.Blocks;
+    image: Schema.Attribute.Media<'images' | 'files', true>;
+  };
+}
+
+export interface LayoutCareersCultureSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_careers_culture_sections';
+  info: {
+    description: 'Culture band: 5-image gallery grid on top, team testimonials list + quote card below.';
+    displayName: 'Careers Culture Section';
+  };
+  attributes: {
+    galleryImageBottomMiddle: Schema.Attribute.Media<'images' | 'files'>;
+    galleryImageBottomRight: Schema.Attribute.Media<'images' | 'files'>;
+    galleryImageLarge: Schema.Attribute.Media<'images' | 'files'>;
+    galleryImageTopMiddle: Schema.Attribute.Media<'images' | 'files'>;
+    galleryImageTopRight: Schema.Attribute.Media<'images' | 'files'>;
+    testimonials: Schema.Attribute.Component<
+      'layout.careers-team-testimonial-item',
+      true
+    >;
+    testimonialsHeading: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Why our team loves Agency Partner'>;
+    testimonialsLogo: Schema.Attribute.Media<'images' | 'files'>;
+  };
+}
+
+export interface LayoutCareersHeroSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_careers_hero_sections';
+  info: {
+    description: 'Dark full-width hero: split heading (plain + highlighted word), CTA link, and background image.';
+    displayName: 'Careers Hero Section';
+  };
+  attributes: {
+    backgroundImage: Schema.Attribute.Media<'images' | 'files'>;
+    cta: Schema.Attribute.Component<'elements.link', false>;
+    heading: Schema.Attribute.Blocks;
+  };
+}
+
+export interface LayoutCareersPerksBenefitsSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_layout_careers_perks_benefits_sections';
+  info: {
+    description: 'Two-column band: split heading + intro copy on the left, accordion perk list on the right.';
+    displayName: 'Careers Perks & Benefits Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.Blocks;
+    image: Schema.Attribute.Media<'images' | 'files'>;
+    perks: Schema.Attribute.Component<'elements.steps', true>;
+  };
+}
+
+export interface LayoutCareersSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_careers_sections';
+  info: {
+    description: 'Careers page band: info + stats grid (top) and category selection cards (bottom).';
+    displayName: 'Careers Section';
+  };
+  attributes: {
+    categories: Schema.Attribute.Component<'elements.link', true>;
+    categoryHeading: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'What are you striving forward?'>;
+    cta: Schema.Attribute.Component<'elements.link', false>;
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.Blocks;
+    statistics: Schema.Attribute.Component<'layout.careers-stat-item', true>;
+  };
+}
+
+export interface LayoutCareersStatItem extends Struct.ComponentSchema {
+  collectionName: 'components_layout_careers_stat_items';
+  info: {
+    description: 'One stat cell: bold value (e.g. 69+) and label underneath.';
+    displayName: 'Careers Stat Item';
+  };
+  attributes: {
+    label: Schema.Attribute.String & Schema.Attribute.Required;
+    value: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface LayoutCareersTeamTestimonialItem
+  extends Struct.ComponentSchema {
+  collectionName: 'components_layout_careers_team_testimonial_items';
+  info: {
+    description: 'One team member: profile photo, name, role, and quote for the culture testimonials panel.';
+    displayName: 'Careers Team Testimonial Item';
+  };
+  attributes: {
+    designation: Schema.Attribute.String & Schema.Attribute.Required;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    photo: Schema.Attribute.Media<'images' | 'files'>;
+    quote: Schema.Attribute.Text & Schema.Attribute.Required;
+  };
+}
+
 export interface LayoutCaseStudiesListSection extends Struct.ComponentSchema {
   collectionName: 'components_layout_case_studies_list_sections';
   info: {
@@ -900,6 +1008,17 @@ export interface LayoutIndustryItem extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutJobOpeningsSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_job_openings_sections';
+  info: {
+    description: 'Careers job list band with heading. Jobs are loaded from the Job collection (search/filter on the frontend).';
+    displayName: 'Job Openings Section';
+  };
+  attributes: {
+    heading: Schema.Attribute.Blocks;
+  };
+}
+
 export interface LayoutLeadersBoard extends Struct.ComponentSchema {
   collectionName: 'components_layout_leaders_boards';
   info: {
@@ -1159,6 +1278,19 @@ export interface LayoutValuePropositionSection extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutValuesSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_values_sections';
+  info: {
+    description: 'Dark band: split heading + intro on top, 3x2 grid of value cards below.';
+    displayName: 'Values Section';
+  };
+  attributes: {
+    cards: Schema.Attribute.Component<'elements.steps', true>;
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.Blocks;
+  };
+}
+
 export interface SectionsHubSpotForm extends Struct.ComponentSchema {
   collectionName: 'components_sections_hub_spot_forms';
   info: {
@@ -1365,6 +1497,13 @@ declare module '@strapi/strapi' {
       'layout.beliefs-section': LayoutBeliefsSection;
       'layout.button': LayoutButton;
       'layout.card-grid': LayoutCardGrid;
+      'layout.careers-cta-section': LayoutCareersCtaSection;
+      'layout.careers-culture-section': LayoutCareersCultureSection;
+      'layout.careers-hero-section': LayoutCareersHeroSection;
+      'layout.careers-perks-benefits-section': LayoutCareersPerksBenefitsSection;
+      'layout.careers-section': LayoutCareersSection;
+      'layout.careers-stat-item': LayoutCareersStatItem;
+      'layout.careers-team-testimonial-item': LayoutCareersTeamTestimonialItem;
       'layout.case-studies-list-section': LayoutCaseStudiesListSection;
       'layout.client-logo-marquee-section': LayoutClientLogoMarqueeSection;
       'layout.client-showcase-section': LayoutClientShowcaseSection;
@@ -1393,6 +1532,7 @@ declare module '@strapi/strapi' {
       'layout.image-slider-section': LayoutImageSliderSection;
       'layout.industry-expertise-section': LayoutIndustryExpertiseSection;
       'layout.industry-item': LayoutIndustryItem;
+      'layout.job-openings-section': LayoutJobOpeningsSection;
       'layout.leaders-board': LayoutLeadersBoard;
       'layout.legal-document': LayoutLegalDocument;
       'layout.mission-vision': LayoutMissionVision;
@@ -1410,6 +1550,7 @@ declare module '@strapi/strapi' {
       'layout.stats-section': LayoutStatsSection;
       'layout.top-nav': LayoutTopNav;
       'layout.value-proposition-section': LayoutValuePropositionSection;
+      'layout.values-section': LayoutValuesSection;
       'sections.hub-spot-form': SectionsHubSpotForm;
       'shared.award-insight-item': SharedAwardInsightItem;
       'shared.client-industry-item': SharedClientIndustryItem;

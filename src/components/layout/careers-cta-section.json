@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_layout_careers_cta_sections",
+  "info": {
+    "displayName": "Careers CTA Section",
+    "description": "Centered careers call-to-action with split heading, email line, button, and four decorative images."
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "blocks"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link-basic"
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": ["images", "files"]
+    }
+  }
+}
