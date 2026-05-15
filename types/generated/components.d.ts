@@ -785,6 +785,10 @@ export interface LayoutFeatureCaseStudies extends Struct.ComponentSchema {
     displayName: 'Feature Case Studies';
   };
   attributes: {
+    CaseStudies: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::case-study.case-study'
+    >;
     categories: Schema.Attribute.Component<'case-study.category', true>;
     heading: Schema.Attribute.Blocks;
   };
