@@ -387,7 +387,7 @@ export interface LayoutAwardItem extends Struct.ComponentSchema {
     displayName: 'Award Item';
   };
   attributes: {
-    imagea: Schema.Attribute.Media<'images' | 'files'> &
+    image: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required;
     logo: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required;
