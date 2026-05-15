@@ -611,6 +611,13 @@ export interface ApiLandingPageLandingPage extends Struct.SingleTypeSchema {
         'layout.dge-score-section',
         'layout.digital-growth-framework-section',
         'layout.digital-product-showcase-section',
+        'layout.careers-hero-section',
+        'layout.careers-section',
+        'layout.careers-perks-benefits-section',
+        'layout.values-section',
+        'layout.careers-cta-section',
+        'layout.careers-culture-section',
+        'layout.job-openings-section',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -678,6 +685,13 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'layout.case-studies-list-section',
         'layout.digital-growth-framework-section',
         'layout.digital-product-showcase-section',
+        'layout.careers-hero-section',
+        'layout.careers-section',
+        'layout.careers-perks-benefits-section',
+        'layout.values-section',
+        'layout.careers-cta-section',
+        'layout.careers-culture-section',
+        'layout.job-openings-section',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;

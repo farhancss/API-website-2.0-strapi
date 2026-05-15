@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_layout_values_sections",
+  "info": {
+    "displayName": "Values Section",
+    "description": "Dark band: split heading + intro on top, 3x2 grid of value cards below."
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "blocks"
+    },
+    "description": {
+      "type": "text"
+    },
+    "cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.steps"
+    }
+  }
+}

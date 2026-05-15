@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_layout_careers_hero_sections",
+  "info": {
+    "displayName": "Careers Hero Section",
+    "description": "Dark full-width hero: split heading (plain + highlighted word), CTA link, and background image."
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "blocks"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link"
+    },
+    "backgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images", "files"]
+    }
+  }
+}

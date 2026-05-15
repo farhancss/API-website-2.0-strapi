@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_layout_careers_perks_benefits_sections",
+  "info": {
+    "displayName": "Careers Perks & Benefits Section",
+    "description": "Two-column band: split heading + intro copy on the left, accordion perk list on the right."
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "blocks"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images", "files"]
+    },
+    "perks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.steps"
+    }
+  }
+}

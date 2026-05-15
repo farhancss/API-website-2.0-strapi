@@ -1,0 +1,49 @@
+{
+  "collectionName": "components_layout_careers_culture_sections",
+  "info": {
+    "displayName": "Careers Culture Section",
+    "description": "Culture band: 5-image gallery grid on top, team testimonials list + quote card below."
+  },
+  "options": {},
+  "attributes": {
+    "galleryImageLarge": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images", "files"]
+    },
+    "galleryImageTopMiddle": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images", "files"]
+    },
+    "galleryImageTopRight": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images", "files"]
+    },
+    "galleryImageBottomMiddle": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images", "files"]
+    },
+    "galleryImageBottomRight": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images", "files"]
+    },
+    "testimonialsHeading": {
+      "type": "string",
+      "default": "Why our team loves Agency Partner"
+    },
+    "testimonialsLogo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images", "files"]
+    },
+    "testimonials": {
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.careers-team-testimonial-item"
+    }
+  }
+}
