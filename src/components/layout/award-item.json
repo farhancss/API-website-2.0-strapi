@@ -6,7 +6,7 @@
   },
   "options": {},
   "attributes": {
-    "imagea": {
+    "image": {
       "type": "media",
       "multiple": false,
       "required": true,
