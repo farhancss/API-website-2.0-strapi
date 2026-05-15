@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_layout_award_items",
+  "info": {
+    "displayName": "Award Item",
+    "description": "One award column: badge graphic, title text, and company logo."
+  },
+  "options": {},
+  "attributes": {
+    "imagea": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "text": {
+      "type": "string",
+      "required": true
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    }
+  }
+}

@@ -380,16 +380,28 @@ export interface LayoutAwardInsightsSection extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutAwardItem extends Struct.ComponentSchema {
+  collectionName: 'components_layout_award_items';
+  info: {
+    description: 'One award column: badge graphic, title text, and company logo.';
+    displayName: 'Award Item';
+  };
+  attributes: {
+    imagea: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    logo: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    text: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface LayoutAwardSection extends Struct.ComponentSchema {
   collectionName: 'components_layout_award_sections';
   info: {
     displayName: 'Award Section';
   };
   attributes: {
-    awards: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    >;
+    awards: Schema.Attribute.Component<'layout.award-item', true>;
     description: Schema.Attribute.Blocks;
     heading: Schema.Attribute.Blocks;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
@@ -1492,6 +1504,7 @@ declare module '@strapi/strapi' {
       'elements.tabs': ElementsTabs;
       'layout.about-section': LayoutAboutSection;
       'layout.award-insights-section': LayoutAwardInsightsSection;
+      'layout.award-item': LayoutAwardItem;
       'layout.award-section': LayoutAwardSection;
       'layout.awards-recognition-section': LayoutAwardsRecognitionSection;
       'layout.beliefs-section': LayoutBeliefsSection;

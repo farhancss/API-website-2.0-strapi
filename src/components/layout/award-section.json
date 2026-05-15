@@ -22,14 +22,9 @@
       ]
     },
     "awards": {
-      "type": "media",
-      "multiple": true,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.award-item"
     }
   },
   "config": {}
