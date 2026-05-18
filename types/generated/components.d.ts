@@ -1310,6 +1310,23 @@ export interface LayoutValuesSection extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutWorkHeroSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_work_hero_sections';
+  info: {
+    displayName: 'Work Hero Section';
+  };
+  attributes: {
+    backgroundImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    backgroundPattern: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    description: Schema.Attribute.Blocks;
+    heading: Schema.Attribute.String;
+  };
+}
+
 export interface SectionsHubSpotForm extends Struct.ComponentSchema {
   collectionName: 'components_sections_hub_spot_forms';
   info: {
@@ -1571,6 +1588,7 @@ declare module '@strapi/strapi' {
       'layout.top-nav': LayoutTopNav;
       'layout.value-proposition-section': LayoutValuePropositionSection;
       'layout.values-section': LayoutValuesSection;
+      'layout.work-hero-section': LayoutWorkHeroSection;
       'sections.hub-spot-form': SectionsHubSpotForm;
       'shared.award-insight-item': SharedAwardInsightItem;
       'shared.client-industry-item': SharedClientIndustryItem;
