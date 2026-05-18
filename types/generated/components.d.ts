@@ -899,6 +899,7 @@ export interface LayoutFooterSocialLink extends Struct.ComponentSchema {
     displayName: 'Footer Social Link';
   };
   attributes: {
+    hoverBackgroundColor: Schema.Attribute.String;
     href: Schema.Attribute.String;
     isExternal: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
     label: Schema.Attribute.String;
