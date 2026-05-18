@@ -1271,6 +1271,9 @@ export interface LayoutTopNav extends Struct.ComponentSchema {
   };
   attributes: {
     cta: Schema.Attribute.Component<'elements.link', false>;
+    darkThemeLogoImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
     logoImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     logoText: Schema.Attribute.String;
     navItems: Schema.Attribute.Component<'elements.link', true>;
