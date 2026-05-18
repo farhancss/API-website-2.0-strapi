@@ -830,6 +830,7 @@ export interface LayoutFooter extends Struct.ComponentSchema {
     description: Schema.Attribute.Text;
     email: Schema.Attribute.Email;
     footerLinks: Schema.Attribute.Component<'layout.footer-link-item', true>;
+    hubSpotForm: Schema.Attribute.Component<'sections.hub-spot-form', false>;
     legalLinks: Schema.Attribute.Component<'elements.link-basic', true>;
     logoImage: Schema.Attribute.Media<'images'>;
     logoText: Schema.Attribute.String;
