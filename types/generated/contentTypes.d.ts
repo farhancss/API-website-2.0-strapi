@@ -692,6 +692,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'layout.careers-cta-section',
         'layout.careers-culture-section',
         'layout.job-openings-section',
+        'layout.work-hero-section',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
