@@ -13,9 +13,6 @@
       "type": "media",
       "multiple": false,
       "allowedTypes": ["images"]
-    },
-    "hoverBackgroundColor": {
-      "type": "string"
     }
   }
 }
