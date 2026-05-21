@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_layout_clutch_rating_summaries",
+  "info": {
+    "displayName": "Clutch Rating Summary",
+    "description": "Static Clutch summary card: rating, review count, logo, and view-all link."
+  },
+  "options": {},
+  "attributes": {
+    "rating": {
+      "type": "decimal",
+      "default": 4.9,
+      "min": 0,
+      "max": 5
+    },
+    "reviewCount": {
+      "type": "integer",
+      "default": 60
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images", "files"]
+    },
+    "viewAllCta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link-basic"
+    }
+  }
+}

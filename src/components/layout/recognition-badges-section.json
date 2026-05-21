@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_layout_recognition_badges_sections",
+  "info": {
+    "displayName": "Recognition Badges Section",
+    "description": "Horizontal row of award badges: badge image, label, and brand logo per column."
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "colored": {
+      "type": "boolean",
+      "default": true
+    },
+    "badges": {
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.award-item"
+    }
+  }
+}
