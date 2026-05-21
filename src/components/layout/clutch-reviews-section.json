@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_layout_clutch_reviews_sections",
+  "info": {
+    "displayName": "Clutch Reviews Section",
+    "description": "Mixed grid of Clutch review cards and colored statistic cards."
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.clutch-review-card"
+    }
+  }
+}

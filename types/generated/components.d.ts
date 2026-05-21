@@ -625,6 +625,50 @@ export interface LayoutClientShowcaseSection extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutClutchReviewCard extends Struct.ComponentSchema {
+  collectionName: 'components_layout_clutch_review_cards';
+  info: {
+    description: 'One grid tile: Clutch testimonial (logo, rating, quote, author) or statistic (value, label, description).';
+    displayName: 'Clutch Review Card';
+  };
+  attributes: {
+    authorDesignation: Schema.Attribute.String;
+    authorName: Schema.Attribute.String;
+    backgroundVariant: Schema.Attribute.Enumeration<
+      ['blue', 'light-blue', 'purple']
+    > &
+      Schema.Attribute.DefaultTo<'blue'>;
+    cardType: Schema.Attribute.Enumeration<['testimonial', 'statistic']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'testimonial'>;
+    description: Schema.Attribute.Text;
+    label: Schema.Attribute.String;
+    logo: Schema.Attribute.Media<'images' | 'files'>;
+    quote: Schema.Attribute.Text;
+    rating: Schema.Attribute.Decimal &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 5;
+          min: 0;
+        },
+        number
+      >;
+    value: Schema.Attribute.String;
+  };
+}
+
+export interface LayoutClutchReviewsSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_clutch_reviews_sections';
+  info: {
+    description: 'Mixed grid of Clutch review cards and colored statistic cards.';
+    displayName: 'Clutch Reviews Section';
+  };
+  attributes: {
+    cards: Schema.Attribute.Component<'layout.clutch-review-card', true>;
+    heading: Schema.Attribute.String;
+  };
+}
+
 export interface LayoutContactUsSection extends Struct.ComponentSchema {
   collectionName: 'components_layout_contact_us_sections';
   info: {
@@ -1545,6 +1589,8 @@ declare module '@strapi/strapi' {
       'layout.case-studies-list-section': LayoutCaseStudiesListSection;
       'layout.client-logo-marquee-section': LayoutClientLogoMarqueeSection;
       'layout.client-showcase-section': LayoutClientShowcaseSection;
+      'layout.clutch-review-card': LayoutClutchReviewCard;
+      'layout.clutch-reviews-section': LayoutClutchReviewsSection;
       'layout.contact-us-section': LayoutContactUsSection;
       'layout.content-with-image': LayoutContentWithImage;
       'layout.content-with-video': LayoutContentWithVideo;
