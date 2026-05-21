@@ -1,0 +1,49 @@
+{
+  "collectionName": "components_layout_clutch_review_cards",
+  "info": {
+    "displayName": "Clutch Review Card",
+    "description": "One grid tile: Clutch testimonial (logo, rating, quote, author) or statistic (value, label, description)."
+  },
+  "options": {},
+  "attributes": {
+    "cardType": {
+      "type": "enumeration",
+      "enum": ["testimonial", "statistic"],
+      "required": true,
+      "default": "testimonial"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images", "files"]
+    },
+    "rating": {
+      "type": "decimal",
+      "min": 0,
+      "max": 5
+    },
+    "quote": {
+      "type": "text"
+    },
+    "authorName": {
+      "type": "string"
+    },
+    "authorDesignation": {
+      "type": "string"
+    },
+    "value": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "backgroundVariant": {
+      "type": "enumeration",
+      "enum": ["blue", "light-blue", "purple"],
+      "default": "blue"
+    }
+  }
+}
