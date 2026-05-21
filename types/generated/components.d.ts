@@ -625,6 +625,28 @@ export interface LayoutClientShowcaseSection extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutClutchRatingSummary extends Struct.ComponentSchema {
+  collectionName: 'components_layout_clutch_rating_summaries';
+  info: {
+    description: 'Static Clutch summary card: rating, review count, logo, and view-all link.';
+    displayName: 'Clutch Rating Summary';
+  };
+  attributes: {
+    logo: Schema.Attribute.Media<'images' | 'files'>;
+    rating: Schema.Attribute.Decimal &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 5;
+          min: 0;
+        },
+        number
+      > &
+      Schema.Attribute.DefaultTo<4.9>;
+    reviewCount: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<60>;
+    viewAllCta: Schema.Attribute.Component<'elements.link-basic', false>;
+  };
+}
+
 export interface LayoutClutchReviewCard extends Struct.ComponentSchema {
   collectionName: 'components_layout_clutch_review_cards';
   info: {
@@ -666,6 +688,39 @@ export interface LayoutClutchReviewsSection extends Struct.ComponentSchema {
   attributes: {
     cards: Schema.Attribute.Component<'layout.clutch-review-card', true>;
     heading: Schema.Attribute.String;
+  };
+}
+
+export interface LayoutClutchTestimonialSlide extends Struct.ComponentSchema {
+  collectionName: 'components_layout_clutch_testimonial_slides';
+  info: {
+    description: 'One carousel testimonial card: company, headline, review body, and reviewer profile.';
+    displayName: 'Clutch Testimonial Slide';
+  };
+  attributes: {
+    companyName: Schema.Attribute.String & Schema.Attribute.Required;
+    headline: Schema.Attribute.String & Schema.Attribute.Required;
+    reviewerAvatar: Schema.Attribute.Media<'images' | 'files'>;
+    reviewerName: Schema.Attribute.String & Schema.Attribute.Required;
+    reviewerTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    reviewText: Schema.Attribute.Text & Schema.Attribute.Required;
+  };
+}
+
+export interface LayoutClutchTestimonialsSliderSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_layout_clutch_testimonials_slider_sections';
+  info: {
+    description: 'Clutch reviews carousel: split heading, rating summary card, and sliding testimonial cards.';
+    displayName: 'Clutch Testimonials Slider Section';
+  };
+  attributes: {
+    heading: Schema.Attribute.Blocks;
+    summary: Schema.Attribute.Component<'layout.clutch-rating-summary', false>;
+    testimonials: Schema.Attribute.Component<
+      'layout.clutch-testimonial-slide',
+      true
+    >;
   };
 }
 
@@ -1264,6 +1319,19 @@ export interface LayoutProfileSection extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutRecognitionBadgesSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_recognition_badges_sections';
+  info: {
+    description: 'Horizontal row of award badges: badge image, label, and brand logo per column.';
+    displayName: 'Recognition Badges Section';
+  };
+  attributes: {
+    badges: Schema.Attribute.Component<'layout.award-item', true>;
+    colored: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    heading: Schema.Attribute.String;
+  };
+}
+
 export interface LayoutResourcesAndCareers extends Struct.ComponentSchema {
   collectionName: 'components_layout_resources_and_careers';
   info: {
@@ -1589,8 +1657,11 @@ declare module '@strapi/strapi' {
       'layout.case-studies-list-section': LayoutCaseStudiesListSection;
       'layout.client-logo-marquee-section': LayoutClientLogoMarqueeSection;
       'layout.client-showcase-section': LayoutClientShowcaseSection;
+      'layout.clutch-rating-summary': LayoutClutchRatingSummary;
       'layout.clutch-review-card': LayoutClutchReviewCard;
       'layout.clutch-reviews-section': LayoutClutchReviewsSection;
+      'layout.clutch-testimonial-slide': LayoutClutchTestimonialSlide;
+      'layout.clutch-testimonials-slider-section': LayoutClutchTestimonialsSliderSection;
       'layout.contact-us-section': LayoutContactUsSection;
       'layout.content-with-image': LayoutContentWithImage;
       'layout.content-with-video': LayoutContentWithVideo;
@@ -1629,6 +1700,7 @@ declare module '@strapi/strapi' {
       'layout.portfolio-project': LayoutPortfolioProject;
       'layout.price-grid': LayoutPriceGrid;
       'layout.profile-section': LayoutProfileSection;
+      'layout.recognition-badges-section': LayoutRecognitionBadgesSection;
       'layout.resources-and-careers': LayoutResourcesAndCareers;
       'layout.section-heading': LayoutSectionHeading;
       'layout.stats-section': LayoutStatsSection;

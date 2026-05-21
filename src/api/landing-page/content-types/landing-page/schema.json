@@ -39,7 +39,9 @@
         "layout.careers-cta-section",
         "layout.careers-culture-section",
         "layout.job-openings-section",
-        "layout.clutch-reviews-section"
+        "layout.clutch-reviews-section",
+        "layout.recognition-badges-section",
+        "layout.clutch-testimonials-slider-section"
       ]
     }
   }

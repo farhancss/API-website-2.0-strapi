@@ -619,6 +619,8 @@ export interface ApiLandingPageLandingPage extends Struct.SingleTypeSchema {
         'layout.careers-culture-section',
         'layout.job-openings-section',
         'layout.clutch-reviews-section',
+        'layout.recognition-badges-section',
+        'layout.clutch-testimonials-slider-section',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -695,6 +697,8 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'layout.job-openings-section',
         'layout.work-hero-section',
         'layout.clutch-reviews-section',
+        'layout.recognition-badges-section',
+        'layout.clutch-testimonials-slider-section',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;

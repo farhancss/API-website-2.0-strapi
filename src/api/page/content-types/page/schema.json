@@ -71,7 +71,9 @@
         "layout.careers-culture-section",
         "layout.job-openings-section",
         "layout.work-hero-section",
-        "layout.clutch-reviews-section"
+        "layout.clutch-reviews-section",
+        "layout.recognition-badges-section",
+        "layout.clutch-testimonials-slider-section"
       ]
     },
     "seo": {

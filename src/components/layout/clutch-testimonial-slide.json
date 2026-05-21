@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_layout_clutch_testimonial_slides",
+  "info": {
+    "displayName": "Clutch Testimonial Slide",
+    "description": "One carousel testimonial card: company, headline, review body, and reviewer profile."
+  },
+  "options": {},
+  "attributes": {
+    "companyName": {
+      "type": "string",
+      "required": true
+    },
+    "headline": {
+      "type": "string",
+      "required": true
+    },
+    "reviewText": {
+      "type": "text",
+      "required": true
+    },
+    "reviewerAvatar": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images", "files"]
+    },
+    "reviewerName": {
+      "type": "string",
+      "required": true
+    },
+    "reviewerTitle": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_layout_clutch_testimonials_slider_sections",
+  "info": {
+    "displayName": "Clutch Testimonials Slider Section",
+    "description": "Clutch reviews carousel: split heading, rating summary card, and sliding testimonial cards."
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "blocks"
+    },
+    "summary": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.clutch-rating-summary"
+    },
+    "testimonials": {
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.clutch-testimonial-slide"
+    }
+  }
+}
