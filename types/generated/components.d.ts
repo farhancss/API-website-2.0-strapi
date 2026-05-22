@@ -691,19 +691,45 @@ export interface LayoutClutchReviewsSection extends Struct.ComponentSchema {
   };
 }
 
-export interface LayoutClutchTestimonialSlide extends Struct.ComponentSchema {
-  collectionName: 'components_layout_clutch_testimonial_slides';
+export interface LayoutClutchTestimonialSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_clutch_testimonial_sections';
   info: {
-    description: 'One carousel testimonial card: company, headline, review body, and reviewer profile.';
-    displayName: 'Clutch Testimonial Slide';
+    description: 'Clutch reviews first, then optional statistic cards below.';
+    displayName: 'Clutch Testimonial Section';
   };
   attributes: {
-    companyName: Schema.Attribute.String & Schema.Attribute.Required;
-    headline: Schema.Attribute.String & Schema.Attribute.Required;
-    reviewerAvatar: Schema.Attribute.Media<'images' | 'files'>;
-    reviewerName: Schema.Attribute.String & Schema.Attribute.Required;
-    reviewerTitle: Schema.Attribute.String & Schema.Attribute.Required;
-    reviewText: Schema.Attribute.Text & Schema.Attribute.Required;
+    label: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Client review'>;
+    review: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::clutch-review.clutch-review'
+    > &
+      Schema.Attribute.Required;
+    statistics: Schema.Attribute.Component<
+      'layout.clutch-testimonial-statistic-item',
+      true
+    >;
+  };
+}
+
+export interface LayoutClutchTestimonialStatisticItem
+  extends Struct.ComponentSchema {
+  collectionName: 'components_layout_clutch_testimonial_statistic_items';
+  info: {
+    description: 'Statistic card with optional logo, shown after reviews in the section.';
+    displayName: 'Clutch Testimonial Statistic';
+  };
+  attributes: {
+    backgroundVariant: Schema.Attribute.Enumeration<
+      ['blue', 'light-blue', 'purple']
+    > &
+      Schema.Attribute.DefaultTo<'blue'>;
+    description: Schema.Attribute.Text;
+    logo: Schema.Attribute.Media<'images' | 'files'>;
+    showAfterReviews: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'0-10'>;
+    statisticLabel: Schema.Attribute.String & Schema.Attribute.Required;
+    value: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -716,11 +742,11 @@ export interface LayoutClutchTestimonialsSliderSection
   };
   attributes: {
     heading: Schema.Attribute.Blocks;
-    summary: Schema.Attribute.Component<'layout.clutch-rating-summary', false>;
-    testimonials: Schema.Attribute.Component<
-      'layout.clutch-testimonial-slide',
-      true
+    reviews: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::clutch-review.clutch-review'
     >;
+    summary: Schema.Attribute.Component<'layout.clutch-rating-summary', false>;
   };
 }
 
@@ -1660,7 +1686,8 @@ declare module '@strapi/strapi' {
       'layout.clutch-rating-summary': LayoutClutchRatingSummary;
       'layout.clutch-review-card': LayoutClutchReviewCard;
       'layout.clutch-reviews-section': LayoutClutchReviewsSection;
-      'layout.clutch-testimonial-slide': LayoutClutchTestimonialSlide;
+      'layout.clutch-testimonial-section': LayoutClutchTestimonialSection;
+      'layout.clutch-testimonial-statistic-item': LayoutClutchTestimonialStatisticItem;
       'layout.clutch-testimonials-slider-section': LayoutClutchTestimonialsSliderSection;
       'layout.contact-us-section': LayoutContactUsSection;
       'layout.content-with-image': LayoutContentWithImage;

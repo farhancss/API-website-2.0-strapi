@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_layout_clutch_testimonial_statistic_items",
+  "info": {
+    "displayName": "Clutch Testimonial Statistic",
+    "description": "Statistic card with optional logo, shown after reviews in the section."
+  },
+  "options": {},
+  "attributes": {
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images", "files"]
+    },
+    "value": {
+      "type": "string",
+      "required": true
+    },
+    "statisticLabel": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "backgroundVariant": {
+      "type": "enumeration",
+      "enum": ["blue", "light-blue", "purple"],
+      "default": "blue"
+    },
+    "showAfterReviews": {
+      "type": "string",
+      "default": "0-10",
+      "description": "Index of the review to show after (0-based index)"
+    }
+  }
+}

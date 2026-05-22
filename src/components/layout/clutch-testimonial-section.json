@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_layout_clutch_testimonial_sections",
+  "info": {
+    "displayName": "Clutch Testimonial Section",
+    "description": "Clutch reviews first, then optional statistic cards below."
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "default": "Client review"
+    },
+    "review": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::clutch-review.clutch-review",
+      "required": true
+    },
+    "statistics": {
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.clutch-testimonial-statistic-item"
+    }
+  }
+}

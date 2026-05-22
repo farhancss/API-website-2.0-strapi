@@ -14,10 +14,10 @@
       "repeatable": false,
       "component": "layout.clutch-rating-summary"
     },
-    "testimonials": {
-      "type": "component",
-      "repeatable": true,
-      "component": "layout.clutch-testimonial-slide"
+    "reviews": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::clutch-review.clutch-review"
     }
   }
 }

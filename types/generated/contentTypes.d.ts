@@ -493,6 +493,41 @@ export interface ApiCaseStudyCaseStudy extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiClutchReviewClutchReview
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'clutch_reviews';
+  info: {
+    description: 'Reusable Clutch-style client reviews. Create once, link from case studies and page sections.';
+    displayName: 'Clutch Reviews';
+    pluralName: 'clutch-reviews';
+    singularName: 'clutch-review';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    companyName: Schema.Attribute.String & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    headline: Schema.Attribute.String & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::clutch-review.clutch-review'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    reviewerAvatar: Schema.Attribute.Media<'images' | 'files'>;
+    reviewerName: Schema.Attribute.String & Schema.Attribute.Required;
+    reviewerTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    reviewText: Schema.Attribute.Text & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   collectionName: 'globals';
   info: {
@@ -621,6 +656,7 @@ export interface ApiLandingPageLandingPage extends Struct.SingleTypeSchema {
         'layout.clutch-reviews-section',
         'layout.recognition-badges-section',
         'layout.clutch-testimonials-slider-section',
+        'layout.clutch-testimonial-section',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -699,6 +735,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'layout.clutch-reviews-section',
         'layout.recognition-badges-section',
         'layout.clutch-testimonials-slider-section',
+        'layout.clutch-testimonial-section',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -1372,6 +1409,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::case-study.case-study': ApiCaseStudyCaseStudy;
+      'api::clutch-review.clutch-review': ApiClutchReviewClutchReview;
       'api::global.global': ApiGlobalGlobal;
       'api::hub-spot-form.hub-spot-form': ApiHubSpotFormHubSpotForm;
       'api::industry.industry': ApiIndustryIndustry;
