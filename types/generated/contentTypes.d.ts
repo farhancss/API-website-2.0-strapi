@@ -517,7 +517,16 @@ export interface ApiClutchReviewClutchReview
       'api::clutch-review.clutch-review'
     > &
       Schema.Attribute.Private;
+    logo: Schema.Attribute.Media<'images' | 'files'>;
     publishedAt: Schema.Attribute.DateTime;
+    rating: Schema.Attribute.Decimal &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 5;
+          min: 0;
+        },
+        number
+      >;
     reviewerAvatar: Schema.Attribute.Media<'images' | 'files'>;
     reviewerName: Schema.Attribute.String & Schema.Attribute.Required;
     reviewerTitle: Schema.Attribute.String & Schema.Attribute.Required;
