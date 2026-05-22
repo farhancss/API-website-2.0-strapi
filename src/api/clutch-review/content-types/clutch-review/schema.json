@@ -36,6 +36,16 @@
     "reviewerTitle": {
       "type": "string",
       "required": true
+    },
+    "rating": {
+      "type": "decimal",
+      "min": 0,
+      "max": 5
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images", "files"]
     }
   }
 }
