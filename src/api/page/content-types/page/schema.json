@@ -73,7 +73,8 @@
         "layout.work-hero-section",
         "layout.clutch-reviews-section",
         "layout.recognition-badges-section",
-        "layout.clutch-testimonials-slider-section"
+        "layout.clutch-testimonials-slider-section",
+        "layout.clutch-testimonial-section"
       ]
     },
     "seo": {
