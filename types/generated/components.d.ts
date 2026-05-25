@@ -82,6 +82,24 @@ export interface CaseStudyDgeProcessSection extends Struct.ComponentSchema {
   };
 }
 
+export interface CaseStudyFeaturedReviewSection extends Struct.ComponentSchema {
+  collectionName: 'components_case_study_featured_review_sections';
+  info: {
+    description: 'Full-width testimonial card: Clutch rating sidebar (left) and linked review quote with author (right).';
+    displayName: 'Featured Review Section';
+  };
+  attributes: {
+    backgroundPattern: Schema.Attribute.Media<'images' | 'files'>;
+    review: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::clutch-review.clutch-review'
+    > &
+      Schema.Attribute.Required;
+    reviewedOnLabel: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Reviewed on'>;
+  };
+}
+
 export interface CaseStudyGrowthSessionSection extends Struct.ComponentSchema {
   collectionName: 'components_case_study_growth_session_sections';
   info: {
@@ -1673,6 +1691,7 @@ declare module '@strapi/strapi' {
       'case-study.challenge-row': CaseStudyChallengeRow;
       'case-study.challenges-section': CaseStudyChallengesSection;
       'case-study.dge-process-section': CaseStudyDgeProcessSection;
+      'case-study.featured-review-section': CaseStudyFeaturedReviewSection;
       'case-study.growth-session-section': CaseStudyGrowthSessionSection;
       'case-study.item': CaseStudyItem;
       'case-study.process-card': CaseStudyProcessCard;
