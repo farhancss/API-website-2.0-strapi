@@ -42,7 +42,8 @@
         "layout.clutch-reviews-section",
         "layout.recognition-badges-section",
         "layout.clutch-testimonials-slider-section",
-        "layout.clutch-testimonial-section"
+        "layout.clutch-testimonial-section",
+        "layout.hero-review-section"
       ]
     }
   }
