@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_case_study_featured_review_sections",
+  "info": {
+    "displayName": "Featured Review Section",
+    "description": "Full-width testimonial card: Clutch rating sidebar (left) and linked review quote with author (right)."
+  },
+  "options": {},
+  "attributes": {
+    "review": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::clutch-review.clutch-review",
+      "required": true
+    },
+    "reviewedOnLabel": {
+      "type": "string",
+      "default": "Reviewed on"
+    },
+    "backgroundPattern": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images", "files"]
+    }
+  }
+}

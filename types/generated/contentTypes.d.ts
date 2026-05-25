@@ -472,6 +472,7 @@ export interface ApiCaseStudyCaseStudy extends Struct.CollectionTypeSchema {
         'case-study.responsive-design-section',
         'case-study.social-media-section',
         'case-study.growth-session-section',
+        'case-study.featured-review-section',
       ]
     >;
     services: Schema.Attribute.Relation<'manyToMany', 'api::service.service'>;
