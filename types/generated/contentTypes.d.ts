@@ -666,6 +666,7 @@ export interface ApiLandingPageLandingPage extends Struct.SingleTypeSchema {
         'layout.recognition-badges-section',
         'layout.clutch-testimonials-slider-section',
         'layout.clutch-testimonial-section',
+        'layout.hero-review-section',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -745,6 +746,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'layout.recognition-badges-section',
         'layout.clutch-testimonials-slider-section',
         'layout.clutch-testimonial-section',
+        'layout.hero-review-section',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;

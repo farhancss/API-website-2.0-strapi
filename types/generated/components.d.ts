@@ -1107,6 +1107,34 @@ export interface LayoutHero extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutHeroReviewSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_hero_review_sections';
+  info: {
+    description: 'Two-column hero: eyebrow and heading on the left, description and Clutch rating summary on the right.';
+    displayName: 'Hero Review Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    eyebrow: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'CLIENT SUCCESS. REAL RESULTS.'>;
+    heading: Schema.Attribute.Blocks;
+    logo: Schema.Attribute.Media<'images' | 'files'>;
+    rating: Schema.Attribute.Decimal &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 5;
+          min: 0;
+        },
+        number
+      > &
+      Schema.Attribute.DefaultTo<4.9>;
+    reviewedOnLabel: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Reviewed on'>;
+    reviewsOnLabel: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Reviews on'>;
+  };
+}
+
 export interface LayoutImageSliderSection extends Struct.ComponentSchema {
   collectionName: 'components_layout_image_slider_sections';
   info: {
@@ -1711,6 +1739,7 @@ declare module '@strapi/strapi' {
       'layout.founder-section': LayoutFounderSection;
       'layout.heading-with-image': LayoutHeadingWithImage;
       'layout.hero': LayoutHero;
+      'layout.hero-review-section': LayoutHeroReviewSection;
       'layout.image-slider-section': LayoutImageSliderSection;
       'layout.industry-expertise-section': LayoutIndustryExpertiseSection;
       'layout.industry-item': LayoutIndustryItem;
