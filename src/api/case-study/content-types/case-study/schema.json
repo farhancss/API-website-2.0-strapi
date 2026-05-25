@@ -72,11 +72,6 @@
       "component": "elements.link-basic",
       "repeatable": false
     },
-    "testimonial": {
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.testimonial"
-    },
     "sections": {
       "type": "dynamiczone",
       "components": [
