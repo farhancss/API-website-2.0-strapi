@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_layout_hero_review_sections",
+  "info": {
+    "displayName": "Hero Review Section",
+    "description": "Two-column hero: eyebrow and heading on the left, description and Clutch rating summary on the right."
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string",
+      "default": "CLIENT SUCCESS. REAL RESULTS."
+    },
+    "heading": {
+      "type": "blocks"
+    },
+    "description": {
+      "type": "text"
+    },
+    "reviewedOnLabel": {
+      "type": "string",
+      "default": "Reviewed on"
+    },
+    "rating": {
+      "type": "decimal",
+      "default": 4.9,
+      "min": 0,
+      "max": 5
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images", "files"]
+    },
+    "reviewsOnLabel": {
+      "type": "string",
+      "default": "Reviews on"
+    }
+  }
+}
