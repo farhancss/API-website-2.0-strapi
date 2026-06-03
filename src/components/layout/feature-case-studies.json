@@ -12,11 +12,6 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::case-study.case-study"
-    },
-    "categories": {
-      "type": "component",
-      "component": "case-study.category",
-      "repeatable": true
     }
   },
   "config": {}
