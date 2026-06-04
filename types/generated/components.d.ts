@@ -539,7 +539,7 @@ export interface LayoutCareersPerksBenefitsSection
     displayName: 'Careers Perks & Benefits Section';
   };
   attributes: {
-    description: Schema.Attribute.Text;
+    description: Schema.Attribute.Blocks;
     heading: Schema.Attribute.Blocks;
     image: Schema.Attribute.Media<'images' | 'files'>;
     perks: Schema.Attribute.Component<'elements.steps', true>;
