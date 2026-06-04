@@ -10,7 +10,7 @@
       "type": "blocks"
     },
     "description": {
-      "type": "text"
+      "type": "blocks"
     },
     "image": {
       "type": "media",
