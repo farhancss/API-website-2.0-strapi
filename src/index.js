@@ -1,5 +1,10 @@
 'use strict';
 const bootstrap = require("./bootstrap");
+const { validateFooterPhone } = require('./api/global/validate-footer-phone');
+const { validateLinkHrefFields } = require('./utils/validate-link-basic-href');
+const {
+  validateContentWithVideoYoutubeUrls,
+} = require('./utils/validate-youtube-url');
 
 module.exports = {
   /**
@@ -8,7 +13,24 @@ module.exports = {
    *
    * This gives you an opportunity to extend code.
    */
-  register(/*{ strapi }*/) {},
+  register({ strapi }) {
+    strapi.documents.use(async (context, next) => {
+      if (!['create', 'update'].includes(context.action)) {
+        return next();
+      }
+
+      const data = context.params.data;
+
+      validateLinkHrefFields(data);
+      validateContentWithVideoYoutubeUrls(data);
+
+      if (context.uid === 'api::global.global') {
+        validateFooterPhone(data);
+      }
+
+      return next();
+    });
+  },
 
   /**
    * An asynchronous bootstrap function that runs before
