@@ -7,6 +7,28 @@ const HREF_REGEX =
 const HREF_ERROR_MESSAGE =
   'Please enter a valid link (e.g. https://example.com, /about-us, or #section).';
 
+const isRecognitionHighlightCard = (value) =>
+  value?.__component === 'shared.recognition-highlight-card' ||
+  (value &&
+    typeof value === 'object' &&
+    'href' in value &&
+    'isExternal' in value &&
+    'title' in value &&
+    'description' in value &&
+    !('image' in value) &&
+    !('text' in value) &&
+    !('children' in value) &&
+    !('label' in value));
+
+const isFooterLinkItem = (value) =>
+  value?.__component === 'layout.footer-link-item' ||
+  (value &&
+    typeof value === 'object' &&
+    'href' in value &&
+    'text' in value &&
+    'isExternal' in value &&
+    'children' in value);
+
 const isLinkBasic = (value) =>
   value?.__component === 'elements.link-basic' ||
   (value &&
@@ -17,7 +39,8 @@ const isLinkBasic = (value) =>
     !('label' in value) &&
     !('isPrimary' in value) &&
     !('image' in value) &&
-    !('logo' in value));
+    !('logo' in value) &&
+    !('children' in value));
 
 const isLink = (value) =>
   value?.__component === 'elements.link' ||
@@ -46,7 +69,12 @@ const validateLinkHrefFields = (data, path = []) => {
     return;
   }
 
-  if (isLinkComponent(data)) {
+  if (isFooterLinkItem(data)) {
+    validateHref(data.href, path);
+  } else if (isRecognitionHighlightCard(data)) {
+    validateHref(data.href, path);
+    return;
+  } else if (isLinkComponent(data)) {
     validateHref(data.href, path);
     return;
   }
