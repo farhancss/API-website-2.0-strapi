@@ -11,12 +11,15 @@
         "images"
       ]
     },
-    "altText": {
+    "heading": {
       "type": "string"
+    },
+    "description": {
+      "type": "text"
     },
     "cta": {
       "type": "component",
-      "component": "elements.link",
+      "component": "elements.link-basic",
       "repeatable": false
     }
   }

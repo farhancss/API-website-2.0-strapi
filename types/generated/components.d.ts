@@ -164,14 +164,17 @@ export interface CaseStudyResponsiveDesignSection
   extends Struct.ComponentSchema {
   collectionName: 'components_case_study_responsive_design_sections';
   info: {
+    description: 'Section label, heading, description, responsive mockup images, a row of process steps (icon + title + description), and optional background illustration.';
     displayName: 'Responsive Design Section';
   };
   attributes: {
+    backgroundImage: Schema.Attribute.Media<'images'>;
     description: Schema.Attribute.Text;
     heading: Schema.Attribute.Blocks;
     images: Schema.Attribute.Media<'images', true>;
     label: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'Responsive Design'>;
+    steps: Schema.Attribute.Component<'elements.steps', true>;
   };
 }
 
@@ -205,8 +208,9 @@ export interface CaseStudySocialMediaCard extends Struct.ComponentSchema {
     displayName: 'Social Media Card';
   };
   attributes: {
-    altText: Schema.Attribute.String;
-    cta: Schema.Attribute.Component<'elements.link', false>;
+    cta: Schema.Attribute.Component<'elements.link-basic', false>;
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images'>;
   };
 }
