@@ -459,7 +459,9 @@ export interface ApiCaseStudyCaseStudy extends Struct.CollectionTypeSchema {
       'manyToMany',
       'api::technology.technology'
     >;
+    primaryColor: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
+    secondaryColor: Schema.Attribute.String;
     sections: Schema.Attribute.DynamicZone<
       [
         'case-study.about-section',
