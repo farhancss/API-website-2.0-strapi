@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_layout_blog_sections",
+  "info": {
+    "displayName": "Blog Section"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

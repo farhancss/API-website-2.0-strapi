@@ -464,6 +464,16 @@ export interface LayoutBeliefsSection extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutBlogSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_blog_sections';
+  info: {
+    displayName: 'Blog Section';
+  };
+  attributes: {
+    heading: Schema.Attribute.String;
+  };
+}
+
 export interface LayoutButton extends Struct.ComponentSchema {
   collectionName: 'components_layout_buttons';
   info: {
@@ -1245,6 +1255,19 @@ export interface LayoutMissionVision extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutNewsletterSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_newsletter_sections';
+  info: {
+    description: 'Blue banner with heading, email signup field, submit button, and optional decorative background graphic.';
+    displayName: 'Newsletter Section';
+  };
+  attributes: {
+    decorativeImage: Schema.Attribute.Media<'images'>;
+    heading: Schema.Attribute.Blocks;
+    hubSpotForm: Schema.Attribute.Component<'sections.hub-spot-form', false>;
+  };
+}
+
 export interface LayoutOfficeSection extends Struct.ComponentSchema {
   collectionName: 'components_layout_office_sections';
   info: {
@@ -1721,6 +1744,7 @@ declare module '@strapi/strapi' {
       'layout.award-section': LayoutAwardSection;
       'layout.awards-recognition-section': LayoutAwardsRecognitionSection;
       'layout.beliefs-section': LayoutBeliefsSection;
+      'layout.blog-section': LayoutBlogSection;
       'layout.button': LayoutButton;
       'layout.card-grid': LayoutCardGrid;
       'layout.careers-cta-section': LayoutCareersCtaSection;
@@ -1769,6 +1793,7 @@ declare module '@strapi/strapi' {
       'layout.leaders-board': LayoutLeadersBoard;
       'layout.legal-document': LayoutLegalDocument;
       'layout.mission-vision': LayoutMissionVision;
+      'layout.newsletter-section': LayoutNewsletterSection;
       'layout.office-section': LayoutOfficeSection;
       'layout.our-clients-section': LayoutOurClientsSection;
       'layout.page-hero-section': LayoutPageHeroSection;

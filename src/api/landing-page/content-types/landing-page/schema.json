@@ -43,7 +43,8 @@
         "layout.recognition-badges-section",
         "layout.clutch-testimonials-slider-section",
         "layout.clutch-testimonial-section",
-        "layout.hero-review-section"
+        "layout.hero-review-section",
+        "layout.newsletter-section"
       ]
     }
   }
