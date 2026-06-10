@@ -430,6 +430,39 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiBlogDetailPageBlogDetailPage
+  extends Struct.SingleTypeSchema {
+  collectionName: 'blog_detail_pages';
+  info: {
+    description: 'Shared layout and blocks for blog detail pages.';
+    displayName: 'Blog Detail Page';
+    pluralName: 'blog-detail-pages';
+    singularName: 'blog-detail-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    blocks: Schema.Attribute.DynamicZone<['layout.resources-and-careers']>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::blog-detail-page.blog-detail-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiCaseStudyCaseStudy extends Struct.CollectionTypeSchema {
   collectionName: 'case_studies';
   info: {
@@ -1424,6 +1457,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::blog-detail-page.blog-detail-page': ApiBlogDetailPageBlogDetailPage;
       'api::case-study.case-study': ApiCaseStudyCaseStudy;
       'api::clutch-review.clutch-review': ApiClutchReviewClutchReview;
       'api::global.global': ApiGlobalGlobal;
