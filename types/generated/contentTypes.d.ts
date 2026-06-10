@@ -443,7 +443,9 @@ export interface ApiBlogDetailPageBlogDetailPage
     draftAndPublish: true;
   };
   attributes: {
-    blocks: Schema.Attribute.DynamicZone<['layout.resources-and-careers']>;
+    blocks: Schema.Attribute.DynamicZone<
+      ['layout.resources-and-careers', 'layout.newsletter-section']
+    >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

@@ -21,7 +21,8 @@
     "blocks": {
       "type": "dynamiczone",
       "components": [
-        "layout.resources-and-careers"
+        "layout.resources-and-careers",
+        "layout.newsletter-section"
       ]
     },
     "seo": {
