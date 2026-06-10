@@ -669,6 +669,7 @@ export interface ApiLandingPageLandingPage extends Struct.SingleTypeSchema {
         'layout.clutch-testimonials-slider-section',
         'layout.clutch-testimonial-section',
         'layout.hero-review-section',
+        'layout.newsletter-section',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -749,6 +750,8 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'layout.clutch-testimonials-slider-section',
         'layout.clutch-testimonial-section',
         'layout.hero-review-section',
+        'layout.newsletter-section',
+        'layout.blog-section',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;

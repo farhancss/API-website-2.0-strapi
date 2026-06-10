@@ -24,8 +24,11 @@
     },
     "theme": {
       "type": "enumeration",
-      "enum": ["light", "dark"],
-      "default": "light"
+      "default": "light",
+      "enum": [
+        "light",
+        "dark"
+      ]
     },
     "blocks": {
       "type": "dynamiczone",
@@ -75,7 +78,9 @@
         "layout.recognition-badges-section",
         "layout.clutch-testimonials-slider-section",
         "layout.clutch-testimonial-section",
-        "layout.hero-review-section"
+        "layout.hero-review-section",
+        "layout.newsletter-section",
+        "layout.blog-section"
       ]
     },
     "seo": {
