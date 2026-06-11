@@ -813,7 +813,7 @@ export interface LayoutContentWithImage extends Struct.ComponentSchema {
   };
   attributes: {
     cta: Schema.Attribute.Component<'elements.link', true>;
-    heading: Schema.Attribute.String;
+    heading: Schema.Attribute.Blocks;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     reverse: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     subHeading: Schema.Attribute.String;
