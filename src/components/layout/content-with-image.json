@@ -8,6 +8,7 @@
     "heading": {
       "type": "blocks"
     },
+    
     "subHeading": {
       "type": "string"
     },
