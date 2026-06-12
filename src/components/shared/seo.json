@@ -16,6 +16,10 @@
       "type": "text",
       "required": true
     },
+    "metaKeywords": {
+      "type": "string",
+      "required": true
+    },
     "shareImage": {
       "type": "media",
       "multiple": false,

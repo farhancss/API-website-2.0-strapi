@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_layout_agency_process_sections",
+  "info": {
+    "displayName": "Agency Process Section",
+    "description": "Two-column section: heading, description, CTA, and awards on the left; vertical process steps on the right."
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "blocks"
+    },
+    "description": {
+      "type": "text"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link-basic"
+    },
+    "awardsDescription": {
+      "type": "text",
+      "default": "An Award-Winning agency committed to excellence, reflecting innovation and client satisfaction at every step."
+    },
+    "awards": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": ["images"]
+    },
+    "processSteps": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.quote"
+    }
+  }
+}

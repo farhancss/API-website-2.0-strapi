@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_layout_website_capability_items",
+  "info": {
+    "displayName": "Website Capability Item",
+    "description": "Capability card with icon, title, description, request-service link, and optional highlighted styling."
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link-basic"
+    }
+  }
+}

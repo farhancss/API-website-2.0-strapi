@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_layout_transform_business_sections",
+  "info": {
+    "displayName": "Transform Business Section",
+    "description": "Dark two-column section with heading, description, CTA button on the left and an image on the right."
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "blocks"
+    },
+    "description": {
+      "type": "text"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link-basic"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    }
+  }
+}

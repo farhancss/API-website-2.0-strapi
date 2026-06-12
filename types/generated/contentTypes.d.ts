@@ -590,6 +590,7 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.Text;
+    externalScripts: Schema.Attribute.Component<'shared.external-script', true>;
     footer: Schema.Attribute.Component<'layout.footer', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -787,12 +788,25 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'layout.hero-review-section',
         'layout.newsletter-section',
         'layout.blog-section',
+        'layout.agency-hero-section',
+        'layout.website-benefits-section',
+        'layout.why-choose-us-section',
+        'layout.website-capabilities-section',
+        'layout.service-cta-section',
+        'layout.website-redesign-section',
+        'layout.contact-quote-section',
+        'layout.agency-intro-section',
+        'layout.transform-business-section',
+        'layout.agency-process-section',
+        'layout.seo-services-section',
+        'layout.high-growth-section',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.Text;
+    externalScripts: Schema.Attribute.Component<'shared.external-script', true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::page.page'> &
       Schema.Attribute.Private;

@@ -389,6 +389,56 @@ export interface LayoutAboutSection extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutAgencyHeroSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_agency_hero_sections';
+  info: {
+    description: 'Dark two-column hero: heading, description, HubSpot proposal form, Clutch rating, trusted logos on the left; background pattern on the right.';
+    displayName: 'Agency Hero Section';
+  };
+  attributes: {
+    backgroundPattern: Schema.Attribute.Media<'images'>;
+    badgeImage: Schema.Attribute.Media<'images', true>;
+    clientLogos: Schema.Attribute.Media<'images', true>;
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.Blocks;
+    hubspotForm: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::hub-spot-form.hub-spot-form'
+    >;
+    trustedHeading: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Trusted by big companies'>;
+  };
+}
+
+export interface LayoutAgencyIntroSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_agency_intro_sections';
+  info: {
+    description: 'Centered heading with a three-column grid of bordered content columns.';
+    displayName: 'Agency Intro Section';
+  };
+  attributes: {
+    columns: Schema.Attribute.Component<'shared.tag', true>;
+    heading: Schema.Attribute.Blocks;
+  };
+}
+
+export interface LayoutAgencyProcessSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_agency_process_sections';
+  info: {
+    description: 'Two-column section: heading, description, CTA, and awards on the left; vertical process steps on the right.';
+    displayName: 'Agency Process Section';
+  };
+  attributes: {
+    awards: Schema.Attribute.Media<'images', true>;
+    awardsDescription: Schema.Attribute.Text &
+      Schema.Attribute.DefaultTo<'An Award-Winning agency committed to excellence, reflecting innovation and client satisfaction at every step.'>;
+    cta: Schema.Attribute.Component<'elements.link-basic', false>;
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.Blocks;
+    processSteps: Schema.Attribute.Component<'shared.quote', true>;
+  };
+}
+
 export interface LayoutAwardInsightsSection extends Struct.ComponentSchema {
   collectionName: 'components_layout_award_insights_sections';
   info: {
@@ -782,6 +832,28 @@ export interface LayoutClutchTestimonialsSliderSection
   };
 }
 
+export interface LayoutContactQuoteSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_contact_quote_sections';
+  info: {
+    description: 'Two-column contact section: heading, next steps, phone CTA, and awards on the left; HubSpot quote form card on the right.';
+    displayName: 'Contact Quote Section';
+  };
+  attributes: {
+    awards: Schema.Attribute.Media<'images', true>;
+    awardsHeading: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'We are an award winning digital agency.'>;
+    heading: Schema.Attribute.Blocks;
+    hubspotForm: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::hub-spot-form.hub-spot-form'
+    >;
+    nextSteps: Schema.Attribute.Component<'shared.tag', true>;
+    nextStepsHeading: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'What happens next?'>;
+    phonePrompt: Schema.Attribute.Blocks;
+  };
+}
+
 export interface LayoutContactUsSection extends Struct.ComponentSchema {
   collectionName: 'components_layout_contact_us_sections';
   info: {
@@ -1166,6 +1238,20 @@ export interface LayoutHeroReviewSection extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutHighGrowthSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_high_growth_sections';
+  info: {
+    description: 'Dark two-column section: heading, description, and CTA on the left; 2x2 grid of bordered feature blocks on the right.';
+    displayName: 'High Growth Section';
+  };
+  attributes: {
+    cta: Schema.Attribute.Component<'elements.link-basic', false>;
+    description: Schema.Attribute.Text;
+    features: Schema.Attribute.Component<'shared.quote', true>;
+    heading: Schema.Attribute.Blocks;
+  };
+}
+
 export interface LayoutImageSliderSection extends Struct.ComponentSchema {
   collectionName: 'components_layout_image_slider_sections';
   info: {
@@ -1456,6 +1542,31 @@ export interface LayoutSectionHeading extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutSeoServicesSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_seo_services_sections';
+  info: {
+    description: 'Dark client-logo bar, two-column intro (heading + description), and a grid of SEO service cards.';
+    displayName: 'SEO Services Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.Blocks;
+    services: Schema.Attribute.Component<'shared.quote', true>;
+  };
+}
+
+export interface LayoutServiceCtaSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_service_cta_sections';
+  info: {
+    description: 'Full-width gradient banner with centered split heading and a request-service CTA button.';
+    displayName: 'Service CTA Section';
+  };
+  attributes: {
+    cta: Schema.Attribute.Component<'elements.link-basic', false>;
+    heading: Schema.Attribute.Blocks;
+  };
+}
+
 export interface LayoutStatsSection extends Struct.ComponentSchema {
   collectionName: 'components_layout_stats_sections';
   info: {
@@ -1491,6 +1602,20 @@ export interface LayoutTopNav extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutTransformBusinessSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_transform_business_sections';
+  info: {
+    description: 'Dark two-column section with heading, description, CTA button on the left and an image on the right.';
+    displayName: 'Transform Business Section';
+  };
+  attributes: {
+    cta: Schema.Attribute.Component<'elements.link-basic', false>;
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.Blocks;
+    image: Schema.Attribute.Media<'images'>;
+  };
+}
+
 export interface LayoutValuePropositionSection extends Struct.ComponentSchema {
   collectionName: 'components_layout_value_proposition_sections';
   info: {
@@ -1516,6 +1641,80 @@ export interface LayoutValuesSection extends Struct.ComponentSchema {
   };
   attributes: {
     cards: Schema.Attribute.Component<'elements.steps', true>;
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.Blocks;
+  };
+}
+
+export interface LayoutWebsiteBenefitsSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_website_benefits_sections';
+  info: {
+    description: 'Two-column header (heading + intro) with a divider and a row of benefit cards (icon, title, description).';
+    displayName: 'Website Benefits Section';
+  };
+  attributes: {
+    benefits: Schema.Attribute.Component<'elements.steps', true>;
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.Blocks;
+  };
+}
+
+export interface LayoutWebsiteCapabilitiesSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_layout_website_capabilities_sections';
+  info: {
+    description: 'Dark section with centered heading and description, a grid of capability cards, and a gradient CTA banner at the bottom.';
+    displayName: 'Website Capabilities Section';
+  };
+  attributes: {
+    capabilities: Schema.Attribute.Component<
+      'layout.website-capability-item',
+      true
+    >;
+    ctaBannerButton: Schema.Attribute.Component<'elements.link-basic', false>;
+    ctaBannerHeading: Schema.Attribute.Blocks;
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.Blocks;
+  };
+}
+
+export interface LayoutWebsiteCapabilityItem extends Struct.ComponentSchema {
+  collectionName: 'components_layout_website_capability_items';
+  info: {
+    description: 'Capability card with icon, title, description, request-service link, and optional highlighted styling.';
+    displayName: 'Website Capability Item';
+  };
+  attributes: {
+    cta: Schema.Attribute.Component<'elements.link-basic', false>;
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.Media<'images'>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface LayoutWebsiteRedesignSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_website_redesign_sections';
+  info: {
+    description: 'Two-column section with heading, multi-paragraph description, CTA on the left and an image on the right.';
+    displayName: 'Website Redesign Section';
+  };
+  attributes: {
+    cta: Schema.Attribute.Component<'elements.link-basic', false>;
+    description: Schema.Attribute.Blocks;
+    heading: Schema.Attribute.Blocks;
+    image: Schema.Attribute.Media<'images'>;
+  };
+}
+
+export interface LayoutWhyChooseUsSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_why_choose_us_sections';
+  info: {
+    description: 'Two-column header (heading + description on the left, benefit tags on the right) with a row of award badges below.';
+    displayName: 'Why Choose Us Section';
+  };
+  attributes: {
+    awards: Schema.Attribute.Component<'layout.award-item', true>;
+    benefitTags: Schema.Attribute.Component<'shared.tag', true>;
     description: Schema.Attribute.Text;
     heading: Schema.Attribute.Blocks;
   };
@@ -1598,6 +1797,22 @@ export interface SharedClientShowcaseItem extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedExternalScript extends Struct.ComponentSchema {
+  collectionName: 'components_shared_external_scripts';
+  info: {
+    description: 'Third-party script loaded from an external URL.';
+    displayName: 'External Script';
+  };
+  attributes: {
+    async: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    attributes: Schema.Attribute.JSON;
+    defer: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    placement: Schema.Attribute.Enumeration<['head', 'body']> &
+      Schema.Attribute.DefaultTo<'body'>;
+    src: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_media';
   info: {
@@ -1659,6 +1874,7 @@ export interface SharedSeo extends Struct.ComponentSchema {
   };
   attributes: {
     metaDescription: Schema.Attribute.Text & Schema.Attribute.Required;
+    metaKeywords: Schema.Attribute.String & Schema.Attribute.Required;
     metaTitle: Schema.Attribute.String & Schema.Attribute.Required;
     shareImage: Schema.Attribute.Media<'images'>;
   };
@@ -1739,6 +1955,9 @@ declare module '@strapi/strapi' {
       'elements.tab-sub-item': ElementsTabSubItem;
       'elements.tabs': ElementsTabs;
       'layout.about-section': LayoutAboutSection;
+      'layout.agency-hero-section': LayoutAgencyHeroSection;
+      'layout.agency-intro-section': LayoutAgencyIntroSection;
+      'layout.agency-process-section': LayoutAgencyProcessSection;
       'layout.award-insights-section': LayoutAwardInsightsSection;
       'layout.award-item': LayoutAwardItem;
       'layout.award-section': LayoutAwardSection;
@@ -1763,6 +1982,7 @@ declare module '@strapi/strapi' {
       'layout.clutch-testimonial-section': LayoutClutchTestimonialSection;
       'layout.clutch-testimonial-statistic-item': LayoutClutchTestimonialStatisticItem;
       'layout.clutch-testimonials-slider-section': LayoutClutchTestimonialsSliderSection;
+      'layout.contact-quote-section': LayoutContactQuoteSection;
       'layout.contact-us-section': LayoutContactUsSection;
       'layout.content-with-image': LayoutContentWithImage;
       'layout.content-with-video': LayoutContentWithVideo;
@@ -1786,6 +2006,7 @@ declare module '@strapi/strapi' {
       'layout.heading-with-image': LayoutHeadingWithImage;
       'layout.hero': LayoutHero;
       'layout.hero-review-section': LayoutHeroReviewSection;
+      'layout.high-growth-section': LayoutHighGrowthSection;
       'layout.image-slider-section': LayoutImageSliderSection;
       'layout.industry-expertise-section': LayoutIndustryExpertiseSection;
       'layout.industry-item': LayoutIndustryItem;
@@ -1806,15 +2027,24 @@ declare module '@strapi/strapi' {
       'layout.recognition-badges-section': LayoutRecognitionBadgesSection;
       'layout.resources-and-careers': LayoutResourcesAndCareers;
       'layout.section-heading': LayoutSectionHeading;
+      'layout.seo-services-section': LayoutSeoServicesSection;
+      'layout.service-cta-section': LayoutServiceCtaSection;
       'layout.stats-section': LayoutStatsSection;
       'layout.top-nav': LayoutTopNav;
+      'layout.transform-business-section': LayoutTransformBusinessSection;
       'layout.value-proposition-section': LayoutValuePropositionSection;
       'layout.values-section': LayoutValuesSection;
+      'layout.website-benefits-section': LayoutWebsiteBenefitsSection;
+      'layout.website-capabilities-section': LayoutWebsiteCapabilitiesSection;
+      'layout.website-capability-item': LayoutWebsiteCapabilityItem;
+      'layout.website-redesign-section': LayoutWebsiteRedesignSection;
+      'layout.why-choose-us-section': LayoutWhyChooseUsSection;
       'layout.work-hero-section': LayoutWorkHeroSection;
       'sections.hub-spot-form': SectionsHubSpotForm;
       'shared.award-insight-item': SharedAwardInsightItem;
       'shared.client-industry-item': SharedClientIndustryItem;
       'shared.client-showcase-item': SharedClientShowcaseItem;
+      'shared.external-script': SharedExternalScript;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
       'shared.recognition-highlight-card': SharedRecognitionHighlightCard;
