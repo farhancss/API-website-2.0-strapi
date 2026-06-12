@@ -904,6 +904,105 @@ export interface ApiPortfolioPortfolio extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiSeoPageSeoPage extends Struct.CollectionTypeSchema {
+  collectionName: 'seo_pages';
+  info: {
+    description: 'SEO landing pages with dynamic blocks, similar to Page.';
+    displayName: 'SEO Page';
+    pluralName: 'seo-pages';
+    singularName: 'seo-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    blocks: Schema.Attribute.DynamicZone<
+      [
+        'layout.section-heading',
+        'layout.hero',
+        'layout.content-with-image',
+        'layout.card-grid',
+        'layout.price-grid',
+        'layout.legal-document',
+        'layout.content-with-video',
+        'layout.resources-and-careers',
+        'layout.profile-section',
+        'layout.mission-vision',
+        'layout.leaders-board',
+        'layout.founder-section',
+        'layout.firm-section',
+        'layout.about-section',
+        'layout.stats-section',
+        'layout.image-slider-section',
+        'layout.office-section',
+        'layout.contact-us-section',
+        'layout.faq-section',
+        'layout.portfolio-list-section',
+        'layout.portfolio-page-featured-case-studies',
+        'layout.dge-score-section',
+        'layout.page-hero-section',
+        'layout.client-showcase-section',
+        'layout.client-logo-marquee-section',
+        'layout.our-clients-section',
+        'layout.awards-recognition-section',
+        'layout.award-insights-section',
+        'layout.beliefs-section',
+        'layout.value-proposition-section',
+        'layout.case-studies-list-section',
+        'layout.digital-growth-framework-section',
+        'layout.digital-product-showcase-section',
+        'layout.careers-hero-section',
+        'layout.careers-section',
+        'layout.careers-perks-benefits-section',
+        'layout.values-section',
+        'layout.careers-cta-section',
+        'layout.careers-culture-section',
+        'layout.job-openings-section',
+        'layout.work-hero-section',
+        'layout.clutch-reviews-section',
+        'layout.recognition-badges-section',
+        'layout.clutch-testimonials-slider-section',
+        'layout.clutch-testimonial-section',
+        'layout.hero-review-section',
+        'layout.newsletter-section',
+        'layout.blog-section',
+        'layout.agency-hero-section',
+        'layout.website-benefits-section',
+        'layout.why-choose-us-section',
+        'layout.website-capabilities-section',
+        'layout.service-cta-section',
+        'layout.website-redesign-section',
+        'layout.contact-quote-section',
+        'layout.agency-intro-section',
+        'layout.transform-business-section',
+        'layout.agency-process-section',
+        'layout.seo-services-section',
+        'layout.high-growth-section',
+      ]
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    externalScripts: Schema.Attribute.Component<'shared.external-script', true>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::seo-page.seo-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
+    slug: Schema.Attribute.UID<'title'>;
+    theme: Schema.Attribute.Enumeration<['light', 'dark']> &
+      Schema.Attribute.DefaultTo<'light'>;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiServiceService extends Struct.CollectionTypeSchema {
   collectionName: 'services';
   info: {
@@ -1483,6 +1582,7 @@ declare module '@strapi/strapi' {
       'api::page.page': ApiPagePage;
       'api::portfolio-shared.portfolio-shared': ApiPortfolioSharedPortfolioShared;
       'api::portfolio.portfolio': ApiPortfolioPortfolio;
+      'api::seo-page.seo-page': ApiSeoPageSeoPage;
       'api::service.service': ApiServiceService;
       'api::technology.technology': ApiTechnologyTechnology;
       'plugin::content-releases.release': PluginContentReleasesRelease;
