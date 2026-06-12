@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_layout_high_growth_sections",
+  "info": {
+    "displayName": "High Growth Section",
+    "description": "Dark two-column section: heading, description, and CTA on the left; 2x2 grid of bordered feature blocks on the right."
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "blocks"
+    },
+    "description": {
+      "type": "text"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link-basic"
+    },
+    "features": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.quote"
+    }
+  }
+}

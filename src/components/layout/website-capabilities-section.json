@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_layout_website_capabilities_sections",
+  "info": {
+    "displayName": "Website Capabilities Section",
+    "description": "Dark section with centered heading and description, a grid of capability cards, and a gradient CTA banner at the bottom."
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "blocks"
+    },
+    "description": {
+      "type": "text"
+    },
+    "capabilities": {
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.website-capability-item"
+    },
+    "ctaBannerHeading": {
+      "type": "blocks"
+    },
+    "ctaBannerButton": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link-basic"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_layout_website_redesign_sections",
+  "info": {
+    "displayName": "Website Redesign Section",
+    "description": "Two-column section with heading, multi-paragraph description, CTA on the left and an image on the right."
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "blocks"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link-basic"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    }
+  }
+}

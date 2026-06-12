@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_layout_why_choose_us_sections",
+  "info": {
+    "displayName": "Why Choose Us Section",
+    "description": "Two-column header (heading + description on the left, benefit tags on the right) with a row of award badges below."
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "blocks"
+    },
+    "description": {
+      "type": "text"
+    },
+    "benefitTags": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.tag"
+    },
+    "awards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.award-item"
+    }
+  }
+}

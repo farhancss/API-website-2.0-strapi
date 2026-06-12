@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_layout_website_benefits_sections",
+  "info": {
+    "displayName": "Website Benefits Section",
+    "description": "Two-column header (heading + intro) with a divider and a row of benefit cards (icon, title, description)."
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "blocks"
+    },
+    "description": {
+      "type": "text"
+    },
+    "benefits": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.steps"
+    }
+  }
+}

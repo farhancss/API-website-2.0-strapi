@@ -80,13 +80,30 @@
         "layout.clutch-testimonial-section",
         "layout.hero-review-section",
         "layout.newsletter-section",
-        "layout.blog-section"
+        "layout.blog-section",
+        "layout.agency-hero-section",
+        "layout.website-benefits-section",
+        "layout.why-choose-us-section",
+        "layout.website-capabilities-section",
+        "layout.service-cta-section",
+        "layout.website-redesign-section",
+        "layout.contact-quote-section",
+        "layout.agency-intro-section",
+        "layout.transform-business-section",
+        "layout.agency-process-section",
+        "layout.seo-services-section",
+        "layout.high-growth-section"
       ]
     },
     "seo": {
       "type": "component",
       "component": "shared.seo",
       "repeatable": false
+    },
+    "externalScripts": {
+      "type": "component",
+      "component": "shared.external-script",
+      "repeatable": true
     }
   }
 }

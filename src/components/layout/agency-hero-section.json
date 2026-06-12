@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_layout_agency_hero_sections",
+  "info": {
+    "displayName": "Agency Hero Section",
+    "description": "Dark two-column hero: heading, description, HubSpot proposal form, Clutch rating, trusted logos on the left; background pattern on the right."
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "blocks"
+    },
+    "description": {
+      "type": "text"
+    },
+    "hubspotForm": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::hub-spot-form.hub-spot-form"
+    },
+    "badgeImage": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": ["images"]
+    },
+    "trustedHeading": {
+      "type": "string",
+      "default": "Trusted by big companies"
+    },
+    "clientLogos": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": ["images"]
+    },
+    "backgroundPattern": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    }
+  }
+}

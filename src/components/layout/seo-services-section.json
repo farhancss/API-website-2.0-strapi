@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_layout_seo_services_sections",
+  "info": {
+    "displayName": "SEO Services Section",
+    "description": "Dark client-logo bar, two-column intro (heading + description), and a grid of SEO service cards."
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "blocks"
+    },
+    "description": {
+      "type": "text"
+    },
+    "services": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.quote"
+    }
+  }
+}
