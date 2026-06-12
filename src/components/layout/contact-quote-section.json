@@ -2,7 +2,7 @@
   "collectionName": "components_layout_contact_quote_sections",
   "info": {
     "displayName": "Contact Quote Section",
-    "description": "Reuses shared content from Contact Quote. Edit once under Content Manager → Contact Quote."
+    "description": "Two-column contact section: heading, next steps, phone CTA, and awards on the left; HubSpot quote form card on the right."
   },
   "options": {},
   "attributes": {

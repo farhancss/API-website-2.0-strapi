@@ -835,7 +835,7 @@ export interface LayoutClutchTestimonialsSliderSection
 export interface LayoutContactQuoteSection extends Struct.ComponentSchema {
   collectionName: 'components_layout_contact_quote_sections';
   info: {
-    description: 'Reuses shared content from Contact Quote. Edit once under Content Manager \u2192 Contact Quote.';
+    description: 'Two-column contact section: heading, next steps, phone CTA, and awards on the left; HubSpot quote form card on the right.';
     displayName: 'Contact Quote Section';
   };
   attributes: {
