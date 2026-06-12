@@ -2,38 +2,14 @@
   "collectionName": "components_layout_contact_quote_sections",
   "info": {
     "displayName": "Contact Quote Section",
-    "description": "Two-column contact section: heading, next steps, phone CTA, and awards on the left; HubSpot quote form card on the right."
+    "description": "Reuses shared content from Contact Quote. Edit once under Content Manager → Contact Quote."
   },
   "options": {},
   "attributes": {
-    "heading": {
-      "type": "blocks"
-    },
-    "nextStepsHeading": {
-      "type": "string",
-      "default": "What happens next?"
-    },
-    "nextSteps": {
-      "type": "component",
-      "repeatable": true,
-      "component": "shared.tag"
-    },
-    "phonePrompt": {
-      "type": "blocks"
-    },
-    "awardsHeading": {
-      "type": "string",
-      "default": "We are an award winning digital agency."
-    },
-    "awards": {
-      "type": "media",
-      "multiple": true,
-      "allowedTypes": ["images"]
-    },
-    "hubspotForm": {
+    "contactQuote": {
       "type": "relation",
       "relation": "manyToOne",
-      "target": "api::hub-spot-form.hub-spot-form"
+      "target": "api::contact-quote.contact-quote"
     }
   }
 }

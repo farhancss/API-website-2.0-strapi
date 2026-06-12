@@ -574,6 +574,52 @@ export interface ApiClutchReviewClutchReview
   };
 }
 
+export interface ApiContactQuoteContactQuote extends Struct.SingleTypeSchema {
+  collectionName: 'contact_quotes';
+  info: {
+    description: 'Shared Contact Quote section content. Edit once and reuse on multiple pages.';
+    displayName: 'Contact Quote';
+    pluralName: 'contact-quotes';
+    singularName: 'contact-quote';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    attachFileHint: Schema.Attribute.Text &
+      Schema.Attribute.DefaultTo<'No more than 3 files. Up to 3MB each. Formats: doc, docx, pdf, ppt, pptx.'>;
+    awards: Schema.Attribute.Media<'images', true>;
+    awardsHeading: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'We are an award winning digital agency.'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    heading: Schema.Attribute.Blocks;
+    hubspotForm: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::hub-spot-form.hub-spot-form'
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::contact-quote.contact-quote'
+    > &
+      Schema.Attribute.Private;
+    mandatoryFieldsLabel: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'*mandatory fields'>;
+    nextSteps: Schema.Attribute.Component<'elements.steps', true>;
+    nextStepsHeading: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'What happens next?'>;
+    phone: Schema.Attribute.Component<'elements.link-basic', false>;
+    phonePrompt: Schema.Attribute.Blocks;
+    publishedAt: Schema.Attribute.DateTime;
+    termsText: Schema.Attribute.Blocks;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   collectionName: 'globals';
   info: {
@@ -810,13 +856,13 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::page.page'> &
       Schema.Attribute.Private;
-    publishedAt: Schema.Attribute.DateTime;
-    seo: Schema.Attribute.Component<'shared.seo', false>;
-    slug: Schema.Attribute.UID<'title'>;
     pageType: Schema.Attribute.Enumeration<
       ['seo', 'service', 'industry', 'landing', 'general']
     > &
       Schema.Attribute.DefaultTo<'general'>;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
+    slug: Schema.Attribute.UID<'title'>;
     theme: Schema.Attribute.Enumeration<['light', 'dark']> &
       Schema.Attribute.DefaultTo<'light'>;
     title: Schema.Attribute.String;
@@ -961,6 +1007,38 @@ export interface ApiTechnologyTechnology extends Struct.CollectionTypeSchema {
     name: Schema.Attribute.String & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'name'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiWhyChooseUsWhyChooseUs extends Struct.SingleTypeSchema {
+  collectionName: 'why_choose_us';
+  info: {
+    description: 'Shared Why Choose Us section content. Edit once and reuse on multiple pages.';
+    displayName: 'Why Choose Us';
+    pluralName: 'why-choose-us-sections';
+    singularName: 'why-choose-us';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    awards: Schema.Attribute.Component<'layout.award-item', true>;
+    benefitTags: Schema.Attribute.Component<'shared.tag', true>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.Blocks;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::why-choose-us.why-choose-us'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1480,6 +1558,7 @@ declare module '@strapi/strapi' {
       'api::blog-detail-page.blog-detail-page': ApiBlogDetailPageBlogDetailPage;
       'api::case-study.case-study': ApiCaseStudyCaseStudy;
       'api::clutch-review.clutch-review': ApiClutchReviewClutchReview;
+      'api::contact-quote.contact-quote': ApiContactQuoteContactQuote;
       'api::global.global': ApiGlobalGlobal;
       'api::hub-spot-form.hub-spot-form': ApiHubSpotFormHubSpotForm;
       'api::industry.industry': ApiIndustryIndustry;
@@ -1489,6 +1568,7 @@ declare module '@strapi/strapi' {
       'api::portfolio.portfolio': ApiPortfolioPortfolio;
       'api::service.service': ApiServiceService;
       'api::technology.technology': ApiTechnologyTechnology;
+      'api::why-choose-us.why-choose-us': ApiWhyChooseUsWhyChooseUs;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
