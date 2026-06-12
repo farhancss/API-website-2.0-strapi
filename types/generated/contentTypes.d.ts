@@ -586,8 +586,6 @@ export interface ApiContactQuoteContactQuote extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    attachFileHint: Schema.Attribute.Text &
-      Schema.Attribute.DefaultTo<'No more than 3 files. Up to 3MB each. Formats: doc, docx, pdf, ppt, pptx.'>;
     awards: Schema.Attribute.Media<'images', true>;
     awardsHeading: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'We are an award winning digital agency.'>;
@@ -605,15 +603,11 @@ export interface ApiContactQuoteContactQuote extends Struct.SingleTypeSchema {
       'api::contact-quote.contact-quote'
     > &
       Schema.Attribute.Private;
-    mandatoryFieldsLabel: Schema.Attribute.String &
-      Schema.Attribute.DefaultTo<'*mandatory fields'>;
-    nextSteps: Schema.Attribute.Component<'elements.steps', true>;
+    nextSteps: Schema.Attribute.Component<'shared.tag', true>;
     nextStepsHeading: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'What happens next?'>;
-    phone: Schema.Attribute.Component<'elements.link-basic', false>;
     phonePrompt: Schema.Attribute.Blocks;
     publishedAt: Schema.Attribute.DateTime;
-    termsText: Schema.Attribute.Blocks;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
