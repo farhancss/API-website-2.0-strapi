@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "why_choose_us",
+  "info": {
+    "singularName": "why-choose-us",
+    "pluralName": "why-choose-us-sections",
+    "displayName": "Why Choose Us",
+    "description": "Shared Why Choose Us section content. Edit once and reuse on multiple pages."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "blocks"
+    },
+    "description": {
+      "type": "text"
+    },
+    "benefitTags": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.tag"
+    },
+    "awards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.award-item"
+    }
+  }
+}

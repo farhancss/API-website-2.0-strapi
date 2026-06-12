@@ -835,22 +835,14 @@ export interface LayoutClutchTestimonialsSliderSection
 export interface LayoutContactQuoteSection extends Struct.ComponentSchema {
   collectionName: 'components_layout_contact_quote_sections';
   info: {
-    description: 'Two-column contact section: heading, next steps, phone CTA, and awards on the left; HubSpot quote form card on the right.';
+    description: 'Reuses shared content from Contact Quote. Edit once under Content Manager \u2192 Contact Quote.';
     displayName: 'Contact Quote Section';
   };
   attributes: {
-    awards: Schema.Attribute.Media<'images', true>;
-    awardsHeading: Schema.Attribute.String &
-      Schema.Attribute.DefaultTo<'We are an award winning digital agency.'>;
-    heading: Schema.Attribute.Blocks;
-    hubspotForm: Schema.Attribute.Relation<
+    contactQuote: Schema.Attribute.Relation<
       'manyToOne',
-      'api::hub-spot-form.hub-spot-form'
+      'api::contact-quote.contact-quote'
     >;
-    nextSteps: Schema.Attribute.Component<'shared.tag', true>;
-    nextStepsHeading: Schema.Attribute.String &
-      Schema.Attribute.DefaultTo<'What happens next?'>;
-    phonePrompt: Schema.Attribute.Blocks;
   };
 }
 
@@ -1709,14 +1701,14 @@ export interface LayoutWebsiteRedesignSection extends Struct.ComponentSchema {
 export interface LayoutWhyChooseUsSection extends Struct.ComponentSchema {
   collectionName: 'components_layout_why_choose_us_sections';
   info: {
-    description: 'Two-column header (heading + description on the left, benefit tags on the right) with a row of award badges below.';
+    description: 'Reuses shared content from Why Choose Us. Edit once under Content Manager \u2192 Why Choose Us.';
     displayName: 'Why Choose Us Section';
   };
   attributes: {
-    awards: Schema.Attribute.Component<'layout.award-item', true>;
-    benefitTags: Schema.Attribute.Component<'shared.tag', true>;
-    description: Schema.Attribute.Text;
-    heading: Schema.Attribute.Blocks;
+    whyChooseUs: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::why-choose-us.why-choose-us'
+    >;
   };
 }
 

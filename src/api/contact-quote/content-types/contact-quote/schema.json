@@ -1,0 +1,61 @@
+{
+  "kind": "singleType",
+  "collectionName": "contact_quotes",
+  "info": {
+    "singularName": "contact-quote",
+    "pluralName": "contact-quotes",
+    "displayName": "Contact Quote",
+    "description": "Shared Contact Quote section content. Edit once and reuse on multiple pages."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "blocks"
+    },
+    "nextStepsHeading": {
+      "type": "string",
+      "default": "What happens next?"
+    },
+    "nextSteps": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.steps"
+    },
+    "phonePrompt": {
+      "type": "blocks"
+    },
+    "phone": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link-basic"
+    },
+    "awardsHeading": {
+      "type": "string",
+      "default": "We are an award winning digital agency."
+    },
+    "awards": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": ["images"]
+    },
+    "hubspotForm": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::hub-spot-form.hub-spot-form"
+    },
+    "mandatoryFieldsLabel": {
+      "type": "string",
+      "default": "*mandatory fields"
+    },
+    "attachFileHint": {
+      "type": "text",
+      "default": "No more than 3 files. Up to 3MB each. Formats: doc, docx, pdf, ppt, pptx."
+    },
+    "termsText": {
+      "type": "blocks"
+    }
+  }
+}
