@@ -397,7 +397,7 @@ export interface LayoutAgencyHeroSection extends Struct.ComponentSchema {
   };
   attributes: {
     backgroundPattern: Schema.Attribute.Media<'images'>;
-    badgeImage: Schema.Attribute.Media<'images', true>;
+    badgeImage: Schema.Attribute.Media<'images'>;
     clientLogos: Schema.Attribute.Media<'images', true>;
     description: Schema.Attribute.Text;
     heading: Schema.Attribute.Blocks;
