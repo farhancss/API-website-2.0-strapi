@@ -813,6 +813,10 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     seo: Schema.Attribute.Component<'shared.seo', false>;
     slug: Schema.Attribute.UID<'title'>;
+    pageType: Schema.Attribute.Enumeration<
+      ['seo', 'service', 'industry', 'landing', 'general']
+    > &
+      Schema.Attribute.DefaultTo<'general'>;
     theme: Schema.Attribute.Enumeration<['light', 'dark']> &
       Schema.Attribute.DefaultTo<'light'>;
     title: Schema.Attribute.String;

@@ -22,6 +22,17 @@
       "type": "uid",
       "targetField": "title"
     },
+    "pageType": {
+      "type": "enumeration",
+      "default": "general",
+      "enum": [
+        "seo",
+        "service",
+        "industry",
+        "landing",
+        "general"
+      ]
+    },  
     "theme": {
       "type": "enumeration",
       "default": "light",
