@@ -54,7 +54,7 @@
     "featuredImage": {
       "type": "media",
       "multiple": false,
-      "allowedTypes": ["images"]
+      "allowedTypes": ["videos", "images"]
     },
     "backgroundPattern": {
       "type": "media",

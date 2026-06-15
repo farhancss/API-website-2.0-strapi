@@ -977,7 +977,7 @@ export interface LayoutDesignServicesHeroSection
     colorPalette: Schema.Attribute.Media<'images', true>;
     cta: Schema.Attribute.Component<'elements.link-basic', false>;
     description: Schema.Attribute.Text;
-    featuredImage: Schema.Attribute.Media<'images'>;
+    featuredImage: Schema.Attribute.Media<'videos' | 'images'>;
     heading: Schema.Attribute.Blocks;
     logoImage: Schema.Attribute.Media<'images'>;
   };
