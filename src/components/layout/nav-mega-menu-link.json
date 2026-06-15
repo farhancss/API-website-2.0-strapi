@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_layout_nav_mega_menu_links",
+  "info": {
+    "displayName": "Nav Mega Menu Link",
+    "description": "Navigation link with optional badge for mega menus."
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "href": {
+      "type": "string"
+    },
+    "isExternal": {
+      "type": "boolean",
+      "default": false
+    },
+    "badge": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.badge"
+    }
+  }
+}

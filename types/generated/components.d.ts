@@ -1442,6 +1442,60 @@ export interface LayoutLegalDocument extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutMegaMenuCatalog extends Struct.ComponentSchema {
+  collectionName: 'components_layout_mega_menu_catalogs';
+  info: {
+    description: 'Catalog-style mega menu: category sidebar, link columns, industry tags, and CTA panel.';
+    displayName: 'Mega Menu Catalog';
+  };
+  attributes: {
+    backgroundPattern: Schema.Attribute.Media<'images'>;
+    categories: Schema.Attribute.Component<'layout.mega-menu-category', true>;
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.Blocks;
+    hubspotForm: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::hub-spot-form.hub-spot-form'
+    >;
+    sidebarLabel: Schema.Attribute.String;
+    tags: Schema.Attribute.Component<'elements.badge', true>;
+    tagsHeading: Schema.Attribute.String;
+    viewAllCta: Schema.Attribute.Component<'elements.link-basic', false>;
+  };
+}
+
+export interface LayoutMegaMenuCategory extends Struct.ComponentSchema {
+  collectionName: 'components_layout_mega_menu_categories';
+  info: {
+    description: 'Sidebar category with icon and link columns for catalog-style mega menus.';
+    displayName: 'Mega Menu Category';
+  };
+  attributes: {
+    columns: Schema.Attribute.Component<'layout.nav-link-column', true>;
+    icon: Schema.Attribute.Media<'images'>;
+    isDefault: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    label: Schema.Attribute.String;
+  };
+}
+
+export interface LayoutMegaMenuContent extends Struct.ComponentSchema {
+  collectionName: 'components_layout_mega_menu_contents';
+  info: {
+    description: 'Three-column mega menu: intro panel, link list, and promotional panel.';
+    displayName: 'Mega Menu Content';
+  };
+  attributes: {
+    cta: Schema.Attribute.Component<'elements.link-basic', false>;
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.String;
+    links: Schema.Attribute.Component<'elements.link-basic', true>;
+    promoBackgroundPattern: Schema.Attribute.Media<'images'>;
+    promoCta: Schema.Attribute.Component<'elements.link-basic', false>;
+    promoHeading: Schema.Attribute.Blocks;
+    promoImages: Schema.Attribute.Media<'images', true>;
+  };
+}
+
 export interface LayoutMissionVision extends Struct.ComponentSchema {
   collectionName: 'components_layout_mission_visions';
   info: {
@@ -1450,6 +1504,50 @@ export interface LayoutMissionVision extends Struct.ComponentSchema {
   attributes: {
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     missionVisionTabs: Schema.Attribute.Component<'elements.tabs', true>;
+  };
+}
+
+export interface LayoutNavItem extends Struct.ComponentSchema {
+  collectionName: 'components_layout_nav_items';
+  info: {
+    description: 'Top navigation item with optional simple link or mega menu dropdown.';
+    displayName: 'Nav Item';
+  };
+  attributes: {
+    href: Schema.Attribute.String;
+    isExternal: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    megaMenu: Schema.Attribute.DynamicZone<
+      ['layout.mega-menu-content', 'layout.mega-menu-catalog']
+    >;
+    menuType: Schema.Attribute.Enumeration<['link', 'mega-menu']> &
+      Schema.Attribute.DefaultTo<'link'>;
+    text: Schema.Attribute.String;
+  };
+}
+
+export interface LayoutNavLinkColumn extends Struct.ComponentSchema {
+  collectionName: 'components_layout_nav_link_columns';
+  info: {
+    description: 'Grouped navigation links under a column heading.';
+    displayName: 'Nav Link Column';
+  };
+  attributes: {
+    heading: Schema.Attribute.String;
+    links: Schema.Attribute.Component<'elements.link-basic', true>;
+  };
+}
+
+export interface LayoutNavMegaMenuLink extends Struct.ComponentSchema {
+  collectionName: 'components_layout_nav_mega_menu_links';
+  info: {
+    description: 'Navigation link with optional badge for mega menus.';
+    displayName: 'Nav Mega Menu Link';
+  };
+  attributes: {
+    badge: Schema.Attribute.Component<'elements.badge', false>;
+    href: Schema.Attribute.String;
+    isExternal: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    text: Schema.Attribute.String;
   };
 }
 
@@ -1700,17 +1798,15 @@ export interface LayoutStatsSection extends Struct.ComponentSchema {
 export interface LayoutTopNav extends Struct.ComponentSchema {
   collectionName: 'components_layout_top_navs';
   info: {
-    description: '';
+    description: 'Site header with logo, navigation items (including mega menus), and primary CTA.';
     displayName: 'Top Nav';
   };
   attributes: {
     cta: Schema.Attribute.Component<'elements.link', false>;
-    darkThemeLogoImage: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    >;
-    logoImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    darkThemeLogoImage: Schema.Attribute.Media<'images'>;
+    logoImage: Schema.Attribute.Media<'images'>;
     logoText: Schema.Attribute.String;
-    navItems: Schema.Attribute.Component<'elements.link', true>;
+    navItems: Schema.Attribute.Component<'layout.nav-item', true>;
   };
 }
 
@@ -2147,7 +2243,13 @@ declare module '@strapi/strapi' {
       'layout.job-openings-section': LayoutJobOpeningsSection;
       'layout.leaders-board': LayoutLeadersBoard;
       'layout.legal-document': LayoutLegalDocument;
+      'layout.mega-menu-catalog': LayoutMegaMenuCatalog;
+      'layout.mega-menu-category': LayoutMegaMenuCategory;
+      'layout.mega-menu-content': LayoutMegaMenuContent;
       'layout.mission-vision': LayoutMissionVision;
+      'layout.nav-item': LayoutNavItem;
+      'layout.nav-link-column': LayoutNavLinkColumn;
+      'layout.nav-mega-menu-link': LayoutNavMegaMenuLink;
       'layout.newsletter-section': LayoutNewsletterSection;
       'layout.office-section': LayoutOfficeSection;
       'layout.our-clients-section': LayoutOurClientsSection;

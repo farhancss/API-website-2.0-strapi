@@ -1,0 +1,44 @@
+{
+  "collectionName": "components_layout_mega_menu_contents",
+  "info": {
+    "displayName": "Mega Menu Content",
+    "description": "Three-column mega menu: intro panel, link list, and promotional panel."
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link-basic"
+    },
+    "links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.link-basic"
+    },
+    "promoHeading": {
+      "type": "blocks"
+    },
+    "promoImages": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": ["images"]
+    },
+    "promoBackgroundPattern": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "promoCta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link-basic"
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "collectionName": "components_layout_mega_menu_catalogs",
+  "info": {
+    "displayName": "Mega Menu Catalog",
+    "description": "Catalog-style mega menu: category sidebar, link columns, industry tags, and CTA panel."
+  },
+  "options": {},
+  "attributes": {
+    "sidebarLabel": {
+      "type": "string"
+    },
+    "categories": {
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.mega-menu-category"
+    },
+    "viewAllCta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link-basic"
+    },
+    "tagsHeading": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.badge"
+    },
+    "heading": {
+      "type": "blocks"
+    },
+    "description": {
+      "type": "text"
+    },
+    "hubspotForm": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::hub-spot-form.hub-spot-form"
+    },
+    "backgroundPattern": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    }
+  }
+}
