@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_layout_creative_services_sections",
+  "info": {
+    "displayName": "Creative Services Section",
+    "description": "Dark section with intro on the left and service category columns on the right (graphic, title, service list, learn-more link)."
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "blocks"
+    },
+    "description": {
+      "type": "text"
+    },
+    "backgroundPattern": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "categories": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.creative-service-category-item"
+    }
+  }
+}

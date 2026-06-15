@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_layout_design_technologies_sections",
+  "info": {
+    "displayName": "Design Technologies Section",
+    "description": "Centered heading and description with a row of design tool icons."
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "blocks"
+    },
+    "description": {
+      "type": "text"
+    },
+    "technologies": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::technology.technology"
+    }
+  }
+}

@@ -840,6 +840,12 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'layout.agency-process-section',
         'layout.seo-services-section',
         'layout.high-growth-section',
+        'layout.design-services-hero-section',
+        'layout.trusted-by-section',
+        'layout.creative-services-section',
+        'layout.design-challenges-section',
+        'layout.design-value-section',
+        'layout.design-technologies-section',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;

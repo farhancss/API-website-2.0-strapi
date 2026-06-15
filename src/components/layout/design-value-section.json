@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_layout_design_value_sections",
+  "info": {
+    "displayName": "Design Value Section",
+    "description": "Dark section with stats bar on top and a two-column layout below: intro with graphic and CTA on the left, accordion features on the right."
+  },
+  "options": {},
+  "attributes": {
+    "statsHeading": {
+      "type": "string",
+      "default": "Driving value through exceptional design"
+    },
+    "stats": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.design-stat-item"
+    },
+    "heading": {
+      "type": "blocks"
+    },
+    "graphic": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "tagline": {
+      "type": "string",
+      "default": "Your brand deserves designs that stand out"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link-basic"
+    },
+    "features": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.quote"
+    }
+  }
+}
