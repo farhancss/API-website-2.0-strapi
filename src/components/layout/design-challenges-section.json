@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_layout_design_challenges_sections",
+  "info": {
+    "displayName": "Design Challenges Section",
+    "description": "Split header with intro icon and copy on the left, main heading on the right, and a three-column challenge grid below."
+  },
+  "options": {},
+  "attributes": {
+    "introIcon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "introDescription": {
+      "type": "text"
+    },
+    "heading": {
+      "type": "blocks"
+    },
+    "challenges": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.steps"
+    }
+  }
+}

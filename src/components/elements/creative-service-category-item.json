@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_elements_creative_service_category_items",
+  "info": {
+    "displayName": "Creative Service Category Item",
+    "description": "Service category card with default and hover graphics, title, service links, and learn-more CTA."
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "hoverImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "title": {
+      "type": "string"
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.link-basic"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link-basic"
+    }
+  }
+}

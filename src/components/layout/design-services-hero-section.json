@@ -1,0 +1,65 @@
+{
+  "collectionName": "components_layout_design_services_hero_sections",
+  "info": {
+    "displayName": "Design Services Hero Section",
+    "description": "Dark hero: breadcrumb, heading, description, CTA, Clutch rating, category pills on the left; color palette, logo, and featured image collage on the right."
+  },
+  "options": {},
+  "attributes": {
+    "breadcrumb": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.link-basic"
+    },
+    "heading": {
+      "type": "blocks"
+    },
+    "description": {
+      "type": "text"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link-basic"
+    },
+    "badgeImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "categoriesHeading": {
+      "type": "string",
+      "default": "Where do you need the most help?"
+    },
+    "categories": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.badge"
+    },
+    "categoriesCta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link-basic"
+    },
+    "colorPalette": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": ["images"]
+    },
+    "logoImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "featuredImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "backgroundPattern": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    }
+  }
+}

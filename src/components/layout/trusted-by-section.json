@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_layout_trusted_by_sections",
+  "info": {
+    "displayName": "Trusted By Section",
+    "description": "Centered heading with a horizontal row of client logos separated by vertical dividers."
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "default": "TRUSTED BY THE TOP COMPANIES"
+    },
+    "clientLogos": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": ["images"]
+    },
+    "isBlackAndWhite": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}
