@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_layout_nav_items",
+  "info": {
+    "displayName": "Nav Item",
+    "description": "Top navigation item with optional simple link or mega menu dropdown."
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "href": {
+      "type": "string"
+    },
+    "isExternal": {
+      "type": "boolean",
+      "default": false
+    },
+    "menuType": {
+      "type": "enumeration",
+      "enum": ["link", "mega-menu"],
+      "default": "link"
+    },
+    "megaMenu": {
+      "type": "dynamiczone",
+      "components": [
+        "layout.mega-menu-content",
+        "layout.mega-menu-catalog"
+      ]
+    }
+  }
+}

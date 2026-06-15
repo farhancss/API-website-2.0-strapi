@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_layout_mega_menu_categories",
+  "info": {
+    "displayName": "Mega Menu Category",
+    "description": "Sidebar category with icon and link columns for catalog-style mega menus."
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "isDefault": {
+      "type": "boolean",
+      "default": false
+    },
+    "columns": {
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.nav-link-column"
+    }
+  }
+}

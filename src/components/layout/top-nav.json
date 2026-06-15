@@ -2,42 +2,32 @@
   "collectionName": "components_layout_top_navs",
   "info": {
     "displayName": "Top Nav",
-    "description": ""
+    "description": "Site header with logo, navigation items (including mega menus), and primary CTA."
   },
   "options": {},
   "attributes": {
     "logoImage": {
       "type": "media",
       "multiple": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
+      "allowedTypes": ["images"]
     },
     "darkThemeLogoImage": {
       "type": "media",
       "multiple": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
+      "allowedTypes": ["images"]
     },
     "logoText": {
       "type": "string"
     },
     "navItems": {
       "type": "component",
-      "component": "elements.link",
-      "repeatable": true
+      "repeatable": true,
+      "component": "layout.nav-item"
     },
     "cta": {
       "type": "component",
-      "component": "elements.link",
-      "repeatable": false
+      "repeatable": false,
+      "component": "elements.link"
     }
   }
 }
