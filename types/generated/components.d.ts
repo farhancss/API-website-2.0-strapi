@@ -384,7 +384,6 @@ export interface ElementsTabSubItem extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Blocks;
-    href: Schema.Attribute.String;
     icon: Schema.Attribute.Media<'images'>;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
@@ -399,6 +398,7 @@ export interface ElementsTabs extends Struct.ComponentSchema {
     children: Schema.Attribute.Component<'elements.tab-sub-item', true>;
     description: Schema.Attribute.Blocks;
     heading: Schema.Attribute.String;
+    href: Schema.Attribute.String;
   };
 }
 
