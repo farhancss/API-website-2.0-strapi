@@ -11,6 +11,9 @@
     "description": {
       "type": "blocks"
     },
+    "href": {
+      "type": "string"
+    },
     "children": {
       "type": "component",
       "component": "elements.tab-sub-item",

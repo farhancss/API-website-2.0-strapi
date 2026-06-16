@@ -13,9 +13,6 @@
     "description": {
       "type": "blocks"
     },
-    "href": {
-      "type": "string"
-    },
     "icon": {
       "type": "media",
       "multiple": false,
