@@ -415,7 +415,6 @@ export interface ElementsSteps extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
-    href: Schema.Attribute.String;
     icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Schema.Attribute.String;
   };
