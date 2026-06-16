@@ -1151,8 +1151,6 @@ export interface LayoutDesignTechnologiesSection
       'manyToMany',
       'api::technology.technology'
     >;
-    theme: Schema.Attribute.Enumeration<['light', 'dark']> &
-      Schema.Attribute.DefaultTo<'light'>;
   };
 }
 
