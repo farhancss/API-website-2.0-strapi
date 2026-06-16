@@ -16,6 +16,11 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::technology.technology"
+    },
+    "theme": {
+      "type": "enumeration",
+      "enum": ["light", "dark"],
+      "default": "light"
     }
   }
 }

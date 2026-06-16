@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_layout_why_web_design_matters_sections",
+  "info": {
+    "displayName": "Why Web Design Matters Section",
+    "description": "Two-column intro with eyebrow label and description, followed by a horizontal stats bar."
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "default": "WHY WEB DESIGN MATTERS?"
+    },
+    "description": {
+      "type": "text"
+    },
+    "stats": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.quote"
+    }
+  }
+}

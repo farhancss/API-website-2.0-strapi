@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_elements_web_design_service_items",
+  "info": {
+    "displayName": "Web Design Service Item",
+    "description": "Service card with title, image, and supporting description."
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_layout_website_engagement_sections",
+  "info": {
+    "displayName": "Website Engagement Section",
+    "description": "Two-column section with heading, description, feature checklist, CTA on the left and an image on the right."
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "blocks"
+    },
+    "description": {
+      "type": "text"
+    },
+    "features": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.tag"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link-basic"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    }
+  }
+}

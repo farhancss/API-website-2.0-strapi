@@ -1,0 +1,54 @@
+{
+  "collectionName": "components_layout_service_design_hero_sections",
+  "info": {
+    "displayName": "Service Design Hero Section",
+    "description": "Dark hero: breadcrumb, heading, description, CTA, and Clutch rating on the left; project showcase cards on the right; trusted-by logos at the bottom."
+  },
+  "options": {},
+  "attributes": {
+    "breadcrumb": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.link-basic"
+    },
+    "heading": {
+      "type": "blocks"
+    },
+    "description": {
+      "type": "text"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link-basic"
+    },
+    "hubspotForm": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::hub-spot-form.hub-spot-form"
+    },
+    "clutchRating": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "backgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "trustedHeading": {
+      "type": "string",
+      "default": "Trusted by big companies"
+    },
+    "clientLogos": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": ["images"]
+    },
+    "isBlackAndWhite": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_layout_ai_service_cta_sections",
+  "info": {
+    "displayName": "AI Service CTA Section",
+    "description": "Dark call-to-action banner with icon, heading, description, CTA, background image, and partner logo strip."
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "heading": {
+      "type": "blocks"
+    },
+    "description": {
+      "type": "text"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link-basic"
+    },
+    "backgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "partnerLogos": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": ["images"]
+    }
+  }
+}

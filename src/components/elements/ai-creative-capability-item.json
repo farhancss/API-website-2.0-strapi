@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_elements_ai_creative_capability_items",
+  "info": {
+    "displayName": "AI Creative Capability Item",
+    "description": "Capability card with title, provider tag, image, and supporting description."
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "provider": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

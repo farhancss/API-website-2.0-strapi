@@ -20,6 +20,9 @@
       "type": "string",
       "required": true
     },
+    "canonicalLink": {
+      "type": "string"
+    },
     "shareImage": {
       "type": "media",
       "multiple": false,
