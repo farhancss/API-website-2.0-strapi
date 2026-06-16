@@ -1,0 +1,44 @@
+{
+  "collectionName": "components_layout_ai_creatives_hero_sections",
+  "info": {
+    "displayName": "AI Creatives Hero Section",
+    "description": "Dark hero with breadcrumb, heading, description, CTA, video panel, and bottom stat callouts."
+  },
+  "options": {},
+  "attributes": {
+    "breadcrumb": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.link-basic"
+    },
+    "heading": {
+      "type": "blocks"
+    },
+    "description": {
+      "type": "text"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link-basic"
+    },
+    "videoThumbnail": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "videoUrl": {
+      "type": "string"
+    },
+    "backgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "stats": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.badge"
+    }
+  }
+}

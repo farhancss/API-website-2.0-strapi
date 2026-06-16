@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_elements_design_process_step_items",
+  "info": {
+    "displayName": "Design Process Step Item",
+    "description": "Process step with step label, primary title pill, and secondary task pills."
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "STEP #1"
+    },
+    "tasks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.tag"
+    }
+  }
+}

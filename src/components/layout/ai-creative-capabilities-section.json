@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_layout_ai_creative_capabilities_sections",
+  "info": {
+    "displayName": "AI Creative Capabilities Section",
+    "description": "Centered intro with CTA and a multi-card grid of AI-powered creative capabilities."
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "blocks"
+    },
+    "description": {
+      "type": "text"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link-basic"
+    },
+    "capabilities": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.ai-creative-capability-item"
+    }
+  }
+}

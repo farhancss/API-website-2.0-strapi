@@ -256,6 +256,21 @@ export interface CaseStudyWebsiteDesignSection extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementsAiCreativeCapabilityItem
+  extends Struct.ComponentSchema {
+  collectionName: 'components_elements_ai_creative_capability_items';
+  info: {
+    description: 'Capability card with title, provider tag, image, and supporting description.';
+    displayName: 'AI Creative Capability Item';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images'>;
+    provider: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface ElementsBadge extends Struct.ComponentSchema {
   collectionName: 'components_elements_badges';
   info: {
@@ -295,6 +310,35 @@ export interface ElementsCreativeServiceCategoryItem
     image: Schema.Attribute.Media<'images'>;
     items: Schema.Attribute.Component<'elements.link-basic', true>;
     title: Schema.Attribute.String;
+  };
+}
+
+export interface ElementsDesignInfoRow extends Struct.ComponentSchema {
+  collectionName: 'components_elements_design_info_rows';
+  info: {
+    description: 'Alternating two-column row with heading, description, feature tags, CTA, and image.';
+    displayName: 'Design Info Row';
+  };
+  attributes: {
+    cta: Schema.Attribute.Component<'elements.link-basic', false>;
+    description: Schema.Attribute.Text;
+    features: Schema.Attribute.Component<'shared.tag', true>;
+    heading: Schema.Attribute.Blocks;
+    image: Schema.Attribute.Media<'images'>;
+    imagePosition: Schema.Attribute.Enumeration<['left', 'right']> &
+      Schema.Attribute.DefaultTo<'left'>;
+  };
+}
+
+export interface ElementsDesignProcessStepItem extends Struct.ComponentSchema {
+  collectionName: 'components_elements_design_process_step_items';
+  info: {
+    description: 'Process step with step label, primary title pill, and secondary task pills.';
+    displayName: 'Design Process Step Item';
+  };
+  attributes: {
+    tasks: Schema.Attribute.Component<'shared.tag', true>;
+    title: Schema.Attribute.String & Schema.Attribute.DefaultTo<'STEP #1'>;
   };
 }
 
@@ -371,6 +415,7 @@ export interface ElementsSteps extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
+    href: Schema.Attribute.String;
     icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Schema.Attribute.String;
   };
@@ -399,6 +444,19 @@ export interface ElementsTabs extends Struct.ComponentSchema {
     description: Schema.Attribute.Blocks;
     heading: Schema.Attribute.String;
     href: Schema.Attribute.String;
+  };
+}
+
+export interface ElementsWebDesignServiceItem extends Struct.ComponentSchema {
+  collectionName: 'components_elements_web_design_service_items';
+  info: {
+    description: 'Service card with title, image, and supporting description.';
+    displayName: 'Web Design Service Item';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images'>;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -466,6 +524,58 @@ export interface LayoutAgencyProcessSection extends Struct.ComponentSchema {
     description: Schema.Attribute.Text;
     heading: Schema.Attribute.Blocks;
     processSteps: Schema.Attribute.Component<'shared.quote', true>;
+  };
+}
+
+export interface LayoutAiCreativeCapabilitiesSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_layout_ai_creative_capabilities_sections';
+  info: {
+    description: 'Centered intro with CTA and a multi-card grid of AI-powered creative capabilities.';
+    displayName: 'AI Creative Capabilities Section';
+  };
+  attributes: {
+    capabilities: Schema.Attribute.Component<
+      'elements.ai-creative-capability-item',
+      true
+    >;
+    cta: Schema.Attribute.Component<'elements.link-basic', false>;
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.Blocks;
+  };
+}
+
+export interface LayoutAiCreativesHeroSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_ai_creatives_hero_sections';
+  info: {
+    description: 'Dark hero with breadcrumb, heading, description, CTA, video panel, and bottom stat callouts.';
+    displayName: 'AI Creatives Hero Section';
+  };
+  attributes: {
+    backgroundImage: Schema.Attribute.Media<'images'>;
+    breadcrumb: Schema.Attribute.Component<'elements.link-basic', true>;
+    cta: Schema.Attribute.Component<'elements.link-basic', false>;
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.Blocks;
+    stats: Schema.Attribute.Component<'elements.badge', true>;
+    videoThumbnail: Schema.Attribute.Media<'images'>;
+    videoUrl: Schema.Attribute.String;
+  };
+}
+
+export interface LayoutAiServiceCtaSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_ai_service_cta_sections';
+  info: {
+    description: 'Dark call-to-action banner with icon, heading, description, CTA, background image, and partner logo strip.';
+    displayName: 'AI Service CTA Section';
+  };
+  attributes: {
+    backgroundImage: Schema.Attribute.Media<'images'>;
+    cta: Schema.Attribute.Component<'elements.link-basic', false>;
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.Blocks;
+    icon: Schema.Attribute.Media<'images'>;
+    partnerLogos: Schema.Attribute.Media<'images', true>;
   };
 }
 
@@ -946,6 +1056,22 @@ export interface LayoutCreativeServicesSection extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutCreativeWebDesignSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_creative_web_design_sections';
+  info: {
+    description: 'Centered heading and intro with a multi-card grid of web design service offerings.';
+    displayName: 'Creative Web Design Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.Blocks;
+    services: Schema.Attribute.Component<
+      'elements.web-design-service-item',
+      true
+    >;
+  };
+}
+
 export interface LayoutDesignChallengesSection extends Struct.ComponentSchema {
   collectionName: 'components_layout_design_challenges_sections';
   info: {
@@ -957,6 +1083,34 @@ export interface LayoutDesignChallengesSection extends Struct.ComponentSchema {
     heading: Schema.Attribute.Blocks;
     introDescription: Schema.Attribute.Text;
     introIcon: Schema.Attribute.Media<'images'>;
+  };
+}
+
+export interface LayoutDesignConversionSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_design_conversion_sections';
+  info: {
+    description: 'Dark two-column section: heading and CTA on the left, service cards grid on the right, and a gradient CTA banner at the bottom.';
+    displayName: 'Design Conversion Section';
+  };
+  attributes: {
+    cta: Schema.Attribute.Component<'elements.link-basic', false>;
+    ctaBannerButton: Schema.Attribute.Component<'elements.link-basic', false>;
+    ctaBannerHeading: Schema.Attribute.Blocks;
+    ctaPrompt: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Ready to improve your conversion rate?'>;
+    heading: Schema.Attribute.Blocks;
+    items: Schema.Attribute.Component<'elements.steps', true>;
+  };
+}
+
+export interface LayoutDesignInfoSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_design_info_sections';
+  info: {
+    description: 'Dark section with stacked alternating rows: image and copy side by side, with feature tags and CTA per row.';
+    displayName: 'Design Info Section';
+  };
+  attributes: {
+    rows: Schema.Attribute.Component<'elements.design-info-row', true>;
   };
 }
 
@@ -998,6 +1152,8 @@ export interface LayoutDesignTechnologiesSection
       'manyToMany',
       'api::technology.technology'
     >;
+    theme: Schema.Attribute.Enumeration<['light', 'dark']> &
+      Schema.Attribute.DefaultTo<'light'>;
   };
 }
 
@@ -1778,6 +1934,31 @@ export interface LayoutServiceCtaSection extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutServiceDesignHeroSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_service_design_hero_sections';
+  info: {
+    description: 'Dark hero: breadcrumb, heading, description, CTA, and Clutch rating on the left; project showcase cards on the right; trusted-by logos at the bottom.';
+    displayName: 'Service Design Hero Section';
+  };
+  attributes: {
+    backgroundImage: Schema.Attribute.Media<'images'>;
+    breadcrumb: Schema.Attribute.Component<'elements.link-basic', true>;
+    clientLogos: Schema.Attribute.Media<'images', true>;
+    clutchRating: Schema.Attribute.Media<'images'>;
+    cta: Schema.Attribute.Component<'elements.link-basic', false>;
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.Blocks;
+    hubspotForm: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::hub-spot-form.hub-spot-form'
+    >;
+    isBlackAndWhite: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<true>;
+    trustedHeading: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Trusted by big companies'>;
+  };
+}
+
 export interface LayoutStatsSection extends Struct.ComponentSchema {
   collectionName: 'components_layout_stats_sections';
   info: {
@@ -1837,6 +2018,35 @@ export interface LayoutTrustedBySection extends Struct.ComponentSchema {
       Schema.Attribute.DefaultTo<'TRUSTED BY THE TOP COMPANIES'>;
     isBlackAndWhite: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<true>;
+  };
+}
+
+export interface LayoutUxDesignProcessSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_ux_design_process_sections';
+  info: {
+    description: 'Centered heading and description with a horizontal row of process steps, each with a primary title pill and secondary task pills.';
+    displayName: 'UX Design Process Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.Blocks;
+    steps: Schema.Attribute.Component<
+      'elements.design-process-step-item',
+      true
+    >;
+  };
+}
+
+export interface LayoutUxUiComparisonSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_ux_ui_comparison_sections';
+  info: {
+    description: 'Centered heading and description with a before-and-after UX/UI comparison slider, side labels, and sticky note annotations.';
+    displayName: 'UX UI Comparison Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.Blocks;
+    image: Schema.Attribute.Media<'images'>;
   };
 }
 
@@ -1916,6 +2126,21 @@ export interface LayoutWebsiteCapabilityItem extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutWebsiteEngagementSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_website_engagement_sections';
+  info: {
+    description: 'Two-column section with heading, description, feature checklist, CTA on the left and an image on the right.';
+    displayName: 'Website Engagement Section';
+  };
+  attributes: {
+    cta: Schema.Attribute.Component<'elements.link-basic', false>;
+    description: Schema.Attribute.Text;
+    features: Schema.Attribute.Component<'shared.tag', true>;
+    heading: Schema.Attribute.Blocks;
+    image: Schema.Attribute.Media<'images'>;
+  };
+}
+
 export interface LayoutWebsiteRedesignSection extends Struct.ComponentSchema {
   collectionName: 'components_layout_website_redesign_sections';
   info: {
@@ -1941,6 +2166,21 @@ export interface LayoutWhyChooseUsSection extends Struct.ComponentSchema {
       'manyToOne',
       'api::why-choose-us.why-choose-us'
     >;
+  };
+}
+
+export interface LayoutWhyWebDesignMattersSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_layout_why_web_design_matters_sections';
+  info: {
+    description: 'Two-column intro with eyebrow label and description, followed by a horizontal stats bar.';
+    displayName: 'Why Web Design Matters Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    label: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'WHY WEB DESIGN MATTERS?'>;
+    stats: Schema.Attribute.Component<'shared.quote', true>;
   };
 }
 
@@ -2169,9 +2409,12 @@ declare module '@strapi/strapi' {
       'case-study.social-media-section': CaseStudySocialMediaSection;
       'case-study.user-experience-section': CaseStudyUserExperienceSection;
       'case-study.website-design-section': CaseStudyWebsiteDesignSection;
+      'elements.ai-creative-capability-item': ElementsAiCreativeCapabilityItem;
       'elements.badge': ElementsBadge;
       'elements.card': ElementsCard;
       'elements.creative-service-category-item': ElementsCreativeServiceCategoryItem;
+      'elements.design-info-row': ElementsDesignInfoRow;
+      'elements.design-process-step-item': ElementsDesignProcessStepItem;
       'elements.design-stat-item': ElementsDesignStatItem;
       'elements.feature': ElementsFeature;
       'elements.link': ElementsLink;
@@ -2180,10 +2423,14 @@ declare module '@strapi/strapi' {
       'elements.steps': ElementsSteps;
       'elements.tab-sub-item': ElementsTabSubItem;
       'elements.tabs': ElementsTabs;
+      'elements.web-design-service-item': ElementsWebDesignServiceItem;
       'layout.about-section': LayoutAboutSection;
       'layout.agency-hero-section': LayoutAgencyHeroSection;
       'layout.agency-intro-section': LayoutAgencyIntroSection;
       'layout.agency-process-section': LayoutAgencyProcessSection;
+      'layout.ai-creative-capabilities-section': LayoutAiCreativeCapabilitiesSection;
+      'layout.ai-creatives-hero-section': LayoutAiCreativesHeroSection;
+      'layout.ai-service-cta-section': LayoutAiServiceCtaSection;
       'layout.award-insights-section': LayoutAwardInsightsSection;
       'layout.award-item': LayoutAwardItem;
       'layout.award-section': LayoutAwardSection;
@@ -2213,7 +2460,10 @@ declare module '@strapi/strapi' {
       'layout.content-with-image': LayoutContentWithImage;
       'layout.content-with-video': LayoutContentWithVideo;
       'layout.creative-services-section': LayoutCreativeServicesSection;
+      'layout.creative-web-design-section': LayoutCreativeWebDesignSection;
       'layout.design-challenges-section': LayoutDesignChallengesSection;
+      'layout.design-conversion-section': LayoutDesignConversionSection;
+      'layout.design-info-section': LayoutDesignInfoSection;
       'layout.design-services-hero-section': LayoutDesignServicesHeroSection;
       'layout.design-technologies-section': LayoutDesignTechnologiesSection;
       'layout.design-value-section': LayoutDesignValueSection;
@@ -2266,17 +2516,22 @@ declare module '@strapi/strapi' {
       'layout.section-heading': LayoutSectionHeading;
       'layout.seo-services-section': LayoutSeoServicesSection;
       'layout.service-cta-section': LayoutServiceCtaSection;
+      'layout.service-design-hero-section': LayoutServiceDesignHeroSection;
       'layout.stats-section': LayoutStatsSection;
       'layout.top-nav': LayoutTopNav;
       'layout.transform-business-section': LayoutTransformBusinessSection;
       'layout.trusted-by-section': LayoutTrustedBySection;
+      'layout.ux-design-process-section': LayoutUxDesignProcessSection;
+      'layout.ux-ui-comparison-section': LayoutUxUiComparisonSection;
       'layout.value-proposition-section': LayoutValuePropositionSection;
       'layout.values-section': LayoutValuesSection;
       'layout.website-benefits-section': LayoutWebsiteBenefitsSection;
       'layout.website-capabilities-section': LayoutWebsiteCapabilitiesSection;
       'layout.website-capability-item': LayoutWebsiteCapabilityItem;
+      'layout.website-engagement-section': LayoutWebsiteEngagementSection;
       'layout.website-redesign-section': LayoutWebsiteRedesignSection;
       'layout.why-choose-us-section': LayoutWhyChooseUsSection;
+      'layout.why-web-design-matters-section': LayoutWhyWebDesignMattersSection;
       'layout.work-hero-section': LayoutWorkHeroSection;
       'sections.hub-spot-form': SectionsHubSpotForm;
       'shared.award-insight-item': SharedAwardInsightItem;

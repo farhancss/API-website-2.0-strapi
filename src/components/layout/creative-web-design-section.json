@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_layout_creative_web_design_sections",
+  "info": {
+    "displayName": "Creative Web Design Section",
+    "description": "Centered heading and intro with a multi-card grid of web design service offerings."
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "blocks"
+    },
+    "description": {
+      "type": "text"
+    },
+    "services": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.web-design-service-item"
+    }
+  }
+}

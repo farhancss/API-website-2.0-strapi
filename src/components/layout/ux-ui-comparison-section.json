@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_layout_ux_ui_comparison_sections",
+  "info": {
+    "displayName": "UX UI Comparison Section",
+    "description": "Centered heading and description with a before-and-after UX/UI comparison slider, side labels, and sticky note annotations."
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "blocks"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    }
+  }
+}

@@ -846,6 +846,17 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'layout.design-challenges-section',
         'layout.design-value-section',
         'layout.design-technologies-section',
+        'layout.service-design-hero-section',
+        'layout.website-engagement-section',
+        'layout.design-conversion-section',
+        'layout.ux-ui-comparison-section',
+        'layout.ux-design-process-section',
+        'layout.why-web-design-matters-section',
+        'layout.creative-web-design-section',
+        'layout.design-info-section',
+        'layout.ai-creatives-hero-section',
+        'layout.ai-creative-capabilities-section',
+        'layout.ai-service-cta-section',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;

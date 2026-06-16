@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_layout_design_info_sections",
+  "info": {
+    "displayName": "Design Info Section",
+    "description": "Dark section with stacked alternating rows: image and copy side by side, with feature tags and CTA per row."
+  },
+  "options": {},
+  "attributes": {
+    "rows": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.design-info-row"
+    }
+  }
+}
