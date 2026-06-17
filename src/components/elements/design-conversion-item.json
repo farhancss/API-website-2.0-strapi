@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_elements_design_conversion_items",
+  "info": {
+    "displayName": "Design Conversion Item",
+    "description": "Service card with icon, title, description, CTA, and optional highlighted styling."
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link-basic"
+    }
+  }
+}

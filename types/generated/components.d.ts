@@ -313,6 +313,20 @@ export interface ElementsCreativeServiceCategoryItem
   };
 }
 
+export interface ElementsDesignConversionItem extends Struct.ComponentSchema {
+  collectionName: 'components_elements_design_conversion_items';
+  info: {
+    description: 'Service card with icon, title, description, CTA, and optional highlighted styling.';
+    displayName: 'Design Conversion Item';
+  };
+  attributes: {
+    cta: Schema.Attribute.Component<'elements.link-basic', false>;
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.Media<'images'>;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface ElementsDesignInfoRow extends Struct.ComponentSchema {
   collectionName: 'components_elements_design_info_rows';
   info: {
@@ -1109,7 +1123,7 @@ export interface LayoutDesignConversionSection extends Struct.ComponentSchema {
     ctaPrompt: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'Ready to improve your conversion rate?'>;
     heading: Schema.Attribute.Blocks;
-    items: Schema.Attribute.Component<'elements.steps', true>;
+    items: Schema.Attribute.Component<'elements.design-conversion-item', true>;
   };
 }
 
@@ -2468,6 +2482,7 @@ declare module '@strapi/strapi' {
       'elements.badge': ElementsBadge;
       'elements.card': ElementsCard;
       'elements.creative-service-category-item': ElementsCreativeServiceCategoryItem;
+      'elements.design-conversion-item': ElementsDesignConversionItem;
       'elements.design-info-row': ElementsDesignInfoRow;
       'elements.design-process-step-item': ElementsDesignProcessStepItem;
       'elements.design-stat-item': ElementsDesignStatItem;
