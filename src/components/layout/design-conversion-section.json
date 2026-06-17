@@ -21,7 +21,7 @@
     "items": {
       "type": "component",
       "repeatable": true,
-      "component": "elements.steps"
+      "component": "elements.design-conversion-item"
     },
     "ctaBannerHeading": {
       "type": "blocks"
