@@ -265,7 +265,7 @@ export interface ElementsAiCreativeCapabilityItem
   };
   attributes: {
     description: Schema.Attribute.Text;
-    image: Schema.Attribute.Media<'images'>;
+    image: Schema.Attribute.Media<'images' | 'videos'>;
     provider: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
