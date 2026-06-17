@@ -2070,6 +2070,7 @@ export interface LayoutUxDesignProcessSection extends Struct.ComponentSchema {
   attributes: {
     description: Schema.Attribute.Text;
     heading: Schema.Attribute.Blocks;
+    image: Schema.Attribute.Media<'images'>;
     steps: Schema.Attribute.Component<
       'elements.design-process-step-item',
       true
