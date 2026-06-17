@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_layout_process_journey_sections",
+  "info": {
+    "displayName": "Process Journey Section",
+    "description": "Dark two-column section with intro text, step carousel on the left, and a zigzag process diagram on the right."
+  },
+  "options": {},
+  "attributes": {
+    "introHeading": {
+      "type": "string",
+      "default": "Yes, the process is simple."
+    },
+    "steps": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.quote"
+    },
+    "pathStartLabel": {
+      "type": "string",
+      "default": "You don't have a brand identity"
+    },
+    "pathEndLabel": {
+      "type": "string",
+      "default": "You do have a brand identity"
+    }
+  }
+}

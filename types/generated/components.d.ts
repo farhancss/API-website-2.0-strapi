@@ -663,6 +663,17 @@ export interface LayoutBlogSection extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutBrandShowcaseSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_brand_showcase_sections';
+  info: {
+    description: 'Horizontal row of square brand identity project cards with logo and brand name.';
+    displayName: 'Brand Showcase Section';
+  };
+  attributes: {
+    cards: Schema.Attribute.Media<'images', true>;
+  };
+}
+
 export interface LayoutButton extends Struct.ComponentSchema {
   collectionName: 'components_layout_buttons';
   info: {
@@ -1134,6 +1145,21 @@ export interface LayoutDesignServicesHeroSection
     featuredImage: Schema.Attribute.Media<'videos' | 'images'>;
     heading: Schema.Attribute.Blocks;
     logoImage: Schema.Attribute.Media<'images'>;
+  };
+}
+
+export interface LayoutDesignSubscriptionSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_layout_design_subscription_sections';
+  info: {
+    description: 'Two-column section with heading, description, and CTA on the left; accordion feature list on the right.';
+    displayName: 'Design Subscription Section';
+  };
+  attributes: {
+    cta: Schema.Attribute.Component<'elements.link-basic', false>;
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.Blocks;
+    items: Schema.Attribute.Component<'shared.quote', true>;
   };
 }
 
@@ -1851,6 +1877,23 @@ export interface LayoutPriceGrid extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutProcessJourneySection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_process_journey_sections';
+  info: {
+    description: 'Dark two-column section with intro text, step carousel on the left, and a zigzag process diagram on the right.';
+    displayName: 'Process Journey Section';
+  };
+  attributes: {
+    introHeading: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Yes, the process is simple.'>;
+    pathEndLabel: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'You do have a brand identity'>;
+    pathStartLabel: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<"You don't have a brand identity">;
+    steps: Schema.Attribute.Component<'shared.quote', true>;
+  };
+}
+
 export interface LayoutProfileSection extends Struct.ComponentSchema {
   collectionName: 'components_layout_profile_sections';
   info: {
@@ -2198,6 +2241,20 @@ export interface LayoutWorkHeroSection extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutWorkShowcaseSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_work_showcase_sections';
+  info: {
+    description: 'Dark two-column section with heading, description, and CTA on the left; masonry grid of portfolio images on the right.';
+    displayName: 'Work Showcase Section';
+  };
+  attributes: {
+    backgroundImage: Schema.Attribute.Media<'images'>;
+    cta: Schema.Attribute.Component<'elements.link-basic', false>;
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.Blocks;
+  };
+}
+
 export interface SectionsHubSpotForm extends Struct.ComponentSchema {
   collectionName: 'components_sections_hub_spot_forms';
   info: {
@@ -2434,6 +2491,7 @@ declare module '@strapi/strapi' {
       'layout.awards-recognition-section': LayoutAwardsRecognitionSection;
       'layout.beliefs-section': LayoutBeliefsSection;
       'layout.blog-section': LayoutBlogSection;
+      'layout.brand-showcase-section': LayoutBrandShowcaseSection;
       'layout.button': LayoutButton;
       'layout.card-grid': LayoutCardGrid;
       'layout.careers-cta-section': LayoutCareersCtaSection;
@@ -2462,6 +2520,7 @@ declare module '@strapi/strapi' {
       'layout.design-conversion-section': LayoutDesignConversionSection;
       'layout.design-info-section': LayoutDesignInfoSection;
       'layout.design-services-hero-section': LayoutDesignServicesHeroSection;
+      'layout.design-subscription-section': LayoutDesignSubscriptionSection;
       'layout.design-technologies-section': LayoutDesignTechnologiesSection;
       'layout.design-value-section': LayoutDesignValueSection;
       'layout.dge-score-section': LayoutDgeScoreSection;
@@ -2507,6 +2566,7 @@ declare module '@strapi/strapi' {
       'layout.portfolio-page-featured-case-studies': LayoutPortfolioPageFeaturedCaseStudies;
       'layout.portfolio-project': LayoutPortfolioProject;
       'layout.price-grid': LayoutPriceGrid;
+      'layout.process-journey-section': LayoutProcessJourneySection;
       'layout.profile-section': LayoutProfileSection;
       'layout.recognition-badges-section': LayoutRecognitionBadgesSection;
       'layout.resources-and-careers': LayoutResourcesAndCareers;
@@ -2530,6 +2590,7 @@ declare module '@strapi/strapi' {
       'layout.why-choose-us-section': LayoutWhyChooseUsSection;
       'layout.why-web-design-matters-section': LayoutWhyWebDesignMattersSection;
       'layout.work-hero-section': LayoutWorkHeroSection;
+      'layout.work-showcase-section': LayoutWorkShowcaseSection;
       'sections.hub-spot-form': SectionsHubSpotForm;
       'shared.award-insight-item': SharedAwardInsightItem;
       'shared.client-industry-item': SharedClientIndustryItem;

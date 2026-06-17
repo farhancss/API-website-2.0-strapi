@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_layout_brand_showcase_sections",
+  "info": {
+    "displayName": "Brand Showcase Section",
+    "description": "Horizontal row of square brand identity project cards with logo and brand name."
+  },
+  "options": {},
+  "attributes": {
+    "cards": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": ["images"]
+    }
+  }
+}

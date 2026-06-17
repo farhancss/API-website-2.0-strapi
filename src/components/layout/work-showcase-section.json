@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_layout_work_showcase_sections",
+  "info": {
+    "displayName": "Work Showcase Section",
+    "description": "Dark two-column section with heading, description, and CTA on the left; masonry grid of portfolio images on the right."
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "blocks"
+    },
+    "description": {
+      "type": "text"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link-basic"
+    },
+    "backgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    }
+  }
+}
