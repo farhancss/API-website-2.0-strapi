@@ -857,6 +857,10 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'layout.ai-creatives-hero-section',
         'layout.ai-creative-capabilities-section',
         'layout.ai-service-cta-section',
+        'layout.work-showcase-section',
+        'layout.process-journey-section',
+        'layout.design-subscription-section',
+        'layout.brand-showcase-section',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;

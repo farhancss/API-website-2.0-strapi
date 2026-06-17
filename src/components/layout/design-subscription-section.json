@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_layout_design_subscription_sections",
+  "info": {
+    "displayName": "Design Subscription Section",
+    "description": "Two-column section with heading, description, and CTA on the left; accordion feature list on the right."
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "blocks"
+    },
+    "description": {
+      "type": "text"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link-basic"
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.quote"
+    }
+  }
+}
