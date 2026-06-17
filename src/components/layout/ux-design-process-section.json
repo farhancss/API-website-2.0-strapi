@@ -12,6 +12,11 @@
     "description": {
       "type": "text"
     },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
     "steps": {
       "type": "component",
       "repeatable": true,
