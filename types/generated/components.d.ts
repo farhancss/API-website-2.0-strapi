@@ -283,20 +283,6 @@ export interface ElementsBadge extends Struct.ComponentSchema {
   };
 }
 
-export interface ElementsBrandShowcaseCard extends Struct.ComponentSchema {
-  collectionName: 'components_elements_brand_showcase_cards';
-  info: {
-    description: 'Square project card with background, logo, and brand name.';
-    displayName: 'Brand Showcase Card';
-  };
-  attributes: {
-    backgroundImage: Schema.Attribute.Media<'images'>;
-    brandName: Schema.Attribute.String;
-    link: Schema.Attribute.Component<'elements.link-basic', false>;
-    logo: Schema.Attribute.Media<'images'>;
-  };
-}
-
 export interface ElementsCard extends Struct.ComponentSchema {
   collectionName: 'components_elements_cards';
   info: {
@@ -684,7 +670,7 @@ export interface LayoutBrandShowcaseSection extends Struct.ComponentSchema {
     displayName: 'Brand Showcase Section';
   };
   attributes: {
-    cards: Schema.Attribute.Component<'elements.brand-showcase-card', true>;
+    cards: Schema.Attribute.Media<'images', true>;
   };
 }
 
@@ -2008,7 +1994,6 @@ export interface LayoutServiceDesignHeroSection extends Struct.ComponentSchema {
     >;
     isBlackAndWhite: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<true>;
-    projects: Schema.Attribute.Component<'elements.brand-showcase-card', true>;
     trustedHeading: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'Trusted by big companies'>;
   };
@@ -2480,7 +2465,6 @@ declare module '@strapi/strapi' {
       'case-study.website-design-section': CaseStudyWebsiteDesignSection;
       'elements.ai-creative-capability-item': ElementsAiCreativeCapabilityItem;
       'elements.badge': ElementsBadge;
-      'elements.brand-showcase-card': ElementsBrandShowcaseCard;
       'elements.card': ElementsCard;
       'elements.creative-service-category-item': ElementsCreativeServiceCategoryItem;
       'elements.design-info-row': ElementsDesignInfoRow;
