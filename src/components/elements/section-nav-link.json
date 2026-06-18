@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_elements_section_nav_links",
+  "info": {
+    "displayName": "Section Nav Link",
+    "description": "Anchor link for sticky section navigation."
+  },
+  "options": {},
+  "attributes": {
+    "sectionId": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    }
+  }
+}

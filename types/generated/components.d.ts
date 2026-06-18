@@ -422,6 +422,18 @@ export interface ElementsPriceCard extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementsSectionNavLink extends Struct.ComponentSchema {
+  collectionName: 'components_elements_section_nav_links';
+  info: {
+    description: 'Anchor link for sticky section navigation.';
+    displayName: 'Section Nav Link';
+  };
+  attributes: {
+    name: Schema.Attribute.String;
+    sectionId: Schema.Attribute.String;
+  };
+}
+
 export interface ElementsSteps extends Struct.ComponentSchema {
   collectionName: 'components_elements_steps';
   info: {
@@ -1963,6 +1975,17 @@ export interface LayoutSectionHeading extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutSectionNavBar extends Struct.ComponentSchema {
+  collectionName: 'components_layout_section_nav_bars';
+  info: {
+    description: 'Sticky pill-shaped horizontal navigation for jumping to page sections.';
+    displayName: 'Section Nav Bar';
+  };
+  attributes: {
+    links: Schema.Attribute.Component<'elements.section-nav-link', true>;
+  };
+}
+
 export interface LayoutSeoServicesSection extends Struct.ComponentSchema {
   collectionName: 'components_layout_seo_services_sections';
   info: {
@@ -2097,7 +2120,7 @@ export interface LayoutUxUiComparisonSection extends Struct.ComponentSchema {
   attributes: {
     description: Schema.Attribute.Text;
     heading: Schema.Attribute.Blocks;
-    image: Schema.Attribute.Media<'images'>;
+    image: Schema.Attribute.Media<'images', true>;
   };
 }
 
@@ -2486,6 +2509,7 @@ declare module '@strapi/strapi' {
       'elements.link': ElementsLink;
       'elements.link-basic': ElementsLinkBasic;
       'elements.price-card': ElementsPriceCard;
+      'elements.section-nav-link': ElementsSectionNavLink;
       'elements.steps': ElementsSteps;
       'elements.tab-sub-item': ElementsTabSubItem;
       'elements.tabs': ElementsTabs;
@@ -2583,6 +2607,7 @@ declare module '@strapi/strapi' {
       'layout.recognition-badges-section': LayoutRecognitionBadgesSection;
       'layout.resources-and-careers': LayoutResourcesAndCareers;
       'layout.section-heading': LayoutSectionHeading;
+      'layout.section-nav-bar': LayoutSectionNavBar;
       'layout.seo-services-section': LayoutSeoServicesSection;
       'layout.service-cta-section': LayoutServiceCtaSection;
       'layout.service-design-hero-section': LayoutServiceDesignHeroSection;

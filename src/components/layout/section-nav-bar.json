@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_layout_section_nav_bars",
+  "info": {
+    "displayName": "Section Nav Bar",
+    "description": "Sticky pill-shaped horizontal navigation for jumping to page sections."
+  },
+  "options": {},
+  "attributes": {
+    "links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.section-nav-link"
+    }
+  }
+}
