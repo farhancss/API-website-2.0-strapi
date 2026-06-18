@@ -2052,6 +2052,8 @@ export interface LayoutServiceCtaSection extends Struct.ComponentSchema {
     backgroundImage: Schema.Attribute.Media<'images'>;
     cta: Schema.Attribute.Component<'elements.link-basic', false>;
     heading: Schema.Attribute.Blocks;
+    leftImage: Schema.Attribute.Media<'images'>;
+    rightImage: Schema.Attribute.Media<'images'>;
   };
 }
 
