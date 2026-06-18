@@ -369,6 +369,24 @@ export interface ElementsDesignStatItem extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementsDigitalEngineFeatureBlock
+  extends Struct.ComponentSchema {
+  collectionName: 'components_elements_digital_engine_feature_blocks';
+  info: {
+    description: 'Two-column block with heading, description, feature list, tech icons, and a visual on the right.';
+    displayName: 'Digital Engine Feature Block';
+  };
+  attributes: {
+    description: Schema.Attribute.Blocks;
+    heading: Schema.Attribute.Blocks;
+    image: Schema.Attribute.Media<'images'>;
+    techIcons: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::technology.technology'
+    >;
+  };
+}
+
 export interface ElementsFeature extends Struct.ComponentSchema {
   collectionName: 'components_elements_features';
   info: {
@@ -1237,6 +1255,29 @@ export interface LayoutDgeScoreSection extends Struct.ComponentSchema {
     description: Schema.Attribute.Text;
     heading: Schema.Attribute.Blocks;
     hubSpotForm: Schema.Attribute.Component<'sections.hub-spot-form', false>;
+  };
+}
+
+export interface LayoutDigitalEngineSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_digital_engine_sections';
+  info: {
+    description: 'Gradient page band with centered intro, repeatable two-column feature blocks, and a bottom CTA.';
+    displayName: 'Digital Engine Section';
+  };
+  attributes: {
+    cta: Schema.Attribute.Component<'elements.link-basic', false>;
+    ctaDescription: Schema.Attribute.Blocks;
+    ctaHeading: Schema.Attribute.Blocks;
+    description: Schema.Attribute.Blocks;
+    featureBlocks: Schema.Attribute.Component<
+      'elements.digital-engine-feature-block',
+      true
+    >;
+    heading: Schema.Attribute.Blocks;
+    techIcons: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::technology.technology'
+    >;
   };
 }
 
@@ -2505,6 +2546,7 @@ declare module '@strapi/strapi' {
       'elements.design-info-row': ElementsDesignInfoRow;
       'elements.design-process-step-item': ElementsDesignProcessStepItem;
       'elements.design-stat-item': ElementsDesignStatItem;
+      'elements.digital-engine-feature-block': ElementsDigitalEngineFeatureBlock;
       'elements.feature': ElementsFeature;
       'elements.link': ElementsLink;
       'elements.link-basic': ElementsLinkBasic;
@@ -2560,6 +2602,7 @@ declare module '@strapi/strapi' {
       'layout.design-technologies-section': LayoutDesignTechnologiesSection;
       'layout.design-value-section': LayoutDesignValueSection;
       'layout.dge-score-section': LayoutDgeScoreSection;
+      'layout.digital-engine-section': LayoutDigitalEngineSection;
       'layout.digital-growth-framework-section': LayoutDigitalGrowthFrameworkSection;
       'layout.digital-product-hero-gallery': LayoutDigitalProductHeroGallery;
       'layout.digital-product-showcase-section': LayoutDigitalProductShowcaseSection;

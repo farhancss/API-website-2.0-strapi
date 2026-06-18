@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_layout_digital_engine_sections",
+  "info": {
+    "displayName": "Digital Engine Section",
+    "description": "Gradient page band with centered intro, repeatable two-column feature blocks, and a bottom CTA."
+  },
+  "options": {},
+  "attributes": {
+    "techIcons": {
+        "type": "relation",
+        "relation": "manyToMany",
+        "target": "api::technology.technology"
+    },
+    "heading": {
+      "type": "blocks"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "featureBlocks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.digital-engine-feature-block"
+    },
+    "ctaHeading": {
+      "type": "blocks"
+    },
+    "ctaDescription": {
+      "type": "blocks"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link-basic"
+    }
+  }
+}
