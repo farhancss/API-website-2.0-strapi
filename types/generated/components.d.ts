@@ -1266,6 +1266,7 @@ export interface LayoutDigitalEngineSection extends Struct.ComponentSchema {
     displayName: 'Digital Engine Section';
   };
   attributes: {
+    backgroundImage: Schema.Attribute.Media<'images'>;
     cta: Schema.Attribute.Component<'elements.link-basic', false>;
     ctaDescription: Schema.Attribute.Blocks;
     ctaHeading: Schema.Attribute.Blocks;
