@@ -861,6 +861,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'layout.process-journey-section',
         'layout.design-subscription-section',
         'layout.brand-showcase-section',
+        'layout.section-nav-bar',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
