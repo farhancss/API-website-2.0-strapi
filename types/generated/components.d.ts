@@ -2049,6 +2049,7 @@ export interface LayoutServiceCtaSection extends Struct.ComponentSchema {
     displayName: 'Service CTA Section';
   };
   attributes: {
+    backgroundImage: Schema.Attribute.Media<'images'>;
     cta: Schema.Attribute.Component<'elements.link-basic', false>;
     heading: Schema.Attribute.Blocks;
   };
