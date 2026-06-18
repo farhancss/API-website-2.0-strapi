@@ -125,7 +125,8 @@
         "layout.process-journey-section",
         "layout.design-subscription-section",
         "layout.brand-showcase-section",
-        "layout.section-nav-bar"
+        "layout.section-nav-bar",
+        "layout.digital-engine-section"
       ]
     },
     "seo": {

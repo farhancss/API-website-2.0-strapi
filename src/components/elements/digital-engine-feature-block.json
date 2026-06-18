@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_elements_digital_engine_feature_blocks",
+  "info": {
+    "displayName": "Digital Engine Feature Block",
+    "description": "Two-column block with heading, description, feature list, tech icons, and a visual on the right."
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "blocks"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "techIcons": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::technology.technology"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    }
+  }
+}
