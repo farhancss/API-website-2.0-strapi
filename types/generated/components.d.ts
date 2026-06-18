@@ -2050,6 +2050,8 @@ export interface LayoutServiceCtaSection extends Struct.ComponentSchema {
   };
   attributes: {
     backgroundImage: Schema.Attribute.Media<'images'>;
+    backgroundTheme: Schema.Attribute.Enumeration<['light', 'dark']> &
+      Schema.Attribute.DefaultTo<'light'>;
     cta: Schema.Attribute.Component<'elements.link-basic', false>;
     heading: Schema.Attribute.Blocks;
     leftImage: Schema.Attribute.Media<'images'>;
