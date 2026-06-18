@@ -536,6 +536,7 @@ export interface LayoutAgencyHeroSection extends Struct.ComponentSchema {
       'manyToOne',
       'api::hub-spot-form.hub-spot-form'
     >;
+    richDescription: Schema.Attribute.Blocks;
     trustedHeading: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'Trusted by big companies'>;
   };
@@ -2205,6 +2206,7 @@ export interface LayoutWebsiteBenefitsSection extends Struct.ComponentSchema {
     benefits: Schema.Attribute.Component<'elements.steps', true>;
     description: Schema.Attribute.Text;
     heading: Schema.Attribute.Blocks;
+    richDescription: Schema.Attribute.Blocks;
   };
 }
 
