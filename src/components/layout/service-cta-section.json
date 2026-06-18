@@ -9,6 +9,11 @@
     "heading": {
       "type": "blocks"
     },
+    "backgroundTheme": {
+      "type": "enumeration",
+      "enum": ["light", "dark"],
+      "default": "light"
+    },
     "cta": {
       "type": "component",
       "repeatable": false,
