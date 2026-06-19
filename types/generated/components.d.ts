@@ -2283,6 +2283,7 @@ export interface LayoutTransformBusinessSection extends Struct.ComponentSchema {
     description: Schema.Attribute.Text;
     heading: Schema.Attribute.Blocks;
     image: Schema.Attribute.Media<'images'>;
+    richDescription: Schema.Attribute.Blocks;
   };
 }
 
@@ -2400,6 +2401,7 @@ export interface LayoutWebsiteCapabilityItem extends Struct.ComponentSchema {
     cta: Schema.Attribute.Component<'elements.link-basic', false>;
     description: Schema.Attribute.Text;
     icon: Schema.Attribute.Media<'images'>;
+    richDescription: Schema.Attribute.Blocks;
     title: Schema.Attribute.String;
   };
 }
