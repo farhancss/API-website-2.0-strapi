@@ -487,6 +487,20 @@ export interface ElementsPriceCard extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementsProvenResultsAccordionItem
+  extends Struct.ComponentSchema {
+  collectionName: 'components_elements_proven_results_accordion_items';
+  info: {
+    description: 'Accordion row with title, description, optional highlighted styling, and nested case study slides.';
+    displayName: 'Proven Results Accordion Item';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    slides: Schema.Attribute.Component<'elements.proven-results-slide', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface ElementsProvenResultsSlide extends Struct.ComponentSchema {
   collectionName: 'components_elements_proven_results_slides';
   info: {
@@ -2091,9 +2105,11 @@ export interface LayoutProvenResultsSection extends Struct.ComponentSchema {
     displayName: 'Proven Results Section';
   };
   attributes: {
-    accordionItems: Schema.Attribute.Component<'shared.quote', true>;
+    accordionItems: Schema.Attribute.Component<
+      'elements.proven-results-accordion-item',
+      true
+    >;
     heading: Schema.Attribute.Blocks;
-    slides: Schema.Attribute.Component<'elements.proven-results-slide', true>;
   };
 }
 
@@ -2696,6 +2712,7 @@ declare module '@strapi/strapi' {
       'elements.marketing-stat-item': ElementsMarketingStatItem;
       'elements.marketing-technology-card': ElementsMarketingTechnologyCard;
       'elements.price-card': ElementsPriceCard;
+      'elements.proven-results-accordion-item': ElementsProvenResultsAccordionItem;
       'elements.proven-results-slide': ElementsProvenResultsSlide;
       'elements.section-nav-link': ElementsSectionNavLink;
       'elements.steps': ElementsSteps;
