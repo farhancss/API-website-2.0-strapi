@@ -12,12 +12,7 @@
     "accordionItems": {
       "type": "component",
       "repeatable": true,
-      "component": "shared.quote"
-    },
-    "slides": {
-      "type": "component",
-      "repeatable": true,
-      "component": "elements.proven-results-slide"
+      "component": "elements.proven-results-accordion-item"
     }
   }
 }

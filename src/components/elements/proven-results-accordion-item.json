@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_elements_proven_results_accordion_items",
+  "info": {
+    "displayName": "Proven Results Accordion Item",
+    "description": "Accordion row with title, description, optional highlighted styling, and nested case study slides."
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "slides": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.proven-results-slide"
+    }
+  }
+}
