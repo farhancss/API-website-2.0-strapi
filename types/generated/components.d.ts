@@ -1280,6 +1280,10 @@ export interface LayoutDesignServicesHeroSection
     description: Schema.Attribute.Text;
     featuredImage: Schema.Attribute.Media<'videos' | 'images'>;
     heading: Schema.Attribute.Blocks;
+    hubspotForm: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::hub-spot-form.hub-spot-form'
+    >;
     logoImage: Schema.Attribute.Media<'images'>;
   };
 }
@@ -2279,6 +2283,7 @@ export interface LayoutTransformBusinessSection extends Struct.ComponentSchema {
     description: Schema.Attribute.Text;
     heading: Schema.Attribute.Blocks;
     image: Schema.Attribute.Media<'images'>;
+    richDescription: Schema.Attribute.Blocks;
   };
 }
 
@@ -2396,6 +2401,7 @@ export interface LayoutWebsiteCapabilityItem extends Struct.ComponentSchema {
     cta: Schema.Attribute.Component<'elements.link-basic', false>;
     description: Schema.Attribute.Text;
     icon: Schema.Attribute.Media<'images'>;
+    richDescription: Schema.Attribute.Blocks;
     title: Schema.Attribute.String;
   };
 }

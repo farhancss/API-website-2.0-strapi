@@ -17,6 +17,9 @@
     "description": {
       "type": "text"
     },
+    "richDescription": {
+      "type": "blocks"
+    },
     "cta": {
       "type": "component",
       "repeatable": false,

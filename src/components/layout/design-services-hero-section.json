@@ -22,6 +22,11 @@
       "repeatable": false,
       "component": "elements.link-basic"
     },
+    "hubspotForm": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::hub-spot-form.hub-spot-form"
+    },
     "badgeImage": {
       "type": "media",
       "multiple": false,
