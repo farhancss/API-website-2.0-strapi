@@ -1280,6 +1280,10 @@ export interface LayoutDesignServicesHeroSection
     description: Schema.Attribute.Text;
     featuredImage: Schema.Attribute.Media<'videos' | 'images'>;
     heading: Schema.Attribute.Blocks;
+    hubspotForm: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::hub-spot-form.hub-spot-form'
+    >;
     logoImage: Schema.Attribute.Media<'images'>;
   };
 }
