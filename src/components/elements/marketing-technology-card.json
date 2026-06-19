@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_elements_marketing_technology_cards",
+  "info": {
+    "displayName": "Marketing Technology Card",
+    "description": "Feature card with title, description, illustration, and optional tool icons for featured layout."
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "technologies": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::technology.technology"
+    },
+    "variant": {
+      "type": "enumeration",
+      "enum": ["horizontal", "featured"],
+      "default": "horizontal"
+    }
+  }
+}

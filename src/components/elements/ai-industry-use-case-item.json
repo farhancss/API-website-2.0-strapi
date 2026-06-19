@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_elements_ai_industry_use_case_items",
+  "info": {
+    "displayName": "AI Industry Use Case Item",
+    "description": "Industry tab with number, title, description, use case checklist, and CTA."
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "blocks"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "useCases": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.feature"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link-basic"
+    }
+  }
+}

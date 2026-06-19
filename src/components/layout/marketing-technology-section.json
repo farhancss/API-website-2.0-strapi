@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_layout_marketing_technology_sections",
+  "info": {
+    "displayName": "Marketing Technology Section",
+    "description": "Dark section with centered heading and a card grid: two horizontal cards on the left and one featured card with tool icons on the right."
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "blocks"
+    },
+    "description": {
+      "type": "text"
+    },
+    "cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.marketing-technology-card"
+    }
+  }
+}

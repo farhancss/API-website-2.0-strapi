@@ -271,6 +271,20 @@ export interface ElementsAiCreativeCapabilityItem
   };
 }
 
+export interface ElementsAiIndustryUseCaseItem extends Struct.ComponentSchema {
+  collectionName: 'components_elements_ai_industry_use_case_items';
+  info: {
+    description: 'Industry tab with number, title, description, use case checklist, and CTA.';
+    displayName: 'AI Industry Use Case Item';
+  };
+  attributes: {
+    cta: Schema.Attribute.Component<'elements.link-basic', false>;
+    description: Schema.Attribute.Blocks;
+    heading: Schema.Attribute.Blocks;
+    useCases: Schema.Attribute.Component<'elements.feature', true>;
+  };
+}
+
 export interface ElementsBadge extends Struct.ComponentSchema {
   collectionName: 'components_elements_badges';
   info: {
@@ -424,6 +438,39 @@ export interface ElementsLinkBasic extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementsMarketingStatItem extends Struct.ComponentSchema {
+  collectionName: 'components_elements_marketing_stat_items';
+  info: {
+    description: 'Result stat with value, title, and description.';
+    displayName: 'Marketing Stat Item';
+  };
+  attributes: {
+    description: Schema.Attribute.Blocks;
+    title: Schema.Attribute.String;
+    value: Schema.Attribute.String;
+  };
+}
+
+export interface ElementsMarketingTechnologyCard
+  extends Struct.ComponentSchema {
+  collectionName: 'components_elements_marketing_technology_cards';
+  info: {
+    description: 'Feature card with title, description, illustration, and optional tool icons for featured layout.';
+    displayName: 'Marketing Technology Card';
+  };
+  attributes: {
+    description: Schema.Attribute.Blocks;
+    image: Schema.Attribute.Media<'images'>;
+    technologies: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::technology.technology'
+    >;
+    title: Schema.Attribute.String;
+    variant: Schema.Attribute.Enumeration<['horizontal', 'featured']> &
+      Schema.Attribute.DefaultTo<'horizontal'>;
+  };
+}
+
 export interface ElementsPriceCard extends Struct.ComponentSchema {
   collectionName: 'components_elements_price_cards';
   info: {
@@ -437,6 +484,19 @@ export interface ElementsPriceCard extends Struct.ComponentSchema {
     link: Schema.Attribute.Component<'elements.link', false>;
     price: Schema.Attribute.String;
     selected: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+  };
+}
+
+export interface ElementsProvenResultsSlide extends Struct.ComponentSchema {
+  collectionName: 'components_elements_proven_results_slides';
+  info: {
+    description: 'Case study card with summary, chart images, and CTA for the results carousel.';
+    displayName: 'Proven Results Slide';
+  };
+  attributes: {
+    chartImages: Schema.Attribute.Media<'images', true>;
+    cta: Schema.Attribute.Component<'elements.link-basic', false>;
+    summary: Schema.Attribute.Text;
   };
 }
 
@@ -604,6 +664,22 @@ export interface LayoutAiCreativesHeroSection extends Struct.ComponentSchema {
     stats: Schema.Attribute.Component<'elements.badge', true>;
     videoThumbnail: Schema.Attribute.Media<'images'>;
     videoUrl: Schema.Attribute.String;
+  };
+}
+
+export interface LayoutAiIndustryUseCasesSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_layout_ai_industry_use_cases_sections';
+  info: {
+    description: 'Centered heading with industry tabs on the left and description, use case checklist, and CTA on the right.';
+    displayName: 'AI Industry Use Cases Section';
+  };
+  attributes: {
+    heading: Schema.Attribute.Blocks;
+    industries: Schema.Attribute.Component<
+      'elements.ai-industry-use-case-item',
+      true
+    >;
   };
 }
 
@@ -1691,6 +1767,35 @@ export interface LayoutLegalDocument extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutMarketingResultsSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_marketing_results_sections';
+  info: {
+    description: 'Centered heading with a row of result stats: value, title, and description.';
+    displayName: 'Marketing Results Section';
+  };
+  attributes: {
+    heading: Schema.Attribute.Blocks;
+    stats: Schema.Attribute.Component<'elements.marketing-stat-item', true>;
+  };
+}
+
+export interface LayoutMarketingTechnologySection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_layout_marketing_technology_sections';
+  info: {
+    description: 'Dark section with centered heading and a card grid: two horizontal cards on the left and one featured card with tool icons on the right.';
+    displayName: 'Marketing Technology Section';
+  };
+  attributes: {
+    cards: Schema.Attribute.Component<
+      'elements.marketing-technology-card',
+      true
+    >;
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.Blocks;
+  };
+}
+
 export interface LayoutMegaMenuCatalog extends Struct.ComponentSchema {
   collectionName: 'components_layout_mega_menu_catalogs';
   info: {
@@ -1979,6 +2084,19 @@ export interface LayoutProfileSection extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutProvenResultsSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_proven_results_sections';
+  info: {
+    description: 'Two-column section with heading and accordion list on the left; case study chart carousel on the right.';
+    displayName: 'Proven Results Section';
+  };
+  attributes: {
+    accordionItems: Schema.Attribute.Component<'shared.quote', true>;
+    heading: Schema.Attribute.Blocks;
+    slides: Schema.Attribute.Component<'elements.proven-results-slide', true>;
+  };
+}
+
 export interface LayoutRecognitionBadgesSection extends Struct.ComponentSchema {
   collectionName: 'components_layout_recognition_badges_sections';
   info: {
@@ -2026,6 +2144,22 @@ export interface LayoutSectionNavBar extends Struct.ComponentSchema {
   };
   attributes: {
     links: Schema.Attribute.Component<'elements.section-nav-link', true>;
+  };
+}
+
+export interface LayoutSeoExpertiseSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_seo_expertise_sections';
+  info: {
+    description: 'Heading with two columns below: award badge on the left; description, checklist, and CTA on the right.';
+    displayName: 'SEO Expertise Section';
+  };
+  attributes: {
+    badgeCaption: Schema.Attribute.String;
+    badgeImage: Schema.Attribute.Media<'images'>;
+    cta: Schema.Attribute.Component<'elements.link-basic', false>;
+    description: Schema.Attribute.Blocks;
+    features: Schema.Attribute.Component<'elements.feature', true>;
+    heading: Schema.Attribute.Blocks;
   };
 }
 
@@ -2547,6 +2681,7 @@ declare module '@strapi/strapi' {
       'case-study.user-experience-section': CaseStudyUserExperienceSection;
       'case-study.website-design-section': CaseStudyWebsiteDesignSection;
       'elements.ai-creative-capability-item': ElementsAiCreativeCapabilityItem;
+      'elements.ai-industry-use-case-item': ElementsAiIndustryUseCaseItem;
       'elements.badge': ElementsBadge;
       'elements.card': ElementsCard;
       'elements.creative-service-category-item': ElementsCreativeServiceCategoryItem;
@@ -2558,7 +2693,10 @@ declare module '@strapi/strapi' {
       'elements.feature': ElementsFeature;
       'elements.link': ElementsLink;
       'elements.link-basic': ElementsLinkBasic;
+      'elements.marketing-stat-item': ElementsMarketingStatItem;
+      'elements.marketing-technology-card': ElementsMarketingTechnologyCard;
       'elements.price-card': ElementsPriceCard;
+      'elements.proven-results-slide': ElementsProvenResultsSlide;
       'elements.section-nav-link': ElementsSectionNavLink;
       'elements.steps': ElementsSteps;
       'elements.tab-sub-item': ElementsTabSubItem;
@@ -2570,6 +2708,7 @@ declare module '@strapi/strapi' {
       'layout.agency-process-section': LayoutAgencyProcessSection;
       'layout.ai-creative-capabilities-section': LayoutAiCreativeCapabilitiesSection;
       'layout.ai-creatives-hero-section': LayoutAiCreativesHeroSection;
+      'layout.ai-industry-use-cases-section': LayoutAiIndustryUseCasesSection;
       'layout.ai-service-cta-section': LayoutAiServiceCtaSection;
       'layout.award-insights-section': LayoutAwardInsightsSection;
       'layout.award-item': LayoutAwardItem;
@@ -2637,6 +2776,8 @@ declare module '@strapi/strapi' {
       'layout.job-openings-section': LayoutJobOpeningsSection;
       'layout.leaders-board': LayoutLeadersBoard;
       'layout.legal-document': LayoutLegalDocument;
+      'layout.marketing-results-section': LayoutMarketingResultsSection;
+      'layout.marketing-technology-section': LayoutMarketingTechnologySection;
       'layout.mega-menu-catalog': LayoutMegaMenuCatalog;
       'layout.mega-menu-category': LayoutMegaMenuCategory;
       'layout.mega-menu-content': LayoutMegaMenuContent;
@@ -2655,10 +2796,12 @@ declare module '@strapi/strapi' {
       'layout.price-grid': LayoutPriceGrid;
       'layout.process-journey-section': LayoutProcessJourneySection;
       'layout.profile-section': LayoutProfileSection;
+      'layout.proven-results-section': LayoutProvenResultsSection;
       'layout.recognition-badges-section': LayoutRecognitionBadgesSection;
       'layout.resources-and-careers': LayoutResourcesAndCareers;
       'layout.section-heading': LayoutSectionHeading;
       'layout.section-nav-bar': LayoutSectionNavBar;
+      'layout.seo-expertise-section': LayoutSeoExpertiseSection;
       'layout.seo-services-section': LayoutSeoServicesSection;
       'layout.service-cta-section': LayoutServiceCtaSection;
       'layout.service-design-hero-section': LayoutServiceDesignHeroSection;

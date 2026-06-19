@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_elements_proven_results_slides",
+  "info": {
+    "displayName": "Proven Results Slide",
+    "description": "Case study card with summary, chart images, and CTA for the results carousel."
+  },
+  "options": {},
+  "attributes": {
+    "summary": {
+      "type": "text"
+    },
+    "chartImages": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": ["images"]
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link-basic"
+    }
+  }
+}

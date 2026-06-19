@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_layout_marketing_results_sections",
+  "info": {
+    "displayName": "Marketing Results Section",
+    "description": "Centered heading with a row of result stats: value, title, and description."
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "blocks"
+    },
+    "stats": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.marketing-stat-item"
+    }
+  }
+}

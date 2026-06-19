@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_layout_ai_industry_use_cases_sections",
+  "info": {
+    "displayName": "AI Industry Use Cases Section",
+    "description": "Centered heading with industry tabs on the left and description, use case checklist, and CTA on the right."
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "blocks"
+    },
+    "industries": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.ai-industry-use-case-item"
+    }
+  }
+}
