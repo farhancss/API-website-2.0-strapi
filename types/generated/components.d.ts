@@ -1211,6 +1211,7 @@ export interface LayoutCreativeWebDesignSection extends Struct.ComponentSchema {
   attributes: {
     description: Schema.Attribute.Text;
     heading: Schema.Attribute.Blocks;
+    richDescription: Schema.Attribute.Blocks;
     services: Schema.Attribute.Component<
       'elements.web-design-service-item',
       true
