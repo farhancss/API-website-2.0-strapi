@@ -46,6 +46,16 @@
         "layout.hero-review-section",
         "layout.newsletter-section"
       ]
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    },
+    "externalScripts": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.external-script"
     }
   }
 }
