@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_layout_proven_results_sections",
+  "info": {
+    "displayName": "Proven Results Section",
+    "description": "Two-column section with heading and accordion list on the left; case study chart carousel on the right."
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "blocks"
+    },
+    "accordionItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.quote"
+    },
+    "slides": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.proven-results-slide"
+    }
+  }
+}

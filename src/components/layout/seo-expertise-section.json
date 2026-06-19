@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_layout_seo_expertise_sections",
+  "info": {
+    "displayName": "SEO Expertise Section",
+    "description": "Heading with two columns below: award badge on the left; description, checklist, and CTA on the right."
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "blocks"
+    },
+    "badgeImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "badgeCaption": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "features": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.feature"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link-basic"
+    }
+  }
+}

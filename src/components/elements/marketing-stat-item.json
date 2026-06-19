@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_elements_marketing_stat_items",
+  "info": {
+    "displayName": "Marketing Stat Item",
+    "description": "Result stat with value, title, and description."
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    }
+  }
+}
