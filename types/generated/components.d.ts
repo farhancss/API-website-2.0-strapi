@@ -459,6 +459,7 @@ export interface ElementsMarketingTechnologyCard
     displayName: 'Marketing Technology Card';
   };
   attributes: {
+    backgroundImage: Schema.Attribute.Media<'images'>;
     description: Schema.Attribute.Blocks;
     image: Schema.Attribute.Media<'images'>;
     technologies: Schema.Attribute.Relation<
