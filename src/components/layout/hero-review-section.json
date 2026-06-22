@@ -29,11 +29,30 @@
     "logo": {
       "type": "media",
       "multiple": false,
-      "allowedTypes": ["images", "files"]
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
     },
     "reviewsOnLabel": {
       "type": "string",
       "default": "Reviews on"
+    },
+    "paddingTop": {
+      "type": "integer",
+      "min": 0
+    },
+    "paddingBottom": {
+      "type": "integer",
+      "min": 0
+    },
+    "marginTop": {
+      "type": "integer",
+      "min": 0
+    },
+    "marginBottom": {
+      "type": "integer",
+      "min": 0
     }
   }
 }

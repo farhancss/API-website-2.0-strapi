@@ -7,9 +7,9 @@
   "options": {},
   "attributes": {
     "techIcons": {
-        "type": "relation",
-        "relation": "manyToMany",
-        "target": "api::technology.technology"
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::technology.technology"
     },
     "heading": {
       "type": "blocks"
@@ -36,7 +36,25 @@
     "backgroundImage": {
       "type": "media",
       "multiple": false,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "paddingTop": {
+      "type": "integer",
+      "min": 0
+    },
+    "paddingBottom": {
+      "type": "integer",
+      "min": 0
+    },
+    "marginTop": {
+      "type": "integer",
+      "min": 0
+    },
+    "marginBottom": {
+      "type": "integer",
+      "min": 0
     }
   }
 }

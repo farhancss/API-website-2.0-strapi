@@ -23,7 +23,9 @@
     "badgeImage": {
       "type": "media",
       "multiple": false,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
     },
     "trustedHeading": {
       "type": "string",
@@ -32,12 +34,32 @@
     "clientLogos": {
       "type": "media",
       "multiple": true,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
     },
     "backgroundPattern": {
       "type": "media",
       "multiple": false,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "paddingTop": {
+      "type": "integer",
+      "min": 0
+    },
+    "paddingBottom": {
+      "type": "integer",
+      "min": 0
+    },
+    "marginTop": {
+      "type": "integer",
+      "min": 0
+    },
+    "marginBottom": {
+      "type": "integer",
+      "min": 0
     }
   }
 }

@@ -25,7 +25,9 @@
     "videoThumbnail": {
       "type": "media",
       "multiple": false,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
     },
     "videoUrl": {
       "type": "string"
@@ -33,12 +35,30 @@
     "backgroundImage": {
       "type": "media",
       "multiple": false,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
     },
     "stats": {
       "type": "component",
       "repeatable": true,
       "component": "elements.badge"
+    },
+    "paddingTop": {
+      "type": "integer",
+      "min": 0
+    },
+    "paddingBottom": {
+      "type": "integer",
+      "min": 0
+    },
+    "marginTop": {
+      "type": "integer",
+      "min": 0
+    },
+    "marginBottom": {
+      "type": "integer",
+      "min": 0
     }
   }
 }

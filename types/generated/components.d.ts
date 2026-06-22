@@ -590,6 +590,34 @@ export interface LayoutAboutSection extends Struct.ComponentSchema {
       true
     >;
     description: Schema.Attribute.String;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
     title: Schema.Attribute.String;
     trustedHeading: Schema.Attribute.String;
   };
@@ -611,6 +639,34 @@ export interface LayoutAgencyHeroSection extends Struct.ComponentSchema {
       'manyToOne',
       'api::hub-spot-form.hub-spot-form'
     >;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
     richDescription: Schema.Attribute.Blocks;
     trustedHeading: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'Trusted by big companies'>;
@@ -626,6 +682,34 @@ export interface LayoutAgencyIntroSection extends Struct.ComponentSchema {
   attributes: {
     columns: Schema.Attribute.Component<'shared.tag', true>;
     heading: Schema.Attribute.Blocks;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
   };
 }
 
@@ -642,6 +726,34 @@ export interface LayoutAgencyProcessSection extends Struct.ComponentSchema {
     cta: Schema.Attribute.Component<'elements.link-basic', false>;
     description: Schema.Attribute.Text;
     heading: Schema.Attribute.Blocks;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
     processSteps: Schema.Attribute.Component<'shared.quote', true>;
   };
 }
@@ -661,6 +773,34 @@ export interface LayoutAiCreativeCapabilitiesSection
     cta: Schema.Attribute.Component<'elements.link-basic', false>;
     description: Schema.Attribute.Text;
     heading: Schema.Attribute.Blocks;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
   };
 }
 
@@ -676,6 +816,34 @@ export interface LayoutAiCreativesHeroSection extends Struct.ComponentSchema {
     cta: Schema.Attribute.Component<'elements.link-basic', false>;
     description: Schema.Attribute.Text;
     heading: Schema.Attribute.Blocks;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
     stats: Schema.Attribute.Component<'elements.badge', true>;
     videoThumbnail: Schema.Attribute.Media<'images'>;
     videoUrl: Schema.Attribute.String;
@@ -695,6 +863,34 @@ export interface LayoutAiIndustryUseCasesSection
       'elements.ai-industry-use-case-item',
       true
     >;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
   };
 }
 
@@ -710,6 +906,34 @@ export interface LayoutAiServiceCtaSection extends Struct.ComponentSchema {
     description: Schema.Attribute.Text;
     heading: Schema.Attribute.Blocks;
     icon: Schema.Attribute.Media<'images'>;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
     partnerLogos: Schema.Attribute.Media<'images', true>;
   };
 }
@@ -724,6 +948,34 @@ export interface LayoutAwardInsightsSection extends Struct.ComponentSchema {
     description: Schema.Attribute.Text;
     heading: Schema.Attribute.Blocks;
     insights: Schema.Attribute.Component<'shared.award-insight-item', true>;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
   };
 }
 
@@ -767,6 +1019,34 @@ export interface LayoutAwardsRecognitionSection extends Struct.ComponentSchema {
     description: Schema.Attribute.Blocks;
     featuredPartner: Schema.Attribute.Media<'images'>;
     heading: Schema.Attribute.Blocks;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
     partners: Schema.Attribute.Media<'images', true>;
     recognitionCard: Schema.Attribute.Component<
       'shared.recognition-highlight-card',
@@ -785,6 +1065,34 @@ export interface LayoutBeliefsSection extends Struct.ComponentSchema {
   attributes: {
     beliefs: Schema.Attribute.Component<'elements.steps', true>;
     heading: Schema.Attribute.Blocks;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
     title: Schema.Attribute.String;
   };
 }
@@ -796,6 +1104,34 @@ export interface LayoutBlogSection extends Struct.ComponentSchema {
   };
   attributes: {
     heading: Schema.Attribute.String;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
   };
 }
 
@@ -807,6 +1143,34 @@ export interface LayoutBrandShowcaseSection extends Struct.ComponentSchema {
   };
   attributes: {
     cards: Schema.Attribute.Media<'images', true>;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
   };
 }
 
@@ -829,6 +1193,34 @@ export interface LayoutCardGrid extends Struct.ComponentSchema {
   };
   attributes: {
     cardItems: Schema.Attribute.Component<'elements.card', true>;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
   };
 }
 
@@ -843,6 +1235,34 @@ export interface LayoutCareersCtaSection extends Struct.ComponentSchema {
     description: Schema.Attribute.Blocks;
     heading: Schema.Attribute.Blocks;
     image: Schema.Attribute.Media<'images' | 'files', true>;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
   };
 }
 
@@ -858,6 +1278,34 @@ export interface LayoutCareersCultureSection extends Struct.ComponentSchema {
     galleryImageLarge: Schema.Attribute.Media<'images' | 'files'>;
     galleryImageTopMiddle: Schema.Attribute.Media<'images' | 'files'>;
     galleryImageTopRight: Schema.Attribute.Media<'images' | 'files'>;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
     testimonials: Schema.Attribute.Component<
       'layout.careers-team-testimonial-item',
       true
@@ -878,6 +1326,34 @@ export interface LayoutCareersHeroSection extends Struct.ComponentSchema {
     backgroundImage: Schema.Attribute.Media<'images' | 'files'>;
     cta: Schema.Attribute.Component<'elements.link', false>;
     heading: Schema.Attribute.Blocks;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
   };
 }
 
@@ -892,6 +1368,34 @@ export interface LayoutCareersPerksBenefitsSection
     description: Schema.Attribute.Blocks;
     heading: Schema.Attribute.Blocks;
     image: Schema.Attribute.Media<'images' | 'files'>;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
     perks: Schema.Attribute.Component<'elements.steps', true>;
   };
 }
@@ -909,6 +1413,34 @@ export interface LayoutCareersSection extends Struct.ComponentSchema {
     cta: Schema.Attribute.Component<'elements.link', false>;
     description: Schema.Attribute.Text;
     heading: Schema.Attribute.Blocks;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
     statistics: Schema.Attribute.Component<'layout.careers-stat-item', true>;
   };
 }
@@ -957,8 +1489,36 @@ export interface LayoutCaseStudiesListSection extends Struct.ComponentSchema {
     >;
     heading: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'Case Studies'>;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
     overviewLabel: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'OVERVIEW'>;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
     viewCaseStudyLabel: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'View Full Case Study'>;
   };
@@ -977,6 +1537,34 @@ export interface LayoutClientLogoMarqueeSection extends Struct.ComponentSchema {
     heading: Schema.Attribute.String;
     isBlackAndWhite: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
   };
 }
 
@@ -990,6 +1578,34 @@ export interface LayoutClientShowcaseSection extends Struct.ComponentSchema {
     cta: Schema.Attribute.Component<'elements.link', false>;
     description: Schema.Attribute.Blocks;
     heading: Schema.Attribute.String;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
   };
 }
 
@@ -1056,6 +1672,34 @@ export interface LayoutClutchReviewsSection extends Struct.ComponentSchema {
   attributes: {
     cards: Schema.Attribute.Component<'layout.clutch-review-card', true>;
     heading: Schema.Attribute.String;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
   };
 }
 
@@ -1068,6 +1712,34 @@ export interface LayoutClutchTestimonialSection extends Struct.ComponentSchema {
   attributes: {
     label: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'Client review'>;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
     review: Schema.Attribute.Relation<
       'manyToMany',
       'api::clutch-review.clutch-review'
@@ -1110,6 +1782,34 @@ export interface LayoutClutchTestimonialsSliderSection
   };
   attributes: {
     heading: Schema.Attribute.Blocks;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
     reviews: Schema.Attribute.Relation<
       'manyToMany',
       'api::clutch-review.clutch-review'
@@ -1129,6 +1829,34 @@ export interface LayoutContactQuoteSection extends Struct.ComponentSchema {
       'manyToOne',
       'api::contact-quote.contact-quote'
     >;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
   };
 }
 
@@ -1148,8 +1876,36 @@ export interface LayoutContactUsSection extends Struct.ComponentSchema {
     heading: Schema.Attribute.String;
     hubSpotForm: Schema.Attribute.Component<'sections.hub-spot-form', false>;
     keyPoints: Schema.Attribute.Blocks;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
     nextSteps: Schema.Attribute.Component<'elements.steps', true>;
     nextStepsHeading: Schema.Attribute.String;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
     subHeading: Schema.Attribute.String;
     successMessage: Schema.Attribute.String;
     successSubText: Schema.Attribute.Text;
@@ -1165,6 +1921,34 @@ export interface LayoutContentWithImage extends Struct.ComponentSchema {
     cta: Schema.Attribute.Component<'elements.link', true>;
     heading: Schema.Attribute.Blocks;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
     reverse: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     subHeading: Schema.Attribute.String;
     text: Schema.Attribute.Text;
@@ -1181,6 +1965,34 @@ export interface LayoutContentWithVideo extends Struct.ComponentSchema {
       'images' | 'files' | 'videos' | 'audios'
     >;
     button: Schema.Attribute.Component<'layout.button', false>;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
     youtubeUrl: Schema.Attribute.String;
   };
 }
@@ -1199,6 +2011,34 @@ export interface LayoutCreativeServicesSection extends Struct.ComponentSchema {
     >;
     description: Schema.Attribute.Text;
     heading: Schema.Attribute.Blocks;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
   };
 }
 
@@ -1211,6 +2051,34 @@ export interface LayoutCreativeWebDesignSection extends Struct.ComponentSchema {
   attributes: {
     description: Schema.Attribute.Text;
     heading: Schema.Attribute.Blocks;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
     richDescription: Schema.Attribute.Blocks;
     services: Schema.Attribute.Component<
       'elements.web-design-service-item',
@@ -1230,6 +2098,34 @@ export interface LayoutDesignChallengesSection extends Struct.ComponentSchema {
     heading: Schema.Attribute.Blocks;
     introDescription: Schema.Attribute.Text;
     introIcon: Schema.Attribute.Media<'images'>;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
   };
 }
 
@@ -1247,6 +2143,34 @@ export interface LayoutDesignConversionSection extends Struct.ComponentSchema {
       Schema.Attribute.DefaultTo<'Ready to improve your conversion rate?'>;
     heading: Schema.Attribute.Blocks;
     items: Schema.Attribute.Component<'elements.design-conversion-item', true>;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
   };
 }
 
@@ -1257,6 +2181,34 @@ export interface LayoutDesignInfoSection extends Struct.ComponentSchema {
     displayName: 'Design Info Section';
   };
   attributes: {
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
     rows: Schema.Attribute.Component<'elements.design-info-row', true>;
   };
 }
@@ -1286,6 +2238,34 @@ export interface LayoutDesignServicesHeroSection
       'api::hub-spot-form.hub-spot-form'
     >;
     logoImage: Schema.Attribute.Media<'images'>;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
   };
 }
 
@@ -1301,6 +2281,34 @@ export interface LayoutDesignSubscriptionSection
     description: Schema.Attribute.Text;
     heading: Schema.Attribute.Blocks;
     items: Schema.Attribute.Component<'shared.quote', true>;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
   };
 }
 
@@ -1314,6 +2322,34 @@ export interface LayoutDesignTechnologiesSection
   attributes: {
     description: Schema.Attribute.Text;
     heading: Schema.Attribute.Blocks;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
     technologies: Schema.Attribute.Relation<
       'manyToMany',
       'api::technology.technology'
@@ -1332,6 +2368,34 @@ export interface LayoutDesignValueSection extends Struct.ComponentSchema {
     features: Schema.Attribute.Component<'shared.quote', true>;
     graphic: Schema.Attribute.Media<'images'>;
     heading: Schema.Attribute.Blocks;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
     stats: Schema.Attribute.Component<'elements.design-stat-item', true>;
     statsHeading: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'Driving value through exceptional design'>;
@@ -1352,6 +2416,34 @@ export interface LayoutDgeScoreSection extends Struct.ComponentSchema {
     description: Schema.Attribute.Text;
     heading: Schema.Attribute.Blocks;
     hubSpotForm: Schema.Attribute.Component<'sections.hub-spot-form', false>;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
   };
 }
 
@@ -1372,6 +2464,34 @@ export interface LayoutDigitalEngineSection extends Struct.ComponentSchema {
       true
     >;
     heading: Schema.Attribute.Blocks;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
     techIcons: Schema.Attribute.Relation<
       'manyToMany',
       'api::technology.technology'
@@ -1389,6 +2509,34 @@ export interface LayoutDigitalGrowthFrameworkSection
   attributes: {
     cta: Schema.Attribute.Component<'elements.link', false>;
     description: Schema.Attribute.Text;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
     steps: Schema.Attribute.Component<'elements.steps', true>;
     title: Schema.Attribute.Blocks;
   };
@@ -1421,6 +2569,34 @@ export interface LayoutDigitalProductShowcaseSection
       'layout.digital-product-hero-gallery',
       true
     >;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
     valueIntro: Schema.Attribute.Component<'elements.steps', false>;
   };
 }
@@ -1462,6 +2638,34 @@ export interface LayoutFaqSection extends Struct.ComponentSchema {
     cta: Schema.Attribute.Component<'elements.link', false>;
     faqs: Schema.Attribute.Component<'layout.faq-item', true>;
     heading: Schema.Attribute.Blocks;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
   };
 }
 
@@ -1485,6 +2689,34 @@ export interface LayoutFirmSection extends Struct.ComponentSchema {
     displayName: 'Firm Section';
   };
   attributes: {
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
     sectionTitle: Schema.Attribute.Component<'elements.tabs', true>;
     topHeading: Schema.Attribute.String;
   };
@@ -1630,6 +2862,34 @@ export interface LayoutFounderSection extends Struct.ComponentSchema {
     >;
     founderName: Schema.Attribute.String;
     funderDescription: Schema.Attribute.Blocks;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
   };
 }
 
@@ -1664,6 +2924,34 @@ export interface LayoutHero extends Struct.ComponentSchema {
     headingHighlight: Schema.Attribute.String;
     hubSpotForm: Schema.Attribute.Component<'sections.hub-spot-form', false>;
     image: Schema.Attribute.Media<'images'>;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
   };
 }
 
@@ -1679,6 +2967,34 @@ export interface LayoutHeroReviewSection extends Struct.ComponentSchema {
       Schema.Attribute.DefaultTo<'CLIENT SUCCESS. REAL RESULTS.'>;
     heading: Schema.Attribute.Blocks;
     logo: Schema.Attribute.Media<'images' | 'files'>;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
     rating: Schema.Attribute.Decimal &
       Schema.Attribute.SetMinMax<
         {
@@ -1706,6 +3022,34 @@ export interface LayoutHighGrowthSection extends Struct.ComponentSchema {
     description: Schema.Attribute.Text;
     features: Schema.Attribute.Component<'shared.quote', true>;
     heading: Schema.Attribute.Blocks;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
   };
 }
 
@@ -1721,6 +3065,34 @@ export interface LayoutImageSliderSection extends Struct.ComponentSchema {
       'images' | 'files' | 'videos' | 'audios',
       true
     >;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
   };
 }
 
@@ -1760,6 +3132,34 @@ export interface LayoutJobOpeningsSection extends Struct.ComponentSchema {
   };
   attributes: {
     heading: Schema.Attribute.Blocks;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
   };
 }
 
@@ -1772,6 +3172,34 @@ export interface LayoutLeadersBoard extends Struct.ComponentSchema {
     cta: Schema.Attribute.Component<'elements.link', true>;
     description: Schema.Attribute.Blocks;
     heading: Schema.Attribute.Blocks;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
     profile: Schema.Attribute.Component<'layout.profile-section', true>;
   };
 }
@@ -1784,6 +3212,34 @@ export interface LayoutLegalDocument extends Struct.ComponentSchema {
   attributes: {
     description: Schema.Attribute.Blocks;
     heading: Schema.Attribute.Blocks;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
   };
 }
 
@@ -1795,6 +3251,34 @@ export interface LayoutMarketingResultsSection extends Struct.ComponentSchema {
   };
   attributes: {
     heading: Schema.Attribute.Blocks;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
     stats: Schema.Attribute.Component<'elements.marketing-stat-item', true>;
   };
 }
@@ -1813,6 +3297,34 @@ export interface LayoutMarketingTechnologySection
     >;
     description: Schema.Attribute.Text;
     heading: Schema.Attribute.Blocks;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
   };
 }
 
@@ -1877,7 +3389,35 @@ export interface LayoutMissionVision extends Struct.ComponentSchema {
   };
   attributes: {
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
     missionVisionTabs: Schema.Attribute.Component<'elements.tabs', true>;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
   };
 }
 
@@ -1935,6 +3475,34 @@ export interface LayoutNewsletterSection extends Struct.ComponentSchema {
     decorativeImage: Schema.Attribute.Media<'images'>;
     heading: Schema.Attribute.Blocks;
     hubSpotForm: Schema.Attribute.Component<'sections.hub-spot-form', false>;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
   };
 }
 
@@ -1947,6 +3515,34 @@ export interface LayoutOfficeSection extends Struct.ComponentSchema {
     description: Schema.Attribute.Blocks;
     heading: Schema.Attribute.String;
     Locations: Schema.Attribute.Component<'layout.heading-with-image', true>;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
   };
 }
 
@@ -1958,6 +3554,34 @@ export interface LayoutOurClientsSection extends Struct.ComponentSchema {
   attributes: {
     clients: Schema.Attribute.Component<'shared.client-industry-item', true>;
     heading: Schema.Attribute.Blocks;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
   };
 }
 
@@ -1976,6 +3600,34 @@ export interface LayoutPageHeroSection extends Struct.ComponentSchema {
     description: Schema.Attribute.Blocks;
     heading: Schema.Attribute.String;
     hubSpotForm: Schema.Attribute.Component<'sections.hub-spot-form', false>;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
   };
 }
 
@@ -2018,6 +3670,34 @@ export interface LayoutPortfolioListSection extends Struct.ComponentSchema {
       > &
       Schema.Attribute.DefaultTo<6>;
     loadMore: Schema.Attribute.Component<'elements.link-basic', false>;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
     projects: Schema.Attribute.Relation<
       'manyToMany',
       'api::portfolio.portfolio'
@@ -2036,6 +3716,34 @@ export interface LayoutPortfolioPageFeaturedCaseStudies
       'oneToMany',
       'api::case-study.case-study'
     >;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
     title: Schema.Attribute.String;
   };
 }
@@ -2067,6 +3775,34 @@ export interface LayoutPriceGrid extends Struct.ComponentSchema {
     displayName: 'Price Grid';
   };
   attributes: {
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
     priceCard: Schema.Attribute.Component<'elements.price-card', true>;
   };
 }
@@ -2080,6 +3816,34 @@ export interface LayoutProcessJourneySection extends Struct.ComponentSchema {
   attributes: {
     introHeading: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'Yes, the process is simple.'>;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
     pathEndLabel: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'You do have a brand identity'>;
     pathStartLabel: Schema.Attribute.String &
@@ -2098,8 +3862,36 @@ export interface LayoutProfileSection extends Struct.ComponentSchema {
     email: Schema.Attribute.Email;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     linkedinUrl: Schema.Attribute.String;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
     message: Schema.Attribute.String;
     name: Schema.Attribute.String;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
     phone: Schema.Attribute.String;
   };
 }
@@ -2116,6 +3908,34 @@ export interface LayoutProvenResultsSection extends Struct.ComponentSchema {
       true
     >;
     heading: Schema.Attribute.Blocks;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
   };
 }
 
@@ -2129,6 +3949,34 @@ export interface LayoutRecognitionBadgesSection extends Struct.ComponentSchema {
     badges: Schema.Attribute.Component<'layout.award-item', true>;
     colored: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
     heading: Schema.Attribute.String;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
   };
 }
 
@@ -2138,6 +3986,34 @@ export interface LayoutResourcesAndCareers extends Struct.ComponentSchema {
     displayName: 'Resources & Careers';
   };
   attributes: {
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
     sectionWithImage: Schema.Attribute.Component<
       'layout.content-with-image',
       true
@@ -2154,6 +4030,34 @@ export interface LayoutSectionHeading extends Struct.ComponentSchema {
     DGEImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     heading: Schema.Attribute.Blocks;
     items: Schema.Attribute.Component<'blocks.text', true>;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
     subHeading: Schema.Attribute.Blocks;
   };
 }
@@ -2166,6 +4070,34 @@ export interface LayoutSectionNavBar extends Struct.ComponentSchema {
   };
   attributes: {
     links: Schema.Attribute.Component<'elements.section-nav-link', true>;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
   };
 }
 
@@ -2182,6 +4114,34 @@ export interface LayoutSeoExpertiseSection extends Struct.ComponentSchema {
     description: Schema.Attribute.Blocks;
     features: Schema.Attribute.Component<'elements.feature', true>;
     heading: Schema.Attribute.Blocks;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
   };
 }
 
@@ -2194,6 +4154,34 @@ export interface LayoutSeoServicesSection extends Struct.ComponentSchema {
   attributes: {
     description: Schema.Attribute.Text;
     heading: Schema.Attribute.Blocks;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
     services: Schema.Attribute.Component<'shared.quote', true>;
   };
 }
@@ -2211,6 +4199,34 @@ export interface LayoutServiceCtaSection extends Struct.ComponentSchema {
     cta: Schema.Attribute.Component<'elements.link-basic', false>;
     heading: Schema.Attribute.Blocks;
     leftImage: Schema.Attribute.Media<'images'>;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
     rightImage: Schema.Attribute.Media<'images'>;
   };
 }
@@ -2235,6 +4251,34 @@ export interface LayoutServiceDesignHeroSection extends Struct.ComponentSchema {
     >;
     isBlackAndWhite: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<true>;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
     trustedHeading: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'Trusted by big companies'>;
   };
@@ -2254,6 +4298,34 @@ export interface LayoutStatsSection extends Struct.ComponentSchema {
       'images' | 'files' | 'videos' | 'audios'
     >;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
     stats: Schema.Attribute.Component<'layout.content-with-image', true>;
   };
 }
@@ -2284,6 +4356,34 @@ export interface LayoutTransformBusinessSection extends Struct.ComponentSchema {
     description: Schema.Attribute.Text;
     heading: Schema.Attribute.Blocks;
     image: Schema.Attribute.Media<'images'>;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
     richDescription: Schema.Attribute.Blocks;
   };
 }
@@ -2300,6 +4400,34 @@ export interface LayoutTrustedBySection extends Struct.ComponentSchema {
       Schema.Attribute.DefaultTo<'TRUSTED BY THE TOP COMPANIES'>;
     isBlackAndWhite: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<true>;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
   };
 }
 
@@ -2313,6 +4441,34 @@ export interface LayoutUxDesignProcessSection extends Struct.ComponentSchema {
     description: Schema.Attribute.Text;
     heading: Schema.Attribute.Blocks;
     image: Schema.Attribute.Media<'images'>;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
   };
 }
 
@@ -2326,6 +4482,34 @@ export interface LayoutUxUiComparisonSection extends Struct.ComponentSchema {
     description: Schema.Attribute.Text;
     heading: Schema.Attribute.Blocks;
     image: Schema.Attribute.Media<'images', true>;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
   };
 }
 
@@ -2343,6 +4527,34 @@ export interface LayoutValuePropositionSection extends Struct.ComponentSchema {
     heading: Schema.Attribute.Blocks;
     image: Schema.Attribute.Media<'images'>;
     items: Schema.Attribute.Component<'elements.tabs', true>;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
   };
 }
 
@@ -2356,6 +4568,34 @@ export interface LayoutValuesSection extends Struct.ComponentSchema {
     cards: Schema.Attribute.Component<'elements.steps', true>;
     description: Schema.Attribute.Text;
     heading: Schema.Attribute.Blocks;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
   };
 }
 
@@ -2369,6 +4609,34 @@ export interface LayoutWebsiteBenefitsSection extends Struct.ComponentSchema {
     benefits: Schema.Attribute.Component<'elements.steps', true>;
     description: Schema.Attribute.Text;
     heading: Schema.Attribute.Blocks;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
     richDescription: Schema.Attribute.Blocks;
   };
 }
@@ -2389,6 +4657,34 @@ export interface LayoutWebsiteCapabilitiesSection
     ctaBannerHeading: Schema.Attribute.Blocks;
     description: Schema.Attribute.Text;
     heading: Schema.Attribute.Blocks;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
   };
 }
 
@@ -2419,6 +4715,34 @@ export interface LayoutWebsiteEngagementSection extends Struct.ComponentSchema {
     features: Schema.Attribute.Component<'shared.tag', true>;
     heading: Schema.Attribute.Blocks;
     image: Schema.Attribute.Media<'images'>;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
   };
 }
 
@@ -2433,6 +4757,34 @@ export interface LayoutWebsiteRedesignSection extends Struct.ComponentSchema {
     description: Schema.Attribute.Blocks;
     heading: Schema.Attribute.Blocks;
     image: Schema.Attribute.Media<'images'>;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
   };
 }
 
@@ -2443,6 +4795,34 @@ export interface LayoutWhyChooseUsSection extends Struct.ComponentSchema {
     displayName: 'Why Choose Us Section';
   };
   attributes: {
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
     whyChooseUs: Schema.Attribute.Relation<
       'manyToOne',
       'api::why-choose-us.why-choose-us'
@@ -2461,6 +4841,34 @@ export interface LayoutWhyWebDesignMattersSection
     description: Schema.Attribute.Text;
     label: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'WHY WEB DESIGN MATTERS?'>;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
     stats: Schema.Attribute.Component<'shared.quote', true>;
   };
 }
@@ -2479,6 +4887,34 @@ export interface LayoutWorkHeroSection extends Struct.ComponentSchema {
     >;
     description: Schema.Attribute.Blocks;
     heading: Schema.Attribute.String;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
   };
 }
 
@@ -2493,6 +4929,34 @@ export interface LayoutWorkShowcaseSection extends Struct.ComponentSchema {
     cta: Schema.Attribute.Component<'elements.link-basic', false>;
     description: Schema.Attribute.Text;
     heading: Schema.Attribute.Blocks;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
   };
 }
 
