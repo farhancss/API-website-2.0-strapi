@@ -12,6 +12,22 @@
       "type": "component",
       "component": "elements.tabs",
       "repeatable": true
+    },
+    "paddingTop": {
+      "type": "integer",
+      "min": 0
+    },
+    "paddingBottom": {
+      "type": "integer",
+      "min": 0
+    },
+    "marginTop": {
+      "type": "integer",
+      "min": 0
+    },
+    "marginBottom": {
+      "type": "integer",
+      "min": 0
     }
   },
   "config": {}

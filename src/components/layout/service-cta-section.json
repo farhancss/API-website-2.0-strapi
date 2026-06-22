@@ -11,7 +11,10 @@
     },
     "backgroundTheme": {
       "type": "enumeration",
-      "enum": ["light", "dark"],
+      "enum": [
+        "light",
+        "dark"
+      ],
       "default": "light"
     },
     "cta": {
@@ -22,17 +25,39 @@
     "backgroundImage": {
       "type": "media",
       "multiple": false,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
     },
     "leftImage": {
       "type": "media",
       "multiple": false,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
     },
     "rightImage": {
       "type": "media",
       "multiple": false,
-      "allowedTypes": ["images"]
-    }   
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "paddingTop": {
+      "type": "integer",
+      "min": 0
+    },
+    "paddingBottom": {
+      "type": "integer",
+      "min": 0
+    },
+    "marginTop": {
+      "type": "integer",
+      "min": 0
+    },
+    "marginBottom": {
+      "type": "integer",
+      "min": 0
+    }
   }
 }
