@@ -411,6 +411,20 @@ export interface ElementsFeature extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementsIndustryExpertiseCard extends Struct.ComponentSchema {
+  collectionName: 'components_elements_industry_expertise_cards';
+  info: {
+    description: 'Image card with title, description, optional link, and highlighted styling.';
+    displayName: 'Industry Expertise Card';
+  };
+  attributes: {
+    description: Schema.Attribute.Blocks;
+    image: Schema.Attribute.Media<'images'>;
+    link: Schema.Attribute.Component<'elements.link-basic', false>;
+    title: Schema.Attribute.Blocks;
+  };
+}
+
 export interface ElementsLink extends Struct.ComponentSchema {
   collectionName: 'components_elements_links';
   info: {
@@ -2611,6 +2625,55 @@ export interface LayoutExplore extends Struct.ComponentSchema {
     cta: Schema.Attribute.Component<'elements.link-basic', true>;
     images: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Schema.Attribute.String;
+  };
+}
+
+export interface LayoutExploreIndustriesSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_explore_industries_sections';
+  info: {
+    description: 'Two-column section with heading, description, lead form, and phone CTA on the left; industry image cards and accordion grid on the right.';
+    displayName: 'Explore Industries Section';
+  };
+  attributes: {
+    description: Schema.Attribute.Blocks;
+    heading: Schema.Attribute.Blocks;
+    hubspotForm: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::hub-spot-form.hub-spot-form'
+    >;
+    industryExpertiseCards: Schema.Attribute.Component<
+      'elements.industry-expertise-card',
+      true
+    >;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    phoneText: Schema.Attribute.Blocks;
   };
 }
 
@@ -5179,6 +5242,7 @@ declare module '@strapi/strapi' {
       'elements.design-stat-item': ElementsDesignStatItem;
       'elements.digital-engine-feature-block': ElementsDigitalEngineFeatureBlock;
       'elements.feature': ElementsFeature;
+      'elements.industry-expertise-card': ElementsIndustryExpertiseCard;
       'elements.link': ElementsLink;
       'elements.link-basic': ElementsLinkBasic;
       'elements.marketing-stat-item': ElementsMarketingStatItem;
@@ -5243,6 +5307,7 @@ declare module '@strapi/strapi' {
       'layout.digital-product-hero-gallery': LayoutDigitalProductHeroGallery;
       'layout.digital-product-showcase-section': LayoutDigitalProductShowcaseSection;
       'layout.explore': LayoutExplore;
+      'layout.explore-industries-section': LayoutExploreIndustriesSection;
       'layout.faq-item': LayoutFaqItem;
       'layout.faq-section': LayoutFaqSection;
       'layout.feature-case-studies': LayoutFeatureCaseStudies;

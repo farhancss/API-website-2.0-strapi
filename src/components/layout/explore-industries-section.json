@@ -1,0 +1,45 @@
+{
+  "collectionName": "components_layout_explore_industries_sections",
+  "info": {
+    "displayName": "Explore Industries Section",
+    "description": "Two-column section with heading, description, lead form, and phone CTA on the left; industry image cards and accordion grid on the right."
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "blocks"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "hubspotForm": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::hub-spot-form.hub-spot-form"
+    },
+    "phoneText": {
+      "type": "blocks"
+    },
+    "industryExpertiseCards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.industry-expertise-card"
+    },
+    "paddingTop": {
+      "type": "integer",
+      "min": 0
+    },
+    "paddingBottom": {
+      "type": "integer",
+      "min": 0
+    },
+    "marginTop": {
+      "type": "integer",
+      "min": 0
+    },
+    "marginBottom": {
+      "type": "integer",
+      "min": 0
+    }
+  }
+}
