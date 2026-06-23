@@ -870,6 +870,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'layout.marketing-technology-section',
         'layout.seo-expertise-section',
         'layout.ai-industry-use-cases-section',
+        'case-study.dge-process-section',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
