@@ -882,6 +882,8 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::page.page'> &
       Schema.Attribute.Private;
+    pageTheme: Schema.Attribute.Enumeration<['default', 'blue', 'orange']> &
+      Schema.Attribute.DefaultTo<'default'>;
     pageType: Schema.Attribute.Enumeration<
       ['seo', 'service', 'industry', 'landing', 'general']
     > &
