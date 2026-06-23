@@ -32,7 +32,16 @@
         "landing",
         "general"
       ]
-    },  
+    },
+    "pageTheme":{
+      "type": "enumeration",
+      "default": "default",
+      "enum": [
+        "default",
+        "blue",
+        "orange"
+      ]
+    },
     "theme": {
       "type": "enumeration",
       "default": "light",
