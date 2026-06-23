@@ -47,7 +47,8 @@
       "default": "light",
       "enum": [
         "light",
-        "dark"
+        "dark",
+        "transparent"
       ]
     },
     "blocks": {
