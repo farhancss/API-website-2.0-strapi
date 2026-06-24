@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_layout_sitemap_sections",
+  "info": {
+    "displayName": "Sitemap Section",
+    "description": "Sitemap page with heading and grouped columns of navigation links."
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "blocks"
+    },
+    "columns": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.link-basic"
+    }
+  }
+}

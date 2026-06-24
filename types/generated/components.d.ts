@@ -4347,6 +4347,18 @@ export interface LayoutServiceDesignHeroSection extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutSitemapSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_sitemap_sections';
+  info: {
+    description: 'Sitemap page with heading and grouped columns of navigation links.';
+    displayName: 'Sitemap Section';
+  };
+  attributes: {
+    columns: Schema.Attribute.Component<'elements.link-basic', true>;
+    heading: Schema.Attribute.Blocks;
+  };
+}
+
 export interface LayoutStatsSection extends Struct.ComponentSchema {
   collectionName: 'components_layout_stats_sections';
   info: {
@@ -5359,6 +5371,7 @@ declare module '@strapi/strapi' {
       'layout.seo-services-section': LayoutSeoServicesSection;
       'layout.service-cta-section': LayoutServiceCtaSection;
       'layout.service-design-hero-section': LayoutServiceDesignHeroSection;
+      'layout.sitemap-section': LayoutSitemapSection;
       'layout.stats-section': LayoutStatsSection;
       'layout.top-nav': LayoutTopNav;
       'layout.transform-business-section': LayoutTransformBusinessSection;
