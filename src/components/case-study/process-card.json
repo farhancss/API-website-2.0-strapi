@@ -15,6 +15,9 @@
       "type": "string",
       "required": true
     },
+    "href": {
+      "type": "string"
+    },
     "items": {
       "type": "component",
       "component": "case-study.process-item",
