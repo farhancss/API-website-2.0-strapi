@@ -144,6 +144,7 @@ export interface CaseStudyProcessCard extends Struct.ComponentSchema {
     displayName: 'Process Card';
   };
   attributes: {
+    href: Schema.Attribute.String;
     icon: Schema.Attribute.Media<'images'>;
     items: Schema.Attribute.Component<'case-study.process-item', true>;
     title: Schema.Attribute.String & Schema.Attribute.Required;
@@ -156,6 +157,7 @@ export interface CaseStudyProcessItem extends Struct.ComponentSchema {
     displayName: 'Process Item';
   };
   attributes: {
+    href: Schema.Attribute.String;
     text: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
