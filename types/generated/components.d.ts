@@ -5182,7 +5182,7 @@ export interface SharedExternalScript extends Struct.ComponentSchema {
     noscript: Schema.Attribute.Text;
     placement: Schema.Attribute.Enumeration<['head', 'body']> &
       Schema.Attribute.DefaultTo<'body'>;
-    src: Schema.Attribute.String & Schema.Attribute.Required;
+    src: Schema.Attribute.String;
   };
 }
 
