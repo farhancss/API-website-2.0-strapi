@@ -17,7 +17,7 @@
     "description": {
       "type": "text"
     },
-    "link": {
+    "cta": {
       "type": "component",
       "repeatable": false,
       "component": "elements.link-basic"

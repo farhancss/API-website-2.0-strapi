@@ -616,9 +616,9 @@ export interface ElementsWebDesignServiceItem extends Struct.ComponentSchema {
     displayName: 'Web Design Service Item';
   };
   attributes: {
+    cta: Schema.Attribute.Component<'elements.link-basic', false>;
     description: Schema.Attribute.Text;
     image: Schema.Attribute.Media<'images'>;
-    link: Schema.Attribute.Component<'elements.link-basic', false>;
     title: Schema.Attribute.String;
   };
 }
