@@ -872,6 +872,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'layout.ai-industry-use-cases-section',
         'layout.explore-industries-section',
         'layout.sitemap-section',
+        'layout.not-found-section',
         'case-study.dge-process-section',
       ]
     >;
