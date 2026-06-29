@@ -3599,6 +3599,49 @@ export interface LayoutNewsletterSection extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutNotFoundSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_not_found_sections';
+  info: {
+    description: '404 error page with centered heading, description, CTA, and optional background imagery.';
+    displayName: 'Not Found Section';
+  };
+  attributes: {
+    backgroundImage: Schema.Attribute.Media<'images'>;
+    backgroundPattern: Schema.Attribute.Media<'images'>;
+    cta: Schema.Attribute.Component<'elements.link-basic', false>;
+    description: Schema.Attribute.Blocks;
+    heading: Schema.Attribute.Blocks;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+  };
+}
+
 export interface LayoutOfficeSection extends Struct.ComponentSchema {
   collectionName: 'components_layout_office_sections';
   info: {
@@ -5382,6 +5425,7 @@ declare module '@strapi/strapi' {
       'layout.nav-link-column': LayoutNavLinkColumn;
       'layout.nav-mega-menu-link': LayoutNavMegaMenuLink;
       'layout.newsletter-section': LayoutNewsletterSection;
+      'layout.not-found-section': LayoutNotFoundSection;
       'layout.office-section': LayoutOfficeSection;
       'layout.our-clients-section': LayoutOurClientsSection;
       'layout.page-hero-section': LayoutPageHeroSection;
