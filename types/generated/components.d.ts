@@ -5178,6 +5178,8 @@ export interface SharedExternalScript extends Struct.ComponentSchema {
     async: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
     attributes: Schema.Attribute.JSON;
     defer: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    inline: Schema.Attribute.Text;
+    noscript: Schema.Attribute.Text;
     placement: Schema.Attribute.Enumeration<['head', 'body']> &
       Schema.Attribute.DefaultTo<'body'>;
     src: Schema.Attribute.String & Schema.Attribute.Required;

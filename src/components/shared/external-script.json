@@ -25,6 +25,12 @@
     },
     "attributes": {
       "type": "json"
+    },
+    "inline": {
+      "type": "text"
+    },
+    "noscript": {
+      "type": "text"
     }
   }
 }
