@@ -5272,7 +5272,7 @@ export interface SharedTag extends Struct.ComponentSchema {
     displayName: 'Tag';
   };
   attributes: {
-    label: Schema.Attribute.String;
+    label: Schema.Attribute.Text;
   };
 }
 
