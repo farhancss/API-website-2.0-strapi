@@ -22,6 +22,18 @@
       "type": "uid",
       "targetField": "title"
     },
+    "parentPage": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::page.page",
+      "inversedBy": "childPages"
+    },
+    "childPages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::page.page",
+      "mappedBy": "parentPage"
+    },
     "pageType": {
       "type": "enumeration",
       "default": "general",
