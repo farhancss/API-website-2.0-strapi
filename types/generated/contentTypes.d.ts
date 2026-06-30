@@ -876,6 +876,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'case-study.dge-process-section',
       ]
     >;
+    childPages: Schema.Attribute.Relation<'oneToMany', 'api::page.page'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -890,6 +891,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
       ['seo', 'service', 'industry', 'landing', 'general']
     > &
       Schema.Attribute.DefaultTo<'general'>;
+    parentPage: Schema.Attribute.Relation<'manyToOne', 'api::page.page'>;
     publishedAt: Schema.Attribute.DateTime;
     seo: Schema.Attribute.Component<'shared.seo', false>;
     slug: Schema.Attribute.UID<'title'>;
