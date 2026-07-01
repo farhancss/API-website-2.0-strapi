@@ -19,6 +19,13 @@
         "images"
       ]
     },
+    "mobileImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
     "paddingTop": {
       "type": "integer",
       "min": 0
