@@ -4604,6 +4604,7 @@ export interface LayoutUxDesignProcessSection extends Struct.ComponentSchema {
         },
         number
       >;
+    mobileImage: Schema.Attribute.Media<'images'>;
     paddingBottom: Schema.Attribute.Integer &
       Schema.Attribute.SetMinMax<
         {
