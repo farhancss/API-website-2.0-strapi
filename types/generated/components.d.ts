@@ -2987,6 +2987,48 @@ export interface LayoutFounderSection extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutGlobalDgeScoreSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_global_dge_score_sections';
+  info: {
+    description: 'Reuses shared content from DGE Score. Edit once under Content Manager \u2192 DGE Score.';
+    displayName: 'Global DGE Score Section';
+  };
+  attributes: {
+    dgeScore: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::dge-score.dge-score'
+    >;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+  };
+}
+
 export interface LayoutHeadingWithImage extends Struct.ComponentSchema {
   collectionName: 'components_layout_heading_with_images';
   info: {
@@ -5409,6 +5451,7 @@ declare module '@strapi/strapi' {
       'layout.footer-solution-group': LayoutFooterSolutionGroup;
       'layout.footer-technology-item': LayoutFooterTechnologyItem;
       'layout.founder-section': LayoutFounderSection;
+      'layout.global-dge-score-section': LayoutGlobalDgeScoreSection;
       'layout.heading-with-image': LayoutHeadingWithImage;
       'layout.hero': LayoutHero;
       'layout.hero-review-section': LayoutHeroReviewSection;

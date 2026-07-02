@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_layout_global_dge_score_sections",
+  "info": {
+    "displayName": "Global DGE Score Section",
+    "description": "Reuses shared content from DGE Score. Edit once under Content Manager → DGE Score."
+  },
+  "options": {},
+  "attributes": {
+    "dgeScore": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::dge-score.dge-score"
+    },
+    "paddingTop": {
+      "type": "integer",
+      "min": 0
+    },
+    "paddingBottom": {
+      "type": "integer",
+      "min": 0
+    },
+    "marginTop": {
+      "type": "integer",
+      "min": 0
+    },
+    "marginBottom": {
+      "type": "integer",
+      "min": 0
+    }
+  }
+}
