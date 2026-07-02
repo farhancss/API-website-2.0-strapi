@@ -939,6 +939,48 @@ export interface LayoutAiIndustryUseCasesSection
   };
 }
 
+export interface LayoutAiPoweredSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_ai_powered_sections';
+  info: {
+    description: 'Centered heading with two-column layout: AI feature cards on the left and lifestyle image with chat overlays on the right.';
+    displayName: 'AI Powered Section';
+  };
+  attributes: {
+    backgroundImage: Schema.Attribute.Media<'images'>;
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.Blocks;
+    image: Schema.Attribute.Media<'images'>;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+  };
+}
+
 export interface LayoutAiServiceCtaSection extends Struct.ComponentSchema {
   collectionName: 'components_layout_ai_service_cta_sections';
   info: {
@@ -5393,6 +5435,7 @@ declare module '@strapi/strapi' {
       'layout.ai-creative-capabilities-section': LayoutAiCreativeCapabilitiesSection;
       'layout.ai-creatives-hero-section': LayoutAiCreativesHeroSection;
       'layout.ai-industry-use-cases-section': LayoutAiIndustryUseCasesSection;
+      'layout.ai-powered-section': LayoutAiPoweredSection;
       'layout.ai-service-cta-section': LayoutAiServiceCtaSection;
       'layout.award-insights-section': LayoutAwardInsightsSection;
       'layout.award-item': LayoutAwardItem;
