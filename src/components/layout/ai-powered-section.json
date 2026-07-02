@@ -12,9 +12,9 @@
     "description": {
       "type": "blocks"
     },
-    "image": {
+    "images": {
       "type": "media",
-      "multiple": false,
+      "multiple": true,
       "allowedTypes": ["images"]
     },
     "backgroundImage": {
