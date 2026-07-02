@@ -949,7 +949,7 @@ export interface LayoutAiPoweredSection extends Struct.ComponentSchema {
     backgroundImage: Schema.Attribute.Media<'images'>;
     description: Schema.Attribute.Blocks;
     heading: Schema.Attribute.Blocks;
-    image: Schema.Attribute.Media<'images'>;
+    images: Schema.Attribute.Media<'images', true>;
     marginBottom: Schema.Attribute.Integer &
       Schema.Attribute.SetMinMax<
         {
