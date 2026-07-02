@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "dge_scores",
+  "info": {
+    "singularName": "dge-score",
+    "pluralName": "dge-scores",
+    "displayName": "DGE Score",
+    "description": "Shared DGE Score section content. Edit once and reuse on multiple pages."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "blocks"
+    },
+    "description": {
+      "type": "text"
+    },
+    "backgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images", "files", "videos", "audios"]
+    },
+    "hubSpotForm":{
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::hub-spot-form.hub-spot-form"
+    }
+  }
+}

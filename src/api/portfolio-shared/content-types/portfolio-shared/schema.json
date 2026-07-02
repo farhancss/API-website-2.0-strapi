@@ -15,6 +15,7 @@
       "type": "dynamiczone",
       "components": [
         "layout.dge-score-section",
+        "layout.global-dge-score-section",
         "layout.portfolio-page-featured-case-studies"
       ]
     }

@@ -614,6 +614,43 @@ export interface ApiContactQuoteContactQuote extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiDgeScoreDgeScore extends Struct.SingleTypeSchema {
+  collectionName: 'dge_scores';
+  info: {
+    description: 'Shared DGE Score section content. Edit once and reuse on multiple pages.';
+    displayName: 'DGE Score';
+    pluralName: 'dge-scores';
+    singularName: 'dge-score';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    backgroundImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.Blocks;
+    hubSpotForm: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::hub-spot-form.hub-spot-form'
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::dge-score.dge-score'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   collectionName: 'globals';
   info: {
@@ -731,6 +768,7 @@ export interface ApiLandingPageLandingPage extends Struct.SingleTypeSchema {
         'layout.industry-expertise-section',
         'layout.faq-section',
         'layout.dge-score-section',
+        'layout.global-dge-score-section',
         'layout.digital-growth-framework-section',
         'layout.digital-product-showcase-section',
         'layout.careers-hero-section',
@@ -804,6 +842,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'layout.portfolio-list-section',
         'layout.portfolio-page-featured-case-studies',
         'layout.dge-score-section',
+        'layout.global-dge-score-section',
         'layout.page-hero-section',
         'layout.client-showcase-section',
         'layout.client-logo-marquee-section',
@@ -929,6 +968,7 @@ export interface ApiPortfolioSharedPortfolioShared
     sections: Schema.Attribute.DynamicZone<
       [
         'layout.dge-score-section',
+        'layout.global-dge-score-section',
         'layout.portfolio-page-featured-case-studies',
       ]
     >;
@@ -1591,6 +1631,7 @@ declare module '@strapi/strapi' {
       'api::case-study.case-study': ApiCaseStudyCaseStudy;
       'api::clutch-review.clutch-review': ApiClutchReviewClutchReview;
       'api::contact-quote.contact-quote': ApiContactQuoteContactQuote;
+      'api::dge-score.dge-score': ApiDgeScoreDgeScore;
       'api::global.global': ApiGlobalGlobal;
       'api::hub-spot-form.hub-spot-form': ApiHubSpotFormHubSpotForm;
       'api::industry.industry': ApiIndustryIndustry;
