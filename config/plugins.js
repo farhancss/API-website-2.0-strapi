@@ -1,4 +1,8 @@
 module.exports = ({ env }) => ({
+  'auth-cookie': {
+    enabled: true,
+    resolve: './src/plugins/auth-cookie',
+  },
   backup: {
     enabled: env.bool('BACKUP_ENABLED', false),
     config: {

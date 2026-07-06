@@ -12,6 +12,7 @@
     "strapi": "strapi"
   },
   "dependencies": {
+    "@growy/strapi-plugin-auth-cookie": "^1.1.2",
     "@strapi/plugin-cloud": "5.34.0",
     "@strapi/plugin-users-permissions": "5.34.0",
     "@strapi/strapi": "5.34.0",

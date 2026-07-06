@@ -1,0 +1,11 @@
+{
+  "name": "auth-cookie",
+  "version": "1.0.0",
+  "private": true,
+  "strapi": {
+    "name": "auth-cookie",
+    "displayName": "Auth Cookie",
+    "description": "Syncs JWT auth tokens into cookies for Strapi v5",
+    "kind": "plugin"
+  }
+}
