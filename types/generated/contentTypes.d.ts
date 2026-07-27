@@ -574,6 +574,50 @@ export interface ApiClutchReviewClutchReview
   };
 }
 
+export interface ApiClutchWidgetClutchWidget extends Struct.SingleTypeSchema {
+  collectionName: 'clutch_widgets';
+  info: {
+    description: 'Shared Clutch embed widget. Edit once and reuse on Hero and other sections.';
+    displayName: 'Clutch Widget';
+    pluralName: 'clutch-widgets';
+    singularName: 'clutch-widget';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    companyId: Schema.Attribute.String & Schema.Attribute.DefaultTo<'858007'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    dataUrl: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'https://widget.clutch.co'>;
+    expandIframe: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    height: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      > &
+      Schema.Attribute.DefaultTo<45>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::clutch-widget.clutch-widget'
+    > &
+      Schema.Attribute.Private;
+    nofollow: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    publishedAt: Schema.Attribute.DateTime;
+    scriptSrc: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'https://widget.clutch.co/static/js/widget.js'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    widgetType: Schema.Attribute.String & Schema.Attribute.DefaultTo<'2'>;
+  };
+}
+
 export interface ApiContactQuoteContactQuote extends Struct.SingleTypeSchema {
   collectionName: 'contact_quotes';
   info: {
@@ -1631,6 +1675,7 @@ declare module '@strapi/strapi' {
       'api::blog-detail-page.blog-detail-page': ApiBlogDetailPageBlogDetailPage;
       'api::case-study.case-study': ApiCaseStudyCaseStudy;
       'api::clutch-review.clutch-review': ApiClutchReviewClutchReview;
+      'api::clutch-widget.clutch-widget': ApiClutchWidgetClutchWidget;
       'api::contact-quote.contact-quote': ApiContactQuoteContactQuote;
       'api::dge-score.dge-score': ApiDgeScoreDgeScore;
       'api::global.global': ApiGlobalGlobal;

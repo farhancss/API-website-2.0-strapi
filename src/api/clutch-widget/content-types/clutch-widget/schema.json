@@ -1,10 +1,16 @@
 {
-  "collectionName": "components_elements_clutch_widgets",
+  "kind": "singleType",
+  "collectionName": "clutch_widgets",
   "info": {
+    "singularName": "clutch-widget",
+    "pluralName": "clutch-widgets",
     "displayName": "Clutch Widget",
-    "description": "Clutch embed widget (script + company badge)."
+    "description": "Shared Clutch embed widget. Edit once and reuse on Hero and other sections."
   },
-  "options": {},
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
   "attributes": {
     "scriptSrc": {
       "type": "string",
