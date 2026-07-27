@@ -60,9 +60,9 @@
       "repeatable": false
     },
     "clutchWidget": {
-      "type": "component",
-      "component": "elements.clutch-widget",
-      "repeatable": false
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::clutch-widget.clutch-widget"
     },
     "paddingTop": {
       "type": "integer",
