@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_elements_clutch_widgets",
+  "info": {
+    "displayName": "Clutch Widget",
+    "description": "Clutch embed widget (script + company badge)."
+  },
+  "options": {},
+  "attributes": {
+    "scriptSrc": {
+      "type": "string",
+      "default": "https://widget.clutch.co/static/js/widget.js"
+    },
+    "dataUrl": {
+      "type": "string",
+      "default": "https://widget.clutch.co"
+    },
+    "widgetType": {
+      "type": "string",
+      "default": "2"
+    },
+    "height": {
+      "type": "integer",
+      "default": 45,
+      "min": 0
+    },
+    "nofollow": {
+      "type": "boolean",
+      "default": false
+    },
+    "expandIframe": {
+      "type": "boolean",
+      "default": true
+    },
+    "companyId": {
+      "type": "string",
+      "default": "858007"
+    }
+  }
+}

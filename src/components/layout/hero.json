@@ -59,6 +59,11 @@
       "component": "sections.hub-spot-form",
       "repeatable": false
     },
+    "clutchWidget": {
+      "type": "component",
+      "component": "elements.clutch-widget",
+      "repeatable": false
+    },
     "paddingTop": {
       "type": "integer",
       "min": 0
