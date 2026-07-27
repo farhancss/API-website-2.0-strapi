@@ -341,6 +341,32 @@ export interface ElementsCard extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementsClutchWidget extends Struct.ComponentSchema {
+  collectionName: 'components_elements_clutch_widgets';
+  info: {
+    description: 'Clutch embed widget (script + company badge).';
+    displayName: 'Clutch Widget';
+  };
+  attributes: {
+    companyId: Schema.Attribute.String & Schema.Attribute.DefaultTo<'858007'>;
+    dataUrl: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'https://widget.clutch.co'>;
+    expandIframe: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    height: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      > &
+      Schema.Attribute.DefaultTo<45>;
+    nofollow: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    scriptSrc: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'https://widget.clutch.co/static/js/widget.js'>;
+    widgetType: Schema.Attribute.String & Schema.Attribute.DefaultTo<'2'>;
+  };
+}
+
 export interface ElementsCreativeServiceCategoryItem
   extends Struct.ComponentSchema {
   collectionName: 'components_elements_creative_service_category_items';
@@ -3097,6 +3123,7 @@ export interface LayoutHero extends Struct.ComponentSchema {
     >;
     badgeItems: Schema.Attribute.Component<'elements.badge', true>;
     clientLogos: Schema.Attribute.Media<'images', true>;
+    clutchWidget: Schema.Attribute.Component<'elements.clutch-widget', false>;
     experienceText: Schema.Attribute.Text;
     heading: Schema.Attribute.String;
     headingHighlight: Schema.Attribute.String;
@@ -5408,6 +5435,7 @@ declare module '@strapi/strapi' {
       'elements.ai-industry-use-case-item': ElementsAiIndustryUseCaseItem;
       'elements.badge': ElementsBadge;
       'elements.card': ElementsCard;
+      'elements.clutch-widget': ElementsClutchWidget;
       'elements.creative-service-category-item': ElementsCreativeServiceCategoryItem;
       'elements.design-conversion-item': ElementsDesignConversionItem;
       'elements.design-info-row': ElementsDesignInfoRow;
