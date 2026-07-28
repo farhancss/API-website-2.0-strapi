@@ -20,6 +20,11 @@
       "relation": "manyToOne",
       "target": "api::hub-spot-form.hub-spot-form"
     },
+    "clutchWidget": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::clutch-widget.clutch-widget"
+    },
     "badgeImage": {
       "type": "media",
       "multiple": false,

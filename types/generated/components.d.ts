@@ -678,6 +678,10 @@ export interface LayoutAgencyHeroSection extends Struct.ComponentSchema {
     backgroundPattern: Schema.Attribute.Media<'images'>;
     badgeImage: Schema.Attribute.Media<'images'>;
     clientLogos: Schema.Attribute.Media<'images', true>;
+    clutchWidget: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::clutch-widget.clutch-widget'
+    >;
     description: Schema.Attribute.Text;
     heading: Schema.Attribute.Blocks;
     hubspotForm: Schema.Attribute.Relation<
@@ -2315,6 +2319,10 @@ export interface LayoutDesignServicesHeroSection
     categoriesCta: Schema.Attribute.Component<'elements.link-basic', false>;
     categoriesHeading: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'Where do you need the most help?'>;
+    clutchWidget: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::clutch-widget.clutch-widget'
+    >;
     colorPalette: Schema.Attribute.Media<'images', true>;
     cta: Schema.Attribute.Component<'elements.link-basic', false>;
     description: Schema.Attribute.Text;
