@@ -521,6 +521,7 @@ export interface ApiCaseStudyCaseStudy extends Struct.CollectionTypeSchema {
     shareLink: Schema.Attribute.Component<'elements.link-basic', false>;
     slug: Schema.Attribute.UID<'companyName'>;
     tags: Schema.Attribute.Component<'shared.tag', true>;
+    thumbnailImage: Schema.Attribute.Media<'images'>;
     type: Schema.Attribute.Relation<'manyToOne', 'api::industry.industry'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

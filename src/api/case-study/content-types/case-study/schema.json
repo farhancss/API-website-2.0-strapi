@@ -28,6 +28,13 @@
       "relation": "manyToOne",
       "target": "api::industry.industry"
     },
+    "thumbnailImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
     "mainImage": {
       "type": "media",
       "multiple": false,
