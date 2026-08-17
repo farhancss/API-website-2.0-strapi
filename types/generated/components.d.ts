@@ -609,6 +609,33 @@ export interface ElementsTabs extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementsTechnologyCategoryItem extends Struct.ComponentSchema {
+  collectionName: 'components_elements_technology_category_items';
+  info: {
+    description: 'Sidebar tab category with grouped technology pills in the content panel.';
+    displayName: 'Technology Category Item';
+  };
+  attributes: {
+    groups: Schema.Attribute.Component<'elements.technology-group', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface ElementsTechnologyGroup extends Struct.ComponentSchema {
+  collectionName: 'components_elements_technology_groups';
+  info: {
+    description: 'Sub-group heading with a grid of technology pills (e.g. DevOps, Cloud).';
+    displayName: 'Technology Group';
+  };
+  attributes: {
+    heading: Schema.Attribute.String;
+    technologies: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::technology.technology'
+    >;
+  };
+}
+
 export interface ElementsWebDesignServiceItem extends Struct.ComponentSchema {
   collectionName: 'components_elements_web_design_service_items';
   info: {
@@ -4579,6 +4606,50 @@ export interface LayoutStatsSection extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutTechnologiesWeUseSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_technologies_we_use_sections';
+  info: {
+    description: 'Heading and description with sidebar category tabs and grouped technology pills.';
+    displayName: 'Technologies We Use Section';
+  };
+  attributes: {
+    categories: Schema.Attribute.Component<
+      'elements.technology-category-item',
+      true
+    >;
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.Blocks;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+  };
+}
+
 export interface LayoutTopNav extends Struct.ComponentSchema {
   collectionName: 'components_layout_top_navs';
   info: {
@@ -5443,6 +5514,8 @@ declare module '@strapi/strapi' {
       'elements.steps': ElementsSteps;
       'elements.tab-sub-item': ElementsTabSubItem;
       'elements.tabs': ElementsTabs;
+      'elements.technology-category-item': ElementsTechnologyCategoryItem;
+      'elements.technology-group': ElementsTechnologyGroup;
       'elements.web-design-service-item': ElementsWebDesignServiceItem;
       'layout.about-section': LayoutAboutSection;
       'layout.agency-hero-section': LayoutAgencyHeroSection;
@@ -5553,6 +5626,7 @@ declare module '@strapi/strapi' {
       'layout.service-design-hero-section': LayoutServiceDesignHeroSection;
       'layout.sitemap-section': LayoutSitemapSection;
       'layout.stats-section': LayoutStatsSection;
+      'layout.technologies-we-use-section': LayoutTechnologiesWeUseSection;
       'layout.top-nav': LayoutTopNav;
       'layout.transform-business-section': LayoutTransformBusinessSection;
       'layout.trusted-by-section': LayoutTrustedBySection;

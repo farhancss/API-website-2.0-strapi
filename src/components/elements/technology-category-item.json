@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_elements_technology_category_items",
+  "info": {
+    "displayName": "Technology Category Item",
+    "description": "Sidebar tab category with grouped technology pills in the content panel."
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "groups": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.technology-group"
+    }
+  }
+}

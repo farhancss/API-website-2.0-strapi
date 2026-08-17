@@ -954,6 +954,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'layout.marketing-technology-section',
         'layout.seo-expertise-section',
         'layout.ai-industry-use-cases-section',
+        'layout.technologies-we-use-section',
         'layout.ai-powered-section',
         'layout.explore-industries-section',
         'layout.sitemap-section',
