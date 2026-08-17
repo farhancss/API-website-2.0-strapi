@@ -829,6 +829,7 @@ export interface ApiLandingPageLandingPage extends Struct.SingleTypeSchema {
         'layout.clutch-testimonial-section',
         'layout.hero-review-section',
         'layout.newsletter-section',
+        'layout.technologies-we-use-section',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -954,6 +955,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'layout.marketing-technology-section',
         'layout.seo-expertise-section',
         'layout.ai-industry-use-cases-section',
+        'layout.technologies-we-use-section',
         'layout.ai-powered-section',
         'layout.explore-industries-section',
         'layout.sitemap-section',
