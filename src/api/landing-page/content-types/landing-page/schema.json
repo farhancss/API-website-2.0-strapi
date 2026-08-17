@@ -45,7 +45,8 @@
         "layout.clutch-testimonials-slider-section",
         "layout.clutch-testimonial-section",
         "layout.hero-review-section",
-        "layout.newsletter-section"
+        "layout.newsletter-section",
+        "layout.technologies-we-use-section"
       ]
     },
     "seo": {
