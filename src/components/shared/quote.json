@@ -11,6 +11,9 @@
     },
     "body": {
       "type": "text"
+    },
+    "richDescription": {
+      "type": "blocks"
     }
   }
 }

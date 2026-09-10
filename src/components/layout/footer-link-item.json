@@ -9,6 +9,10 @@
       "type": "boolean",
       "default": false
     },
+    "nofollow": {
+      "type": "boolean",
+      "default": false
+    },
     "children": {
       "type": "component",
       "repeatable": true,

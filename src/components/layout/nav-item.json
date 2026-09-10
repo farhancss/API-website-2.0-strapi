@@ -16,6 +16,10 @@
       "type": "boolean",
       "default": false
     },
+    "nofollow": {
+      "type": "boolean",
+      "default": false
+    },
     "menuType": {
       "type": "enumeration",
       "enum": ["link", "mega-menu"],

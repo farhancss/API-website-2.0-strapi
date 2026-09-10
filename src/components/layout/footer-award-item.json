@@ -9,6 +9,10 @@
       "type": "boolean",
       "default": true
     },
+    "nofollow": {
+      "type": "boolean",
+      "default": true
+    },
     "image": {
       "type": "media",
       "multiple": false,

@@ -16,6 +16,10 @@
       "type": "boolean",
       "default": false
     },
+    "nofollow": {
+      "type": "boolean",
+      "default": false
+    },
     "badge": {
       "type": "component",
       "repeatable": false,
