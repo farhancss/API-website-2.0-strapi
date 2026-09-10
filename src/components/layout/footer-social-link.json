@@ -8,6 +8,10 @@
       "type": "boolean",
       "default": true
     },
+    "nofollow": {
+      "type": "boolean",
+      "default": true
+    },
     "label": { "type": "string" },
     "logo": {
       "type": "media",

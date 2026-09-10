@@ -14,6 +14,10 @@
     "isExternal": {
       "type": "boolean",
       "default": false
+    },
+    "nofollow": {
+      "type": "boolean",
+      "default": false
     }
   },
   "config": {}

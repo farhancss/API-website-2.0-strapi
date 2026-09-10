@@ -466,6 +466,7 @@ export interface ElementsLink extends Struct.ComponentSchema {
     isExternal: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     isPrimary: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     label: Schema.Attribute.String;
+    nofollow: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     text: Schema.Attribute.String;
   };
 }
@@ -478,6 +479,7 @@ export interface ElementsLinkBasic extends Struct.ComponentSchema {
   attributes: {
     href: Schema.Attribute.String;
     isExternal: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    nofollow: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     text: Schema.Attribute.String;
   };
 }
@@ -2965,6 +2967,7 @@ export interface LayoutFooterAwardItem extends Struct.ComponentSchema {
     href: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images'>;
     isExternal: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    nofollow: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
     title: Schema.Attribute.String;
   };
 }
@@ -2978,6 +2981,7 @@ export interface LayoutFooterLinkItem extends Struct.ComponentSchema {
     children: Schema.Attribute.Component<'elements.link', true>;
     href: Schema.Attribute.String;
     isExternal: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    nofollow: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     text: Schema.Attribute.String;
   };
 }
@@ -2992,6 +2996,7 @@ export interface LayoutFooterSocialLink extends Struct.ComponentSchema {
     isExternal: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
     label: Schema.Attribute.String;
     logo: Schema.Attribute.Media<'images'>;
+    nofollow: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
   };
 }
 
@@ -3267,6 +3272,7 @@ export interface LayoutHighGrowthSection extends Struct.ComponentSchema {
         },
         number
       >;
+    richDescription: Schema.Attribute.Blocks;
   };
 }
 
@@ -3652,6 +3658,7 @@ export interface LayoutNavItem extends Struct.ComponentSchema {
     >;
     menuType: Schema.Attribute.Enumeration<['link', 'mega-menu']> &
       Schema.Attribute.DefaultTo<'link'>;
+    nofollow: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     text: Schema.Attribute.String;
   };
 }
@@ -3678,6 +3685,7 @@ export interface LayoutNavMegaMenuLink extends Struct.ComponentSchema {
     badge: Schema.Attribute.Component<'elements.badge', false>;
     href: Schema.Attribute.String;
     isExternal: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    nofollow: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     text: Schema.Attribute.String;
   };
 }
@@ -5006,6 +5014,7 @@ export interface LayoutWebsiteCapabilitiesSection
         },
         number
       >;
+    richDescription: Schema.Attribute.Blocks;
   };
 }
 
@@ -5378,6 +5387,7 @@ export interface SharedQuote extends Struct.ComponentSchema {
   };
   attributes: {
     body: Schema.Attribute.Text;
+    richDescription: Schema.Attribute.Blocks;
     title: Schema.Attribute.String;
   };
 }
@@ -5394,6 +5404,7 @@ export interface SharedRecognitionHighlightCard extends Struct.ComponentSchema {
     href: Schema.Attribute.String;
     icon: Schema.Attribute.Media<'images'>;
     isExternal: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    nofollow: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     title: Schema.Attribute.String;
   };
 }
