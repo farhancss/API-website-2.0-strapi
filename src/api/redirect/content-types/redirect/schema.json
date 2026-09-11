@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "redirects",
+  "info": {
+    "singularName": "redirect",
+    "pluralName": "redirects",
+    "displayName": "Redirects",
+    "description": "Old URL to new URL mappings. Add one whenever a page slug changes so existing links and search results keep working."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "source": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "destination": {
+      "type": "string",
+      "required": true
+    },
+    "redirectType": {
+      "type": "enumeration",
+      "default": "permanent_301",
+      "enum": [
+        "permanent_301",
+        "temporary_302"
+      ]
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": true
+    },
+    "notes": {
+      "type": "text"
+    }
+  }
+}

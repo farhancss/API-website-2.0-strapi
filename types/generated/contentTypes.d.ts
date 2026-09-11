@@ -1074,6 +1074,44 @@ export interface ApiPortfolioPortfolio extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiRedirectRedirect extends Struct.CollectionTypeSchema {
+  collectionName: 'redirects';
+  info: {
+    description: 'Old URL to new URL mappings. Add one whenever a page slug changes so existing links and search results keep working.';
+    displayName: 'Redirects';
+    pluralName: 'redirects';
+    singularName: 'redirect';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    destination: Schema.Attribute.String & Schema.Attribute.Required;
+    isActive: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::redirect.redirect'
+    > &
+      Schema.Attribute.Private;
+    notes: Schema.Attribute.Text;
+    publishedAt: Schema.Attribute.DateTime;
+    redirectType: Schema.Attribute.Enumeration<
+      ['permanent_301', 'temporary_302']
+    > &
+      Schema.Attribute.DefaultTo<'permanent_301'>;
+    source: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiServiceService extends Struct.CollectionTypeSchema {
   collectionName: 'services';
   info: {
@@ -1690,6 +1728,7 @@ declare module '@strapi/strapi' {
       'api::page.page': ApiPagePage;
       'api::portfolio-shared.portfolio-shared': ApiPortfolioSharedPortfolioShared;
       'api::portfolio.portfolio': ApiPortfolioPortfolio;
+      'api::redirect.redirect': ApiRedirectRedirect;
       'api::service.service': ApiServiceService;
       'api::technology.technology': ApiTechnologyTechnology;
       'api::why-choose-us.why-choose-us': ApiWhyChooseUsWhyChooseUs;
