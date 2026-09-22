@@ -2905,6 +2905,7 @@ export interface LayoutFooter extends Struct.ComponentSchema {
       'layout.footer-accordion-section',
       true
     >;
+    addressBlock: Schema.Attribute.Blocks;
     addressHeading: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'Address'>;
     addressText: Schema.Attribute.Text;
