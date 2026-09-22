@@ -60,7 +60,9 @@
     "addressText": {
       "type": "text"
     },
-
+    "addressBlock": {
+      "type": "blocks"
+    },
     "awards": {
       "type": "component",
       "repeatable": true,
