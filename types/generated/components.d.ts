@@ -2258,6 +2258,7 @@ export interface LayoutDesignConversionSection extends Struct.ComponentSchema {
   attributes: {
     cta: Schema.Attribute.Component<'elements.link-basic', false>;
     ctaBannerButton: Schema.Attribute.Component<'elements.link-basic', false>;
+    ctaBannerDescription: Schema.Attribute.Blocks;
     ctaBannerHeading: Schema.Attribute.Blocks;
     ctaPrompt: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'Ready to improve your conversion rate?'>;
@@ -4984,6 +4985,7 @@ export interface LayoutWebsiteCapabilitiesSection
       true
     >;
     ctaBannerButton: Schema.Attribute.Component<'elements.link-basic', false>;
+    ctaBannerDescription: Schema.Attribute.Blocks;
     ctaBannerHeading: Schema.Attribute.Blocks;
     description: Schema.Attribute.Text;
     heading: Schema.Attribute.Blocks;
