@@ -23,6 +23,9 @@
     "ctaBannerHeading": {
       "type": "blocks"
     },
+    "ctaBannerDescription": {
+      "type": "blocks"
+    },
     "ctaBannerButton": {
       "type": "component",
       "repeatable": false,
