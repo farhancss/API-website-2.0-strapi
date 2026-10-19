@@ -2966,6 +2966,10 @@ export interface LayoutFooterAwardItem extends Struct.ComponentSchema {
   };
   attributes: {
     backgroundImage: Schema.Attribute.Media<'images'>;
+    goodfirmsWidget: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::goodfirms-widget.goodfirms-widget'
+    >;
     href: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images'>;
     isExternal: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
@@ -3144,6 +3148,10 @@ export interface LayoutHero extends Struct.ComponentSchema {
       'api::clutch-widget.clutch-widget'
     >;
     experienceText: Schema.Attribute.Text;
+    goodfirmsWidget: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::goodfirms-widget.goodfirms-widget'
+    >;
     heading: Schema.Attribute.String;
     headingHighlight: Schema.Attribute.String;
     hubSpotForm: Schema.Attribute.Component<'sections.hub-spot-form', false>;

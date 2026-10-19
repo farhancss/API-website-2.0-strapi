@@ -729,6 +729,50 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiGoodfirmsWidgetGoodfirmsWidget
+  extends Struct.SingleTypeSchema {
+  collectionName: 'goodfirms_widgets';
+  info: {
+    description: 'Shared GoodFirms embed widget. Edit once and reuse on Hero and other sections.';
+    displayName: 'GoodFirms Widget';
+    pluralName: 'goodfirms-widgets';
+    singularName: 'goodfirms-widget';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    companyId: Schema.Attribute.String & Schema.Attribute.DefaultTo<'110446'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    height: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      > &
+      Schema.Attribute.DefaultTo<61>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::goodfirms-widget.goodfirms-widget'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    scriptSrc: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'https://assets.goodfirms.co/assets/js/widget.min.js'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    widgetPattern: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'horizontal-inline'>;
+    widgetType: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'goodfirms-widget-t9'>;
+  };
+}
+
 export interface ApiHubSpotFormHubSpotForm extends Struct.CollectionTypeSchema {
   collectionName: 'hub_spot_forms';
   info: {
@@ -1722,6 +1766,7 @@ declare module '@strapi/strapi' {
       'api::contact-quote.contact-quote': ApiContactQuoteContactQuote;
       'api::dge-score.dge-score': ApiDgeScoreDgeScore;
       'api::global.global': ApiGlobalGlobal;
+      'api::goodfirms-widget.goodfirms-widget': ApiGoodfirmsWidgetGoodfirmsWidget;
       'api::hub-spot-form.hub-spot-form': ApiHubSpotFormHubSpotForm;
       'api::industry.industry': ApiIndustryIndustry;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
