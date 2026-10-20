@@ -3145,6 +3145,21 @@ export interface LayoutHero extends Struct.ComponentSchema {
     >;
     experienceText: Schema.Attribute.Text;
     goodfirmsImage: Schema.Attribute.Media<'images'>;
+    goodfirmsRating: Schema.Attribute.Decimal &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 5;
+          min: 0;
+        },
+        number
+      >;
+    goodfirmsReviewCount: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
     goodfirmsUrl: Schema.Attribute.String;
     heading: Schema.Attribute.String;
     headingHighlight: Schema.Attribute.String;
