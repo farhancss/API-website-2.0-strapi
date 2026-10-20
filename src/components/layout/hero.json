@@ -64,6 +64,16 @@
       "relation": "manyToOne",
       "target": "api::clutch-widget.clutch-widget"
     },
+    "goodfirmsImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "goodfirmsUrl": {
+      "type": "string"
+    },
     "paddingTop": {
       "type": "integer",
       "min": 0

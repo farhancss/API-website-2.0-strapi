@@ -3144,6 +3144,8 @@ export interface LayoutHero extends Struct.ComponentSchema {
       'api::clutch-widget.clutch-widget'
     >;
     experienceText: Schema.Attribute.Text;
+    goodfirmsImage: Schema.Attribute.Media<'images'>;
+    goodfirmsUrl: Schema.Attribute.String;
     heading: Schema.Attribute.String;
     headingHighlight: Schema.Attribute.String;
     hubSpotForm: Schema.Attribute.Component<'sections.hub-spot-form', false>;
