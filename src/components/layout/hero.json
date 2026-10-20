@@ -74,6 +74,15 @@
     "goodfirmsUrl": {
       "type": "string"
     },
+    "goodfirmsRating": {
+      "type": "decimal",
+      "min": 0,
+      "max": 5
+    },
+    "goodfirmsReviewCount": {
+      "type": "integer",
+      "min": 0
+    },
     "paddingTop": {
       "type": "integer",
       "min": 0
