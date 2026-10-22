@@ -32,6 +32,11 @@
       "relation": "manyToOne",
       "target": "api::clutch-widget.clutch-widget"
     },
+    "goodfirmsWidget": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::goodfirms-widget.goodfirms-widget"
+    },
     "clutchRating": {
       "type": "media",
       "multiple": false,

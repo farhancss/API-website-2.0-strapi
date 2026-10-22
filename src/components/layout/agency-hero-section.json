@@ -25,6 +25,11 @@
       "relation": "manyToOne",
       "target": "api::clutch-widget.clutch-widget"
     },
+    "goodfirmsWidget": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::goodfirms-widget.goodfirms-widget"
+    },
     "badgeImage": {
       "type": "media",
       "multiple": false,
