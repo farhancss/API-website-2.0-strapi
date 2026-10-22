@@ -3161,6 +3161,10 @@ export interface LayoutHero extends Struct.ComponentSchema {
         number
       >;
     goodfirmsUrl: Schema.Attribute.String;
+    goodfirmsWidget: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::goodfirms-widget.goodfirms-widget'
+    >;
     heading: Schema.Attribute.String;
     headingHighlight: Schema.Attribute.String;
     hubSpotForm: Schema.Attribute.Component<'sections.hub-spot-form', false>;
