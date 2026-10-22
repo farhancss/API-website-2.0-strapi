@@ -712,6 +712,10 @@ export interface LayoutAgencyHeroSection extends Struct.ComponentSchema {
       'api::clutch-widget.clutch-widget'
     >;
     description: Schema.Attribute.Text;
+    goodfirmsWidget: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::goodfirms-widget.goodfirms-widget'
+    >;
     heading: Schema.Attribute.Blocks;
     hubspotForm: Schema.Attribute.Relation<
       'manyToOne',
@@ -2357,6 +2361,10 @@ export interface LayoutDesignServicesHeroSection
     cta: Schema.Attribute.Component<'elements.link-basic', false>;
     description: Schema.Attribute.Text;
     featuredImage: Schema.Attribute.Media<'videos' | 'images'>;
+    goodfirmsWidget: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::goodfirms-widget.goodfirms-widget'
+    >;
     heading: Schema.Attribute.Blocks;
     hubspotForm: Schema.Attribute.Relation<
       'manyToOne',
@@ -4539,6 +4547,10 @@ export interface LayoutServiceDesignHeroSection extends Struct.ComponentSchema {
     >;
     cta: Schema.Attribute.Component<'elements.link-basic', false>;
     description: Schema.Attribute.Text;
+    goodfirmsWidget: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::goodfirms-widget.goodfirms-widget'
+    >;
     heading: Schema.Attribute.Blocks;
     hubspotForm: Schema.Attribute.Relation<
       'manyToOne',
