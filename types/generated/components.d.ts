@@ -2290,7 +2290,7 @@ export interface LayoutCustomSoftwareHeroSection
         },
         number
       >;
-    tag: Schema.Attribute.Component<'elements.badge', false>;
+    tag: Schema.Attribute.Component<'shared.tag', false>;
   };
 }
 
