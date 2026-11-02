@@ -1,0 +1,52 @@
+{
+  "collectionName": "components_layout_why_companies_choose_sections",
+  "info": {
+    "displayName": "Why Companies Choose Section",
+    "description": "Two-column section: dark Clutch review card with overall rating on the left; heading, description and checklist of reasons on the right."
+  },
+  "options": {},
+  "attributes": {
+    "clutchWidget": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::clutch-widget.clutch-widget"
+    },
+    "review": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::clutch-review.clutch-review"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link-basic"
+    },
+    "heading": {
+      "type": "blocks"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "checklist": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.tag"
+    },
+    "paddingTop": {
+      "type": "integer",
+      "min": 0
+    },
+    "paddingBottom": {
+      "type": "integer",
+      "min": 0
+    },
+    "marginTop": {
+      "type": "integer",
+      "min": 0
+    },
+    "marginBottom": {
+      "type": "integer",
+      "min": 0
+    }
+  }
+}
