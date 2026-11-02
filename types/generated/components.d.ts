@@ -4289,6 +4289,8 @@ export interface LayoutProvenResultsSection extends Struct.ComponentSchema {
       'elements.proven-results-accordion-item',
       true
     >;
+    ctaLink: Schema.Attribute.Component<'elements.link-basic', false>;
+    ctaText: Schema.Attribute.Blocks;
     heading: Schema.Attribute.Blocks;
     marginBottom: Schema.Attribute.Integer &
       Schema.Attribute.SetMinMax<
