@@ -573,6 +573,20 @@ export interface ElementsSectionNavLink extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementsSoftwareOutcomeItem extends Struct.ComponentSchema {
+  collectionName: 'components_elements_software_outcome_items';
+  info: {
+    description: 'Outcome card with icon, title, description, and optional highlighted styling.';
+    displayName: 'Software Outcome Item';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.Media<'images'>;
+    isHighlighted: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface ElementsSteps extends Struct.ComponentSchema {
   collectionName: 'components_elements_steps';
   info: {
@@ -4603,6 +4617,48 @@ export interface LayoutSitemapSection extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutSoftwareOutcomesSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_software_outcomes_sections';
+  info: {
+    description: 'Two-column section: heading, CTA and award badges on the left; a grid of outcome cards (icon, title, description) on the right.';
+    displayName: 'Software Outcomes Section';
+  };
+  attributes: {
+    awards: Schema.Attribute.Media<'images', true>;
+    cta: Schema.Attribute.Component<'elements.link-basic', false>;
+    heading: Schema.Attribute.Blocks;
+    items: Schema.Attribute.Component<'elements.software-outcome-item', true>;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+  };
+}
+
 export interface LayoutStatsSection extends Struct.ComponentSchema {
   collectionName: 'components_layout_stats_sections';
   info: {
@@ -5558,6 +5614,7 @@ declare module '@strapi/strapi' {
       'elements.proven-results-accordion-item': ElementsProvenResultsAccordionItem;
       'elements.proven-results-slide': ElementsProvenResultsSlide;
       'elements.section-nav-link': ElementsSectionNavLink;
+      'elements.software-outcome-item': ElementsSoftwareOutcomeItem;
       'elements.steps': ElementsSteps;
       'elements.tab-sub-item': ElementsTabSubItem;
       'elements.tabs': ElementsTabs;
@@ -5672,6 +5729,7 @@ declare module '@strapi/strapi' {
       'layout.service-cta-section': LayoutServiceCtaSection;
       'layout.service-design-hero-section': LayoutServiceDesignHeroSection;
       'layout.sitemap-section': LayoutSitemapSection;
+      'layout.software-outcomes-section': LayoutSoftwareOutcomesSection;
       'layout.stats-section': LayoutStatsSection;
       'layout.technologies-we-use-section': LayoutTechnologiesWeUseSection;
       'layout.top-nav': LayoutTopNav;
