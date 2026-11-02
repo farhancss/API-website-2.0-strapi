@@ -2532,10 +2532,12 @@ export interface LayoutDesignTechnologiesSection
   extends Struct.ComponentSchema {
   collectionName: 'components_layout_design_technologies_sections';
   info: {
-    description: 'Centered heading and description with a row of design tool icons.';
+    description: 'Centered heading and description with a row of design tool icons. Switch backgroundTheme to dark for the dark band treatment.';
     displayName: 'Design Technologies Section';
   };
   attributes: {
+    backgroundTheme: Schema.Attribute.Enumeration<['light', 'dark']> &
+      Schema.Attribute.DefaultTo<'light'>;
     description: Schema.Attribute.Text;
     heading: Schema.Attribute.Blocks;
     marginBottom: Schema.Attribute.Integer &

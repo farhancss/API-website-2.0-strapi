@@ -2,7 +2,7 @@
   "collectionName": "components_layout_design_technologies_sections",
   "info": {
     "displayName": "Design Technologies Section",
-    "description": "Centered heading and description with a row of design tool icons."
+    "description": "Centered heading and description with a row of design tool icons. Switch backgroundTheme to dark for the dark band treatment."
   },
   "options": {},
   "attributes": {
@@ -16,6 +16,14 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::technology.technology"
+    },
+    "backgroundTheme": {
+      "type": "enumeration",
+      "enum": [
+        "light",
+        "dark"
+      ],
+      "default": "light"
     },
     "paddingTop": {
       "type": "integer",
