@@ -22,6 +22,11 @@
       "multiple": false,
       "allowedTypes": ["images"]
     },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
     "url": {
       "type": "string"
     },
