@@ -5321,6 +5321,57 @@ export interface LayoutWhyChooseUsSection extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutWhyCompaniesChooseSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_layout_why_companies_choose_sections';
+  info: {
+    description: 'Two-column section: dark Clutch review card with overall rating on the left; heading, description and checklist of reasons on the right.';
+    displayName: 'Why Companies Choose Section';
+  };
+  attributes: {
+    checklist: Schema.Attribute.Component<'shared.tag', true>;
+    clutchWidget: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::clutch-widget.clutch-widget'
+    >;
+    cta: Schema.Attribute.Component<'elements.link-basic', false>;
+    description: Schema.Attribute.Blocks;
+    heading: Schema.Attribute.Blocks;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    review: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::clutch-review.clutch-review'
+    >;
+  };
+}
+
 export interface LayoutWhyWebDesignMattersSection
   extends Struct.ComponentSchema {
   collectionName: 'components_layout_why_web_design_matters_sections';
@@ -5816,6 +5867,7 @@ declare module '@strapi/strapi' {
       'layout.website-engagement-section': LayoutWebsiteEngagementSection;
       'layout.website-redesign-section': LayoutWebsiteRedesignSection;
       'layout.why-choose-us-section': LayoutWhyChooseUsSection;
+      'layout.why-companies-choose-section': LayoutWhyCompaniesChooseSection;
       'layout.why-web-design-matters-section': LayoutWhyWebDesignMattersSection;
       'layout.work-hero-section': LayoutWorkHeroSection;
       'layout.work-showcase-section': LayoutWorkShowcaseSection;
