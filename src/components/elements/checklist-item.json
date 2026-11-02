@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_elements_checklist_items",
+  "info": {
+    "displayName": "Checklist Item",
+    "description": "Single checklist line with text and an optional custom icon."
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    }
+  }
+}

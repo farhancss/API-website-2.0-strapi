@@ -1008,6 +1008,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'layout.sitemap-section',
         'layout.not-found-section',
         'layout.software-outcomes-section',
+        'layout.custom-software-hero-section',
         'case-study.dge-process-section',
       ]
     >;
