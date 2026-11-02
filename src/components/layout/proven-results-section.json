@@ -14,6 +14,14 @@
       "repeatable": true,
       "component": "elements.proven-results-accordion-item"
     },
+    "ctaText": {
+      "type": "blocks"
+    },
+    "ctaLink": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link-basic"
+    },
     "paddingTop": {
       "type": "integer",
       "min": 0
