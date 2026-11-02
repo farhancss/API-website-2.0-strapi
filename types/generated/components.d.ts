@@ -341,6 +341,18 @@ export interface ElementsCard extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementsChecklistItem extends Struct.ComponentSchema {
+  collectionName: 'components_elements_checklist_items';
+  info: {
+    description: 'Single checklist line with text and an optional custom icon.';
+    displayName: 'Checklist Item';
+  };
+  attributes: {
+    icon: Schema.Attribute.Media<'images'>;
+    text: Schema.Attribute.String;
+  };
+}
+
 export interface ElementsCreativeServiceCategoryItem
   extends Struct.ComponentSchema {
   collectionName: 'components_elements_creative_service_category_items';
@@ -2222,6 +2234,63 @@ export interface LayoutCreativeWebDesignSection extends Struct.ComponentSchema {
       'elements.web-design-service-item',
       true
     >;
+  };
+}
+
+export interface LayoutCustomSoftwareHeroSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_layout_custom_software_hero_sections';
+  info: {
+    description: 'Dark two-column hero: tag, heading, description, checklist and review ratings on the left; featured image and HubSpot consultation form on the right.';
+    displayName: 'Custom Software Hero Section';
+  };
+  attributes: {
+    backgroundPattern: Schema.Attribute.Media<'images'>;
+    checklist: Schema.Attribute.Component<'elements.checklist-item', true>;
+    clutchWidget: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::clutch-widget.clutch-widget'
+    >;
+    description: Schema.Attribute.Blocks;
+    featuredImage: Schema.Attribute.Media<'images' | 'videos'>;
+    goodfirmsWidget: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::goodfirms-widget.goodfirms-widget'
+    >;
+    heading: Schema.Attribute.Blocks;
+    hubspotForm: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::hub-spot-form.hub-spot-form'
+    >;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    tag: Schema.Attribute.Component<'elements.badge', false>;
   };
 }
 
@@ -5598,6 +5667,7 @@ declare module '@strapi/strapi' {
       'elements.ai-industry-use-case-item': ElementsAiIndustryUseCaseItem;
       'elements.badge': ElementsBadge;
       'elements.card': ElementsCard;
+      'elements.checklist-item': ElementsChecklistItem;
       'elements.creative-service-category-item': ElementsCreativeServiceCategoryItem;
       'elements.design-conversion-item': ElementsDesignConversionItem;
       'elements.design-info-row': ElementsDesignInfoRow;
@@ -5661,6 +5731,7 @@ declare module '@strapi/strapi' {
       'layout.content-with-video': LayoutContentWithVideo;
       'layout.creative-services-section': LayoutCreativeServicesSection;
       'layout.creative-web-design-section': LayoutCreativeWebDesignSection;
+      'layout.custom-software-hero-section': LayoutCustomSoftwareHeroSection;
       'layout.design-challenges-section': LayoutDesignChallengesSection;
       'layout.design-conversion-section': LayoutDesignConversionSection;
       'layout.design-info-section': LayoutDesignInfoSection;
