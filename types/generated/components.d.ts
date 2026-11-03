@@ -403,10 +403,11 @@ export interface ElementsDesignInfoRow extends Struct.ComponentSchema {
 export interface ElementsDesignProcessStepItem extends Struct.ComponentSchema {
   collectionName: 'components_elements_design_process_step_items';
   info: {
-    description: 'Process step with step label, primary title pill, and secondary task pills.';
+    description: 'Process step: title is the step label on the timeline, primaryTask is the highlighted pill, tasks are the secondary pills below it.';
     displayName: 'Design Process Step Item';
   };
   attributes: {
+    primaryTask: Schema.Attribute.String;
     tasks: Schema.Attribute.Component<'shared.tag', true>;
     title: Schema.Attribute.String & Schema.Attribute.DefaultTo<'STEP #1'>;
   };
@@ -4926,7 +4927,7 @@ export interface LayoutTrustedBySection extends Struct.ComponentSchema {
 export interface LayoutUxDesignProcessSection extends Struct.ComponentSchema {
   collectionName: 'components_layout_ux_design_process_sections';
   info: {
-    description: 'Centered heading and description with a horizontal row of process steps, each with a primary title pill and secondary task pills.';
+    description: 'Centered heading and description with a horizontal row of process steps, each with a primary title pill and secondary task pills. Use steps for editable content; image and mobileImage remain as a static fallback.';
     displayName: 'UX Design Process Section';
   };
   attributes: {
@@ -4962,6 +4963,10 @@ export interface LayoutUxDesignProcessSection extends Struct.ComponentSchema {
         },
         number
       >;
+    steps: Schema.Attribute.Component<
+      'elements.design-process-step-item',
+      true
+    >;
   };
 }
 
