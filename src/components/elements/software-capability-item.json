@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_elements_software_capability_items",
+  "info": {
+    "displayName": "Software Capability Item",
+    "description": "Capability card with title, showcase image, and supporting description. width controls how many columns the card spans."
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
+    },
+    "description": {
+      "type": "text"
+    },
+    "width": {
+      "type": "enumeration",
+      "enum": [
+        "one-third",
+        "half"
+      ],
+      "default": "one-third"
+    }
+  }
+}
