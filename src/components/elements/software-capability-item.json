@@ -20,6 +20,11 @@
     "description": {
       "type": "text"
     },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link-basic"
+    },
     "width": {
       "type": "enumeration",
       "enum": [
