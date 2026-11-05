@@ -599,6 +599,21 @@ export interface ElementsSectionNavLink extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementsSoftwareCapabilityItem extends Struct.ComponentSchema {
+  collectionName: 'components_elements_software_capability_items';
+  info: {
+    description: 'Capability card with title, showcase image, and supporting description. width controls how many columns the card spans.';
+    displayName: 'Software Capability Item';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'videos'>;
+    title: Schema.Attribute.String;
+    width: Schema.Attribute.Enumeration<['one-third', 'half']> &
+      Schema.Attribute.DefaultTo<'one-third'>;
+  };
+}
+
 export interface ElementsSoftwareOutcomeItem extends Struct.ComponentSchema {
   collectionName: 'components_elements_software_outcome_items';
   info: {
@@ -4751,6 +4766,51 @@ export interface LayoutSitemapSection extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutSoftwareCapabilitiesSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_layout_software_capabilities_sections';
+  info: {
+    description: 'Intro with heading on the left and description on the right, above a mixed-width grid of capability cards (title, image, description).';
+    displayName: 'Software Capabilities Section';
+  };
+  attributes: {
+    capabilities: Schema.Attribute.Component<
+      'elements.software-capability-item',
+      true
+    >;
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.Blocks;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+  };
+}
+
 export interface LayoutSoftwareOutcomesSection extends Struct.ComponentSchema {
   collectionName: 'components_layout_software_outcomes_sections';
   info: {
@@ -5805,6 +5865,7 @@ declare module '@strapi/strapi' {
       'elements.proven-results-accordion-item': ElementsProvenResultsAccordionItem;
       'elements.proven-results-slide': ElementsProvenResultsSlide;
       'elements.section-nav-link': ElementsSectionNavLink;
+      'elements.software-capability-item': ElementsSoftwareCapabilityItem;
       'elements.software-outcome-item': ElementsSoftwareOutcomeItem;
       'elements.steps': ElementsSteps;
       'elements.tab-sub-item': ElementsTabSubItem;
@@ -5922,6 +5983,7 @@ declare module '@strapi/strapi' {
       'layout.service-cta-section': LayoutServiceCtaSection;
       'layout.service-design-hero-section': LayoutServiceDesignHeroSection;
       'layout.sitemap-section': LayoutSitemapSection;
+      'layout.software-capabilities-section': LayoutSoftwareCapabilitiesSection;
       'layout.software-outcomes-section': LayoutSoftwareOutcomesSection;
       'layout.stats-section': LayoutStatsSection;
       'layout.technologies-we-use-section': LayoutTechnologiesWeUseSection;
