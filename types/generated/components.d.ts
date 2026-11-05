@@ -606,6 +606,7 @@ export interface ElementsSoftwareCapabilityItem extends Struct.ComponentSchema {
     displayName: 'Software Capability Item';
   };
   attributes: {
+    cta: Schema.Attribute.Component<'elements.link-basic', false>;
     description: Schema.Attribute.Text;
     image: Schema.Attribute.Media<'images' | 'videos'>;
     title: Schema.Attribute.String;
