@@ -1011,6 +1011,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'layout.software-outcomes-section',
         'layout.custom-software-hero-section',
         'layout.why-companies-choose-section',
+        'layout.industries-showcase-section',
         'case-study.dge-process-section',
       ]
     >;

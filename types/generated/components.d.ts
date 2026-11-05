@@ -403,11 +403,10 @@ export interface ElementsDesignInfoRow extends Struct.ComponentSchema {
 export interface ElementsDesignProcessStepItem extends Struct.ComponentSchema {
   collectionName: 'components_elements_design_process_step_items';
   info: {
-    description: 'Process step: title is the step label on the timeline, primaryTask is the highlighted pill, tasks are the secondary pills below it.';
+    description: 'Process step with step label, primary title pill, and secondary task pills.';
     displayName: 'Design Process Step Item';
   };
   attributes: {
-    primaryTask: Schema.Attribute.String;
     tasks: Schema.Attribute.Component<'shared.tag', true>;
     title: Schema.Attribute.String & Schema.Attribute.DefaultTo<'STEP #1'>;
   };
@@ -465,6 +464,20 @@ export interface ElementsIndustryExpertiseCard extends Struct.ComponentSchema {
     image: Schema.Attribute.Media<'images'>;
     link: Schema.Attribute.Component<'elements.link-basic', false>;
     title: Schema.Attribute.Blocks;
+  };
+}
+
+export interface ElementsIndustryShowcaseItem extends Struct.ComponentSchema {
+  collectionName: 'components_elements_industry_showcase_items';
+  info: {
+    description: 'Industry tile with a line icon and a label. verticalOffset shifts the tile up or down to build the staggered row.';
+    displayName: 'Industry Showcase Item';
+  };
+  attributes: {
+    icon: Schema.Attribute.Media<'images'>;
+    label: Schema.Attribute.String;
+    link: Schema.Attribute.Component<'elements.link-basic', false>;
+    verticalOffset: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
   };
 }
 
@@ -3436,6 +3449,53 @@ export interface LayoutImageSliderSection extends Struct.ComponentSchema {
   };
 }
 
+export interface LayoutIndustriesShowcaseSection
+  extends Struct.ComponentSchema {
+  collectionName: 'components_layout_industries_showcase_sections';
+  info: {
+    description: 'Centered heading and description above a staggered row of industry tiles, each with a line icon and label.';
+    displayName: 'Industries Showcase Section';
+  };
+  attributes: {
+    backgroundTheme: Schema.Attribute.Enumeration<['light', 'dark']> &
+      Schema.Attribute.DefaultTo<'dark'>;
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.Blocks;
+    industries: Schema.Attribute.Component<
+      'elements.industry-showcase-item',
+      true
+    >;
+    marginBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    marginTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingBottom: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    paddingTop: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+  };
+}
+
 export interface LayoutIndustryExpertiseSection extends Struct.ComponentSchema {
   collectionName: 'components_layout_industry_expertise_sections';
   info: {
@@ -5736,6 +5796,7 @@ declare module '@strapi/strapi' {
       'elements.digital-engine-feature-block': ElementsDigitalEngineFeatureBlock;
       'elements.feature': ElementsFeature;
       'elements.industry-expertise-card': ElementsIndustryExpertiseCard;
+      'elements.industry-showcase-item': ElementsIndustryShowcaseItem;
       'elements.link': ElementsLink;
       'elements.link-basic': ElementsLinkBasic;
       'elements.marketing-stat-item': ElementsMarketingStatItem;
@@ -5824,6 +5885,7 @@ declare module '@strapi/strapi' {
       'layout.hero-review-section': LayoutHeroReviewSection;
       'layout.high-growth-section': LayoutHighGrowthSection;
       'layout.image-slider-section': LayoutImageSliderSection;
+      'layout.industries-showcase-section': LayoutIndustriesShowcaseSection;
       'layout.industry-expertise-section': LayoutIndustryExpertiseSection;
       'layout.industry-item': LayoutIndustryItem;
       'layout.job-openings-section': LayoutJobOpeningsSection;

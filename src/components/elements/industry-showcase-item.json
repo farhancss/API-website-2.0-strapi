@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_elements_industry_showcase_items",
+  "info": {
+    "displayName": "Industry Showcase Item",
+    "description": "Industry tile with a line icon and a label. verticalOffset shifts the tile up or down to build the staggered row."
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "label": {
+      "type": "string"
+    },
+    "link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link-basic"
+    },
+    "verticalOffset": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}
