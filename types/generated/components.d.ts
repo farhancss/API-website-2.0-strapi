@@ -4778,7 +4778,7 @@ export interface LayoutSoftwareCapabilitiesSection
       'elements.software-capability-item',
       true
     >;
-    description: Schema.Attribute.Text;
+    description: Schema.Attribute.Blocks;
     heading: Schema.Attribute.Blocks;
     marginBottom: Schema.Attribute.Integer &
       Schema.Attribute.SetMinMax<
