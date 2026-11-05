@@ -4991,7 +4991,7 @@ export interface LayoutUxDesignProcessSection extends Struct.ComponentSchema {
     displayName: 'UX Design Process Section';
   };
   attributes: {
-    description: Schema.Attribute.Text;
+    description: Schema.Attribute.Blocks;
     heading: Schema.Attribute.Blocks;
     image: Schema.Attribute.Media<'images'>;
     marginBottom: Schema.Attribute.Integer &
