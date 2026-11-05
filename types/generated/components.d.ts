@@ -3459,7 +3459,7 @@ export interface LayoutIndustriesShowcaseSection
   attributes: {
     backgroundTheme: Schema.Attribute.Enumeration<['light', 'dark']> &
       Schema.Attribute.DefaultTo<'dark'>;
-    description: Schema.Attribute.Text;
+    description: Schema.Attribute.Blocks;
     heading: Schema.Attribute.Blocks;
     industries: Schema.Attribute.Component<
       'elements.industry-showcase-item',
@@ -4991,7 +4991,7 @@ export interface LayoutUxDesignProcessSection extends Struct.ComponentSchema {
     displayName: 'UX Design Process Section';
   };
   attributes: {
-    description: Schema.Attribute.Blocks;
+    description: Schema.Attribute.Text;
     heading: Schema.Attribute.Blocks;
     image: Schema.Attribute.Media<'images'>;
     marginBottom: Schema.Attribute.Integer &

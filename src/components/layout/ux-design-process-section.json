@@ -9,9 +9,8 @@
     "heading": {
       "type": "blocks"
     },
-    
     "description": {
-      "type": "blocks"
+      "type": "text"
     },
     "steps": {
       "type": "component",
