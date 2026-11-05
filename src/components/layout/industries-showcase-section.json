@@ -1,0 +1,45 @@
+{
+  "collectionName": "components_layout_industries_showcase_sections",
+  "info": {
+    "displayName": "Industries Showcase Section",
+    "description": "Centered heading and description above a staggered row of industry tiles, each with a line icon and label."
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "blocks"
+    },
+    "description": {
+      "type": "text"
+    },
+    "industries": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.industry-showcase-item"
+    },
+    "backgroundTheme": {
+      "type": "enumeration",
+      "enum": [
+        "light",
+        "dark"
+      ],
+      "default": "dark"
+    },
+    "paddingTop": {
+      "type": "integer",
+      "min": 0
+    },
+    "paddingBottom": {
+      "type": "integer",
+      "min": 0
+    },
+    "marginTop": {
+      "type": "integer",
+      "min": 0
+    },
+    "marginBottom": {
+      "type": "integer",
+      "min": 0
+    }
+  }
+}
