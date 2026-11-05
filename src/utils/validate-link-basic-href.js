@@ -2,10 +2,10 @@ const { yup, errors } = require('@strapi/utils');
 const { YupValidationError } = errors;
 
 const HREF_REGEX =
-  /^(https?:\/\/[^\s]+|\/(?:[a-z0-9-]+(?:\/[a-z0-9-]+)*)?\/?|#[a-zA-Z0-9_-]*)$/;
+  /^(https?:\/\/[^\s]+|\/(?:[a-z0-9-]+(?:\/[a-z0-9-]+)*)?\/?(?:#[a-zA-Z0-9_-]+)?|#[a-zA-Z0-9_-]*)$/;
 
 const HREF_ERROR_MESSAGE =
-  'Please enter a valid link (e.g. https://example.com, /about-us, or #section).';
+  'Please enter a valid link (e.g. https://example.com, /about-us, /#section, or #section).';
 
 const isRecognitionHighlightCard = (value) =>
   value?.__component === 'shared.recognition-highlight-card' ||
