@@ -5496,7 +5496,7 @@ export interface LayoutWhyCompaniesChooseSection
         number
       >;
     review: Schema.Attribute.Relation<
-      'manyToOne',
+      'manyToMany',
       'api::clutch-review.clutch-review'
     >;
   };
