@@ -1929,6 +1929,10 @@ export interface LayoutClutchTestimonialSection extends Struct.ComponentSchema {
       'layout.clutch-testimonial-statistic-item',
       true
     >;
+    summaryWidget: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::clutch-rating-summary.clutch-rating-summary'
+    >;
   };
 }
 
@@ -1995,6 +1999,10 @@ export interface LayoutClutchTestimonialsSliderSection
       'api::clutch-review.clutch-review'
     >;
     summary: Schema.Attribute.Component<'layout.clutch-rating-summary', false>;
+    summaryWidget: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::clutch-rating-summary.clutch-rating-summary'
+    >;
   };
 }
 
@@ -5823,7 +5831,7 @@ export interface SharedTestimonial extends Struct.ComponentSchema {
 }
 
 declare module '@strapi/strapi' {
-  export module Public {
+  export namespace Public {
     export interface ComponentSchemas {
       'blocks.text': BlocksText;
       'case-study.about-section': CaseStudyAboutSection;

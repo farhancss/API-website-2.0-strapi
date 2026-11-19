@@ -1,0 +1,37 @@
+{
+  "kind": "singleType",
+  "collectionName": "clutch_rating_summaries",
+  "info": {
+    "singularName": "clutch-rating-summary",
+    "pluralName": "clutch-rating-summaries",
+    "displayName": "Clutch Rating Summary Widget",
+    "description": "Shared Clutch summary card: rating, review count, logo, and view-all link. Edit once and reuse across testimonial sections."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "rating": {
+      "type": "decimal",
+      "default": 4.9,
+      "min": 0,
+      "max": 5
+    },
+    "reviewCount": {
+      "type": "integer",
+      "default": 60,
+      "min": 0
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images", "files"]
+    },
+    "viewAllCta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link-basic"
+    }
+  }
+}
