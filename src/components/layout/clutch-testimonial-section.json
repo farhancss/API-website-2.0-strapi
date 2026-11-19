@@ -16,6 +16,11 @@
       "target": "api::clutch-review.clutch-review",
       "required": true
     },
+    "summaryWidget": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::clutch-rating-summary.clutch-rating-summary"
+    },
     "statistics": {
       "type": "component",
       "repeatable": true,
