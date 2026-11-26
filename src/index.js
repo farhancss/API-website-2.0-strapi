@@ -2,9 +2,6 @@
 const bootstrap = require("./bootstrap");
 const { validateFooterPhone } = require('./api/global/validate-footer-phone');
 const { validateLinkHrefFields } = require('./utils/validate-link-basic-href');
-const {
-  validateContentWithVideoYoutubeUrls,
-} = require('./utils/validate-youtube-url');
 
 module.exports = {
   /**
@@ -22,7 +19,6 @@ module.exports = {
       const data = context.params.data;
 
       validateLinkHrefFields(data);
-      validateContentWithVideoYoutubeUrls(data);
 
       if (context.uid === 'api::global.global') {
         validateFooterPhone(data);
